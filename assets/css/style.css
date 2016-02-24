@@ -142,3 +142,88 @@ nav ul li a:hover, .active {
   background: #008ed6;
 }
 /*Header style end*/
+
+/*footer style starts*/
+
+footer {
+  width: 100%;
+  background: #e0e0e0;
+  color: #333;
+  font-size: 14px;
+}
+
+.foot-content {
+  padding: 50px 0;
+}
+
+.foot-content ul {
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.foot-content ul li {
+  margin: 5px 0;
+}
+
+.foot-content ul li a, .foot-content p a {
+  color: #000;
+  font-weight: 500;
+}
+
+.foot-content ul li a:hover, .foot-content p a:hover {
+  color: #008ed6;
+}
+
+.email, .call, .fb, .tw {
+  display: inline-block;
+}
+
+.email, .call {
+  width: 16px;
+  height: 16px;
+  margin: 3px 5px 0 0;
+}
+
+.email {
+  background: url("../images/email.png");
+}
+
+.call {
+  background: url("../images/call.png");
+}
+
+.fb, .tw {
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+}
+
+.fb {
+  background: url("../images/fb.png");
+
+}
+.tw {
+  background: url("../images/tw.png");
+}
+
+.fb:hover, .tw:hover {
+  opacity: 0.8;
+}
+
+.foot-content p {
+  text-align: center;
+  width: 60%;
+  margin: 15px auto;
+}
+
+.foot-content p.pnote a {
+  font-weight: 600;
+  color: #008ed6;
+}
+
+.foot-content p.pnote a:hover {
+  color: #037cb9;
+}
+/*footer style end*/
