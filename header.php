@@ -49,6 +49,7 @@
 
 </head>
 <body>
+    <!-- Header starts here -->
     <header>
         <div class="wrapper cf">
             <div class="head-content">
@@ -66,3 +67,4 @@
             </div>
         </div>
     </header>
+    <!-- Header ends here -->

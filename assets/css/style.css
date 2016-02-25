@@ -133,6 +133,7 @@ nav ul li {
 nav ul li a {
   font-size: 14px;
   color: #000;
+  font-weight: 600;
   padding: 25px;
   display: inline-block;
 }
@@ -227,3 +228,154 @@ footer {
   color: #037cb9;
 }
 /*footer style end*/
+
+/*content style start*/
+
+.container {
+  width: 100%;
+}
+
+.main-content {
+  background: url("../images/main-banner-2.jpg") top center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  min-height: 850px;
+}
+
+.main-text {
+  padding: 250px 0 374px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
+}
+
+.main-text h2 {
+  font-size: 44px;
+  color: #fff;
+}
+
+.main-text h3 {
+  margin: 25px 0;
+  font-size: 34px;
+  color: #fff;
+}
+
+.main-text a {
+  width: 170px;
+  height: 70px;
+  display: inline-block;
+  background: #008ed6;
+  color: #fff;
+  vertical-align: top;
+}
+
+.main-text a + a {
+  margin: 0 0 0 2%;
+}
+
+.main-text a:hover {
+  background: #037cb9;
+}
+
+.btn-car,.btn-health {
+  display: inline-block; 
+  width: 50px;
+  height: 50px;
+}
+
+.btn-car {
+  margin: 10px 0 0 0;
+  background: url("../images/icon-car.png");
+}
+
+.btn-health {
+  margin: 10px 0 0 0;
+  background: url("../images/icon-health.png");
+}
+
+.t-car, .t-health {
+  color: #fff;
+  font-weight: 600;
+  vertical-align: top;
+  display: inline-block;
+  margin: 23px 0 0 22px;
+}
+
+.sketch-cont {
+  width: 52%;
+  margin: 0 auto;
+  padding: 35px 0 56px 0;
+}
+
+.sketch-cont div {
+  display: inline-block;
+  text-align: center;
+}
+
+.sketch-cont div h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.sketch-cont div p {
+  width: 54%;
+  margin: 0 auto
+}
+
+.ins-head {
+  background: #008ed6;
+  text-align: center;
+}
+
+.ins-head h2 {
+  color: #fff;
+  font-size: 32px;
+  padding: 12px 0;
+}
+
+.list-insurance .ins-img {
+  margin: 30px 0;
+}
+
+.list-insurance .ins-img img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.ins-thoug {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ins-thoug p {
+  font-size: 20px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.easy-wrap {
+  width: 60%;
+  margin: 60px auto;
+}
+
+.easy-wrap p {
+  margin: 0 3%;
+  display: inline-block;
+}
+
+.easy-wrap p img, .easy-wrap p span {
+  display: block;
+  text-align: center;
+}
+
+.easy-wrap p span {
+  margin: 15px 0 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*content style end*/
