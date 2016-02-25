@@ -378,4 +378,76 @@ footer {
   font-weight: 600;
 }
 
-/*content style end*/
+.car-content {
+
+}
+
+.car-content {
+  background: url("../images/car-banner.jpg") top center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  min-height: 850px;
+  margin: 0 0 1px 0;
+}
+
+.car-text {
+  padding: 50px 0 0 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
+}
+
+.car-quote {
+  padding: 0 0 440px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
+}
+
+.car-text h2 {
+  font-size: 44px;
+  color: #fff;
+}
+
+/*.car-quote {
+      width: 61%;
+    margin: 0 auto;
+    }*/
+
+    .car-get {
+      width: 61%;
+      margin: 0 auto;
+    }
+
+    .car-get ul {
+     -webkit-column-count: 3;
+     -moz-column-count: 3;
+     column-count: 3;
+   }
+
+   .car-get ul li {
+    margin: 30px 0;
+    display: inline-block;
+
+  }
+
+  .car-get button {
+    border: none;
+    background: #fff;
+    width: 250px;
+    height: 60px;
+    font-size: 19px;
+    color: #008ed6;
+    font-weight: 500;
+    outline: none;
+  }
+
+  .car-get button:hover {
+    color: #fff;
+    background: #008ed6;
+  }
+
+  .car-get button.btn-quote {
+    margin: 20px 0 0 0;
+  }
+  /*content style end*/

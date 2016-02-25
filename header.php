@@ -59,8 +59,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.php" title="Home" class="active">HOME</a></li>
-                        <li><a href="car.php" title="Car">CAR</a></li>
-                        <li><a href="health.php" title="Health">HEALTH</a></li>
+                        <li><a href="car-insurance.php" title="Car">CAR</a></li>
+                        <li><a href="health-insurance.php" title="Health">HEALTH</a></li>
                         <li><a href="about-us.php" title="About Us">ABOUT US</a></li>
                     </ul>
                 </nav>

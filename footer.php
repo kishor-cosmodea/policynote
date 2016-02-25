@@ -20,11 +20,11 @@
 				</li>
 			</ul>
 			<p>
-				This Site Is Being Operated By Policynote Insurance, 
-				an IRDAI Certified Broker Under License No. IRDAI/AAAAAA/22, Valid Till: 02/02/2022
+				This site is Being operated by Policynote insurance, 
+				an IRDAI certified broker under license no. IRDAI/AAAAAA/22, Valid till: 02/02/2022
 			</p>
 			<p>
-				Insurance Is The Subject Matter Of The Solicitation.
+				Insurance is the subject matter of the solicitation.
 			</p>
 			<p class="pnote">&copy; 2016 <a href="index.php" title="Policynote">Policynote</a>. All Rights Reserved.</p>
 		</div>

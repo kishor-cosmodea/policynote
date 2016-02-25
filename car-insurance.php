@@ -1,34 +1,30 @@
 <?php
 $description="";
-$pagetitle="";
+$pagetitle="Car Insurance |";
 include("header.php");
 ?>
 
 <!-- Content starts here-->
 <div class="container">
-	<div class="main-content">
-		<div class="main-text">
-			<h2>Adding Insurance to Life</h2>
-			<h3>Get Quotes</h3>
-			<a href="car-insurance.php" title="Car"><span class="btn-car"></span><span class="t-car">CAR</span></a>
-			<a href="health-insurance.php" title="Health"><span class="btn-health"></span><span class="t-health">HEALTH</span></a>
+	<div class="car-content">
+		<div class="car-text">
+			<h2>Get Insurance for your Car</h2>
+		</div>
+		<div class="car-quote">
+			<div class="car-get">
+				<ul>
+					<li><button>Car Model</button></li>
+					<li><button>Registration Year</button></li>
+					<li><button>Fuel Type</button></li>
+					<li><button>Policy Status</button></li>
+					<li><button>Varient</button></li>
+					<li><button>Registration RTO</button></li>
+				</ul>
+				<button class="btn-quote">Get Quotes</button>
+			</div>
 		</div>
 	</div>
 	<div class="middle-content">
-		<div class="wrapper">
-			<div class="sketch-cont">
-				<div>
-					<img src="assets/images/sketch-car.png" alt="car">
-					<h3>Car Insurance</h3>
-					<p>Compare and save upto 60% on car insurance</p>
-				</div>
-				<div>
-					<img src="assets/images/sketch-health.png" alt="health">
-					<h3>Health Insurance</h3>
-					<p>Find the best match health insurance</p>
-				</div>
-			</div>
-		</div>
 		<div class="list-insurance">
 			<div class="ins-head">
 				<h2>LIST OF COMPANIES WE ARE AFFILIATED WITH</h2>
