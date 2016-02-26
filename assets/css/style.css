@@ -101,6 +101,7 @@ li { list-style-type: none; }
 
 header {
   width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 
 .wrapper {
@@ -485,4 +486,167 @@ footer {
   background: #008ed6;
 }
 
+.car-profile-text h2 {
+  text-align: center;
+  font-size: 38px;
+  color: #008ed6;
+  margin: 10px 0;
+}
+
+.car-refine {
+  margin: 0 0 60px 0;
+  display: inline-block;
+  width: 21%;
+  border: 1px solid #008ed6;
+  padding: 10px 3%;
+  background-color: #f3f2f1;
+}
+
+.car-re-data h3 {
+  margin: 5px 0;
+  font-size: 32px;
+  text-align: center;
+  color: #008ed6;
+}
+
+.car-refine .ref-submit {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #008ed6;
+  margin: 10px 0 10px 2px;
+}
+
+.car-refine .ref-submit:hover {
+  background: #037cb9;
+}
+
+.car-refine button {
+  border: 1px solid #008ed6;
+  background: #fff;
+  width: 230px;
+  height: 36px;
+  font-size: 14px;
+  color: #008ed6;
+  font-weight: 500;
+  text-align: left;
+  outline: none;
+  margin: 10px 0 10px 13px;
+}
+
+.car-refine button:hover {
+  color: #fff;
+  background: #008ed6;
+}
+
+.car-re-dis {
+  margin: 25px 0;
+  border-top: 1px solid #008ed6;
+  border-bottom: 1px solid #008ed6;
+}
+
+.car-re-add span {
+  display: block;
+  margin: 15px 0 5px 5%;
+  font-size: 21px;
+  color: #008ed6;
+  font-weight: 600;
+}
+
+.car-re-add button {
+  text-align: center;
+}
+
+.car-result-data {
+  min-height: 755px;
+  margin: 0 0 60px 2%;
+  display: inline-block;
+  width: 60%;
+  border: 1px solid #008ed6;
+  padding: 24px 2%;
+  background-color: #f3f2f1;
+  vertical-align: top;
+}
+
+.car-plan {
+  background: #fff;
+  border: 1px solid #008ed6;
+  padding: 10px 2%;
+}
+
+.car-plan div {
+  float: right;
+}
+
+.car-plan span {
+  display: inline-block;
+  font-weight: 600;
+  color: #008ed6;
+}
+
+.car-plan .car-sort {
+  color: #000;
+}
+
+.car-policy-plan {
+  margin: 30px 0;
+  background: #fff;
+  border: 1px solid #008ed6;
+  padding: 15px 4%;
+  box-shadow: 0 0 19px -5px rgb(0,0,0);
+  -moz-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
+}
+
+.car-policy-plan p {
+  display: inline-block;
+  width: 215px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.car-policy-plan p span {
+  margin: 5px 0;
+  font-size: 14px;
+  display: block;
+}
+
+.car-idv {
+  font-weight: 600;
+}
+
+.car-premium {
+  margin: 25px 0 0 0;
+}
+
+.car-policy-plan .car-premium .car-amt {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.car-policy-plan .car-premium .car-det {
+  color: #008ed6;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+.car-buy {
+  background: #037cb9;
+  width: 125px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #008ed6;
+  margin: 35px 0 0 0;
+  border: none;
+  font-size: 18px;
+  float: right;
+}
+
+.car-buy:hover {
+  background: #037cb9;
+}
 /*content style end*/

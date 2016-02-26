@@ -20,7 +20,7 @@
 				</li>
 			</ul>
 			<p>
-				This site is Being operated by Policynote insurance, 
+				This site is being operated by Policynote insurance, 
 				an IRDAI certified broker under license no. IRDAI/AAAAAA/22, Valid till: 02/02/2022
 			</p>
 			<p>
