@@ -440,50 +440,14 @@ footer {
 }
 
 .car-get button.btn-quote {
+  color: #fff;
   margin: 20px 0 0 0;
-}
-
-.health-content {
-  background: url("../images/health-banner.jpg") top center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  min-height: 850px;
-  margin: 0 0 1px 0;
-}
-
-.health-text {
-  padding: 50px 0 0 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
-}
-
-.health-quote {
-  padding: 0 0 620px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
-}
-
-.health-text h2 {
-  font-size: 44px;
-  color: #fff;
-}
-
-.health-get button {
-  border: none;
-  background: #fff;
-  width: 250px;
-  height: 60px;
-  font-size: 19px;
-  color: #008ed6;
-  font-weight: 500;
-  outline: none;
-}
-
-.health-get button:hover {
-  color: #fff;
   background: #008ed6;
+}
+
+.car-get button.btn-quote:hover {
+  color: #008ed6;
+  background: #fff;
 }
 
 .car-profile-text h2 {
@@ -632,6 +596,11 @@ footer {
   font-size: 12px;
 }
 
+.car-policy-plan p img {
+    display: inline-block;
+    width: 60%;
+    height: auto;
+}
 
 .car-buy {
   background: #037cb9;
@@ -644,9 +613,111 @@ footer {
   border: none;
   font-size: 18px;
   float: right;
+  outline: none;
 }
 
 .car-buy:hover {
   background: #037cb9;
 }
+
+.health-content {
+  background: url("../images/health-banner.jpg") top center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  min-height: 850px;
+  margin: 0 0 1px 0;
+}
+
+.health-text {
+  padding: 50px 0 0 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
+}
+
+.health-quote {
+  padding: 0 0 315px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
+}
+
+.health-text h2 {
+  font-size: 44px;
+  color: #fff;
+}
+
+.health-text h3 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.health-get ul li {
+    margin: 20px 0;
+}
+
+.health-get button {
+  border: none;
+  background: #008ed6;
+  width: 130px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+}
+
+.health-get button:hover {
+  color: #008ed6;
+  background: #fff;
+}
+
+.health-get {
+      text-align: left;
+    width: 61%;
+    margin: -20px auto 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.health-get .health-pin {
+  border-bottom: 1px dotted #ccc;
+  background: 0 0;
+  border-width: 0 0 1px;
+  outline: none;
+  width: 80px;
+  color: #008ed6;
+  font-size: 22px;
+  text-align: center;
+}
+
+.health-get .health-age {
+  border-bottom: 1px dotted #ccc;
+  background: 0 0;
+  border-width: 0 0 1px;
+  outline: none;
+  width: 40px;
+  color: #008ed6;
+  font-size: 22px;
+  text-align: center;
+}
+
+.health-get  button.btn-quote {
+    color: #008ed6;
+    background: #fff;
+    border: none;
+    width: 250px;
+    height: 60px;
+    font-size: 19px;
+    font-weight: 500;
+    display: block;
+    margin: 50px auto 0;
+    width: 30%;
+}
+
+.health-get  button.btn-quote:hover {
+  color: #fff;
+  background: #008ed6;
+}
+
 /*content style end*/
