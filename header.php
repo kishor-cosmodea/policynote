@@ -58,14 +58,13 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a id="nav-home" href="index.php" title="Home">HOME</a></li>
-                        <li><a id="nav-car" href="car-insurance.php" title="Car">CAR</a></li>
-                        <li><a id="nav-health" href="health-insurance.php" title="Health">HEALTH</a></li>
-                        <li><a id="nav-about" href="about-us.php" title="About Us">ABOUT US</a></li>
+                        <li><a href="index.php" title="Home" class="active">HOME</a></li>
+                        <li><a href="car-insurance.php" title="Car">CAR</a></li>
+                        <li><a href="health-insurance.php" title="Health">HEALTH</a></li>
+                        <li><a href="about-us.php" title="About Us">ABOUT US</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <!-- Header ends here -->
-
