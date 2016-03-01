@@ -43,7 +43,7 @@ include("header.php");
 
 				<div class="car-policy-plan">
 					<p>
-						<img src="assets/images/apollo.png" alt="">
+						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
 						<span>Rs. 5,00,850</span>
 					</p>
@@ -58,7 +58,7 @@ include("header.php");
 
 				<div class="car-policy-plan">
 					<p>
-						<img src="assets/images/apollo.png" alt="">
+						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
 						<span>Rs. 5,00,850</span>
 					</p>
@@ -73,7 +73,7 @@ include("header.php");
 
 				<div class="car-policy-plan">
 					<p>
-						<img src="assets/images/apollo.png" alt="">
+						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
 						<span>Rs. 5,00,850</span>
 					</p>

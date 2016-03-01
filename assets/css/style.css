@@ -450,14 +450,16 @@ footer {
   background: #fff;
 }
 
-.car-profile-text h2 {
+.car-profile-text h2,
+.health-profile-text h2 {
   text-align: center;
   font-size: 38px;
   color: #008ed6;
   margin: 10px 0;
 }
 
-.car-refine {
+.car-refine,
+.health-refine {
   margin: 0 0 60px 0;
   display: inline-block;
   width: 21%;
@@ -466,14 +468,24 @@ footer {
   background-color: #f3f2f1;
 }
 
-.car-re-data h3 {
+.health-refine {
+  min-height: 783px;
+}
+
+.car-re-data h3,
+.health-re-data h3 {
   margin: 5px 0;
   font-size: 32px;
   text-align: center;
   color: #008ed6;
 }
 
-.car-refine .ref-submit {
+.health-re-data p {
+  margin: 15px 0;
+}
+
+.car-refine .ref-submit,
+.health-refine .ref-submit {
   width: 250px;
   height: 50px;
   text-align: center;
@@ -482,11 +494,13 @@ footer {
   margin: 10px 0 10px 2px;
 }
 
-.car-refine .ref-submit:hover {
+.car-refine .ref-submit:hover,
+.health-refine .ref-submit:hover {
   background: #037cb9;
 }
 
-.car-refine button {
+.car-refine button,
+.health-refine button {
   border: 1px solid #008ed6;
   background: #fff;
   width: 230px;
@@ -499,18 +513,27 @@ footer {
   margin: 10px 0 10px 13px;
 }
 
-.car-refine button:hover {
+.health-refine button {
+  display: inline-block;
+  width: 106px;
+  text-align: center;
+}
+
+.car-refine button:hover,
+.health-refine button:hover {
   color: #fff;
   background: #008ed6;
 }
 
-.car-re-dis {
+.car-re-dis,
+.health-re-dis {
   margin: 25px 0;
   border-top: 1px solid #008ed6;
   border-bottom: 1px solid #008ed6;
 }
 
-.car-re-add span {
+.car-re-add span,
+.health-re-add span {
   display: block;
   margin: 15px 0 5px 5%;
   font-size: 21px;
@@ -518,11 +541,13 @@ footer {
   font-weight: 600;
 }
 
-.car-re-add button {
+.car-re-add button,
+.health-re-add button {
   text-align: center;
 }
 
-.car-result-data {
+.car-result-data,
+.health-result-data {
   min-height: 755px;
   margin: 0 0 60px 2%;
   display: inline-block;
@@ -533,27 +558,32 @@ footer {
   vertical-align: top;
 }
 
-.car-plan {
+.car-plan,
+.health-plan {
   background: #fff;
   border: 1px solid #008ed6;
   padding: 10px 2%;
 }
 
-.car-plan div {
+.car-plan div,
+.health-plan div {
   float: right;
 }
 
-.car-plan span {
+.car-plan span,
+.health-plan span {
   display: inline-block;
   font-weight: 600;
   color: #008ed6;
 }
 
-.car-plan .car-sort {
+.car-plan .car-sort,
+.health-plan .health-sort {
   color: #000;
 }
 
-.car-policy-plan {
+.car-policy-plan,
+.health-policy-plan {
   margin: 30px 0;
   background: #fff;
   border: 1px solid #008ed6;
@@ -563,20 +593,32 @@ footer {
   -webkit-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
 }
 
-.car-policy-plan p {
+.health-policy-plan {
+  padding: 0;
+  min-height: 190px;
+}
+
+.car-policy-plan p,
+.health-policy-plan p {
   display: inline-block;
   width: 215px;
   text-align: center;
   vertical-align: top;
 }
 
-.car-policy-plan p span {
+.health-policy-plan p {
+  width: 31%;
+}
+
+.car-policy-plan p span,
+.health-policy-plan p span {
   margin: 5px 0;
   font-size: 14px;
   display: block;
 }
 
-.car-idv {
+.car-idv,
+.health-cov {
   font-weight: 600;
 }
 
@@ -584,25 +626,33 @@ footer {
   margin: 25px 0 0 0;
 }
 
-.car-policy-plan .car-premium .car-amt {
+.health-premium {
+  margin: 6px 0 0 0;
+}
+
+.car-policy-plan .car-premium .car-amt,
+.health-policy-plan .health-premium .health-amt {
   font-size: 23px;
   font-weight: 500;
 }
 
-.car-policy-plan .car-premium .car-det {
+.car-policy-plan .car-premium .car-det,
+.health-policy-plan .health-premium .health-det {
   color: #008ed6;
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
 }
 
-.car-policy-plan p img {
-    display: inline-block;
-    width: 60%;
-    height: auto;
+.car-policy-plan p img,
+.health-policy-plan p img {
+  display: inline-block;
+  width: 60%;
+  height: auto;
 }
 
-.car-buy {
+.car-buy,
+.health-buy {
   background: #037cb9;
   width: 125px;
   height: 40px;
@@ -616,8 +666,34 @@ footer {
   outline: none;
 }
 
-.car-buy:hover {
+.health-buy {
+  margin: 7px 0 0 0;
+}
+
+.car-buy:hover,
+.health-buy:hover {
   background: #037cb9;
+}
+
+.health-policy-plan .health-pla-cont {
+  padding: 20px 0;
+}
+
+.health-policy-plan .health-cov-cont {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.health-policy-plan .health-cov-cont  div {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.health-policy-plan div span {
+  display: block;
+  font-size: 14px;
 }
 
 .health-content {
@@ -653,7 +729,7 @@ footer {
 }
 
 .health-get ul li {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .health-get button {
@@ -673,25 +749,27 @@ footer {
 }
 
 .health-get {
-      text-align: left;
-    width: 61%;
-    margin: -20px auto 0;
+  text-align: left;
+  width: 61%;
+  margin: -20px auto 0;
   font-size: 26px;
   color: #fff;
 }
 
-.health-get .health-pin {
+.health-get .health-pin,
+.health-pin {
   border-bottom: 1px dotted #ccc;
   background: 0 0;
   border-width: 0 0 1px;
   outline: none;
-  width: 80px;
+  width: 90px;
   color: #008ed6;
   font-size: 22px;
   text-align: center;
 }
 
-.health-get .health-age {
+.health-get .health-age,
+.health-age {
   border-bottom: 1px dotted #ccc;
   background: 0 0;
   border-width: 0 0 1px;
@@ -703,16 +781,16 @@ footer {
 }
 
 .health-get  button.btn-quote {
-    color: #008ed6;
-    background: #fff;
-    border: none;
-    width: 250px;
-    height: 60px;
-    font-size: 19px;
-    font-weight: 500;
-    display: block;
-    margin: 50px auto 0;
-    width: 30%;
+  color: #008ed6;
+  background: #fff;
+  border: none;
+  width: 250px;
+  height: 60px;
+  font-size: 19px;
+  font-weight: 500;
+  display: block;
+  margin: 50px auto 0;
+  width: 30%;
 }
 
 .health-get  button.btn-quote:hover {
