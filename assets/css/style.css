@@ -451,7 +451,8 @@ footer {
 }
 
 .car-profile-text h2,
-.health-profile-text h2 {
+.health-profile-text h2,
+.car-chk-text h2 {
   text-align: center;
   font-size: 38px;
   color: #008ed6;
@@ -459,7 +460,8 @@ footer {
 }
 
 .car-refine,
-.health-refine {
+.health-refine,
+.car-checkout {
   margin: 0 0 60px 0;
   display: inline-block;
   width: 21%;
@@ -473,7 +475,8 @@ footer {
 }
 
 .car-re-data h3,
-.health-re-data h3 {
+.health-re-data h3,
+.car-ch-data h3 {
   margin: 5px 0;
   font-size: 32px;
   text-align: center;
@@ -798,4 +801,20 @@ footer {
   background: #008ed6;
 }
 
+.car-ch-ins {
+      text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.car-ch-ins img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.car-ch-ins span {
+  display: block;
+}
 /*content style end*/

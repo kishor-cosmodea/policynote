@@ -28,6 +28,12 @@ $(window).load(function() {
 			$('#nav-car').addClass('active');
 		}
 
+		var pos_car_chk = pathname.search("car-checkout.php");
+
+		if(pos_car_chk == 12) {
+			$('#nav-car').addClass('active');
+		}
+
 		var pos_health = pathname.search("health-insurance.php");
 
 		if(pos_health == 12) {
