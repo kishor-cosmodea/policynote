@@ -102,6 +102,8 @@ li { list-style-type: none; }
 header {
   width: 100%;
   border-bottom: 1px solid #ccc;
+      position: fixed;
+    background-color: #fff;
 }
 
 .wrapper {
@@ -135,8 +137,11 @@ nav ul li a {
   font-size: 14px;
   color: #000;
   font-weight: 600;
-  padding: 25px;
+/*  padding: 25px;*/
   display: inline-block;
+width: 65px;
+    padding: 25px 10px;
+    text-align: center;
 }
 
 nav ul li a:hover, .active {
@@ -242,29 +247,30 @@ footer {
   width: 100%;
   height: auto;
   text-align: center;
-  min-height: 850px;
 }
 
 .main-text {
-  padding: 250px 0 374px 0;
+  padding: 220px 0 150px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .main-text h2 {
-  font-size: 44px;
+  font-size: 40px;
   color: #fff;
+  font-weight: 600;
 }
 
 .main-text h3 {
-  margin: 25px 0;
-  font-size: 34px;
+  margin: 30px 0;
+  font-size: 28px;
   color: #fff;
 }
 
 .main-text a {
+  border-radius: 30px;
   width: 170px;
-  height: 70px;
+  height: 60px;
   display: inline-block;
   background: #008ed6;
   color: #fff;
@@ -286,12 +292,12 @@ footer {
 }
 
 .btn-car {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   background: url("../images/icon-car.png");
 }
 
 .btn-health {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   background: url("../images/icon-health.png");
 }
 
@@ -300,7 +306,11 @@ footer {
   font-weight: 600;
   vertical-align: top;
   display: inline-block;
-  margin: 23px 0 0 22px;
+  margin: 18px 0 0 22px;
+}
+
+.t-health {
+  margin: 18px 0 0 10px;
 }
 
 .sketch-cont {
@@ -324,19 +334,23 @@ footer {
   margin: 0 auto
 }
 
+.car-bg-lay {
+  padding: 30px 0 1px 0;
+   background-color: #fbfbfb;
+}
+
 .ins-head {
-  background: #008ed6;
+  margin: 8px 0 0 0;
   text-align: center;
 }
 
 .ins-head h2 {
-  color: #fff;
+  color: #008ed6;
   font-size: 32px;
-  padding: 12px 0;
 }
 
 .list-insurance .ins-img {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .list-insurance .ins-img img {
@@ -346,6 +360,48 @@ footer {
   display: block;
 }
 
+.car-spl-data {
+    padding: 30px 0;
+    background-color: #fbfbfb;
+}
+
+.car-spl-data img {
+  width: 100%;
+  height: auto;
+}
+
+.spl-one-cont {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.spl-one-cont p {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+      font-size: 16px;
+}
+
+.spl-one-cont .car-tech {
+    float: right;
+    width: 60%;
+}
+
+.spl-one-cont .car-left {
+    float: left;
+    width: 60%;
+    margin: 0 105px 0 0;
+}
+
+.spl-one-cont .car-tech span,
+.spl-one-cont .car-left span {
+  margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+    color: #008ed6;
+}
+
 .ins-thoug {
   width: 40%;
   margin: 0 auto;
@@ -353,9 +409,26 @@ footer {
 }
 
 .ins-thoug p {
-  font-size: 20px;
+  font-size: 19px;
   margin: 40px 0;
   font-weight: 400;
+}
+
+.main-testi {
+  padding: 150px 0;
+      background-color: #4281ba;
+      color: #fff;
+      text-align: center;
+}
+
+.main-testi h2 {
+font-size: 32px;
+    width: 55%;
+    margin: 0 auto 30px;
+}
+
+.main-testi span {
+font-size: 26px;
 }
 
 .easy-wrap {
@@ -385,18 +458,17 @@ footer {
   width: 100%;
   height: auto;
   text-align: center;
-  min-height: 850px;
   margin: 0 0 1px 0;
 }
 
 .car-text {
-  padding: 50px 0 0 0;
+  padding: 100px 0 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .car-quote {
-  padding: 0 0 440px 0;
+  padding: 0 0 300px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
@@ -705,18 +777,17 @@ footer {
   width: 100%;
   height: auto;
   text-align: center;
-  min-height: 850px;
   margin: 0 0 1px 0;
 }
 
 .health-text {
-  padding: 50px 0 0 0;
+  padding: 100px 0 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .health-quote {
-  padding: 0 0 315px 0;
+  padding: 0 0 265px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
