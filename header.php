@@ -24,8 +24,8 @@
          <!-- To adhear no-cache for Chrome -->
     <!-- <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
     <meta http-equiv="Pragma" content="no-store, no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="robots" content="index, follow" /> -->
+    <meta http-equiv="Expires" content="0" /> -->
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
