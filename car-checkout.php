@@ -17,44 +17,68 @@ include("header.php");
 				</div>
 				<div class="car-ch-ins">
 					<img src="assets/images/sbi.png" alt="policy-logo">
-					<span>2016 Maruti Swift Dzire</span>
-					<span>VXI(1197cc Petrol)</span>
-					<span>Rs. 8,222</span>
+					<span class="car-ct-amt">2016 Maruti Swift Dzire</span>
+					<span>ZXI 1197cc</span>
+					<span>Petrol</span>
+					<span class="car-ct-amt">Rs. 8,222</span>
 				</div>
 				<p>Policy Cover Summary</p>
 				<div class="car-ch-idv">
-					<span>Insured Declared Value (IDV)</span>
-					<span>Car:</span><span>Rs. 3,66,789</span>
+					<h3>Insured Declared Value:</h3>
+					<span>Car:</span><span class="idv-right">Rs. 3,66,789</span>
 				</div>
 				<div class="car-ch-add">
-					<span>Add Ons</span>
+					<h3>Add Ons</h3>
 					<span>No Add Ons supported.</span>
 				</div>
 				<div class="car-ch-dis">
-					<span>Discounts</span>
+					<h3>Discounts</h3>
 					<span>No additional discounts applicable.</span>
 				</div>
 			</div>
-			<div class="car-result-data">
+			<div class="car-chout-data">
 
-				<div class="car-policy-plan">
+				<div class="car-chout-plan">
 					<p>Important: Please keep your policy documents ready to provide accurate data</p>
-					<div>
+					<div class="car-chout-prop">
 						<p>1. Proposer</p>
 					</div>
-					<div>
+					<div class="car-chout-user">
 						<button>Mr</button>
 						<input type="text" name="fname" placeholder="First Name">
 						<input type="text" name="lname" placeholder="Last Name">
-						<input type="text" name="email" placeholder="Email ID">
-						<input type="text" name="mobile" placeholder="Mobile No.">
+						<p><input type="text" name="email" placeholder="Email ID">
+							<input type="text" name="mobile" placeholder="Mobile No."></p>
+						</div>
+					</div>
+
+					<div class="car-chout-plan">
+						<div class="car-chout-prop">
+							<p>2. Verify critical information</p>
+						</div>
+						<div class="car-chout-user">
+							<span>When do you want to start the policy?</span>
+							<p class="ch-inp"><input id="dd" type="text" name="dd" placeholder="DD">
+								<input id="mm" type="text" name="mm" placeholder="MM">
+								<input id="yyyy" type="text" name="yyyy" placeholder="YYYY"></p>
+							</div>
+						</div>
+
+						<div class="car-chout-plan">
+							<div class="car-chout-prop">
+								<p>3. Payment Option</p>
+							</div>
+							<div class="car-chout-user">
+								<span>Buy at Home</span>
+								<span>facilitator will assist on phone & in-person</span>
+								<p class="car-chout-buy"><button>Confirm</button></p>
+							</div>
+						</div>
+
 					</div>
 				</div>
-
 			</div>
 		</div>
-	</div>
-</div>
-<!-- Content ends here -->
+		<!-- Content ends here -->
 
-<?php include("footer.php"); ?>
+		<?php include("footer.php"); ?>

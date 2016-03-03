@@ -102,8 +102,9 @@ li { list-style-type: none; }
 header {
   width: 100%;
   border-bottom: 1px solid #ccc;
-      position: fixed;
-    background-color: #fff;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
 }
 
 .wrapper {
@@ -137,11 +138,11 @@ nav ul li a {
   font-size: 14px;
   color: #000;
   font-weight: 600;
-/*  padding: 25px;*/
+  /*  padding: 25px;*/
   display: inline-block;
-width: 65px;
-    padding: 25px 10px;
-    text-align: center;
+  width: 65px;
+  padding: 25px 10px;
+  text-align: center;
 }
 
 nav ul li a:hover, .active {
@@ -336,7 +337,7 @@ footer {
 
 .car-bg-lay {
   padding: 30px 0 1px 0;
-   background-color: #fbfbfb;
+  background-color: #fbfbfb;
 }
 
 .ins-head {
@@ -361,8 +362,8 @@ footer {
 }
 
 .car-spl-data {
-    padding: 30px 0;
-    background-color: #fbfbfb;
+  padding: 30px 0;
+  background-color: #fbfbfb;
 }
 
 .car-spl-data img {
@@ -371,35 +372,35 @@ footer {
 }
 
 .spl-one-cont {
-    width: 80%;
-    margin: 50px auto;
+  width: 80%;
+  margin: 50px auto;
 }
 
 .spl-one-cont p {
   display: inline-block;
   width: 30%;
   vertical-align: top;
-      font-size: 16px;
+  font-size: 16px;
 }
 
 .spl-one-cont .car-tech {
-    float: right;
-    width: 60%;
+  float: right;
+  width: 60%;
 }
 
 .spl-one-cont .car-left {
-    float: left;
-    width: 60%;
-    margin: 0 105px 0 0;
+  float: left;
+  width: 60%;
+  margin: 0 105px 0 0;
 }
 
 .spl-one-cont .car-tech span,
 .spl-one-cont .car-left span {
   margin: 0 0 30px 0;
-    font-size: 26px;
-    font-weight: 500;
-    display: block;
-    color: #008ed6;
+  font-size: 26px;
+  font-weight: 500;
+  display: block;
+  color: #008ed6;
 }
 
 .ins-thoug {
@@ -416,19 +417,19 @@ footer {
 
 .main-testi {
   padding: 150px 0;
-      background-color: #4281ba;
-      color: #fff;
-      text-align: center;
+  background-color: #4281ba;
+  color: #fff;
+  text-align: center;
 }
 
 .main-testi h2 {
-font-size: 32px;
-    width: 55%;
-    margin: 0 auto 30px;
+  font-size: 32px;
+  width: 55%;
+  margin: 0 auto 30px;
 }
 
 .main-testi span {
-font-size: 26px;
+  font-size: 26px;
 }
 
 .easy-wrap {
@@ -522,6 +523,10 @@ font-size: 26px;
   background: #fff;
 }
 
+.car-profile-content {
+  margin: 100px 0 0 0;
+}
+
 .car-profile-text h2,
 .health-profile-text h2,
 .car-chk-text h2 {
@@ -540,6 +545,7 @@ font-size: 26px;
   border: 1px solid #008ed6;
   padding: 10px 3%;
   background-color: #f3f2f1;
+  min-height: 783px;
 }
 
 .health-refine {
@@ -622,7 +628,8 @@ font-size: 26px;
 }
 
 .car-result-data,
-.health-result-data {
+.health-result-data,
+.car-chout-data {
   min-height: 755px;
   margin: 0 0 60px 2%;
   display: inline-block;
@@ -634,10 +641,16 @@ font-size: 26px;
 }
 
 .car-plan,
-.health-plan {
+.health-plan,
+.car-chout-plan {
   background: #fff;
   border: 1px solid #008ed6;
   padding: 10px 2%;
+}
+
+.car-chout-plan {
+  padding: 10px 0;
+  margin: 30px 0;
 }
 
 .car-plan div,
@@ -873,19 +886,136 @@ font-size: 26px;
 }
 
 .car-ch-ins {
-      text-align: center;
-    width: 90%;
-    margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .car-ch-ins img {
-    display: block;
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .car-ch-ins span {
+  margin: 4px 0;
   display: block;
+  font-size: 16px;
 }
+
+.car-ch-ins span.car-ct-amt{
+  font-size: 20px;
+}
+
+.car-ch-idv, .car-ch-add, .car-ch-dis {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 {
+  font-weight: 600;
+}
+
+.car-ch-dis {
+  border: none;
+}
+
+.car-checkout p {
+  padding: 2px 0;
+  font-size: 20px;
+  color: #008ed6;
+  border: 1px solid #008ed6;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+.car-ch-idv .idv-right {
+  float: right;
+}
+
+.car-ch-add span, .car-ch-dis span {
+  display: block;
+  font-size: 14px;
+}
+
+.car-chout-plan p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.car-chout-prop {
+  margin: 10px 0 10px 0;
+  padding: 8px 0 8px 4%;
+  color: #fff;
+  background: #008ed6;
+}
+
+.car-chout-prop p {
+  text-align: left;
+}
+
+.car-chout-user {
+  padding: 10px 4%;
+}
+
+.car-chout-user button {
+  margin: 0 38px 25px 0;
+  border: none;
+  width: 90px;
+  height: 35px;
+  font-size: 19px;
+  font-weight: 500;
+  outline: none;
+  color: #fff;
+  background: #008ed6;
+  font-size: 14px;
+  text-align: left;
+}
+
+.car-chout-user button:hover,
+.car-chout-buy button:hover {
+  background-color: #037cb9;
+}
+
+.car-chout-user input {
+  width: 30%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.car-chout-user p.ch-inp {
+  margin: 25px 0 32px 0;
+  text-align: left;
+}
+
+.car-chout-user #dd {
+  width: 6%;
+  text-align: center;
+}
+
+.car-chout-user #mm {
+  width: 7%;
+  text-align: center;
+}
+
+.car-chout-user #yyyy {
+  width: 12%;
+  text-align: center;
+}
+
+.car-chout-buy {
+  font-size: 15px;
+  text-align: center;
+}
+
+.car-chout-buy button {
+  font-size: 15px;
+  text-align: center;
+
+  margin: 30px 0 14px 0;
+  text-align: center;
+}
+
+
 /*content style end*/
