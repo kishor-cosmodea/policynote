@@ -39,7 +39,7 @@ include("header.php");
 			<div class="car-chout-data">
 
 				<div class="car-chout-plan">
-					<p>Important: Please keep your policy documents ready to provide accurate data</p>
+					<p><span>Important</span> : Refer to your RC book and current policy copy to provide accurate data.</p>
 					<div class="car-chout-prop">
 						<p>1. Proposer</p>
 					</div>
