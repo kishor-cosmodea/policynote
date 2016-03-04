@@ -37,7 +37,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
     <!--jQuery -->
-    <script src="assets/vendor/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
 
     <!-- For IE9 browsers. -->
     <!--[if IE 9 ]><html class="ie9"> <![endif]-->
