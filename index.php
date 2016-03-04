@@ -17,7 +17,7 @@ include("header.php");
 	<div class="middle-content">
 		<div class="list-insurance">
 			<div class="ins-head">
-				<h2>LIST OF COMPANIES WE ARE AFFILIATED WITH</h2>
+				<h2>Get a quote from more than 100 companies</h2>
 			</div>
 			<div class="ins-img">
 				<img src="assets/images/insurance-comp.jpg" alt="Ins">
@@ -31,7 +31,6 @@ include("header.php");
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
 						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 					</p>
 				</div>
 
@@ -41,7 +40,6 @@ include("header.php");
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
 						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 					</p>
 					<p><img src="assets/images/dummy-200x200-Rope.jpg" alt="car"></p>
 				</div>
@@ -53,10 +51,8 @@ include("header.php");
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
 						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 					</p>
 				</div>
-
 			</div>
 
 			<div class="sketch-cont">
@@ -72,6 +68,10 @@ include("header.php");
 				</div>
 			</div>
 
+			<div class="main-testi">
+				<h2>“Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.”</h2>
+				<span>- Jack Son</span>
+			</div>
 			<div class="car-bg-lay">
 				<div class="ins-head">
 					<h2>INSURANCE THOUGHTS</h2>
@@ -87,11 +87,7 @@ include("header.php");
 					</p>
 				</div>
 			</div>
-			<div class="main-testi">
-				<h2>“Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.”</h2>
-				<span>- Jack Son</span>
-			</div>
-			<div class="easy-save">
+<!-- 			<div class="easy-save">
 				<div class="easy-wrap">
 					<p>
 						<img src="assets/images/easy.png" alt="easy">
@@ -110,7 +106,7 @@ include("header.php");
 						<span>QUICK</span>
 					</p>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
