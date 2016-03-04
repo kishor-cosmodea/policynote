@@ -1,6 +1,6 @@
 <?php
 $description="";
-$pagetitle="Car Compare |";
+$pagetitle="Car Checkout |";
 include("header.php");
 ?>
 

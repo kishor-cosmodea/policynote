@@ -90,10 +90,7 @@
 ========================================================================== */
 
 /*Header style start*/
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
+body { font-family: 'Open Sans', sans-serif; }
 
 a { text-decoration: none; }
 
@@ -112,13 +109,9 @@ header {
   margin: 0 auto;
 }
 
-h1, nav, nav ul li {
-  display: inline-block;
-}
+h1, nav, nav ul li { display: inline-block; }
 
-h1 {
-  padding: 13px 0;
-}
+h1 { padding: 13px 0; }
 
 h1 a {
   font-size: 32px;
@@ -126,19 +119,14 @@ h1 a {
   color: #008ed6;
 }
 
-nav {
-  float: right;
-}
+nav { float: right; }
 
-nav ul li {
-  margin: 0 0 0 -3px;
-}
+nav ul li { margin: 0 0 0 -3px; }
 
 nav ul li a {
   font-size: 14px;
   color: #000;
   font-weight: 600;
-  /*  padding: 25px;*/
   display: inline-block;
   width: 65px;
   padding: 25px 10px;
@@ -152,7 +140,6 @@ nav ul li a:hover, .active {
 /*Header style end*/
 
 /*footer style starts*/
-
 footer {
   width: 100%;
   background: #e0e0e0;
@@ -160,9 +147,7 @@ footer {
   font-size: 14px;
 }
 
-.foot-content {
-  padding: 50px 0;
-}
+.foot-content { padding: 50px 0; }
 
 .foot-content ul {
   display: inline-block;
@@ -171,22 +156,17 @@ footer {
   text-align: center;
 }
 
-.foot-content ul li {
-  margin: 5px 0;
-}
+.foot-content ul li { margin: 5px 0; }
 
 .foot-content ul li a, .foot-content p a {
   color: #000;
   font-weight: 500;
 }
 
-.foot-content ul li a:hover, .foot-content p a:hover {
-  color: #008ed6;
-}
+.foot-content ul li a:hover, 
+.foot-content p a:hover { color: #008ed6; }
 
-.email, .call, .fb, .tw {
-  display: inline-block;
-}
+.email, .call, .fb, .tw { display: inline-block; }
 
 .email, .call {
   width: 16px;
@@ -194,13 +174,9 @@ footer {
   margin: 3px 5px 0 0;
 }
 
-.email {
-  background: url("../images/email.png");
-}
+.email { background: url("../images/email.png"); }
 
-.call {
-  background: url("../images/call.png");
-}
+.call { background: url("../images/call.png"); }
 
 .fb, .tw {
   width: 32px;
@@ -208,17 +184,11 @@ footer {
   text-indent: -9999px;
 }
 
-.fb {
-  background: url("../images/fb.png");
+.fb { background: url("../images/fb.png"); }
 
-}
-.tw {
-  background: url("../images/tw.png");
-}
+.tw { background: url("../images/tw.png"); }
 
-.fb:hover, .tw:hover {
-  opacity: 0.8;
-}
+.fb:hover, .tw:hover { opacity: 0.8; }
 
 .foot-content p {
   text-align: center;
@@ -231,16 +201,11 @@ footer {
   color: #008ed6;
 }
 
-.foot-content p.pnote a:hover {
-  color: #037cb9;
-}
+.foot-content p.pnote a:hover { color: #037cb9; }
 /*footer style end*/
 
 /*content style start*/
-
-.container {
-  width: 100%;
-}
+.container { width: 100%; }
 
 .main-content {
   background: url("../images/main-banner-2.jpg") top center;
@@ -253,7 +218,6 @@ footer {
 .main-text {
   padding: 220px 0 150px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .main-text h2 {
@@ -278,13 +242,9 @@ footer {
   vertical-align: top;
 }
 
-.main-text a + a {
-  margin: 0 0 0 2%;
-}
+.main-text a + a { margin: 0 0 0 2%; }
 
-.main-text a:hover {
-  background: #037cb9;
-}
+.main-text a:hover { background: #037cb9; }
 
 .btn-car,.btn-health {
   display: inline-block; 
@@ -310,9 +270,7 @@ footer {
   margin: 18px 0 0 22px;
 }
 
-.t-health {
-  margin: 18px 0 0 10px;
-}
+.t-health { margin: 18px 0 0 10px; }
 
 .sketch-cont {
   width: 52%;
@@ -350,9 +308,7 @@ footer {
   font-size: 32px;
 }
 
-.list-insurance .ins-img {
-  margin: 20px 0;
-}
+.list-insurance .ins-img { margin: 20px 0; }
 
 .list-insurance .ins-img img {
   width: 70%;
@@ -465,13 +421,11 @@ footer {
 .car-text {
   padding: 100px 0 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .car-quote {
   padding: 0 0 300px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .car-text h2 {
@@ -493,7 +447,6 @@ footer {
 .car-get ul li {
   margin: 30px 0;
   display: inline-block;
-
 }
 
 .car-get button {
@@ -525,22 +478,24 @@ footer {
 
 .car-profile-content,
 .health-profile-content {
-  margin: 100px auto 0;
+  margin: 78px auto 0;
   width: 90%;
 }
 
 .car-profile-text h2,
 .health-profile-text h2,
-.car-chk-text h2 {
+.car-chk-text h2,
+.health-chk-text h2 {
   text-align: center;
-  font-size: 38px;
+  font-size: 32px;
   color: #008ed6;
-  margin: 10px 0;
+  margin: 0 0 12px 0;
 }
 
 .car-refine,
 .health-refine,
-.car-checkout {
+.car-checkout,
+.health-checkout {
   margin: 0 0 60px 0;
   display: inline-block;
   width: 24%;
@@ -550,22 +505,23 @@ footer {
   min-height: 783px;
 }
 
-.health-refine {
-  min-height: 783px;
-}
+.car-checkout { min-height: 735px; }
+
+.health-refine { min-height: 783px; }
+
+.health-checkout { min-height: 212px; }
 
 .car-re-data h3,
 .health-re-data h3,
-.car-ch-data h3 {
+.car-ch-data h3,
+.health-ch-data h3 {
   margin: 5px 0;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   color: #008ed6;
 }
 
-.health-re-data p {
-  margin: 15px 0;
-}
+.health-re-data p { margin: 15px 0; }
 
 .car-refine .ref-submit,
 .health-refine .ref-submit {
@@ -631,7 +587,8 @@ footer {
 
 .car-result-data,
 .health-result-data,
-.car-chout-data {
+.car-chout-data,
+.health-chout-data {
   min-height: 755px;
   margin: 0 0 60px 2%;
   display: inline-block;
@@ -642,20 +599,26 @@ footer {
   vertical-align: top;
 }
 
+.car-chout-data,
+.health-chout-data { padding: 0 2%; }
+
 .car-plan,
 .health-plan,
-.car-chout-plan {
+.car-chout-plan,
+.health-chout-plan {
   background: #fff;
   border: 1px solid #008ed6;
   padding: 10px 2%;
 }
 
-.car-chout-plan {
+.car-chout-plan,
+.health-chout-plan {
   padding: 10px 0;
   margin: 30px 0;
 }
 
-.car-chout-plan p span { font-weight: 600; }
+.car-chout-plan p span,
+.health-chout-plan p span { font-weight: 600; }
 
 .car-plan div,
 .health-plan div {
@@ -670,9 +633,7 @@ footer {
 }
 
 .car-plan .car-sort,
-.health-plan .health-sort {
-  color: #000;
-}
+.health-plan .health-sort { color: #000; }
 
 .car-policy-plan,
 .health-policy-plan {
@@ -698,9 +659,7 @@ footer {
   vertical-align: top;
 }
 
-.health-policy-plan p {
-  width: 31%;
-}
+.health-policy-plan p { width: 31%; }
 
 .car-policy-plan p span,
 .health-policy-plan p span {
@@ -710,17 +669,11 @@ footer {
 }
 
 .car-idv,
-.health-cov {
-  font-weight: 600;
-}
+.health-cov { font-weight: 600; }
 
-.car-premium {
-  margin: 25px 0 0 0;
-}
+.car-premium { margin: 25px 0 0 0; }
 
-.health-premium {
-  margin: 6px 0 0 0;
-}
+.health-premium { margin: 6px 0 0 0; }
 
 .car-policy-plan .car-premium .car-amt,
 .health-policy-plan .health-premium .health-amt {
@@ -758,18 +711,12 @@ footer {
   outline: none;
 }
 
-.health-buy {
-  margin: 7px 0 0 0;
-}
+.health-buy { margin: 7px 0 0 0; }
 
 .car-buy:hover,
-.health-buy:hover {
-  background: #037cb9;
-}
+.health-buy:hover { background: #037cb9; }
 
-.health-policy-plan .health-pla-cont {
-  padding: 20px 0;
-}
+.health-policy-plan .health-pla-cont { padding: 20px 0; }
 
 .health-policy-plan .health-cov-cont {
   border-top: 1px solid #ccc;
@@ -800,13 +747,11 @@ footer {
 .health-text {
   padding: 100px 0 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .health-quote {
   padding: 0 0 265px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  /*background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
 }
 
 .health-text h2 {
@@ -819,9 +764,7 @@ footer {
   color: #fff;
 }
 
-.health-get ul li {
-  margin: 20px 0;
-}
+.health-get ul li { margin: 20px 0; }
 
 .health-get button {
   border: none;
@@ -889,41 +832,39 @@ footer {
   background: #008ed6;
 }
 
-.car-ch-ins {
+.car-ch-ins,
+.health-ch-ins {
   text-align: center;
   width: 90%;
   margin: 0 auto;
 }
 
-.car-ch-ins img {
+.car-ch-ins img,
+.health-ch-ins img {
   display: block;
-  width: 70%;
+  width: 60%;
   height: auto;
   margin: 0 auto;
 }
 
-.car-ch-ins span {
+.car-ch-ins span,
+.health-ch-ins span {
   margin: 4px 0;
   display: block;
   font-size: 16px;
 }
 
-.car-ch-ins span.car-ct-amt{
-  font-size: 20px;
-}
+.car-ch-ins span.car-ct-amt,
+.health-ch-ins span.health-ct-amt { font-size: 20px; }
 
 .car-ch-idv, .car-ch-add, .car-ch-dis {
   padding: 30px 0;
   border-bottom: 1px solid #ccc;
 }
 
-.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 {
-  font-weight: 600;
-}
+.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 { font-weight: 600; }
 
-.car-ch-dis {
-  border: none;
-}
+.car-ch-dis { border: none; }
 
 .car-checkout p {
   padding: 2px 0;
@@ -941,23 +882,31 @@ footer {
   font-size: 14px;
 }
 
-.car-chout-plan p {
+.car-chout-plan p,
+.health-chout-plan p {
   font-size: 15px;
   text-align: center;
 }
 
-.car-chout-prop {
+.car-chout-prop,
+.health-chout-prop {
   margin: 10px 0 10px 0;
   padding: 8px 0 8px 4%;
   color: #fff;
   background: #008ed6;
 }
 
-.car-chout-prop p { text-align: left; }
+.car-chout-prop p,
+.health-chout-prop p,
+.health-chout-plan span + p { text-align: left; }
 
-.car-chout-user { padding: 10px 4%; }
+.health-chout-plan span + p { margin: 20px 0 10px 0; }
 
-.car-chout-user button {
+.car-chout-user,
+.health-chout-user { padding: 10px 4%; }
+
+.car-chout-user button,
+.health-chout-user button {
   margin: 0 31px 25px 0;
   border: none;
   width: 90px;
@@ -972,45 +921,78 @@ footer {
 }
 
 .car-chout-user button:hover,
-.car-chout-buy button:hover { background-color: #037cb9; }
+.car-chout-buy button:hover,
+.health-chout-user button:hover,
+.health-chout-buy button:hover { background-color: #037cb9; }
 
-.car-chout-user input {
+.car-chout-user input,
+.health-chout-user input {
   width: 30%;
   padding: 8px;
   box-sizing: border-box;
 }
 
-.car-chout-user p.ch-inp {
-  margin: 25px 0 32px 0;
+.health-chout-user .health-rb input {
+  width: 3%;
+  vertical-align: top;
+}
+
+.car-chout-user p.ch-inp,
+.health-chout-user p.he-inp {
+  margin: 25px 0 21px 0;
   text-align: left;
 }
 
 .car-chout-user #dd,
-.car-chout-user #mm {
+.car-chout-user #mm,
+.health-chout-user #dd,
+.health-chout-user #mm {
   width: 7%;
   text-align: center;
 }
 
-.car-chout-user #yyyy {
+.car-chout-user #yyyy,
+.health-chout-user #yyyy {
   width: 12%;
   text-align: center;
 }
 
-.car-chout-buy {
+.car-chout-buy,
+.health-chout-buy {
   font-size: 15px;
   text-align: center;
 }
 
-.car-chout-buy button {
+.car-chout-buy button,
+.health-chout-buy button {
   width: 110px;
   height: 41px;
   margin: 35px 0 14px 0;
   font-size: 15px;
   text-align: center;
-  text-align: center;
 }
 
-.car-chout-user span { font-weight: 600; }
+.health-chout-buy button {
+  width: 160px;
+  margin: 20px 0 6px 0;
+}
+
+.car-chout-user span,
+.health-chout-user span {
+  vertical-align: top;
+  font-weight: 600;
+}
 
 .car-chout-user span + span { float: right; }
+
+.health-chout-user #fname { margin: 0 0 0 80px; }
+
+.health-chout-user #dd { margin: 0 0 0 16px; }
+
+textarea {
+  padding: 10px;
+  margin: 0 0 0 46px;
+  font-family: 'Open Sans', sans-serif;
+  resize: none;
+}
 /*content style end*/

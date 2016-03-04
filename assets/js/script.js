@@ -46,6 +46,12 @@ $(window).load(function() {
 			$('#nav-health').addClass('active');	
 		}
 		
+		var pos_car_chk = pathname.search("health-checkout.php");
+
+		if(pos_car_chk == 12) {
+			$('#nav-health').addClass('active');
+		}
+
 		var pos_about = pathname.search("about-us.php");
 
 		if(pos_about == 12) {
