@@ -19,7 +19,7 @@ include("header.php");
 					<img src="assets/images/apollo.png" alt="policy-logo">
 					<span class="health-ct-amt">Care NCB Super</span>
 					<span>Cover Amount : 1,00,000</span>
-					<span class="health-ct-amt">Rs. 2,283</span>
+					<span class="health-ct-amt"><i class="fa fa-inr"></i> 2,283</span>
 				</div>
 			</div>
 			<div class="health-chout-data">

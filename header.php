@@ -36,7 +36,10 @@
     <!-- Open sans google font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
-    <!--jQuery -->
+    <!-- Bootstrap of rupee font -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- jQuery -->
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
 
     <!-- For IE9 browsers. -->

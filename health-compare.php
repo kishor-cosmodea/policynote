@@ -44,7 +44,7 @@ include("header.php");
 							<img src="assets/images/apollo.png" alt="policy-logo">
 						</p>
 						<p class="health-premium">
-							<span class="health-amt">Rs. 2,123</span>
+							<span class="health-amt"><i class="fa fa-inr"></i> 2,123</span>
 						</p>
 						<p>
 							<button class="health-buy">Buy</button>
@@ -53,7 +53,7 @@ include("header.php");
 					<div class="health-cov-cont">
 						<div>
 							<span class="health-cov">Covered Amount</span>
-							<span>Rs. 3 Lakhs</span>
+							<span><i class="fa fa-inr"></i> 3 Lakhs</span>
 						</div>
 						<div>
 							<span class="health-cov">Key Benefits</span>
@@ -74,7 +74,7 @@ include("header.php");
 							<img src="assets/images/apollo.png" alt="policy-logo">
 						</p>
 						<p class="health-premium">
-							<span class="health-amt">Rs. 2,123</span>
+							<span class="health-amt"><i class="fa fa-inr"></i> 2,123</span>
 						</p>
 						<p>
 							<button class="health-buy">Buy</button>
@@ -83,7 +83,7 @@ include("header.php");
 					<div class="health-cov-cont">
 						<div>
 							<span class="health-cov">Covered Amount</span>
-							<span>Rs. 3 Lakhs</span>
+							<span><i class="fa fa-inr"></i> 3 Lakhs</span>
 						</div>
 						<div>
 							<span class="health-cov">Key Benefits</span>

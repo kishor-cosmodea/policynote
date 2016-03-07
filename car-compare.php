@@ -45,10 +45,10 @@ include("header.php");
 					<p>
 						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span>Rs. 5,00,850</span>
+						<span><i class="fa fa-inr"></i> 5,00,850</span>
 					</p>
 					<p class="car-premium">
-						<span class="car-amt">Rs. 10,123</span>
+						<span class="car-amt"><i class="fa fa-inr"></i> 10,123</span>
 						<span class="car-det">Premium Details</span>
 					</p>
 					<p>
@@ -60,10 +60,10 @@ include("header.php");
 					<p>
 						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span>Rs. 5,00,850</span>
+						<span><i class="fa fa-inr"></i> 5,00,850</span>
 					</p>
 					<p class="car-premium">
-						<span class="car-amt">Rs. 12,333</span>
+						<span class="car-amt"><i class="fa fa-inr"></i> 12,333</span>
 						<span class="car-det">Premium Details</span>
 					</p>
 					<p>
@@ -75,10 +75,10 @@ include("header.php");
 					<p>
 						<img src="assets/images/sbi.png" alt="policy-logo">
 						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span>Rs. 5,00,850</span>
+						<span><i class="fa fa-inr"></i> 5,00,850</span>
 					</p>
 					<p class="car-premium">
-						<span class="car-amt">Rs. 15,563</span>
+						<span class="car-amt"><i class="fa fa-inr"></i> 15,563</span>
 						<span class="car-det">Premium Details</span>
 					</p>
 					<p>

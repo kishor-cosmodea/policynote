@@ -20,12 +20,12 @@ include("header.php");
 					<span class="car-ct-amt">2016 Maruti Swift Dzire</span>
 					<span>ZXI 1197cc</span>
 					<span>Petrol</span>
-					<span class="car-ct-amt">Rs. 8,222</span>
+					<span class="car-ct-amt"><i class="fa fa-inr"></i> 8,222</span>
 				</div>
 				<p>Policy Cover Summary</p>
 				<div class="car-ch-idv">
 					<h3>Insured Declared Value:</h3>
-					<span>Car:</span><span class="idv-right">Rs. 3,66,789</span>
+					<span>Car:</span><span class="idv-right"><i class="fa fa-inr"></i> 3,66,789</span>
 				</div>
 				<div class="car-ch-add">
 					<h3>Add Ons</h3>
