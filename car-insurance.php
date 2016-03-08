@@ -13,14 +13,48 @@ include("header.php");
 		<div class="car-quote">
 			<div class="car-get">
 				<ul>
-					<li><button>Car Model</button></li>
-					<li><button>Registration Year</button></li>
-					<li><button>Fuel Type</button></li>
-					<li><button>Policy Status</button></li>
-					<li><button>Varient</button></li>
-					<li><button>Registration RTO</button></li>
+					<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod"></li>
+					<li>
+						<select name="Manufacturing Year">
+							<option value="year">Manufacturing Year</option>
+							<option value="2016">2016</option>
+							<option value="2015">2015</option>
+							<option value="2015">2014</option>
+							<option value="2015">2013</option>
+							<option value="2015">2012</option>
+							<option value="2015">2011</option>
+						</select>
+						<select name="Fuel Type" class="sel-fuel">
+							<option value="fueltype">Fuel Type</option>
+							<option value="petrol">Petrol</option>
+							<option value="diesel">Diesel</option>
+						</select>
+						<select name="Variant" class="sel-var">
+							<option value="variant">Variant</option>
+							<option value="tsi">TSI</option>
+							<option value="vdi">VDI</option>
+							<option value="vdi">ZDI</option>
+						</select>
+					</li>
+					<li>
+						<label>Registration (RTO)    </label>
+						<select name="SelRtoCode" class="sel-rto">
+							<option value="mh-01">MH-01-Mumbai Central- Location- Tardeo</option>
+							<option value="mh-02">MH-02-Andheri (mumbai Western Suburbs)</option>
+							<option value="mh-03">MH-03-Mumbai, (east), Wadala</option>
+							<option value="mh-04">MH-04-Thane</option>
+							<option value="mh-05">MH-05-Kalyan</option>
+						</select>
+					</li>
+					<li>
+						<label>Policy Status    </label>
+						<select name="SelPolStat">
+							<option value="buynew">Buy New</option>
+							<option value="renew">Renew</option>
+						</select>
+					</li>
 				</ul>
-				<button class="btn-quote">Get Quotes</button>
+				<button class="btn-quote"><a href="car-compare.php">Get Quotes</a></button>
 			</div>
 		</div>
 	</div>

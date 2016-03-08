@@ -306,7 +306,8 @@ footer {
 
 .ins-head h2 {
   color: #008ed6;
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 .list-insurance .ins-img { margin: 20px 0; }
@@ -354,7 +355,7 @@ footer {
 .spl-one-cont .car-left span {
   margin: 0 0 30px 0;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   color: #008ed6;
 }
@@ -366,7 +367,7 @@ footer {
 }
 
 .ins-thoug p {
-  font-size: 19px;
+  font-size: 16px;
   margin: 40px 0;
   font-weight: 400;
 }
@@ -384,9 +385,7 @@ footer {
   margin: 0 auto 30px;
 }
 
-.main-testi span {
-  font-size: 26px;
-}
+.main-testi span { font-size: 26px; }
 
 .easy-wrap {
   width: 60%;
@@ -424,29 +423,24 @@ footer {
 }
 
 .car-quote {
-  padding: 0 0 175px 0;
+  padding: 0 0 100px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
 .car-text h2 {
+  font-weight: 600;
   font-size: 44px;
   color: #fff;
 }
 
 .car-get {
-  width: 61%;
+  width: 50%;
   margin: 0 auto;
-}
-
-.car-get ul {
- -webkit-column-count: 3;
- -moz-column-count: 3;
- column-count: 3;
 }
 
 .car-get ul li {
   margin: 30px 0;
-  display: inline-block;
+  text-align: left;
 }
 
 .car-get button {
@@ -476,6 +470,50 @@ footer {
   background: #fff;
 }
 
+.car-get button a { color: #fff; }
+
+.car-get button a:hover { color: #008ed6; }
+
+.car-get label {
+  font-size: 26px;
+  color: #fff;
+}
+
+.car-get select {
+  width: 200px;
+  height: 48px;
+  padding: 5px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.car-get select:hover {
+  color: #fff;
+  background-color: #008ed6;
+}
+
+.car-get select.sel-rto { width: 304px; }
+
+.car-get select.sel-fuel,
+.car-get select.sel-var { margin: 0 0 0 15px; }
+
+.car-get input {
+  border-bottom: 1px dotted #ccc;
+  background: 0 0;
+  border-width: 0 0 1px;
+  outline: none;
+  width: 160px;
+  color: #008ed6;
+  font-size: 22px;
+  text-align: center;
+}
+
 .car-profile-content,
 .health-profile-content {
   margin: 78px auto 0;
@@ -486,6 +524,7 @@ footer {
 .health-profile-text h2,
 .car-chk-text h2,
 .health-chk-text h2 {
+  font-weight: 600;
   text-align: center;
   font-size: 32px;
   color: #008ed6;
@@ -716,6 +755,12 @@ footer {
 .car-buy:hover,
 .health-buy:hover { background: #037cb9; }
 
+.car-buy a,
+.health-buy a { color: #fff; }
+
+.car-buy a:hover,
+.health-buy a:hover { color: #008ed6; }
+
 .health-policy-plan .health-pla-cont { padding: 20px 0; }
 
 .health-policy-plan .health-cov-cont {
@@ -755,6 +800,7 @@ footer {
 }
 
 .health-text h2 {
+  font-weight: 600;
   font-size: 44px;
   color: #fff;
 }
@@ -1010,8 +1056,9 @@ textarea {
 
 .about-text h2 {
   margin: 392px 0 0 8%;
-  font-size: 50px;
+  font-size: 46px;
   color: #fff;
+  font-weight: 600;
 }
 
 .about-text h3 {
@@ -1044,8 +1091,9 @@ textarea {
 }
 
 .about-family h2 {
-  font-size: 50px;
+  font-size: 46px;
   color: #fff;
+  font-weight: 600;
 }
 
 .about-family h3 {
@@ -1056,8 +1104,9 @@ textarea {
 .about-policy { text-align: center; }
 
 .about-policy h2 {
-  font-size: 46px;
+  font-size: 44px;
   color: #008ed6;
+  font-weight: 600;
 }
 
 .about-policy h3 {
@@ -1083,8 +1132,9 @@ textarea {
 }
 
 .about-buy h2 {
-  font-size: 46px;
+  font-size: 44px;
   color: #fff;
+  font-weight: 600;
 }
 
 .about-buy h2 span {
@@ -1124,8 +1174,9 @@ textarea {
 .about-cont h2 {
   margin: 0 0 20px 0;
   text-align: center;
-  font-size: 46px;
+  font-size: 44px;
   color: #008ed6;
+  font-weight: 600;
 }
 
 .about-cont { margin: 20px 0 36px 0; }
@@ -1164,9 +1215,7 @@ textarea {
   background-color: #fbfbfb;
 }
 
-.terms-content .wrapper {
-  width: 80%;
-}
+.terms-content .wrapper { width: 80%; }
 
 .terms-content h2 {
   padding: 10px 0;
@@ -1182,7 +1231,6 @@ textarea {
   color: #008ed6;
 }
 
-.terms-use:last-child {
-  padding: 0 0 30px 0;
-}
+.terms-use:last-child { padding: 0 0 30px 0; }
+
 /*content style end*/
