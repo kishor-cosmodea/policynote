@@ -44,7 +44,11 @@ include("header.php");
 						<p>1. Proposer</p>
 					</div>
 					<div class="car-chout-user">
-						<button>Mr</button>
+						<select name="chk-mr" class="chk-mr">
+							<option value="mr">Mr</option>
+							<option value="mrs">Mrs</option>
+							<option value="ms">Ms</option>
+						</select>
 						<input type="text" name="fname" placeholder="First Name">
 						<input type="text" name="lname" placeholder="Last Name">
 						<p><input type="text" name="email" placeholder="Email ID">
