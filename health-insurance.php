@@ -24,14 +24,14 @@ include("header.php");
 						<button>Son</button>
 						<button>Daughter</button>
 					</li>
-					<li><span>Insured member details are :</span></li>
+					<li><span>Insured members details are :</span></li>
 					<li>
 						<span>Self :</span><input class="health-age" type="text" name="health-pin"><span>Years</span>
 						<button>Male</button>
 						<button>Female</button>
 					</li>
 				</ul>
-				<button class="btn-quote">Get Quotes</button>
+				<button class="btn-quote"><a href="health-compare.php">Get Quotes</a></button>
 			</div>
 		</div>
 	</div>

@@ -34,7 +34,10 @@ include("header.php");
 					<span>Policy Plans</span>
 					<div>
 						<span class="health-sort">Sort By:</span>
-						<span>Price</span>
+						<select name="hel-price" class="hel-price">
+							<option value="price">Price</option>
+							<option value="match">Match</option>
+						</select>
 					</div>
 				</div>
 
@@ -47,7 +50,7 @@ include("header.php");
 							<span class="health-amt"><i class="fa fa-inr"></i> 2,123</span>
 						</p>
 						<p>
-							<button class="health-buy">Buy</button>
+							<button class="health-buy"><a href="health-checkout.php">Buy</a></button>
 						</p>
 					</div>
 					<div class="health-cov-cont">
@@ -77,7 +80,7 @@ include("header.php");
 							<span class="health-amt"><i class="fa fa-inr"></i> 2,123</span>
 						</p>
 						<p>
-							<button class="health-buy">Buy</button>
+							<button class="health-buy"><a href="health-checkout.php">Buy</a></button>
 						</p>
 					</div>
 					<div class="health-cov-cont">

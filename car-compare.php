@@ -80,7 +80,10 @@ include("header.php");
 					<span>Policy Plans</span>
 					<div>
 						<span class="car-sort">Sort By:</span>
-						<span>Premium</span>
+						<select name="car-price" class="car-price">
+							<option value="price">Price</option>
+							<option value="match">Match</option>
+						</select>
 					</div>
 				</div>
 
