@@ -418,12 +418,12 @@ footer {
 }
 
 .car-text {
-  padding: 100px 0 0 0;
+  padding: 83px 0 23px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
 .car-quote {
-  padding: 0 0 100px 0;
+  padding: 0 0 60px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
@@ -434,8 +434,11 @@ footer {
 }
 
 .car-get {
-  width: 50%;
+  width: 47.4%;
   margin: 0 auto;
+  padding: 1px 2% 35px;
+  border-radius: 3px;
+  background: rgba(239,239,244,.96);
 }
 
 .car-get ul li {
@@ -459,14 +462,11 @@ footer {
 
 .car-get button.btn-quote {
   color: #fff;
-  margin: 20px 0 0 0;
+  margin: 15px 0 0 0;
   background: #008ed6;
 }
 
-.car-get button.btn-quote:hover {
-  color: #008ed6;
-  background: #fff;
-}
+.car-get button.btn-quote:hover { background: #037cb9; }
 
 .car-get button a {
   color: #fff;
@@ -474,31 +474,28 @@ footer {
   display: inline-block;
 }
 
-.car-get button a:hover { color: #008ed6; }
+.car-get button a:hover { color: #fff; }
 
 .car-get label {
-  font-size: 26px;
-  color: #fff;
+  font-size: 18px;
+  color: #008ed6;
 }
 
 .car-get select {
   width: 200px;
   height: 48px;
   padding: 5px;
-  background-color: #fff;
+  background-color: #008ed6;
   font-family: 'Open Sans', sans-serif;
-  color: #000;
+  color: #fff;
   outline: none;
   border: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
 }
 
-.car-get select:hover {
-  color: #fff;
-  background-color: #008ed6;
-}
+.car-get select:hover { background-color: #037cb9; }
 
 .car-get select.sel-rto { width: 304px; }
 
@@ -506,13 +503,13 @@ footer {
 .car-get select.sel-var { margin: 0 0 0 15px; }
 
 .car-get input {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #999;
   background: 0 0;
   border-width: 0 0 1px;
   outline: none;
   width: 160px;
   color: #008ed6;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -560,6 +557,7 @@ footer {
   font-size: 24px;
   text-align: center;
   color: #008ed6;
+  font-weight: 600;
 }
 
 .health-re-data p { margin: 15px 0; }
@@ -579,19 +577,20 @@ footer {
 
 .car-re-data ul { margin: 15px 0; }
 
-.car-re-data label {
-  font-size: 18px;
+.car-re-data label,
+.health-re-data p span {
+  font-size: 16px;
   color: #008ed6;
 }
 
 .car-re-data input {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #999;
   background: 0 0;
   border-width: 0 0 1px;
   outline: none;
   width: 145px;
   color: #008ed6;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -617,11 +616,11 @@ footer {
 .car-refine button,
 .health-refine button {
   border: 1px solid #008ed6;
-  background: #fff;
+  background: #008ed6;
   width: 230px;
   height: 36px;
   font-size: 14px;
-  color: #008ed6;
+  color: #fff;
   font-weight: 500;
   text-align: left;
   outline: none;
@@ -635,10 +634,7 @@ footer {
 }
 
 .car-refine button:hover,
-.health-refine button:hover {
-  color: #fff;
-  background: #008ed6;
-}
+.health-refine button:hover { background: #037cb9; }
 
 .car-re-dis,
 .health-re-dis {
@@ -674,7 +670,7 @@ footer {
   vertical-align: top;
 }
 
-.car-result-data { min-height: 845px;  }
+.car-result-data { min-height: 841px;  }
 
 .car-chout-data,
 .health-chout-data { padding: 0 2%; }
@@ -839,12 +835,12 @@ footer {
 }
 
 .health-text {
-  padding: 100px 0 0 0;
+  padding: 83px 0 23px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
 .health-quote {
-  padding: 0 0 140px 0;
+  padding: 0 0 60px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
@@ -854,9 +850,12 @@ footer {
   color: #fff;
 }
 
-.health-text h3 {
-  font-size: 30px;
-  color: #fff;
+.health-get h3 {
+  margin: 12px 0 -10px 0;
+  font-size: 24px;
+  color: #008ed6;
+  text-align: center;
+  font-weight: 600;
 }
 
 .health-get ul li { margin: 20px 0; }
@@ -866,40 +865,40 @@ footer {
   background: #008ed6;
   width: 130px;
   height: 40px;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   font-weight: 500;
   outline: none;
 }
 
-.health-get button:hover {
-  color: #008ed6;
-  background: #fff;
-}
+.health-get button:hover { background: #037cb9; }
 
 .health-get {
+  width: 59.6%;
+  padding: 1px 2% 30px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background: rgba(239,239,244,.96);
   text-align: left;
-  width: 61%;
-  margin: -20px auto 0;
-  font-size: 26px;
-  color: #fff;
+  font-size: 18px;
+  color: #008ed6;
 }
 
 .health-get .health-pin,
 .health-pin {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #999;
   background: 0 0;
   border-width: 0 0 1px;
   outline: none;
   width: 90px;
   color: #008ed6;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 
 .health-get .health-age,
 .health-age {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #999;
   background: 0 0;
   border-width: 0 0 1px;
   outline: none;
@@ -918,17 +917,14 @@ footer {
   font-size: 19px;
   font-weight: 500;
   outline: none;
-  color: #008ed6;
-  background: #fff;
-}
-
-.health-get  button.btn-quote:hover {
   color: #fff;
   background: #008ed6;
 }
 
+.health-get  button.btn-quote:hover { background: #037cb9; }
+
 .health-get button a {
-  color: #008ed6;
+  color: #fff;
   padding: 20px 60px;
   display: inline-block;
 }
@@ -952,7 +948,7 @@ footer {
 
 .car-ch-ins span,
 .health-ch-ins span {
-  margin: 4px 0;
+  margin: 11px 0;
   display: block;
   font-size: 16px;
 }

@@ -37,7 +37,7 @@ include("header.php");
 						</select>
 					</li>
 					<li>
-						<label>Registration (RTO)    </label>
+						<label>Registration (RTO)     </label>
 						<select name="SelRtoCode" class="sel-rto">
 							<option value="mh-01">MH-01-Mumbai Central- Location- Tardeo</option>
 							<option value="mh-02">MH-02-Andheri (mumbai Western Suburbs)</option>
@@ -47,7 +47,7 @@ include("header.php");
 						</select>
 					</li>
 					<li>
-						<label>Policy Status    </label>
+						<label>Policy Status     </label>
 						<select name="SelPolStat">
 							<option value="buynew">Buy New</option>
 							<option value="renew">Renew</option>

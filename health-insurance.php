@@ -9,12 +9,13 @@ include("header.php");
 	<div class="health-content">
 		<div class="health-text">
 			<h2>Get Insurance for your Health</h2>
-			<h3>New Health Policy</h3>
+			
 		</div>
 		<div class="health-quote">
 			<div class="health-get">
+				<h3>New Health Policy</h3>
 				<ul>
-					<li><span>Pin Code </span><input class="health-pin" type="text" name="health-pin"></li>
+					<li><span>Pin Code    </span><input class="health-pin" type="text" name="health-pin"></li>
 					<li><span>Insurance For :</span></li>
 					<li>
 						<button>Self</button>
@@ -26,7 +27,7 @@ include("header.php");
 					</li>
 					<li><span>Insured members details are :</span></li>
 					<li>
-						<span>Self :</span><input class="health-age" type="text" name="health-pin"><span>Years</span>
+						<span>Self    </span><input class="health-age" type="text" name="health-pin"><span>    Years    </span>
 						<button>Male</button>
 						<button>Female</button>
 					</li>
