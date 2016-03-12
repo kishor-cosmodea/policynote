@@ -14,7 +14,7 @@ include("header.php");
 			<div class="health-refine">
 				<div class="health-re-data">
 					<h3>Refine Search</h3>
-					<p><span>Pin Code </span><input class="health-pin" type="text" name="health-pin"></p>
+					<p><span>Pin Code </span><input class="health-pin" type="text" name="health-pin" placeholder="eg. 400001"></p>
 					<p><span>Insured for:</span></p>
 					<button>Self</button>
 					<button>Spouse</button>
@@ -23,7 +23,7 @@ include("header.php");
 					<button>Son</button>
 					<button>Daughter</button>
 					<p><span>Insured member details are:</span></p>
-					<p><span>Self :</span><input class="health-age" type="text" name="health-pin"><span>Years</span></p>
+					<p><span>Self :</span><input class="health-age" type="text" name="health-age" placeholder="age"><span>Years</span></p>
 					<button>Male</button>
 					<button>Female</button>
 				</div>

@@ -102,6 +102,7 @@ header {
   position: fixed;
   background-color: #fff;
   top: 0;
+  z-index: 1;
 }
 
 .wrapper {
@@ -503,14 +504,11 @@ footer {
 .car-get select.sel-var { margin: 0 0 0 15px; }
 
 .car-get input {
-  border-bottom: 1px dotted #999;
-  background: 0 0;
-  border-width: 0 0 1px;
+  padding: 8px;
+  border: 1px solid #ccc;
   outline: none;
-  width: 160px;
   color: #008ed6;
-  font-size: 20px;
-  text-align: center;
+  font-size: 16px;
 }
 
 .car-profile-content,
@@ -584,14 +582,12 @@ footer {
 }
 
 .car-re-data input {
-  border-bottom: 1px dotted #999;
-  background: 0 0;
-  border-width: 0 0 1px;
+  width: 152px;
+  padding: 8px 5px;
+  border: 1px solid #ccc;
   outline: none;
-  width: 145px;
   color: #008ed6;
-  font-size: 20px;
-  text-align: center;
+  font-size: 14px;
 }
 
 .car-re-data select,
@@ -616,11 +612,11 @@ footer {
 .car-refine button,
 .health-refine button {
   border: 1px solid #008ed6;
-  background: #008ed6;
+  background: #fff;
   width: 230px;
   height: 36px;
   font-size: 14px;
-  color: #fff;
+  color: #008ed6;
   font-weight: 500;
   text-align: left;
   outline: none;
@@ -634,7 +630,12 @@ footer {
 }
 
 .car-refine button:hover,
-.health-refine button:hover { background: #037cb9; }
+.health-refine button:hover {
+  color: #fff;
+  background: #008ed6;
+}
+
+.car-re-data { border-bottom: 1px solid #008ed6; }
 
 .car-re-dis,
 .health-re-dis {
@@ -670,7 +671,7 @@ footer {
   vertical-align: top;
 }
 
-.car-result-data { min-height: 841px;  }
+.car-result-data { min-height: 865px;  }
 
 .car-chout-data,
 .health-chout-data { padding: 0 2%; }
@@ -723,7 +724,7 @@ footer {
   margin: 30px 0;
   background: #fff;
   border: 1px solid #008ed6;
-  padding: 15px 2%;
+  text-align: center;
   box-shadow: 0 0 19px -5px rgb(0,0,0);
   -moz-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
   -webkit-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
@@ -754,8 +755,6 @@ footer {
 .car-idv,
 .health-cov { font-weight: 600; }
 
-.car-premium { margin: 25px 0 0 0; }
-
 .health-premium { margin: 6px 0 0 0; }
 
 .car-policy-plan .car-premium .car-amt,
@@ -772,6 +771,11 @@ footer {
   font-size: 12px;
 }
 
+.car-premium .car-low {
+      color: #00b300;
+    font-weight: 600;
+}
+
 .car-policy-plan p img,
 .health-policy-plan p img {
   display: inline-block;
@@ -782,9 +786,9 @@ footer {
 .car-buy,
 .health-buy {
   text-align: center;
-  color: #fff;
-  background: #008ed6;
-  margin: 35px 0 0 0;
+  color: #000;
+  background: #00b300;
+  margin: 15px 0 0 0;
   border: none;
   font-size: 18px;
   float: right;
@@ -792,9 +796,6 @@ footer {
 }
 
 .health-buy { margin: 7px 0 0 0; }
-
-.car-buy:hover,
-.health-buy:hover { background: #037cb9; }
 
 .car-buy a,
 .health-buy a {
@@ -805,6 +806,18 @@ footer {
 
 .car-buy a:hover,
 .health-buy a:hover { color: #fff; }
+
+.car-policy-plan div {
+  padding: 15px 0;
+}
+
+.car-policy-plan .car-idv-cont { border-top: 1px solid #ccc; }
+
+.car-idv-cont p { border-left: 1px solid #ccc; }
+
+.car-idv-cont p:first-child { border: none; }
+
+.car-idv-cont span { display: block; }
 
 .health-policy-plan .health-pla-cont { padding: 20px 0; }
 
@@ -861,17 +874,20 @@ footer {
 .health-get ul li { margin: 20px 0; }
 
 .health-get button {
-  border: none;
-  background: #008ed6;
   width: 130px;
   height: 40px;
+  border: 1px solid #008ed6;
+  background: #fff;
   font-size: 14px;
-  color: #fff;
+  color: #008ed6;
   font-weight: 500;
   outline: none;
 }
 
-.health-get button:hover { background: #037cb9; }
+.health-get button:hover {
+  color: #fff;
+  background: #008ed6;
+}
 
 .health-get {
   width: 59.6%;
@@ -886,25 +902,23 @@ footer {
 
 .health-get .health-pin,
 .health-pin {
-  border-bottom: 1px dotted #999;
-  background: 0 0;
-  border-width: 0 0 1px;
-  outline: none;
   width: 90px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  outline: none;
   color: #008ed6;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 
 .health-get .health-age,
 .health-age {
-  border-bottom: 1px dotted #999;
-  background: 0 0;
-  border-width: 0 0 1px;
+  width: 30px;
+  padding: 8px;
+  margin: 0 8px;
   outline: none;
-  width: 40px;
   color: #008ed6;
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
 }
 

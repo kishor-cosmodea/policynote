@@ -15,7 +15,7 @@ include("header.php");
 				<div class="car-re-data">
 					<h3>Refine Search</h3>
 					<ul>
-						<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod"></li>
+						<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod" placeholder="eg. polo, i20"></li>
 						<li>
 							<select name="Manufacturing Year">
 								<option value="year">Manufacturing Year</option>
@@ -88,48 +88,62 @@ include("header.php");
 				</div>
 
 				<div class="car-policy-plan">
-					<p>
-						<img src="assets/images/sbi.png" alt="policy-logo">
-						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span><i class="fa fa-inr"></i> 5,00,850</span>
-					</p>
-					<p class="car-premium">
-						<span class="car-amt"><i class="fa fa-inr"></i> 10,123</span>
-						<span class="car-det">Premium Details</span>
-					</p>
-					<p>
-						<button class="car-buy"><a href="car-checkout.php">Buy</a></button>
-					</p>
+					<div>
+						<p>
+							<img src="assets/images/sbi.png" alt="policy-logo">
+						</p>
+						<p class="car-premium">
+							<span class="car-low">Lowest Price</span>		
+							<span class="car-amt"><i class="fa fa-inr"></i> 10,123</span>
+							<span class="car-det">Premium Details</span>
+						</p>
+						<p>
+							<button class="car-buy"><a href="car-checkout.php">Buy</a></button>
+						</p>
+					</div>
+					<div class="car-idv-cont">
+						<p>
+							<span class="car-idv">Insured Declared Value (IDV)</span>
+							<span><i class="fa fa-inr"></i> 5,00,850</span>
+						</p>
+						<p>
+							<span>Add Ons</span>
+							<span>-</span>
+						</p>
+						<p>
+							<span>Discounts</span>
+							<span>-</span>
+						</p>
+					</div>
 				</div>
 
 				<div class="car-policy-plan">
-					<p>
-						<img src="assets/images/sbi.png" alt="policy-logo">
-						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span><i class="fa fa-inr"></i> 5,00,850</span>
-					</p>
-					<p class="car-premium">
-						<span class="car-amt"><i class="fa fa-inr"></i> 12,333</span>
-						<span class="car-det">Premium Details</span>
-					</p>
-					<p>
-						<button class="car-buy"><a href="car-checkout.php">Buy</a></button>
-					</p>
-				</div>
-
-				<div class="car-policy-plan">
-					<p>
-						<img src="assets/images/sbi.png" alt="policy-logo">
-						<span class="car-idv">Insured Declared Value (IDV)</span>
-						<span><i class="fa fa-inr"></i> 5,00,850</span>
-					</p>
-					<p class="car-premium">
-						<span class="car-amt"><i class="fa fa-inr"></i> 15,563</span>
-						<span class="car-det">Premium Details</span>
-					</p>
-					<p>
-						<button class="car-buy"><a href="car-checkout.php">Buy</a></button>
-					</p>
+					<div>
+						<p>
+							<img src="assets/images/sbi.png" alt="policy-logo">
+						</p>
+						<p class="car-premium">
+							<span class="car-amt"><i class="fa fa-inr"></i> 10,123</span>
+							<span class="car-det">Premium Details</span>
+						</p>
+						<p>
+							<button class="car-buy"><a href="car-checkout.php">Buy</a></button>
+						</p>
+					</div>
+					<div class="car-idv-cont">
+						<p>
+							<span class="car-idv">Insured Declared Value (IDV)</span>
+							<span><i class="fa fa-inr"></i> 5,00,850</span>
+						</p>
+						<p>
+							<span>Add Ons</span>
+							<span>-</span>
+						</p>
+						<p>
+							<span>Discounts</span>
+							<span>-</span>
+						</p>
+					</div>
 				</div>
 
 			</div>

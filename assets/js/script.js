@@ -59,3 +59,12 @@ $(window).load(function() {
 		}
 
 	});
+
+// Hide input placeholder on focus event
+$('input[placeholder]').on('focus', function () {
+	var $this = $(this);
+	$this.data('placeholder', $this.prop('placeholder')).removeAttr('placeholder')
+}).on('blur', function () {
+	var $this = $(this);
+	$this.prop('placeholder', $this.data('placeholder'));
+});

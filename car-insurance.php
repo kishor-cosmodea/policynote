@@ -13,7 +13,7 @@ include("header.php");
 		<div class="car-quote">
 			<div class="car-get">
 				<ul>
-					<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod"></li>
+					<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod" placeholder="eg. polo, i20"></li>
 					<li>
 						<select name="Manufacturing Year">
 							<option value="year">Manufacturing Year</option>
