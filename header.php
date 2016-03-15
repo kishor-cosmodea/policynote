@@ -42,6 +42,9 @@
     <!-- jQuery -->
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
 
+    <!-- Typehead -->
+    <script type="text/javascript" src="assets/vendor/typehead.min.js"></script>
+
     <!-- For IE9 browsers. -->
     <!--[if IE 9 ]><html class="ie9"> <![endif]-->
 

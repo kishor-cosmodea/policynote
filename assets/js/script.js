@@ -60,6 +60,14 @@ $(window).load(function() {
 
 	});
 
+
+// Document ready functions
+$(document).ready(function(){
+	//alert("hi");
+
+});
+
+
 // Hide input placeholder on focus event
 $('input[placeholder]').on('focus', function () {
 	var $this = $(this);
