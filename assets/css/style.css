@@ -437,17 +437,11 @@ footer {
 .car-get {
   width: 47.4%;
   margin: 0 auto;
-  padding: 1px 2% 35px;
+padding: 9px 2% 35px;
   border-radius: 3px;
   background: rgba(239,239,244,.96);
-}
-
-/*.car-get ul li {
-  margin: 30px 0;
   text-align: left;
-  }*/
-
-  /*.car-get ul li a { color: #fff; }*/
+}
 
   .car-get button {
     border: none;
@@ -465,7 +459,7 @@ footer {
 
   .car-get button.btn-quote {
     color: #fff;
-    margin: 30px 0 0 0;
+    margin: 30px 0 0 32%;
     background: #008ed6;
   }
 
@@ -516,16 +510,19 @@ footer {
     font-size: 14px;
   }
 
-  .car-get .dropdown-menu {
+  .car-get .dropdown-menu,
+  .car-re-data .dropdown-menu {
     position: absolute;
     width: 200px;
   }
 
-  .car-get .dropdown-menu li {
+  .car-get .dropdown-menu li,
+  .car-re-data .dropdown-menu li {
     background: #008ed6;
   }
 
-  .car-get .dropdown-menu li a {
+  .car-get .dropdown-menu li a,
+  .car-re-data .dropdown-menu a {
     color: #fff;
     padding: 5px;
     display: block;
@@ -534,22 +531,24 @@ footer {
 
 
   .car-get .dropdown-menu li:hover,
-  .car-get .dropdown-menu li a:hover {
+  .car-get .dropdown-menu li a:hover,
+  .car-re-data .dropdown-menu li:hover, 
+  .car-re-data .dropdown-menu li a:hover {
     color: #008ed6;
     background: #fff;
   }
 
   ::-webkit-input-placeholder {
-    color:    #008ed6;
+    color:    #ccc;
   }
   :-moz-placeholder {
-    color:    #008ed6;
+    color:    #ccc;
   }
   ::-moz-placeholder {
-    color:    #008ed6;
+    color:    #ccc;
   }
   :-ms-input-placeholder {
-    color:    #008ed6;
+    color:    #ccc;
   }
 
 
@@ -615,18 +614,21 @@ footer {
   .car-refine .ref-submit:hover,
   .health-refine .ref-submit:hover { background: #037cb9; }
 
-  .car-re-data ul { margin: 15px 0; }
+/*  .car-re-data ul { margin: 15px 0; }*/
 
   .car-re-data label,
   .health-re-data p span {
+    margin: 10px 0;
+    display: inline-block;
     font-size: 16px;
     color: #008ed6;
   }
 
   .car-re-data input {
-    width: 152px;
+    width: 189px;
     padding: 8px 5px;
     border: 1px solid #ccc;
+    margin: 5px 0 0 0;
     outline: none;
     color: #008ed6;
     font-size: 14px;
@@ -637,7 +639,7 @@ footer {
     width: 200px;
     height: 40px;
     padding: 5px;
-    margin: 10px 13%;
+    margin: 10px 0;
     background-color: #008ed6;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
@@ -650,6 +652,8 @@ footer {
 
   .car-re-data select:hover,
   .car-re-dis select:hover { background: #037cb9; }
+
+  .car-re-dis select { margin: 10px 0 10px 33px; }
 
   .car-refine button,
   .health-refine button {
@@ -677,7 +681,10 @@ footer {
     background: #008ed6;
   }
 
-  .car-re-data { border-bottom: 1px solid #008ed6; }
+  .car-re-data {
+  padding: 0 0 0 33px;
+    border-bottom: 1px solid #008ed6;
+  }
 
   .car-re-dis,
   .health-re-dis {
@@ -713,7 +720,7 @@ footer {
     vertical-align: top;
   }
 
-  .car-result-data { min-height: 865px;  }
+  .car-result-data { min-height: 916px; }
 
   .car-chout-data,
   .health-chout-data { padding: 0 2%; }

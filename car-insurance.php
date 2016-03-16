@@ -20,7 +20,7 @@ include("header.php");
 					,&quot;Audi Q5&quot;,&quot;Audi Q7&quot;,&quot;Audi Q7&quot;,&quot;Audi R8&quot;
 					,&quot;Audi RS5&quot;,&quot;Audi RS 6 Avant&quot;,&quot;Audi RS7&quot;,&quot;Audi S4&quot;
 					,&quot;Audi S6&quot;,&quot;Audi TT Coupe&quot;
-					]" placeholder="eg. audi a3">
+					]" placeholder="eg. Audi A3">
 				</p>
 				<p>
 <!-- 					<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
@@ -39,9 +39,17 @@ include("header.php");
             	<option value="2015">2013</option>
             	<option value="2015">2012</option>
             	<option value="2015">2011</option>
+            	<option value="2016">2010</option>
+            	<option value="2015">2009</option>
+            	<option value="2015">2008</option>
+            	<option value="2015">2007</option>
+            	<option value="2015">2006</option>
+            	<option value="2015">2005</option>
+            	<option value="2016">2004</option>
+            	<option value="2015">2003</option>
+            	<option value="2015">2002</option>
+            	<option value="2015">2001</option>
             </select>
-
-
 
             <select name="Fuel Type" class="sel-fuel">
             	<option value="fueltype">Fuel Type</option>

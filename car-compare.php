@@ -14,17 +14,34 @@ include("header.php");
 			<div class="car-refine">
 				<div class="car-re-data">
 					<h3>Refine Search</h3>
-					<ul>
-						<li><label>Car Model is     </label><input class="car-mod" type="text" name="car-mod" placeholder="eg. polo, i20"></li>
-						<li>
+
+					<label>Car Model is</label>
+					<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
+					data-source="[&quot;Audi A3&quot;,&quot;Audi A4&quot;,&quot;Audi A6&quot;
+					,&quot;Audi A7&quot;,&quot;Audi A8&quot;,&quot;Audi C7&quot;,&quot;Audi Q3&quot;
+					,&quot;Audi Q5&quot;,&quot;Audi Q7&quot;,&quot;Audi Q7&quot;,&quot;Audi R8&quot;
+					,&quot;Audi RS5&quot;,&quot;Audi RS 6 Avant&quot;,&quot;Audi RS7&quot;,&quot;Audi S4&quot;
+					,&quot;Audi S6&quot;,&quot;Audi TT Coupe&quot;
+					]" placeholder="eg. Audi A3">
+
 							<select name="Manufacturing Year">
 								<option value="year">Manufacturing Year</option>
-								<option value="2016">2016</option>
-								<option value="2015">2015</option>
-								<option value="2015">2014</option>
-								<option value="2015">2013</option>
-								<option value="2015">2012</option>
-								<option value="2015">2011</option>
+            	<option value="2016">2016</option>
+            	<option value="2015">2015</option>
+            	<option value="2015">2014</option>
+            	<option value="2015">2013</option>
+            	<option value="2015">2012</option>
+            	<option value="2015">2011</option>
+            	<option value="2016">2010</option>
+            	<option value="2015">2009</option>
+            	<option value="2015">2008</option>
+            	<option value="2015">2007</option>
+            	<option value="2015">2006</option>
+            	<option value="2015">2005</option>
+            	<option value="2016">2004</option>
+            	<option value="2015">2003</option>
+            	<option value="2015">2002</option>
+            	<option value="2015">2001</option>
 							</select>
 							<select name="Fuel Type" class="sel-fuel">
 								<option value="fueltype">Fuel Type</option>
@@ -37,25 +54,29 @@ include("header.php");
 								<option value="vdi">VDI</option>
 								<option value="vdi">ZDI</option>
 							</select>
-						</li>
-						<li>
-							<label>Registration (RTO)    </label>
+
+<!-- 							<label>Registration (RTO)    </label>
 							<select name="SelRtoCode" class="sel-rto">
 								<option value="mh-01">MH-01-Mumbai Central- Location- Tardeo</option>
 								<option value="mh-02">MH-02-Andheri (mumbai Western Suburbs)</option>
 								<option value="mh-03">MH-03-Mumbai, (east), Wadala</option>
 								<option value="mh-04">MH-04-Thane</option>
 								<option value="mh-05">MH-05-Kalyan</option>
-							</select>
-						</li>
-						<li>
+							</select> -->
+          	<label>Registration location (RTO)</label>
+          	<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
+          	data-source="[&quot;MH-01-Mumbai Central- Location- Tardeo&quot;,&quot;MH-02-Andheri (mumbai Western Suburbs)&quot;,&quot;MH-03-Mumbai, (east), Wadala&quot;
+          	,&quot;MH-04-Thane&quot;,&quot;MH-05-Kalyan&quot;,&quot;2011&quot;,&quot;2010&quot;
+          	,&quot;2009&quot;,&quot;2008&quot;,&quot;2007&quot;,&quot;2006&quot;
+          	]" placeholder="eg. MH-01 or Mumbai">
+
+<p>
 							<label>Policy Status    </label>
 							<select name="SelPolStat">
 								<option value="buynew">Buy New</option>
 								<option value="renew">Renew</option>
 							</select>
-						</li>
-					</ul>
+</p>
 				</div>
 				<div class="car-re-add">
 					<span>Add Ons</span>
