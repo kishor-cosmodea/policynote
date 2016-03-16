@@ -17,7 +17,7 @@ include("header.php");
 				<ul>
 					<li><span>Pin Code    </span><input class="health-pin" type="text" name="health-pin" placeholder="eg. 400001"></li>
 					<li><span>Insurance For :</span></li>
-					<li>
+					<li class="health-item">
 						<button>Self</button>
 						<button>Spouse</button>
 						<button>Father</button>
@@ -26,7 +26,7 @@ include("header.php");
 						<button>Daughter</button>
 					</li>
 					<li><span>Insured members details are :</span></li>
-					<li>
+					<li class="health-g-item">
 						<span>Self    </span><input class="health-age" type="text" name="health-age" placeholder="age"><span>    Years    </span>
 						<button>Male</button>
 						<button>Female</button>

@@ -76,3 +76,28 @@ $('input[placeholder]').on('focus', function () {
 	var $this = $(this);
 	$this.prop('placeholder', $this.data('placeholder'));
 });
+
+
+//Car and health insurance buttons
+$('.car-re-add button, .health-item button').click( function () {
+
+	if ( $(this).hasClass( "act" ) ) {
+		$(this).removeClass('act');
+	} else {
+		$(this).addClass('act');
+	}
+
+});
+
+
+//Health insurance gender buttons
+$('.health-g-item button').click( function () {
+
+	if ( $("button").hasClass( "act" ) ) {
+		$(this).removeClass('act');
+	} else {
+		$(this).addClass('act');
+	}
+
+});
+
