@@ -79,7 +79,7 @@ $('input[placeholder]').on('focus', function () {
 
 
 //Car and health insurance buttons
-$('.car-re-add button, .health-item button').click( function () {
+$('.car-re-add button, .health-item button').on("click", function () {
 
 	if ( $(this).hasClass( "act" ) ) {
 		$(this).removeClass('act');
@@ -91,13 +91,40 @@ $('.car-re-add button, .health-item button').click( function () {
 
 
 //Health insurance gender buttons
-$('.health-g-item button').click( function () {
+$('.health-g-item button').on("click", function () {
 
-	if ( $("button").hasClass( "act" ) ) {
+	if ( $("button").hasClass( 'act' ) ) {
+		console.log("if");
 		$(this).removeClass('act');
 	} else {
+		console.log("el");
 		$(this).addClass('act');
 	}
 
 });
 
+
+//input mobile validation
+    var inputMobile = [];
+    $(function() {
+      $(".mobile").each(function(i) {
+        inputMobile[i]=this.defaultValue;
+         $(this).data("idx",i); // save this field's index to access later
+      });
+      $(".mobile").on("keyup", function (e) {
+        var $field = $(this),
+            val=this.value,
+            $thisIndex=parseInt($field.data("idx"),10); // retrieve the index
+//        window.console && console.log($field.is(":invalid"));
+          //  $field.is(":invalid") is for Safari, it must be the last to not error in IE8
+        if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
+            this.value = inputMobile[$thisIndex];
+            return;
+        } 
+        if (val.length > Number($field.attr("maxlength"))) {
+          val=val.slice(0, 10);
+          $field.val(val);
+        }
+        inputMobile[$thisIndex]=val;
+      });      
+    });

@@ -15,7 +15,7 @@ include("header.php");
 				<div class="car-re-data">
 					<h3>Refine Search</h3>
 
-					<label>Car Model is</label>
+					<label>Car model is</label>
 					<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
 					data-source="[&quot;Audi A3&quot;,&quot;Audi A4&quot;,&quot;Audi A6&quot;
 					,&quot;Audi A7&quot;,&quot;Audi A8&quot;,&quot;Audi C7&quot;,&quot;Audi Q3&quot;
@@ -71,7 +71,7 @@ include("header.php");
           	]" placeholder="eg. MH-01 or Mumbai">
 
 <p>
-							<label>Policy Status    </label>
+							<label>Policy status    </label>
 							<select name="SelPolStat">
 								<option value="buynew">Buy New</option>
 								<option value="renew">Renew</option>

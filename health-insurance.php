@@ -7,16 +7,13 @@ include("header.php");
 <!-- Content starts here-->
 <div class="container">
 	<div class="health-content">
-		<div class="health-text">
-			<h2>Get Insurance for your Health</h2>
-			
-		</div>
 		<div class="health-quote">
+			<h2>Get Insurance for your Health</h2>
 			<div class="health-get">
 				<h3>New Health Policy</h3>
 				<ul>
-					<li><span>Pin Code    </span><input class="health-pin" type="text" name="health-pin" placeholder="eg. 400001"></li>
-					<li><span>Insurance For :</span></li>
+					<li><span>Pin code    </span><input class="health-pin" type="text" name="health-pin" placeholder="eg. 400001" maxlength="6"></li>
+					<li><span>Insurance for :</span></li>
 					<li class="health-item">
 						<button>Self</button>
 						<button>Spouse</button>
@@ -27,7 +24,7 @@ include("header.php");
 					</li>
 					<li><span>Insured members details are :</span></li>
 					<li class="health-g-item">
-						<span>Self    </span><input class="health-age" type="text" name="health-age" placeholder="age"><span>    Years    </span>
+						<span>Self    </span><input class="health-age" type="text" name="health-age" placeholder="age" maxlength="2"><span>    Years    </span>
 						<button>Male</button>
 						<button>Female</button>
 					</li>
@@ -96,7 +93,7 @@ include("header.php");
 			</div>
 			<div class="car-bg-lay">
 				<div class="ins-head">
-					<h2>INSURANCE THOUGHTS</h2>
+					<h2>Insurance Thoughts</h2>
 				</div>
 				<div class="ins-thoug">
 					<p>

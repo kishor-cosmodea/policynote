@@ -74,7 +74,7 @@ include("header.php");
 			</div>
 			<div class="car-bg-lay">
 				<div class="ins-head">
-					<h2>INSURANCE THOUGHTS</h2>
+					<h2>Insurance Thoughts</h2>
 				</div>
 				<div class="ins-thoug">
 					<p>

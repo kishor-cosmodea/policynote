@@ -33,8 +33,8 @@ include("header.php");
 						<button>Self</button>
 						<input type="text" name="fname" placeholder="First Name">
 						<input type="text" name="lname" placeholder="Last Name">
-						<p><input type="text" name="email" placeholder="Email ID">
-							<input type="text" name="mobile" placeholder="Mobile No."></p>
+						<p><input type="text" name="email" placeholder="Email">
+							<input class="mobile" type="number" name="mobile" placeholder="Mobile" maxlength="10"></p>
 						</div>
 					</div>
 
@@ -48,9 +48,9 @@ include("header.php");
 							<input type="text" name="lname" placeholder="Last Name">
 							<p class="he-inp">
 								<span>Date of Birth</span>
-								<input id="dd" type="text" name="dd" placeholder="DD">
-								<input id="mm" type="text" name="mm" placeholder="MM">
-								<input id="yyyy" type="text" name="yyyy" placeholder="YYYY">
+								<input id="dd" type="text" name="dd" placeholder="DD" maxlength="2">
+								<input id="mm" type="text" name="mm" placeholder="MM" maxlength="2">
+								<input id="yyyy" type="text" name="yyyy" placeholder="YYYY" maxlength="4">
 							</p>
 						</div>
 					</div>
@@ -74,7 +74,7 @@ include("header.php");
 						</div>
 						<div class="health-chout-user">
 							<span>Address</span>
-							<textarea rows="4" cols="50" placeholder="Address"></textarea>
+							<textarea rows="4" cols="50" placeholder="Address" maxlength="250"></textarea>
 							<p class="health-chout-buy"><button>Confirm Purchase</button></p>
 						</div>
 					</div>

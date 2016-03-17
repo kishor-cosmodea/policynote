@@ -210,7 +210,7 @@ footer {
 .container { width: 100%; }
 
 .main-content {
-  background: url("../images/main-banner-2.jpg") 0 18px;
+  background: url("../images/main-banner-2.jpg") 0 30px;
   background-size: cover;
   width: 100%;
   height: auto;
@@ -218,7 +218,7 @@ footer {
 }
 
 .main-text {
-  padding: 220px 0 155px 0;
+  padding: 220px 0 170px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
@@ -410,6 +410,7 @@ footer {
 }
 
 .car-content {
+      padding: 70px 0 0 0;
   background: url("../images/car-banner-2.jpg") top center;
   background-size: cover;
   width: 100%;
@@ -424,11 +425,12 @@ footer {
 }
 
 .car-quote {
-  padding: 0 0 60px 0;
+  padding: 0 0 100px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
-.car-text h2 {
+.car-quote h2 {
+  padding: 20px 0;
   font-weight: 600;
   font-size: 44px;
   color: #fff;
@@ -538,6 +540,14 @@ footer {
 .car-re-data .dropdown-menu li a:hover {
   color: #008ed6;
   background: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 
 ::-webkit-input-placeholder {
@@ -895,12 +905,13 @@ footer {
 }
 
 .health-content {
-  background: url("../images/health-banner-2.jpg") top center;
-  background-size: cover;
   width: 100%;
   height: auto;
+  padding: 70px 0 0 0;
+  background: url("../images/health-banner-2.jpg") top center;
+  background-size: cover;
   text-align: center;
-  margin: 0 0 1px 0;
+  
 }
 
 .health-text {
@@ -909,11 +920,12 @@ footer {
 }
 
 .health-quote {
-  padding: 0 0 60px 0;
+    padding: 0 0 70px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
-.health-text h2 {
+.health-quote h2 {
+  padding: 20px 0;
   font-weight: 600;
   font-size: 44px;
   color: #fff;
@@ -1290,7 +1302,7 @@ textarea {
 }
 
 .about-buy button {
-  padding: 0 0 0 1%;
+  padding: 0 0 0 2%;
   border-radius: 5px;
   margin: 0 1%;
   border: none;
@@ -1304,6 +1316,8 @@ textarea {
   text-align: left;
 }
 
+.about-buy button img { margin: 0px 0 0 10px; }
+
 .about-buy button#about-get {
   padding: 0;
   width: 250px;
@@ -1312,6 +1326,8 @@ textarea {
   background: #008ed6;
   text-align: center;
 }
+
+.about-buy button#about-get:hover  { background: #037cb9; }
 
 .about-cont h2 {
   margin: 0 0 20px 0;

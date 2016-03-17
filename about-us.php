@@ -41,7 +41,7 @@ include("header.php");
 			</div>
 			<div>
 				<span class="about-want">I want to buy</span>
-				<button>Select Insurance Type</button>
+				<button>Select Insurance Type <img src="assets/images/arrow-down.png" alt="arrow"></button>
 				<button id="about-get">Get Started</button>
 			</div>
 		</div>
