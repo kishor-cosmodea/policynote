@@ -10,6 +10,8 @@ $(window).load(function() {
  	  var pathname = window.location.pathname; // Returns path only
 		// var url      = window.location.href;     // Returns full URL
 
+		// alert(pathname);
+
 		var pos_home = pathname.search("index.php");
 
 		if(pos_home == 12) {
@@ -55,7 +57,13 @@ $(window).load(function() {
 		var pos_about = pathname.search("about-us.php");
 
 		if(pos_about == 12) {
-			$('#nav-about').addClass('active');	
+			$('#nav-about').addClass('active');
+		}
+
+		var pos_about = pathname.search("contact-us.php");
+
+		if(pos_about == 12) {
+			$('#nav-contact').addClass('active');	
 		}
 
 	});

@@ -33,8 +33,11 @@
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
-    <!-- Open sans google font -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+    <!-- Open Raleway font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    
+    <!-- Abril font -->
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap of rupee font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -68,6 +71,7 @@
                         <li><a id="nav-car" href="car-insurance.php" title="Car">Car</a></li>
                         <li><a id="nav-health" href="health-insurance.php" title="Health">Health</a></li>
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
+                        <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>

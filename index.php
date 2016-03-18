@@ -8,8 +8,9 @@ include("header.php");
 <div class="container">
 	<div class="main-content">
 		<div class="main-text">
-			<h2>Adding Insurance to Life</h2>
-			<h3>Get Quotes :</h3>
+			<div class="main-life"><h2>Give</h2><h3>Life</h3></div>
+			<div><h2>an</h2><h3>Insurance</h3></div>
+			<div class="main-gq"><h4>Get Quotes:</h4></div>
 			<a href="car-insurance.php" title="Car"><span class="btn-car"></span><span class="t-car">Car</span></a>
 			<a href="health-insurance.php" title="Health"><span class="btn-health"></span><span class="t-health">Health</span></a>
 		</div>
@@ -26,45 +27,45 @@ include("header.php");
 			<div class="car-spl-data cf">
 				<div class="spl-one-cont">
 					<p><img src="assets/images/dummy-200x200-Rope.jpg" alt="car"></p>
-					<p class="car-tech">
-						<span>Lorem Ipsum is simply dummy text of the printing</span>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					<div class="car-tech">
+						<h2>Lorem Ipsum is simply dummy text of the printing</h2>
+						<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-					</p>
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+					</div>
 				</div>
 
 				<div class="spl-one-cont">
-					<p class="car-left">
-						<span>Lorem Ipsum is simply dummy text of the printing</span>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					<div class="car-left">
+						<h2>Lorem Ipsum is simply dummy text of the printing</h2>
+						<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-					</p>
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+					</div>
 					<p><img src="assets/images/dummy-200x200-Rope.jpg" alt="car"></p>
 				</div>
 
 				<div class="spl-one-cont">
 					<p><img src="assets/images/dummy-200x200-Rope.jpg" alt="car"></p>
-					<p class="car-tech">
-						<span>Lorem Ipsum is simply dummy text of the printing</span>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					<div class="car-tech">
+						<h2>Lorem Ipsum is simply dummy text of the printing</h2>
+						<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-					</p>
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+					</div>
 				</div>
 			</div>
 
-			<div class="sketch-cont">
-				<div>
-					<img src="assets/images/sketch-car.png" alt="car">
+			<div class="sketch-cont cf">
+				<div class="car-block">
 					<h3>Car Insurance</h3>
-					<p>Compare and save upto 60% on car insurance</p>
+					<img src="assets/images/sketch-car.png" alt="car">
+					<p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
 				</div>
-				<div>
-					<img src="assets/images/sketch-health.png" alt="health">
+				<div class="health-block">
 					<h3>Health Insurance</h3>
-					<p>Find the best match health insurance</p>
+					<img src="assets/images/sketch-health.png" alt="health">
+					<p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
 				</div>
 			</div>
 
