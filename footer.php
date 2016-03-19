@@ -7,7 +7,7 @@
         <h2>
           <a href="index.php" title="Policynote">Policynote</a>
         </h2>
-				<p class="pnote">&copy; 2016 Policynote. All Rights Reserved.</p>
+				<span class="pnote">&copy; 2016 Policynote. All Rights Reserved.</span>
 			</ul>
 			<ul>
 				<li><a href="about-us.php" title="About Us">About Us</a></li>
@@ -16,8 +16,8 @@
 				<li><a href="contact-us.php" title="Contact Us">Contact Us</a></li>
 			</ul>
       <ul>
-        <li><a id="nav-car" href="car-insurance.php" title="Car Insurance">Car Insurance</a></li>
-        <li><a id="nav-health" href="health-insurance.php" title="Health Insurance">Health Insurance</a></li>
+        <li><a href="car-insurance.php" title="Car Insurance">Car Insurance</a></li>
+        <li><a href="health-insurance.php" title="Health Insurance">Health Insurance</a></li>
       </ul>
 			<ul>
 				<li><span>Subscribe</span></li>

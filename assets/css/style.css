@@ -193,7 +193,7 @@ font-weight: 300;
   padding: 15px 11px;
     display: inline-block;
     vertical-align: top;
-    background: #008ed6;
+    background: #587291;
     color: #fff;
     line-height: 0;
     font-weight: 700;
@@ -307,8 +307,6 @@ margin: 49px 9% 25px 0;
 
 .main-text a + a { margin: 0 3%; }
 
-/*.main-text a:hover { background: #037cb9; }*/
-
 .btn-car {
   display: inline-block; 
   width: 40px;
@@ -321,14 +319,9 @@ margin: 49px 9% 25px 0;
   height: 25px;
 }
 
-.btn-car {
-/*  margin: 5px 0 0 0;*/
-  background: url("../images/car.png");
-}
+.btn-car { background: url("../images/car.png"); }
 
-.btn-health {
-  background: url("../images/heart.png");
-}
+.btn-health { background: url("../images/heart.png"); }
 
 .t-car, .t-health {
 color: #fff;
@@ -338,8 +331,6 @@ color: #fff;
     margin: 0 0 0 18px;
     font-size: 22.5px;
 }
-
-/*.t-health { margin: 18px 0 0 10px; }*/
 
 .sketch-cont .car-block,
 .sketch-cont .health-block {
@@ -356,8 +347,8 @@ background: #008ed6;
 }
 
 .sketch-cont .health-block {
-  background: #ccc;
-    color: #000;
+  background: #587291;
+    color: #fff;
         min-height: 265px;
 }
 
@@ -380,18 +371,31 @@ background: #008ed6;
 
 .list-insurance { margin: 0 0 60px 0; }
 
+.ins-img span {
+    width: 13%;
+    margin: 20px 0 0 7%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.ins-img img + span { margin: 20px 0 0 13%; }
+
+.ins-img span:last-child { margin: 20px 0 0 9%; }
+
 .ins-head {
     margin: 52px 0 0 0;
     text-align: center;
 }
 
 .ins-head h2 {
-color: #008ed6;
+  margin: 0 0 10px 0;
+color: #363636;
     font-size: 36px;
     font-weight: 300;
 }
 
-/*.list-insurance .ins-img { margin: 20px 0; }*/
+.ins-how h2 { margin: -20px 0 30px 0; }
 
 .list-insurance .ins-img img {
   width: 70%;
@@ -400,10 +404,7 @@ color: #008ed6;
   display: block;
 }
 
-.car-spl-data {
-/*  padding: 30px 0;*/
-  background-color: #fbfbfb;
-}
+.car-spl-data { background-color: #fbfbfb; }
 
 .car-spl-data img {
   width: 100%;
@@ -437,7 +438,7 @@ color: #008ed6;
   font-size: 36px;
   font-weight: 300;
   display: block;
-  color: #008ed6;
+color: #363636;
 }
 
 .spl-one-cont .car-tech span,
@@ -460,19 +461,28 @@ color: #008ed6;
 }
 
 .main-testi {
-padding: 60px 0;
-    background-color: #4281ba;
-    color: #fff;
+background: url("../images/testimonialsbg.png");
+    background-size: cover;
     text-align: center;
 }
 
 .main-testi h2 {
-font-size: 26px;
-    width: 55%;
-    margin: 0 auto 15px;
+font-size: 25px;
+    font-weight: 700;
+    width: 64%;
+    margin: 0 auto 0;
+    line-height: 40px;
+    padding: 45px 0 40px 0;
 }
 
-.main-testi span { font-size: 22px; }
+.main-testi span {
+font-size: 25px;
+    font-weight: 300;
+    text-align: right;
+    display: inherit;
+    margin: 0 20% 0 0;
+    padding: 0 0 24px 0;
+}
 
 .easy-wrap {
   width: 60%;

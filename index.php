@@ -17,11 +17,28 @@ include("header.php");
 	</div>
 	<div class="middle-content">
 		<div class="list-insurance">
-			<div class="ins-head">
-				<h2>Get a quote from more than 100 companies</h2>
+			<div>
+				<div class="ins-head ins-how">
+					<h2>How it Works</h2>
+				</div>
+				<div class="ins-img">
+					<img src="assets/images/how-it-works.png" alt="Ins">
+					<span>Give us your car details</span>
+					<span>Select from wide array of affordable options</span>
+					<span>Fill in your personal details</span>
+					<span>Our Executive will contact you at the earliest</span>
+				</div>
+				<div>
+
+				</div>
 			</div>
-			<div class="ins-img">
-				<img src="assets/images/insurance-comp.jpg" alt="Ins">
+			<div>
+				<div class="ins-head">
+					<h2>Get a quote from more than 100 companies</h2>
+				</div>
+				<div class="ins-img">
+					<img src="assets/images/insurance-comp.jpg" alt="Ins">
+				</div>
 			</div>
 
 			<div class="car-spl-data cf">
@@ -59,11 +76,13 @@ include("header.php");
 			<div class="sketch-cont cf">
 				<div class="car-block">
 					<h3>Car Insurance</h3>
+					<!-- <i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i> -->
 					<img src="assets/images/sketch-car.png" alt="car">
 					<p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
 				</div>
 				<div class="health-block">
 					<h3>Health Insurance</h3>
+					<!-- <i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i> -->
 					<img src="assets/images/sketch-health.png" alt="health">
 					<p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
 				</div>
@@ -88,26 +107,6 @@ include("header.php");
 					</p>
 				</div>
 			</div>
-<!-- 			<div class="easy-save">
-				<div class="easy-wrap">
-					<p>
-						<img src="assets/images/easy.png" alt="easy">
-						<span>SECURE</span>
-					</p>
-					<p>
-						<img src="assets/images/simple.png" alt="simple">
-						<span>EASY</span>
-					</p>
-					<p>
-						<img src="assets/images/save.png" alt="save">
-						<span>SAVE</span>
-					</p>
-					<p>
-						<img src="assets/images/quick.png" alt="quick">
-						<span>QUICK</span>
-					</p>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </div>

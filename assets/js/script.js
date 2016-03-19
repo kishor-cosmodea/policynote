@@ -10,8 +10,6 @@ $(window).load(function() {
  	  var pathname = window.location.pathname; // Returns path only
 		// var url      = window.location.href;     // Returns full URL
 
-		// alert(pathname);
-
 		var pos_home = pathname.search("index.php");
 
 		if(pos_home == 12) {
