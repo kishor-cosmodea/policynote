@@ -9,7 +9,7 @@ include("header.php");
 	<div class="car-content">
 		<div class="car-quote">
       <div class="car-get cf">
-        <h2>Need a Car Quote? <span>It on takes 30 seconds</span></h2>
+        <h2>Need a Car Quote? <span>It only takes 30 seconds</span></h2>
         <div class="car-fis-ul">
           <p>
            <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"

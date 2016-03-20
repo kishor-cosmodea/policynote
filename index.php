@@ -11,8 +11,8 @@ include("header.php");
 			<div class="main-life"><h2>Give</h2><h3>Life</h3></div>
 			<div><h2>an</h2><h3>Insurance</h3></div>
 			<div class="main-gq"><h4>Get Quotes:</h4></div>
-			<a href="car-insurance.php" title="Car"><span class="btn-car"></span><span class="t-car">Car</span></a>
-			<a href="health-insurance.php" title="Health"><span class="btn-health"></span><span class="t-health">Health</span></a>
+			<a href="car-insurance.php" title="Car"><i class="fa fa-car fa-2x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i></span><span class="t-car">Car</span></a>
+			<a href="health-insurance.php" title="Health"><i class="fa fa-heart-o fa-2x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i></span><span class="t-health">Health</span></a>
 		</div>
 	</div>
 	<div class="middle-content">
@@ -76,14 +76,14 @@ include("header.php");
 			<div class="sketch-cont cf">
 				<div class="car-block">
 					<h3>Car Insurance</h3>
-					<!-- <i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i> -->
-					<img src="assets/images/sketch-car.png" alt="car">
+					<i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
+					<!-- <img src="assets/images/sketch-car.png" alt="car"> -->
 					<p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
 				</div>
 				<div class="health-block">
 					<h3>Health Insurance</h3>
-					<!-- <i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i> -->
-					<img src="assets/images/sketch-health.png" alt="health">
+					<i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+					<!-- <img src="assets/images/sketch-health.png" alt="health"> -->
 					<p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
 				</div>
 			</div>

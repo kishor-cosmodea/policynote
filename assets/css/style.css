@@ -507,20 +507,14 @@ footer {
 }
 
 .car-content {
-  padding: 390px 0 0 0;
+  margin: 7px 0 0 0;
+  padding: 354px 0 0 0;
   background: url("../images/car.jpg") top center;
   background-size: cover;
   text-align: center;
 }
 
-.car-text {
-  padding: 83px 0 23px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-}
-
-.car-quote {
-  padding: 0 0 80px 0;
-}
+.car-quote { padding: 0 0 140px 0; }
 
 .car-get h2 {
   font-family: 'Abril Fatface', cursive;
@@ -529,31 +523,31 @@ footer {
 }
 
 .car-get h2 span {
-font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 34.75px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .car-get {
-width: 65%;
-    margin: 0 auto;
-    padding: 20px 3% 31px;
-    border-radius: 6px;
-    background: rgba(255,255,255, 0.7);
-    text-align: left;
+  width: 65%;
+  margin: 0 auto;
+  padding: 21px 3% 32px;
+  border-radius: 6px;
+  background: rgba(255,255,255, 0.8);
+  text-align: left;
 }
 
 .car-get div {
   width: 82%;
-      display: inline-block;
+  display: inline-block;
 }
 
 .car-get div.car-sub-btn {
-      width: 18%;
-    margin: -39px 0 0 0;
+  width: 18%;
+  margin: -39px 0 0 0;
   float: right;
-        display: inline-block;
-      vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .car-get button {
@@ -566,25 +560,25 @@ width: 65%;
 }
 
 .car-get button.btn-quote {
-    border-radius: 6px;
-    color: #fff;
-    background: #587291;
+  border-radius: 6px;
+  color: #fff;
+  background: #587291;
 }
 
 .car-get button a {
-padding: 15px 20px;
+  padding: 15px 20px;
   display: inline-block;
   color: #fff;
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .car-get select {
-  width: 200px;
+  width: 204px;
   height: 48px;
   padding: 5px;
-    border: 3px solid #008ed6;
-        border-radius: 4px;
-    color: #ccc;
+  border: 3px solid #008ed6;
+  border-radius: 4px;
+  color: #ccc;
   outline: none;
   font-size: 14px;
   cursor: pointer;
@@ -597,10 +591,10 @@ padding: 15px 20px;
   height: 20px;
   margin: 25px 0;
   padding: 10px;
-border: 3px solid #008ed6;
-    outline: none;
-    font-size: 14px;
-    border-radius: 4px;
+  border: 3px solid #008ed6;
+  outline: none;
+  font-size: 14px;
+  border-radius: 4px;
 }
 
 .car-sel,
@@ -1012,115 +1006,98 @@ i.fa {
   }
 
   .health-content {
-    width: 100%;
-    height: auto;
-    padding: 70px 0 0 0;
-    background: url("../images/health-banner-2.jpg") top center;
+    margin: 63px 0 0 0;
+    padding: 327px 0 0 0;
+    background: url("../images/health.jpg") top center;
     background-size: cover;
     text-align: center;
 
   }
 
-  .health-text {
-    padding: 83px 0 23px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  }
-
-  .health-quote {
-    padding: 0 0 70px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  }
+  .health-quote { padding: 0 0 140px 0; }
 
   .health-quote h2 {
-    padding: 20px 0;
-    font-weight: 600;
-    font-size: 44px;
-    color: #fff;
-  }
-
-  .health-get h3 {
-    margin: 12px 0 -10px 0;
-    font-size: 24px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 34.75px;
     color: #008ed6;
-    text-align: center;
-    font-weight: 600;
   }
 
-  .health-get ul li { margin: 20px 0; }
+  .health-get h2 span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 34.75px;
+    font-weight: 300;
+  }
 
   .health-get button {
-    width: 130px;
-    height: 40px;
-    border: 1px solid #008ed6;
+    border: none;
     background: #fff;
-    font-size: 14px;
+    font-size: 19px;
     color: #008ed6;
     font-weight: 500;
     outline: none;
-  }
-
-  .health-get button:hover {
-    color: #fff;
-    background: #008ed6;
   }
 
   .health-get {
-    width: 59.6%;
-    padding: 1px 2% 30px;
+    width: 55%;
     margin: 0 auto;
-    border-radius: 3px;
-    background: rgba(239,239,244,.96);
+    padding: 21px 3% 7px;
+    border-radius: 6px;
+    background: rgba(255,255,255, 0.8);
     text-align: left;
-    font-size: 18px;
-    color: #008ed6;
   }
 
-  .health-get .health-pin,
-  .health-pin {
-    width: 90px;
-    padding: 8px;
-    border: 1px solid #ccc;
+  .health-get input {
+    width: 178px;
+    height: 20px;
+    margin: 25px 0;
+    padding: 10px;
+    border: 3px solid #008ed6;
     outline: none;
-    color: #008ed6;
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
   }
 
-  .health-pin { margin: 0 0 0 15px; }
-
-  .health-get .health-age,
-  .health-age {
-    width: 30px;
-    padding: 8px;
-    margin: 0 8px;
+  .health-get select {
+    width: 204px;
+    height: 48px;
+    padding: 5px;
+    border: 3px solid #008ed6;
+    border-radius: 4px;
+    margin: 25px 0 0 0;
+    color: #ccc;
     outline: none;
-    color: #008ed6;
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .health-get p {
+    display: inline-block;
+    width: 65%;
+  }
+
+  .health-get p.health-sub-btn {
+    width: 21%;
+    margin: -17px 0 0 0;
+    float: right;
+    display: inline-block;
+    vertical-align: top;
   }
 
   .health-get  button.btn-quote {
-    margin: 45px auto 0;
-    display: block;
-    width: auto;
-    height: auto;
-    border: none;
-    font-size: 19px;
-    font-weight: 500;
-    outline: none;
+    border-radius: 6px;
     color: #fff;
-    background: #008ed6;
+    background: #587291;
   }
-
-  .health-get  button.btn-quote:hover { background: #037cb9; }
 
   .health-get button a {
-    color: #fff;
-    padding: 20px 60px;
+    padding: 15px 20px;
     display: inline-block;
+    color: #fff;
+    font-weight: 600;
   }
 
-  .health-get button a:hover { color: #fff; }
+  .health-get .gender,
+  .health-get .health-pin { margin: 0 4%; }
 
   .car-ch-ins,
   .health-ch-ins {
