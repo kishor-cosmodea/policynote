@@ -90,7 +90,8 @@
 ========================================================================== */
 
 /*Header style start*/
-body { font-family: 'Raleway', sans-serif; }
+body, select, input,
+textarea, button { font-family: 'Raleway', sans-serif; }
 
 a { text-decoration: none; }
 
@@ -107,16 +108,16 @@ header {
 }
 
 .wrapper {
-    max-width: 1250px;
-    width: 89%;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1250px;
+  width: 89%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 h1, nav, nav ul li {
   display: inline-block;
-vertical-align: top;
-padding: 0 20px 0 0;
+  vertical-align: top;
+  padding: 0 20px 0 0;
 }
 
 nav ul li { padding: 0 65px 0 0; }
@@ -137,17 +138,17 @@ nav {
 }
 
 nav ul li a {
-    display: block;
-    text-transform: uppercase;
-    color: #000;
-    font-size: 16px;
-    font-weight: 300;
+  display: block;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .active {
   color: #008ed6;
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /*Header style end*/
@@ -164,16 +165,16 @@ footer {
 }
 
 .foot-content h2 a {
-font-size: 40px;
-    font-weight: 700;
-    color: #008ed6;
-    text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  color: #008ed6;
+  text-transform: uppercase;
 }
 
 .foot-content ul {
-    display: inline-block;
-    margin: 0 0 0 14%;
-    vertical-align: top;
+  display: inline-block;
+  margin: 0 0 0 14%;
+  vertical-align: top;
 }
 
 .foot-content ul:first-child {
@@ -184,20 +185,20 @@ font-size: 40px;
 
 .foot-content ul li a, .foot-content li span {
   color: #000;
-font-weight: 300;
-    font-size: 16px;
-    line-height: 35px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 35px;
 }
 
 .foot-content ul li #sub-email{
   padding: 15px 11px;
-    display: inline-block;
-    vertical-align: top;
-    background: #587291;
-    color: #fff;
-    line-height: 0;
-    font-weight: 700;
-    font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+  background: #587291;
+  color: #fff;
+  line-height: 0;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .fb, .tw { display: inline-block; }
@@ -240,12 +241,12 @@ font-weight: 300;
 }
 
 .foot-content ul li input {
-    width: 135px;
-    height: 30px;
-    border: none;
-    outline: none;
-    padding: 0 0 0 10px;
-    font-size: 12px;
+  width: 135px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0 0 0 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 /*footer style end*/
@@ -256,18 +257,18 @@ font-weight: 300;
 
 .main-content {
   margin: 62px 0 0 0;
-background: url("../images/main-banner.jpg") top center;
-    background-size: cover;
+  background: url("../images/main-banner.jpg") top center;
+  background-size: cover;
 }
 
 .main-text {
-      padding: 0 8% 288px 0;
-      text-align: right;
+  padding: 0 8% 288px 0;
+  text-align: right;
 }
 
 .main-text .main-life {
-margin: 0 13.7% 0 0;
-    padding: 138px 0 0 0;
+  margin: 0 13.7% 0 0;
+  padding: 138px 0 0 0;
 }
 
 .main-text h2 {
@@ -278,31 +279,31 @@ margin: 0 13.7% 0 0;
 }
 
 .main-text h3 {
-font-family: 'Abril Fatface', cursive;
-font-size: 59px;
-display: inline-block;
-    margin: 0 0 0 20px;
-    color: #008ed6;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 59px;
+  display: inline-block;
+  margin: 0 0 0 20px;
+  color: #008ed6;
 }
 
 .main-text h4 {
-font-size: 28.5px;
-    font-weight: 500;
-    display: inline-block;
-    color: #008ed6;
+  font-size: 28.5px;
+  font-weight: 500;
+  display: inline-block;
+  color: #008ed6;
 }
 
 .main-text .main-gq {
-margin: 49px 9% 25px 0;
+  margin: 49px 9% 25px 0;
 }
 
 .main-text a {
-    border-radius: 6px;
-    display: inline-block;
-    background: #587291;
-    color: #fff;
-    vertical-align: top;
-    padding: 15px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  background: #587291;
+  color: #fff;
+  vertical-align: top;
+  padding: 15px 20px;
 }
 
 .main-text a + a { margin: 0 3%; }
@@ -324,59 +325,59 @@ margin: 49px 9% 25px 0;
 .btn-health { background: url("../images/heart.png"); }
 
 .t-car, .t-health {
-color: #fff;
-    font-weight: 700;
-    vertical-align: top;
-    display: inline-block;
-    margin: 0 0 0 18px;
-    font-size: 22.5px;
+  color: #fff;
+  font-weight: 700;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 0 0 18px;
+  font-size: 22.5px;
 }
 
 .sketch-cont .car-block,
 .sketch-cont .health-block {
-    width: 50%;
-    text-align: center;
-    padding: 70px 0;
-    float: left;
+  width: 50%;
+  text-align: center;
+  padding: 70px 0;
+  float: left;
 }
 
 .sketch-cont .car-block {
-background: #008ed6;
-    color: #fff;
-    min-height: 265px;
+  background: #008ed6;
+  color: #fff;
+  min-height: 265px;
 }
 
 .sketch-cont .health-block {
   background: #587291;
-    color: #fff;
-        min-height: 265px;
+  color: #fff;
+  min-height: 265px;
 }
 
 .sketch-cont .car-block h3,
- .sketch-cont .health-block h3 {
+.sketch-cont .health-block h3 {
  font-size: 36px;
-  font-weight: 300;
-  line-height: 40px;
-  margin: 0 0 20px 0;
+ font-weight: 300;
+ line-height: 40px;
+ margin: 0 0 20px 0;
 }
 
 .sketch-cont .car-block p,
 .sketch-cont .health-block p {
-    font-size: 14px;
-    font-weight: 500;
-    width: 44%;
-    margin: 20px auto 0;
-    line-height: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 44%;
+  margin: 20px auto 0;
+  line-height: 21px;
 }
 
 .list-insurance { margin: 0 0 60px 0; }
 
 .ins-img span {
-    width: 13%;
-    margin: 20px 0 0 7%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
+  width: 13%;
+  margin: 20px 0 0 7%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
 }
 
 .ins-img img + span { margin: 20px 0 0 13%; }
@@ -384,15 +385,15 @@ background: #008ed6;
 .ins-img span:last-child { margin: 20px 0 0 9%; }
 
 .ins-head {
-    margin: 52px 0 0 0;
-    text-align: center;
+  margin: 52px 0 0 0;
+  text-align: center;
 }
 
 .ins-head h2 {
   margin: 0 0 10px 0;
-color: #363636;
-    font-size: 36px;
-    font-weight: 300;
+  color: #363636;
+  font-size: 36px;
+  font-weight: 300;
 }
 
 .ins-how h2 { margin: -20px 0 30px 0; }
@@ -438,7 +439,7 @@ color: #363636;
   font-size: 36px;
   font-weight: 300;
   display: block;
-color: #363636;
+  color: #363636;
 }
 
 .spl-one-cont .car-tech span,
@@ -461,27 +462,27 @@ color: #363636;
 }
 
 .main-testi {
-background: url("../images/testimonialsbg.png");
-    background-size: cover;
-    text-align: center;
+  background: url("../images/testimonialsbg.png");
+  background-size: cover;
+  text-align: center;
 }
 
 .main-testi h2 {
-font-size: 25px;
-    font-weight: 700;
-    width: 64%;
-    margin: 0 auto 0;
-    line-height: 40px;
-    padding: 45px 0 40px 0;
+  font-size: 25px;
+  font-weight: 700;
+  width: 64%;
+  margin: 0 auto 0;
+  line-height: 40px;
+  padding: 45px 0 40px 0;
 }
 
 .main-testi span {
-font-size: 25px;
-    font-weight: 300;
-    text-align: right;
-    display: inherit;
-    margin: 0 20% 0 0;
-    padding: 0 0 24px 0;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: right;
+  display: inherit;
+  margin: 0 20% 0 0;
+  padding: 0 0 24px 0;
 }
 
 .easy-wrap {
@@ -506,7 +507,7 @@ font-size: 25px;
 }
 
 .car-content {
-      padding: 70px 0 0 0;
+  padding: 70px 0 0 0;
   background: url("../images/car-banner-2.jpg") top center;
   background-size: cover;
   width: 100%;
@@ -582,7 +583,6 @@ font-size: 25px;
   padding: 5px;
   background-color: #008ed6;
   border: 1px solid #008ed6;
-  font-family: 'Open Sans', sans-serif;
   color: #fff;
   outline: none;
   font-weight: 600;
@@ -640,10 +640,10 @@ font-size: 25px;
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
 }
 
 ::-webkit-input-placeholder {
@@ -681,12 +681,11 @@ input[type=number]::-webkit-outer-spin-button {
 .health-refine,
 .car-checkout,
 .health-checkout {
-  margin: 0 0 60px 0;
+  margin: 33px 0 60px 0;
   display: inline-block;
   width: 24%;
-  border: 1px solid #008ed6;
   padding: 10px 3%;
-  background-color: #f3f2f1;
+  background-color: #fbfbfb;
   min-height: 783px;
 }
 
@@ -722,8 +721,6 @@ input[type=number]::-webkit-outer-spin-button {
 .car-refine .ref-submit:hover,
 .health-refine .ref-submit:hover { background: #037cb9; }
 
-/*  .car-re-data ul { margin: 15px 0; }*/
-
 .car-re-data label,
 .health-re-data p span {
   margin: 10px 0;
@@ -749,7 +746,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 5px;
   margin: 10px 0;
   background-color: #008ed6;
-  font-family: 'Open Sans', sans-serif;
   color: #fff;
   outline: none;
   border: none;
@@ -826,24 +822,31 @@ input[type=number]::-webkit-outer-spin-button {
   min-height: 755px;
   margin: 0 0 60px 2%;
   display: inline-block;
-  width: 63%;
-  border: 1px solid #008ed6;
-  padding: 24px 2%;
-  background-color: #f3f2f1;
-  vertical-align: top;
+  width: 95%;
+  padding: 2%;
+  background-color: #fbfbfb;
 }
 
-.car-result-data { min-height: 916px; }
+.car-result-data { min-height: 853px; }
 
 .car-chout-data,
 .health-chout-data { padding: 0 2%; }
 
-.car-plan,
+.car-wrap-plan {
+  vertical-align: top;
+  width: 69%;
+  display: inline-block;
+}
+
+.car-plan {
+  width: 99%;
+  padding: 0px 2% 14px;
+}
+
 .health-plan,
 .car-chout-plan,
 .health-chout-plan {
   background: #fff;
-  border: 1px solid #008ed6;
   padding: 10px 2%;
 }
 
@@ -861,35 +864,24 @@ input[type=number]::-webkit-outer-spin-button {
 
 .car-plan select,
 .health-plan select {
-  width: 80px;
-  height: 37px;
-  padding: 5px;
-  margin: -9px -12px 0 5px;
-  background-color: #008ed6;
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  outline: none;
   border: none;
   font-weight: 600;
   font-size: 14px;
+  color: #008ed6;
   cursor: pointer;
+  outline: none;
 }
-
-.car-plan select:hover,
-.health-plan select:hover { background: #037cb9; }
 
 .car-plan .car-sort,
 .health-plan .health-sort { color: #000; }
 
 .car-policy-plan,
 .health-policy-plan {
-  margin: 30px 0;
   background: #fff;
-  border: 1px solid #008ed6;
   text-align: center;
-  box-shadow: 0 0 19px -5px rgb(0,0,0);
+/*  box-shadow: 0 0 19px -5px rgb(0,0,0);
   -moz-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
-  -webkit-box-shadow: 0 0 19px -5px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 19px -5px rgb(0, 0, 0);*/
 }
 
 .health-policy-plan {
@@ -900,9 +892,15 @@ input[type=number]::-webkit-outer-spin-button {
 .car-policy-plan p,
 .health-policy-plan p {
   display: inline-block;
-  width: 215px;
+  width: 230px;
   text-align: center;
   vertical-align: top;
+  padding: 20px 0;
+  border-right: 4px solid #fbfbfb;
+}
+
+.car-policy-plan p:first-child {
+  float: left;
 }
 
 .health-policy-plan p { width: 31%; }
@@ -925,6 +923,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 500;
 }
 
+i.fa {
+  vertical-align: bottom;
+}
+
 .car-policy-plan .car-premium .car-det,
 .health-policy-plan .health-premium .health-det {
   color: #008ed6;
@@ -943,14 +945,16 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   width: 60%;
   height: auto;
+  margin: 12px 0;
 }
 
 .car-buy,
 .health-buy {
   text-align: center;
   color: #000;
-  background: #00b300;
-  margin: 15px 0 0 0;
+  background: #587291;
+  border-radius: 6px;
+  margin: 18px 47px 0 0;
   border: none;
   font-size: 18px;
   float: right;
@@ -962,529 +966,531 @@ input[type=number]::-webkit-outer-spin-button {
 .car-buy a,
 .health-buy a {
   color: #fff;
-  padding: 8px 32px;
+  padding: 10px 20px;
   display: inline-block;
 }
 
 .car-buy a:hover,
 .health-buy a:hover { color: #fff; }
 
-.car-policy-plan div {
+/*.car-policy-plan div {
   padding: 15px 0;
-}
+  }*/
 
-.car-policy-plan .car-idv-cont { border-top: 1px solid #ccc; }
+  .car-policy-plan .car-idv-cont { border-top: 4px solid #fbfbfb; }
 
-.car-idv-cont p { border-left: 1px solid #ccc; }
+  .car-idv-cont p {
+    padding: 15px 0;
+    border-right: 4px solid #fbfbfb;
+  }
 
-.car-idv-cont p:first-child { border: none; }
+  .car-policy-plan p:last-child,
+  .car-idv-cont p:last-child { border: none; }
 
-.car-idv-cont span { display: block; }
+  .car-idv-cont span { display: block; }
 
-.health-policy-plan .health-pla-cont { padding: 20px 0; }
+  .health-policy-plan .health-pla-cont { padding: 20px 0; }
 
-.health-policy-plan .health-cov-cont {
-  border-top: 1px solid #ccc;
-  text-align: center;
-  padding: 15px 0;
-}
+  .health-policy-plan .health-cov-cont {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 15px 0;
+  }
 
-.health-policy-plan .health-cov-cont  div {
-  width: 32%;
-  display: inline-block;
-  vertical-align: top;
-}
+  .health-policy-plan .health-cov-cont  div {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+  }
 
-.health-policy-plan div span {
-  display: block;
-  font-size: 14px;
-}
+  .health-policy-plan div span {
+    display: block;
+    font-size: 14px;
+  }
 
-.health-content {
-  width: 100%;
-  height: auto;
-  padding: 70px 0 0 0;
-  background: url("../images/health-banner-2.jpg") top center;
-  background-size: cover;
-  text-align: center;
-  
-}
+  .health-content {
+    width: 100%;
+    height: auto;
+    padding: 70px 0 0 0;
+    background: url("../images/health-banner-2.jpg") top center;
+    background-size: cover;
+    text-align: center;
 
-.health-text {
-  padding: 83px 0 23px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-}
+  }
 
-.health-quote {
+  .health-text {
+    padding: 83px 0 23px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
+
+  .health-quote {
     padding: 0 0 70px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-}
-
-.health-quote h2 {
-  padding: 20px 0;
-  font-weight: 600;
-  font-size: 44px;
-  color: #fff;
-}
-
-.health-get h3 {
-  margin: 12px 0 -10px 0;
-  font-size: 24px;
-  color: #008ed6;
-  text-align: center;
-  font-weight: 600;
-}
-
-.health-get ul li { margin: 20px 0; }
-
-.health-get button {
-  width: 130px;
-  height: 40px;
-  border: 1px solid #008ed6;
-  background: #fff;
-  font-size: 14px;
-  color: #008ed6;
-  font-weight: 500;
-  outline: none;
-}
-
-.health-get button:hover {
-  color: #fff;
-  background: #008ed6;
-}
-
-.health-get {
-  width: 59.6%;
-  padding: 1px 2% 30px;
-  margin: 0 auto;
-  border-radius: 3px;
-  background: rgba(239,239,244,.96);
-  text-align: left;
-  font-size: 18px;
-  color: #008ed6;
-}
-
-.health-get .health-pin,
-.health-pin {
-  width: 90px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  color: #008ed6;
-  font-size: 16px;
-  text-align: center;
-}
-
-.health-pin { margin: 0 0 0 15px; }
-
-.health-get .health-age,
-.health-age {
-  width: 30px;
-  padding: 8px;
-  margin: 0 8px;
-  outline: none;
-  color: #008ed6;
-  font-size: 16px;
-  text-align: center;
-}
-
-.health-get  button.btn-quote {
-  margin: 45px auto 0;
-  display: block;
-  width: auto;
-  height: auto;
-  border: none;
-  font-size: 19px;
-  font-weight: 500;
-  outline: none;
-  color: #fff;
-  background: #008ed6;
-}
-
-.health-get  button.btn-quote:hover { background: #037cb9; }
-
-.health-get button a {
-  color: #fff;
-  padding: 20px 60px;
-  display: inline-block;
-}
-
-.health-get button a:hover { color: #fff; }
-
-.car-ch-ins,
-.health-ch-ins {
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.car-ch-ins img,
-.health-ch-ins img {
-  display: block;
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.car-ch-ins span,
-.health-ch-ins span {
-  margin: 11px 0;
-  display: block;
-  font-size: 16px;
-}
-
-.car-ch-ins span.car-ct-amt,
-.health-ch-ins span.health-ct-amt { font-size: 20px; }
-
-.car-ch-idv, .car-ch-add, .car-ch-dis {
-  padding: 30px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 { font-weight: 600; }
-
-.car-ch-dis { border: none; }
-
-.car-checkout p {
-  padding: 2px 0;
-  font-size: 20px;
-  color: #008ed6;
-  border: 1px solid #008ed6;
-  text-align: center;
-  margin: 40px 0 0 0;
-}
-
-.car-ch-idv .idv-right { float: right; }
-
-.car-ch-add span, .car-ch-dis span {
-  display: block;
-  font-size: 14px;
-}
-
-.car-chout-plan p,
-.health-chout-plan p {
-  font-size: 15px;
-  text-align: center;
-}
-
-.car-chout-prop,
-.health-chout-prop {
-  margin: 10px 0 10px 0;
-  padding: 8px 0 8px 4%;
-  color: #fff;
-  background: #008ed6;
-}
-
-.car-chout-prop p,
-.health-chout-prop p,
-.health-chout-plan span + p { text-align: left; }
-
-.health-chout-plan span + p { margin: 20px 0 10px 0; }
-
-.car-chout-user,
-.health-chout-user { padding: 10px 4%; }
-
-.car-chout-user button,
-.health-chout-user button {
-  margin: 0 31px 25px 0;
-  border: none;
-  width: 90px;
-  height: 35px;
-  font-size: 19px;
-  font-weight: 500;
-  outline: none;
-  color: #fff;
-  background: #008ed6;
-  font-size: 14px;
-  text-align: left;
-}
-
-.car-chout-user button:hover,
-.car-chout-buy button:hover,
-.health-chout-user button:hover,
-.health-chout-buy button:hover { background-color: #037cb9; }
-
-.car-chout-user select {
-  width: 80px;
-  height: 37px;
-  padding: 5px;
-  margin: 0 6.4% 20px 0;
-  background-color: #008ed6;
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  outline: none;
-  border: none;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.car-chout-user select:hover { background: #037cb9; }
-
-.car-chout-user input,
-.health-chout-user input {
-  width: 30%;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.health-chout-user .health-rb input {
-  width: 3%;
-  vertical-align: top;
-}
-
-.car-chout-user p.ch-inp,
-.health-chout-user p.he-inp {
-  margin: 25px 0 21px 0;
-  text-align: left;
-}
-
-.car-chout-user #dd,
-.car-chout-user #mm,
-.health-chout-user #dd,
-.health-chout-user #mm {
-  width: 7%;
-  text-align: center;
-}
-
-.car-chout-user #yyyy,
-.health-chout-user #yyyy {
-  width: 12%;
-  text-align: center;
-}
-
-.car-chout-buy,
-.health-chout-buy {
-  font-size: 15px;
-  text-align: center;
-}
-
-.car-chout-buy button,
-.health-chout-buy button {
-  width: 110px;
-  height: 41px;
-  margin: 35px 0 14px 0;
-  font-size: 15px;
-  text-align: center;
-}
-
-.health-chout-buy button {
-  width: 160px;
-  margin: 20px 0 6px 0;
-}
-
-.car-chout-user span,
-.health-chout-user span {
-  vertical-align: top;
-  font-weight: 600;
-}
-
-.car-chout-user span + span { float: right; }
-
-.health-chout-user #fname { margin: 0 0 0 80px; }
-
-.health-chout-user #dd { margin: 0 0 0 16px; }
-
-textarea {
-  padding: 10px;
-  margin: 0 0 0 46px;
-  font-family: 'Open Sans', sans-serif;
-  resize: none;
-}
-
-.about-content {
-  background: url("../images/about-us.jpg") 0 -215px;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-}
-
-.about-text {
-  padding: 100px 0 30px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-}
-
-.about-text h2 {
-  margin: 392px 0 0 8%;
-  font-size: 46px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.about-text h3 {
-  font-size: 18px;
-  color: #fff;
-  margin: 0 0 0 12%;
-}
-
-.about-family {
-  color: #fff;
-  background-color: #314451;
-}
-
-.about-family .wrap-family,
-.about-policy .wrap-policy {
-  width: 50%;
-  margin: 0 auto;
-  padding: 140px 0;
-}
-
-.about-family .wrap-family div {
-  width: 48%;
-  display: inline-block;
-}
-
-.about-family img {
-  width: 100%;
-  height: auto;
-  display: inline-block;
-}
-
-.about-family h2 {
-  font-size: 46px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.about-family h3 {
-  font-size: 18px;
-  color: #fff;
-}
-
-.about-policy { text-align: center; }
-
-.about-policy h2 {
-  font-size: 44px;
-  color: #008ed6;
-  font-weight: 600;
-}
-
-.about-policy h3 {
-  margin: 10px 0 0 0;
-  font-size: 16px;
-  color: #000;
-}
-
-.about-buy {
-  color: #fff;
-  background-color: #ccc;
-}
-
-.about-buy .wrap-buy {
-  width: 49%;
-  margin: 0 auto;
-  padding: 140px 0;
-}
-
-.about-buy .wrap-buy div {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.about-buy h2 {
-  font-size: 44px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.about-buy h2 span {
-  color: #008ed6;
-  font-weight: 600;
-}
-
-.about-buy .wrap-buy .about-want {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.about-buy button {
-  padding: 0 0 0 2%;
-  border-radius: 5px;
-  margin: 0 1%;
-  border: none;
-  background: #fff;
-  width: 200px;
-  height: 60px;
-  font-size: 15px;
-  color: #008ed6;
-  font-weight: 400;
-  outline: none;
-  text-align: left;
-}
-
-.about-buy button img { margin: 0px 0 0 10px; }
-
-.about-buy button#about-get {
-  padding: 0;
-  width: 250px;
-  font-size: 20px;
-  color: #fff;
-  background: #008ed6;
-  text-align: center;
-}
-
-.about-buy button#about-get:hover  { background: #037cb9; }
-
-.about-cont h2 {
-  margin: 0 0 20px 0;
-  text-align: center;
-  font-size: 44px;
-  color: #008ed6;
-  font-weight: 600;
-}
-
-.about-cont { margin: 20px 0 36px 0; }
-
-.about-cont .wrap-cont {
-  width: 60%;
-  margin: 80px auto 0;
-}
-
-.about-cont .about-street,
-.about-cont .about-add {
-  vertical-align: top;
-  display: inline-block;
-}
-
-.about-cont .about-street {
-  margin: 0 20px 0 0;
-  text-align: right;
-}
-
-.about-cont .about-street p {
-  margin: 0 0 5px 0;
-  color: #008ed6;
-  font-weight: 600;
-}
-
-.about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
-
-.about-cont .about-street span {
-  font-size: 15px;
-  display: block;
-}
-
-.terms-content {
-  margin: 70px 0 0 0;
-  background-color: #fbfbfb;
-}
-
-.terms-content .wrapper { width: 80%; }
-
-.terms-content h2 {
-  padding: 10px 0;
-  font-size: 32px;
-  color: #008ed6;
-  text-align: center;
-  font-weight: 600;
-}
-
-.terms-use h3 {
-  margin: 15px 0;
-  font-size: 24px;
-  color: #008ed6;
-}
-
-.terms-use:last-child { padding: 0 0 30px 0; }
-
-/*content style end*/
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
+
+  .health-quote h2 {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 44px;
+    color: #fff;
+  }
+
+  .health-get h3 {
+    margin: 12px 0 -10px 0;
+    font-size: 24px;
+    color: #008ed6;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .health-get ul li { margin: 20px 0; }
+
+  .health-get button {
+    width: 130px;
+    height: 40px;
+    border: 1px solid #008ed6;
+    background: #fff;
+    font-size: 14px;
+    color: #008ed6;
+    font-weight: 500;
+    outline: none;
+  }
+
+  .health-get button:hover {
+    color: #fff;
+    background: #008ed6;
+  }
+
+  .health-get {
+    width: 59.6%;
+    padding: 1px 2% 30px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background: rgba(239,239,244,.96);
+    text-align: left;
+    font-size: 18px;
+    color: #008ed6;
+  }
+
+  .health-get .health-pin,
+  .health-pin {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #008ed6;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .health-pin { margin: 0 0 0 15px; }
+
+  .health-get .health-age,
+  .health-age {
+    width: 30px;
+    padding: 8px;
+    margin: 0 8px;
+    outline: none;
+    color: #008ed6;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .health-get  button.btn-quote {
+    margin: 45px auto 0;
+    display: block;
+    width: auto;
+    height: auto;
+    border: none;
+    font-size: 19px;
+    font-weight: 500;
+    outline: none;
+    color: #fff;
+    background: #008ed6;
+  }
+
+  .health-get  button.btn-quote:hover { background: #037cb9; }
+
+  .health-get button a {
+    color: #fff;
+    padding: 20px 60px;
+    display: inline-block;
+  }
+
+  .health-get button a:hover { color: #fff; }
+
+  .car-ch-ins,
+  .health-ch-ins {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .car-ch-ins img,
+  .health-ch-ins img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .car-ch-ins span,
+  .health-ch-ins span {
+    margin: 11px 0;
+    display: block;
+    font-size: 16px;
+  }
+
+  .car-ch-ins span.car-ct-amt,
+  .health-ch-ins span.health-ct-amt { font-size: 20px; }
+
+  .car-ch-idv, .car-ch-add, .car-ch-dis {
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 { font-weight: 600; }
+
+  .car-ch-dis { border: none; }
+
+  .car-checkout p {
+    padding: 2px 0;
+    font-size: 20px;
+    color: #008ed6;
+    border: 1px solid #008ed6;
+    text-align: center;
+    margin: 40px 0 0 0;
+  }
+
+  .car-ch-idv .idv-right { float: right; }
+
+  .car-ch-add span, .car-ch-dis span {
+    display: block;
+    font-size: 14px;
+  }
+
+  .car-chout-plan p,
+  .health-chout-plan p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .car-chout-prop,
+  .health-chout-prop {
+    margin: 10px 0 10px 0;
+    padding: 8px 0 8px 4%;
+    color: #fff;
+    background: #008ed6;
+  }
+
+  .car-chout-prop p,
+  .health-chout-prop p,
+  .health-chout-plan span + p { text-align: left; }
+
+  .health-chout-plan span + p { margin: 20px 0 10px 0; }
+
+  .car-chout-user,
+  .health-chout-user { padding: 10px 4%; }
+
+  .car-chout-user button,
+  .health-chout-user button {
+    margin: 0 31px 25px 0;
+    border: none;
+    width: 90px;
+    height: 35px;
+    font-size: 19px;
+    font-weight: 500;
+    outline: none;
+    color: #fff;
+    background: #008ed6;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .car-chout-user button:hover,
+  .car-chout-buy button:hover,
+  .health-chout-user button:hover,
+  .health-chout-buy button:hover { background-color: #037cb9; }
+
+  .car-chout-user select {
+    width: 80px;
+    height: 37px;
+    padding: 5px;
+    margin: 0 6.4% 20px 0;
+    background-color: #008ed6;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .car-chout-user select:hover { background: #037cb9; }
+
+  .car-chout-user input,
+  .health-chout-user input {
+    width: 30%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .health-chout-user .health-rb input {
+    width: 3%;
+    vertical-align: top;
+  }
+
+  .car-chout-user p.ch-inp,
+  .health-chout-user p.he-inp {
+    margin: 25px 0 21px 0;
+    text-align: left;
+  }
+
+  .car-chout-user #dd,
+  .car-chout-user #mm,
+  .health-chout-user #dd,
+  .health-chout-user #mm {
+    width: 7%;
+    text-align: center;
+  }
+
+  .car-chout-user #yyyy,
+  .health-chout-user #yyyy {
+    width: 12%;
+    text-align: center;
+  }
+
+  .car-chout-buy,
+  .health-chout-buy {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .car-chout-buy button,
+  .health-chout-buy button {
+    width: 110px;
+    height: 41px;
+    margin: 35px 0 14px 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .health-chout-buy button {
+    width: 160px;
+    margin: 20px 0 6px 0;
+  }
+
+  .car-chout-user span,
+  .health-chout-user span {
+    vertical-align: top;
+    font-weight: 600;
+  }
+
+  .car-chout-user span + span { float: right; }
+
+  .health-chout-user #fname { margin: 0 0 0 80px; }
+
+  .health-chout-user #dd { margin: 0 0 0 16px; }
+
+  textarea {
+    padding: 10px;
+    margin: 0 0 0 46px;
+    resize: none;
+  }
+
+  .about-content {
+    background: url("../images/about-us.jpg") 0 -215px;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-text {
+    padding: 100px 0 30px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
+
+  .about-text h2 {
+    margin: 392px 0 0 8%;
+    font-size: 46px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .about-text h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 0 12%;
+  }
+
+  .about-family {
+    color: #fff;
+    background-color: #314451;
+  }
+
+  .about-family .wrap-family,
+  .about-policy .wrap-policy {
+    width: 50%;
+    margin: 0 auto;
+    padding: 140px 0;
+  }
+
+  .about-family .wrap-family div {
+    width: 48%;
+    display: inline-block;
+  }
+
+  .about-family img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  .about-family h2 {
+    font-size: 46px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .about-family h3 {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .about-policy { text-align: center; }
+
+  .about-policy h2 {
+    font-size: 44px;
+    color: #008ed6;
+    font-weight: 600;
+  }
+
+  .about-policy h3 {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .about-buy {
+    color: #fff;
+    background-color: #ccc;
+  }
+
+  .about-buy .wrap-buy {
+    width: 49%;
+    margin: 0 auto;
+    padding: 140px 0;
+  }
+
+  .about-buy .wrap-buy div {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .about-buy h2 {
+    font-size: 44px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .about-buy h2 span {
+    color: #008ed6;
+    font-weight: 600;
+  }
+
+  .about-buy .wrap-buy .about-want {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .about-buy button {
+    padding: 0 0 0 2%;
+    border-radius: 5px;
+    margin: 0 1%;
+    border: none;
+    background: #fff;
+    width: 200px;
+    height: 60px;
+    font-size: 15px;
+    color: #008ed6;
+    font-weight: 400;
+    outline: none;
+    text-align: left;
+  }
+
+  .about-buy button img { margin: 0px 0 0 10px; }
+
+  .about-buy button#about-get {
+    padding: 0;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    background: #008ed6;
+    text-align: center;
+  }
+
+  .about-buy button#about-get:hover  { background: #037cb9; }
+
+  .about-cont h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 44px;
+    color: #008ed6;
+    font-weight: 600;
+  }
+
+  .about-cont { margin: 20px 0 36px 0; }
+
+  .about-cont .wrap-cont {
+    width: 60%;
+    margin: 80px auto 0;
+  }
+
+  .about-cont .about-street,
+  .about-cont .about-add {
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .about-cont .about-street {
+    margin: 0 20px 0 0;
+    text-align: right;
+  }
+
+  .about-cont .about-street p {
+    margin: 0 0 5px 0;
+    color: #008ed6;
+    font-weight: 600;
+  }
+
+  .about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
+
+  .about-cont .about-street span {
+    font-size: 15px;
+    display: block;
+  }
+
+  .terms-content {
+    margin: 70px 0 0 0;
+    background-color: #fbfbfb;
+  }
+
+  .terms-content .wrapper { width: 80%; }
+
+  .terms-content h2 {
+    padding: 10px 0;
+    font-size: 32px;
+    color: #008ed6;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .terms-use h3 {
+    margin: 15px 0;
+    font-size: 24px;
+    color: #008ed6;
+  }
+
+  .terms-use:last-child { padding: 0 0 30px 0; }
+
+  /*content style end*/

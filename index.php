@@ -89,7 +89,7 @@ include("header.php");
 			</div>
 
 			<div class="main-testi">
-				<h2>“Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.”</h2>
+				<h2>Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.</h2>
 				<span>- Jack Son</span>
 			</div>
 			<div class="car-bg-lay">
