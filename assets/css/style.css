@@ -507,13 +507,10 @@ footer {
 }
 
 .car-content {
-  padding: 70px 0 0 0;
-  background: url("../images/car-banner-2.jpg") top center;
+  padding: 390px 0 0 0;
+  background: url("../images/car.jpg") top center;
   background-size: cover;
-  width: 100%;
-  height: auto;
   text-align: center;
-  margin: 0 0 1px 0;
 }
 
 .car-text {
@@ -522,24 +519,41 @@ footer {
 }
 
 .car-quote {
-  padding: 0 0 100px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  padding: 0 0 80px 0;
 }
 
-.car-quote h2 {
-  padding: 20px 0;
-  font-weight: 600;
-  font-size: 44px;
-  color: #fff;
+.car-get h2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 34.75px;
+  color: #008ed6;
+}
+
+.car-get h2 span {
+font-family: 'Raleway', sans-serif;
+  font-size: 34.75px;
+  font-weight: 500;
 }
 
 .car-get {
-  width: 47.4%;
-  margin: 0 auto;
-  padding: 9px 2% 35px;
-  border-radius: 3px;
-  background: rgba(239,239,244,.96);
-  text-align: left;
+width: 65%;
+    margin: 0 auto;
+    padding: 20px 3% 31px;
+    border-radius: 6px;
+    background: rgba(255,255,255, 0.7);
+    text-align: left;
+}
+
+.car-get div {
+  width: 82%;
+      display: inline-block;
+}
+
+.car-get div.car-sub-btn {
+      width: 18%;
+    margin: -39px 0 0 0;
+  float: right;
+        display: inline-block;
+      vertical-align: top;
 }
 
 .car-get button {
@@ -551,62 +565,49 @@ footer {
   outline: none;
 }
 
-.car-get button:hover {
-  color: #fff;
-  background: #008ed6;
-}
-
 .car-get button.btn-quote {
-  color: #fff;
-  margin: 30px 0 0 32%;
-  background: #008ed6;
+    border-radius: 6px;
+    color: #fff;
+    background: #587291;
 }
-
-.car-get button.btn-quote:hover { background: #037cb9; }
 
 .car-get button a {
-  color: #fff;
-  padding: 20px 60px;
+padding: 15px 20px;
   display: inline-block;
-}
-
-.car-get button a:hover { color: #fff; }
-
-.car-get label {
-  font-size: 18px;
-  color: #008ed6;
+  color: #fff;
+    font-weight: 600;
 }
 
 .car-get select {
   width: 200px;
   height: 48px;
   padding: 5px;
-  background-color: #008ed6;
-  border: 1px solid #008ed6;
-  color: #fff;
+    border: 3px solid #008ed6;
+        border-radius: 4px;
+    color: #ccc;
   outline: none;
-  font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
 }
 
-/*.car-get select:hover { background-color: #037cb9; }*/
-
 .car-get select.sel-rto { width: 304px; }
-
-.car-get select.sel-fuel,
-.car-get select.sel-var { margin: 0 0 0 15px; }
 
 .car-get input {
   width: 178px;
   height: 20px;
   margin: 25px 0;
   padding: 10px;
-  border: 1px solid #008ed6;
-  outline: none;
-  color: #008ed6;
-  font-size: 14px;
+border: 3px solid #008ed6;
+    outline: none;
+    font-size: 14px;
+    border-radius: 4px;
 }
+
+.car-sel,
+.car-get input.car-sel {
+  margin: 0 4%;
+}
+
 
 .car-get .dropdown-menu,
 .car-re-data .dropdown-menu {
@@ -614,7 +615,9 @@ footer {
   width: 200px;
 }
 
-.car-get .dropdown-menu { margin: 25px 0px 0px; }
+.car-fis-ul .dropdown-menu { margin: 25px 0 10px; }
+
+.car-sec-ul .dropdown-menu { margin: 0 0 0 31px; }
 
 .car-get .dropdown-menu li,
 .car-re-data .dropdown-menu li {
