@@ -663,15 +663,39 @@ input[type=number]::-webkit-outer-spin-button {
   width: 90%;
 }
 
-.car-profile-text h2,
-.health-profile-text h2,
+.health-profile-text span {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 10px 20px 0 0;
+}
+
+.car-profile-text a,
+.health-profile-text a,
 .car-chk-text h2,
 .health-chk-text h2 {
-  font-weight: 600;
+  width: 15%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  font-size: 12px;
+  color: #363636;
   text-align: center;
-  font-size: 32px;
-  color: #008ed6;
-  margin: 0 0 12px 0;
+  outline: none;
+}
+
+.car-profile-text a:hover,
+.health-profile-text a:hover {
+  color: #fff;
+  background: #587291;
+  border: none;
+}
+
+.car-profile-text a i,
+.health-profile-text a i {
+  vertical-align: top;
+  margin: 17px 5px 0 0;
 }
 
 .car-refine,
@@ -686,14 +710,18 @@ input[type=number]::-webkit-outer-spin-button {
   min-height: 783px;
 }
 
+.health-refine { padding: 0; }
+
 .car-checkout { min-height: 735px; }
 
-.health-refine { min-height: 783px; }
+.health-refine {
+  width: 28%;
+  min-height: 783px;
+}
 
 .health-checkout { min-height: 212px; }
 
 .car-re-data h3,
-.health-re-data h3,
 .car-ch-data h3,
 .health-ch-data h3 {
   margin: 5px 0;
@@ -703,27 +731,64 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 600;
 }
 
-.health-re-data p { margin: 15px 0; }
+.health-re-data {
+  border-bottom: 1px solid #ccc;
+  padding: 30px 10%;
+}
+
+.health-re-data h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #363636;
+  font-weight: 600;
+}
+
+.health-re-data select {
+  width: 204px;
+  height: 26px;
+  border: 1px solid #363636;
+  border-radius: 4px;
+  margin: 10px 0;
+  color: #ccc;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.health-re-data input {
+  vertical-align: top;
+}
+
+.health-re-data p {
+  margin: 10px 0;
+  font-size: 14px;
+}
 
 .car-refine .ref-submit,
 .health-refine .ref-submit {
-  width: 250px;
+  width: 160px;
   height: 50px;
+  border-radius: 6px;
+  margin: 40px 25%;
   text-align: center;
   color: #fff;
-  background: #008ed6;
-  margin: 10px 0 10px 2px;
+  background: #587291;
+  font-size: 18px;
+  outline: none;
+  border: none;
 }
 
-.car-refine .ref-submit:hover,
-.health-refine .ref-submit:hover { background: #037cb9; }
-
-.car-re-data label,
-.health-re-data p span {
+.car-re-data label {
   margin: 10px 0;
   display: inline-block;
   font-size: 16px;
   color: #008ed6;
+}
+
+.health-re-data p span {
+  margin: 10px 0;
+  display: block;
+  font-size: 14px;
 }
 
 .car-re-data input {
@@ -756,8 +821,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .car-re-dis select { margin: 10px 0 10px 33px; }
 
-.car-refine button,
-.health-refine button {
+.car-refine button {
   border: 1px solid #008ed6;
   background: #fff;
   width: 230px;
@@ -774,12 +838,6 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   width: 106px;
   text-align: center;
-}
-
-.car-refine button:hover,
-.health-refine button:hover {
-  color: #fff;
-  background: #008ed6;
 }
 
 .act {
@@ -816,11 +874,11 @@ input[type=number]::-webkit-outer-spin-button {
 .health-result-data,
 .car-chout-data,
 .health-chout-data {
-  min-height: 755px;
+  min-height: 738px;
   margin: 0 0 60px 2%;
   display: inline-block;
   width: 95%;
-  padding: 2%;
+  padding: 3%;
   background-color: #fbfbfb;
 }
 
@@ -887,12 +945,14 @@ input[type=number]::-webkit-outer-spin-button {
 .car-policy-plan p,
 .health-policy-plan p {
   display: inline-block;
-  width: 230px;
+  width: 32%;
   text-align: center;
   vertical-align: top;
   padding: 20px 0;
   border-right: 4px solid #fbfbfb;
 }
+
+.health-policy-plan p { min-height: 82px; }
 
 .car-policy-plan p:first-child {
   float: left;
@@ -907,8 +967,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .car-idv,
 .health-cov { font-weight: 600; }
-
-.health-premium { margin: 6px 0 0 0; }
 
 .car-policy-plan .car-premium .car-amt,
 .health-policy-plan .health-premium .health-amt {
@@ -965,504 +1023,504 @@ i.fa {
 .car-buy a:hover,
 .health-buy a:hover { color: #fff; }
 
-  .car-policy-plan .car-idv-cont { border-top: 4px solid #fbfbfb; }
-
-  .car-idv-cont p {
-    padding: 15px 0;
-    border-right: 4px solid #fbfbfb;
-  }
-
-  .car-policy-plan p:last-child,
-  .car-idv-cont p:last-child,
-  .health-pla-cont p:last-child,
-  .health-policy-plan .health-cov-cont p:last-child { border: none; }
-
-  .car-idv-cont span { display: block; }
-
-  .health-policy-plan .health-cov-cont {
-    border-top: 4px solid #fbfbfb;
-  }
-
-  .health-policy-plan .health-cov-cont p{
-    width: 32%;
-    display: inline-block;
-    vertical-align: top;
-        padding: 15px 0;
-    border-right: 4px solid #fbfbfb;
-        min-height: 90px;
-  }
-
-  .health-policy-plan div span {
-    display: block;
-    font-size: 14px;
-  }
-
-  .health-content {
-    margin: 63px 0 0 0;
-    padding: 327px 0 0 0;
-    background: url("../images/health.jpg") top center;
-    background-size: cover;
-    text-align: center;
-
-  }
-
-  .health-quote { padding: 0 0 140px 0; }
-
-  .health-quote h2 {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 34.75px;
-    color: #008ed6;
-  }
-
-  .health-get h2 span {
-    font-family: 'Raleway', sans-serif;
-    font-size: 34.75px;
-    font-weight: 300;
-  }
-
-  .health-get button {
-    border: none;
-    background: #fff;
-    font-size: 19px;
-    color: #008ed6;
-    font-weight: 500;
-    outline: none;
-  }
-
-  .health-get {
-    width: 55%;
-    margin: 0 auto;
-    padding: 21px 3% 7px;
-    border-radius: 6px;
-    background: rgba(255,255,255, 0.8);
-    text-align: left;
-  }
-
-  .health-get input {
-    width: 178px;
-    height: 20px;
-    margin: 25px 0;
-    padding: 10px;
-    border: 3px solid #008ed6;
-    outline: none;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-
-  .health-get select {
-    width: 204px;
-    height: 48px;
-    padding: 5px;
-    border: 3px solid #008ed6;
-    border-radius: 4px;
-    margin: 25px 0 0 0;
-    color: #ccc;
-    outline: none;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  .health-get p {
-    display: inline-block;
-    width: 65%;
-  }
-
-  .health-get p.health-sub-btn {
-    width: 21%;
-    margin: -17px 0 0 0;
-    float: right;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .health-get  button.btn-quote {
-    border-radius: 6px;
-    color: #fff;
-    background: #587291;
-  }
-
-  .health-get button a {
-    padding: 15px 20px;
-    display: inline-block;
-    color: #fff;
-    font-weight: 600;
-  }
-
-  .health-get .gender,
-  .health-get .health-pin { margin: 0 4%; }
-
-  .car-ch-ins,
-  .health-ch-ins {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .car-ch-ins img,
-  .health-ch-ins img {
-    display: block;
-    width: 60%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .car-ch-ins span,
-  .health-ch-ins span {
-    margin: 11px 0;
-    display: block;
-    font-size: 16px;
-  }
-
-  .car-ch-ins span.car-ct-amt,
-  .health-ch-ins span.health-ct-amt { font-size: 20px; }
-
-  .car-ch-idv, .car-ch-add, .car-ch-dis {
-    padding: 30px 0;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 { font-weight: 600; }
-
-  .car-ch-dis { border: none; }
-
-  .car-checkout p {
-    padding: 2px 0;
-    font-size: 20px;
-    color: #008ed6;
-    border: 1px solid #008ed6;
-    text-align: center;
-    margin: 40px 0 0 0;
-  }
-
-  .car-ch-idv .idv-right { float: right; }
-
-  .car-ch-add span, .car-ch-dis span {
-    display: block;
-    font-size: 14px;
-  }
-
-  .car-chout-plan p,
-  .health-chout-plan p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .car-chout-prop,
-  .health-chout-prop {
-    margin: 10px 0 10px 0;
-    padding: 8px 0 8px 4%;
-    color: #fff;
-    background: #008ed6;
-  }
-
-  .car-chout-prop p,
-  .health-chout-prop p,
-  .health-chout-plan span + p { text-align: left; }
-
-  .health-chout-plan span + p { margin: 20px 0 10px 0; }
-
-  .car-chout-user,
-  .health-chout-user { padding: 10px 4%; }
-
-  .car-chout-user button,
-  .health-chout-user button {
-    margin: 0 31px 25px 0;
-    border: none;
-    width: 90px;
-    height: 35px;
-    font-size: 19px;
-    font-weight: 500;
-    outline: none;
-    color: #fff;
-    background: #008ed6;
-    font-size: 14px;
-    text-align: left;
-  }
-
-  .car-chout-user button:hover,
-  .car-chout-buy button:hover,
-  .health-chout-user button:hover,
-  .health-chout-buy button:hover { background-color: #037cb9; }
-
-  .car-chout-user select {
-    width: 80px;
-    height: 37px;
-    padding: 5px;
-    margin: 0 6.4% 20px 0;
-    background-color: #008ed6;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  .car-chout-user select:hover { background: #037cb9; }
-
-  .car-chout-user input,
-  .health-chout-user input {
-    width: 30%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-
-  .health-chout-user .health-rb input {
-    width: 3%;
-    vertical-align: top;
-  }
-
-  .car-chout-user p.ch-inp,
-  .health-chout-user p.he-inp {
-    margin: 25px 0 21px 0;
-    text-align: left;
-  }
-
-  .car-chout-user #dd,
-  .car-chout-user #mm,
-  .health-chout-user #dd,
-  .health-chout-user #mm {
-    width: 7%;
-    text-align: center;
-  }
-
-  .car-chout-user #yyyy,
-  .health-chout-user #yyyy {
-    width: 12%;
-    text-align: center;
-  }
-
-  .car-chout-buy,
-  .health-chout-buy {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .car-chout-buy button,
-  .health-chout-buy button {
-    width: 110px;
-    height: 41px;
-    margin: 35px 0 14px 0;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .health-chout-buy button {
-    width: 160px;
-    margin: 20px 0 6px 0;
-  }
-
-  .car-chout-user span,
-  .health-chout-user span {
-    vertical-align: top;
-    font-weight: 600;
-  }
-
-  .car-chout-user span + span { float: right; }
-
-  .health-chout-user #fname { margin: 0 0 0 80px; }
-
-  .health-chout-user #dd { margin: 0 0 0 16px; }
-
-  textarea {
-    padding: 10px;
-    margin: 0 0 0 46px;
-    resize: none;
-  }
-
-  .about-content {
-    background: url("../images/about-us.jpg") 0 -215px;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-  }
-
-  .about-text {
-    padding: 100px 0 30px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  }
-
-  .about-text h2 {
-    margin: 392px 0 0 8%;
-    font-size: 46px;
-    color: #fff;
-    font-weight: 600;
-  }
-
-  .about-text h3 {
-    font-size: 18px;
-    color: #fff;
-    margin: 0 0 0 12%;
-  }
-
-  .about-family {
-    color: #fff;
-    background-color: #314451;
-  }
-
-  .about-family .wrap-family,
-  .about-policy .wrap-policy {
-    width: 50%;
-    margin: 0 auto;
-    padding: 140px 0;
-  }
-
-  .about-family .wrap-family div {
-    width: 48%;
-    display: inline-block;
-  }
-
-  .about-family img {
-    width: 100%;
-    height: auto;
-    display: inline-block;
-  }
-
-  .about-family h2 {
-    font-size: 46px;
-    color: #fff;
-    font-weight: 600;
-  }
-
-  .about-family h3 {
-    font-size: 18px;
-    color: #fff;
-  }
-
-  .about-policy { text-align: center; }
-
-  .about-policy h2 {
-    font-size: 44px;
-    color: #008ed6;
-    font-weight: 600;
-  }
-
-  .about-policy h3 {
-    margin: 10px 0 0 0;
-    font-size: 16px;
-    color: #000;
-  }
-
-  .about-buy {
-    color: #fff;
-    background-color: #ccc;
-  }
-
-  .about-buy .wrap-buy {
-    width: 49%;
-    margin: 0 auto;
-    padding: 140px 0;
-  }
-
-  .about-buy .wrap-buy div {
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .about-buy h2 {
-    font-size: 44px;
-    color: #fff;
-    font-weight: 600;
-  }
-
-  .about-buy h2 span {
-    color: #008ed6;
-    font-weight: 600;
-  }
-
-  .about-buy .wrap-buy .about-want {
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  .about-buy button {
-    padding: 0 0 0 2%;
-    border-radius: 5px;
-    margin: 0 1%;
-    border: none;
-    background: #fff;
-    width: 200px;
-    height: 60px;
-    font-size: 15px;
-    color: #008ed6;
-    font-weight: 400;
-    outline: none;
-    text-align: left;
-  }
-
-  .about-buy button img { margin: 0px 0 0 10px; }
-
-  .about-buy button#about-get {
-    padding: 0;
-    width: 250px;
-    font-size: 20px;
-    color: #fff;
-    background: #008ed6;
-    text-align: center;
-  }
-
-  .about-buy button#about-get:hover  { background: #037cb9; }
-
-  .about-cont h2 {
-    margin: 0 0 20px 0;
-    text-align: center;
-    font-size: 44px;
-    color: #008ed6;
-    font-weight: 600;
-  }
-
-  .about-cont { margin: 20px 0 36px 0; }
-
-  .about-cont .wrap-cont {
-    width: 60%;
-    margin: 80px auto 0;
-  }
-
-  .about-cont .about-street,
-  .about-cont .about-add {
-    vertical-align: top;
-    display: inline-block;
-  }
-
-  .about-cont .about-street {
-    margin: 0 20px 0 0;
-    text-align: right;
-  }
-
-  .about-cont .about-street p {
-    margin: 0 0 5px 0;
-    color: #008ed6;
-    font-weight: 600;
-  }
-
-  .about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
-
-  .about-cont .about-street span {
-    font-size: 15px;
-    display: block;
-  }
-
-  .terms-content {
-    margin: 70px 0 0 0;
-    background-color: #fbfbfb;
-  }
-
-  .terms-content .wrapper { width: 80%; }
-
-  .terms-content h2 {
-    padding: 10px 0;
-    font-size: 32px;
-    color: #008ed6;
-    text-align: center;
-    font-weight: 600;
-  }
-
-  .terms-use h3 {
-    margin: 15px 0;
-    font-size: 24px;
-    color: #008ed6;
-  }
-
-  .terms-use:last-child { padding: 0 0 30px 0; }
-
-  /*content style end*/
+.car-policy-plan .car-idv-cont { border-top: 4px solid #fbfbfb; }
+
+.car-idv-cont p {
+  padding: 15px 0;
+  border-right: 4px solid #fbfbfb;
+}
+
+.car-policy-plan p:last-child,
+.car-idv-cont p:last-child,
+.health-pla-cont p:last-child,
+.health-policy-plan .health-cov-cont p:last-child { border: none; }
+
+.car-idv-cont span { display: block; }
+
+.health-policy-plan .health-cov-cont {
+  border-top: 4px solid #fbfbfb;
+}
+
+.health-policy-plan .health-cov-cont p {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 0;
+  border-right: 4px solid #fbfbfb;
+  min-height: 70px;
+}
+
+.health-policy-plan div span {
+  display: block;
+  font-size: 14px;
+}
+
+.health-content {
+  margin: 63px 0 0 0;
+  padding: 327px 0 0 0;
+  background: url("../images/health.jpg") top center;
+  background-size: cover;
+  text-align: center;
+
+}
+
+.health-quote { padding: 0 0 140px 0; }
+
+.health-quote h2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 34.75px;
+  color: #008ed6;
+}
+
+.health-get h2 span {
+  font-family: 'Raleway', sans-serif;
+  font-size: 34.75px;
+  font-weight: 300;
+}
+
+.health-get button {
+  border: none;
+  background: #fff;
+  font-size: 19px;
+  color: #008ed6;
+  font-weight: 500;
+  outline: none;
+}
+
+.health-get {
+  width: 55%;
+  margin: 0 auto;
+  padding: 21px 3% 7px;
+  border-radius: 6px;
+  background: rgba(255,255,255, 0.8);
+  text-align: left;
+}
+
+.health-get input {
+  width: 178px;
+  height: 20px;
+  margin: 25px 0;
+  padding: 10px;
+  border: 3px solid #008ed6;
+  outline: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.health-get select {
+  width: 204px;
+  height: 48px;
+  padding: 5px;
+  border: 3px solid #008ed6;
+  border-radius: 4px;
+  margin: 25px 0 0 0;
+  color: #ccc;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.health-get p {
+  display: inline-block;
+  width: 65%;
+}
+
+.health-get p.health-sub-btn {
+  width: 21%;
+  margin: -17px 0 0 0;
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.health-get  button.btn-quote {
+  border-radius: 6px;
+  color: #fff;
+  background: #587291;
+}
+
+.health-get button a {
+  padding: 15px 20px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+}
+
+.health-get .gender,
+.health-get .health-pin { margin: 0 4%; }
+
+.car-ch-ins,
+.health-ch-ins {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.car-ch-ins img,
+.health-ch-ins img {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.car-ch-ins span,
+.health-ch-ins span {
+  margin: 11px 0;
+  display: block;
+  font-size: 16px;
+}
+
+.car-ch-ins span.car-ct-amt,
+.health-ch-ins span.health-ct-amt { font-size: 20px; }
+
+.car-ch-idv, .car-ch-add, .car-ch-dis {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 { font-weight: 600; }
+
+.car-ch-dis { border: none; }
+
+.car-checkout p {
+  padding: 2px 0;
+  font-size: 20px;
+  color: #008ed6;
+  border: 1px solid #008ed6;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+.car-ch-idv .idv-right { float: right; }
+
+.car-ch-add span, .car-ch-dis span {
+  display: block;
+  font-size: 14px;
+}
+
+.car-chout-plan p,
+.health-chout-plan p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.car-chout-prop,
+.health-chout-prop {
+  margin: 10px 0 10px 0;
+  padding: 8px 0 8px 4%;
+  color: #fff;
+  background: #008ed6;
+}
+
+.car-chout-prop p,
+.health-chout-prop p,
+.health-chout-plan span + p { text-align: left; }
+
+.health-chout-plan span + p { margin: 20px 0 10px 0; }
+
+.car-chout-user,
+.health-chout-user { padding: 10px 4%; }
+
+.car-chout-user button,
+.health-chout-user button {
+  margin: 0 31px 25px 0;
+  border: none;
+  width: 90px;
+  height: 35px;
+  font-size: 19px;
+  font-weight: 500;
+  outline: none;
+  color: #fff;
+  background: #008ed6;
+  font-size: 14px;
+  text-align: left;
+}
+
+.car-chout-user button:hover,
+.car-chout-buy button:hover,
+.health-chout-user button:hover,
+.health-chout-buy button:hover { background-color: #037cb9; }
+
+.car-chout-user select {
+  width: 80px;
+  height: 37px;
+  padding: 5px;
+  margin: 0 6.4% 20px 0;
+  background-color: #008ed6;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.car-chout-user select:hover { background: #037cb9; }
+
+.car-chout-user input,
+.health-chout-user input {
+  width: 30%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.health-chout-user .health-rb input {
+  width: 3%;
+  vertical-align: top;
+}
+
+.car-chout-user p.ch-inp,
+.health-chout-user p.he-inp {
+  margin: 25px 0 21px 0;
+  text-align: left;
+}
+
+.car-chout-user #dd,
+.car-chout-user #mm,
+.health-chout-user #dd,
+.health-chout-user #mm {
+  width: 7%;
+  text-align: center;
+}
+
+.car-chout-user #yyyy,
+.health-chout-user #yyyy {
+  width: 12%;
+  text-align: center;
+}
+
+.car-chout-buy,
+.health-chout-buy {
+  font-size: 15px;
+  text-align: center;
+}
+
+.car-chout-buy button,
+.health-chout-buy button {
+  width: 110px;
+  height: 41px;
+  margin: 35px 0 14px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.health-chout-buy button {
+  width: 160px;
+  margin: 20px 0 6px 0;
+}
+
+.car-chout-user span,
+.health-chout-user span {
+  vertical-align: top;
+  font-weight: 600;
+}
+
+.car-chout-user span + span { float: right; }
+
+.health-chout-user #fname { margin: 0 0 0 80px; }
+
+.health-chout-user #dd { margin: 0 0 0 16px; }
+
+textarea {
+  padding: 10px;
+  margin: 0 0 0 46px;
+  resize: none;
+}
+
+.about-content {
+  background: url("../images/about-us.jpg") 0 -215px;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.about-text {
+  padding: 100px 0 30px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.about-text h2 {
+  margin: 392px 0 0 8%;
+  font-size: 46px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.about-text h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 0 12%;
+}
+
+.about-family {
+  color: #fff;
+  background-color: #314451;
+}
+
+.about-family .wrap-family,
+.about-policy .wrap-policy {
+  width: 50%;
+  margin: 0 auto;
+  padding: 140px 0;
+}
+
+.about-family .wrap-family div {
+  width: 48%;
+  display: inline-block;
+}
+
+.about-family img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.about-family h2 {
+  font-size: 46px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.about-family h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.about-policy { text-align: center; }
+
+.about-policy h2 {
+  font-size: 44px;
+  color: #008ed6;
+  font-weight: 600;
+}
+
+.about-policy h3 {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.about-buy {
+  color: #fff;
+  background-color: #ccc;
+}
+
+.about-buy .wrap-buy {
+  width: 49%;
+  margin: 0 auto;
+  padding: 140px 0;
+}
+
+.about-buy .wrap-buy div {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about-buy h2 {
+  font-size: 44px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.about-buy h2 span {
+  color: #008ed6;
+  font-weight: 600;
+}
+
+.about-buy .wrap-buy .about-want {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about-buy button {
+  padding: 0 0 0 2%;
+  border-radius: 5px;
+  margin: 0 1%;
+  border: none;
+  background: #fff;
+  width: 200px;
+  height: 60px;
+  font-size: 15px;
+  color: #008ed6;
+  font-weight: 400;
+  outline: none;
+  text-align: left;
+}
+
+.about-buy button img { margin: 0px 0 0 10px; }
+
+.about-buy button#about-get {
+  padding: 0;
+  width: 250px;
+  font-size: 20px;
+  color: #fff;
+  background: #008ed6;
+  text-align: center;
+}
+
+.about-buy button#about-get:hover  { background: #037cb9; }
+
+.about-cont h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 44px;
+  color: #008ed6;
+  font-weight: 600;
+}
+
+.about-cont { margin: 20px 0 36px 0; }
+
+.about-cont .wrap-cont {
+  width: 60%;
+  margin: 80px auto 0;
+}
+
+.about-cont .about-street,
+.about-cont .about-add {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.about-cont .about-street {
+  margin: 0 20px 0 0;
+  text-align: right;
+}
+
+.about-cont .about-street p {
+  margin: 0 0 5px 0;
+  color: #008ed6;
+  font-weight: 600;
+}
+
+.about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
+
+.about-cont .about-street span {
+  font-size: 15px;
+  display: block;
+}
+
+.terms-content {
+  margin: 70px 0 0 0;
+  background-color: #fbfbfb;
+}
+
+.terms-content .wrapper { width: 80%; }
+
+.terms-content h2 {
+  padding: 10px 0;
+  font-size: 32px;
+  color: #008ed6;
+  text-align: center;
+  font-weight: 600;
+}
+
+.terms-use h3 {
+  margin: 15px 0;
+  font-size: 24px;
+  color: #008ed6;
+}
+
+.terms-use:last-child { padding: 0 0 30px 0; }
+
+/*content style end*/

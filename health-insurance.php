@@ -28,8 +28,8 @@ include("header.php");
 					</select>
 				</p>
 				<p>
-					<input type="text" name="health-age" maxlength="2" placeholder="age">
-					<input class="health-pin" type="text" name="health-pin" placeholder="eg. 400001" maxlength="6">
+					<input type="text" name="health-age" maxlength="2" placeholder="Age">
+					<input class="health-pin" type="text" name="health-pin" placeholder="Pincode" maxlength="6">
 				</p>
 				<p class="health-sub-btn">
 					<button class="btn-quote"><a href="health-compare.php">Get Quotes</a></button>
