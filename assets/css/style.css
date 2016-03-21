@@ -656,13 +656,17 @@ input[type=number]::-webkit-outer-spin-button {
   color:    #ccc;
 }
 
+.car-profile-content {
+  margin: 10px auto 0;
+  width: 90%;
+}
 
-.car-profile-content,
 .health-profile-content {
   margin: 78px auto 0;
   width: 90%;
 }
 
+.car-profile-text span,
 .health-profile-text span {
   font-size: 18px;
   font-weight: 600;
@@ -710,18 +714,17 @@ input[type=number]::-webkit-outer-spin-button {
   min-height: 783px;
 }
 
-.health-refine { padding: 0; }
-
 .car-checkout { min-height: 735px; }
 
+.car-refine,
 .health-refine {
   width: 28%;
+  padding: 0;
   min-height: 783px;
 }
 
 .health-checkout { min-height: 212px; }
 
-.car-re-data h3,
 .car-ch-data h3,
 .health-ch-data h3 {
   margin: 5px 0;
@@ -731,11 +734,13 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 600;
 }
 
+.car-re-data,
 .health-re-data {
   border-bottom: 1px solid #ccc;
   padding: 30px 10%;
 }
 
+.car-re-data h3,
 .health-re-data h3 {
   margin: 5px 0;
   font-size: 16px;
@@ -743,6 +748,13 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 600;
 }
 
+.car-re-data div p,
+.health-re-data div p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.car-re-data select,
 .health-re-data select {
   width: 204px;
   height: 26px;
@@ -759,6 +771,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
+.car-re-data p
 .health-re-data p {
   margin: 10px 0;
   font-size: 14px;
@@ -785,21 +798,18 @@ input[type=number]::-webkit-outer-spin-button {
   color: #008ed6;
 }
 
-.health-re-data p span {
+.car-re-data div p span,
+.health-re-data div p span {
   margin: 10px 0;
   display: block;
   font-size: 14px;
 }
 
-.car-re-data input {
-  width: 189px;
-  padding: 8px 5px;
-  border: 1px solid #ccc;
-  margin: 5px 0 0 0;
-  outline: none;
-  color: #008ed6;
-  font-size: 14px;
+.car-re-data div span {
+  font-size: 12px;
 }
+
+.car-re-data i { cursor: pointer; }
 
 .car-re-data select,
 .car-re-dis select {
@@ -816,8 +826,6 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.car-re-data select:hover,
-.car-re-dis select:hover { background: #037cb9; }
 
 .car-re-dis select { margin: 10px 0 10px 33px; }
 
@@ -843,11 +851,6 @@ input[type=number]::-webkit-outer-spin-button {
 .act {
   color: #fff !important;
   background: #008ed6 !important;
-}
-
-.car-re-data {
-  padding: 0 0 0 33px;
-  border-bottom: 1px solid #008ed6;
 }
 
 .car-re-dis,
@@ -882,7 +885,51 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #fbfbfb;
 }
 
-.car-result-data { min-height: 853px; }
+.car-result-data { min-height: 738px; }
+
+.health-result-data { min-height: 868px; }
+
+.car-sel-info {
+  margin: 64px 0 0 0;
+  background: #e9e9f0;
+}
+
+.car-sel-info div {
+  display: inline-block;
+  width: 20%;
+  padding: 20px 6% 13px;
+  vertical-align: top;
+  border-right: 1px solid #fbfbfb;
+  min-height: 103px;
+}
+
+.car-sel-info div:last-child { border:none; }
+
+.car-sel-info p {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.car-sel-info span {
+  font-size: 14px;
+  display: block;
+  font-weight: 300;
+  margin: 8px 0;
+}
+
+.car-sel-info .car-name {
+  font-size: 20px;
+  color: #008ed6;
+  margin: 9px 0;
+  font-weight: 400;
+}
+
+.car-sel-info .car-idv {
+  font-size: 16px;
+  color: #008ed6;
+  margin: 9px 0;
+  font-weight: 400;
+}
 
 .car-chout-data,
 .health-chout-data { padding: 0 2%; }

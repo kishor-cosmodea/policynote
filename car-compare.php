@@ -6,91 +6,60 @@ include("header.php");
 
 <!-- Content starts here-->
 <div class="container">
+	<div class="car-sel-info">
+		<div>
+			<p>SHOWING RESULTS FOR</p>
+			<span class="car-name">Aston Martin DB9</span>
+			<span>Coupe (5935 CC)</span>
+			<span>MH-01 - Mumbai</span>
+		</div>
+		<div>
+			<p>IDV</p>
+			<span class="car-idv">Insured Declared Value (IDV)</span>
+			<span>It has been set automatically to get you the best quotes from each insurer.</span>
+		</div>
+		<div>
+			<p>POLICY DETAILS</p>
+			<span>Manufacturing Date..................01-01-2016</span>
+			<span>Policy start date............................01-04-2016</span>
+		</div>
+	</div>
 	<div class="wrapper">
 		<div class="car-profile-content">
+
 			<div class="car-profile-text">
-				<h2>Buy Car Insurance</h2>
+				<span>Car Plans</span> <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a>
 			</div>
 			<div class="car-refine">
 				<div class="car-re-data">
-					<h3>Refine Search</h3>
-
-					<label>Car model is</label>
-					<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
-					data-source="[&quot;Audi A3&quot;,&quot;Audi A4&quot;,&quot;Audi A6&quot;
-					,&quot;Audi A7&quot;,&quot;Audi A8&quot;,&quot;Audi C7&quot;,&quot;Audi Q3&quot;
-					,&quot;Audi Q5&quot;,&quot;Audi Q7&quot;,&quot;Audi Q7&quot;,&quot;Audi R8&quot;
-					,&quot;Audi RS5&quot;,&quot;Audi RS 6 Avant&quot;,&quot;Audi RS7&quot;,&quot;Audi S4&quot;
-					,&quot;Audi S6&quot;,&quot;Audi TT Coupe&quot;
-					]" placeholder="eg. Audi A3">
-
-					<select name="Manufacturing Year">
-						<option value="year">Manufacturing Year</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2015">2014</option>
-						<option value="2015">2013</option>
-						<option value="2015">2012</option>
-						<option value="2015">2011</option>
-						<option value="2016">2010</option>
-						<option value="2015">2009</option>
-						<option value="2015">2008</option>
-						<option value="2015">2007</option>
-						<option value="2015">2006</option>
-						<option value="2015">2005</option>
-						<option value="2016">2004</option>
-						<option value="2015">2003</option>
-						<option value="2015">2002</option>
-						<option value="2015">2001</option>
-					</select>
-					<select name="Fuel Type" class="sel-fuel">
-						<option value="fueltype">Fuel Type</option>
-						<option value="petrol">Petrol</option>
-						<option value="diesel">Diesel</option>
-					</select>
-					<select name="Variant" class="sel-var">
-						<option value="variant">Variant</option>
-						<option value="tsi">TSI</option>
-						<option value="vdi">VDI</option>
-						<option value="vdi">ZDI</option>
-					</select>
-
-					<label>Registration location (RTO)</label>
-					<input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
-					data-source="[&quot;MH-01-Mumbai Central- Location- Tardeo&quot;,&quot;MH-02-Andheri (mumbai Western Suburbs)&quot;,&quot;MH-03-Mumbai, (east), Wadala&quot;
-					,&quot;MH-04-Thane&quot;,&quot;MH-05-Kalyan&quot;,&quot;2011&quot;,&quot;2010&quot;
-					,&quot;2009&quot;,&quot;2008&quot;,&quot;2007&quot;,&quot;2006&quot;
-					]" placeholder="eg. MH-01 or Mumbai">
-
-					<p>
-						<label>Policy status    </label>
-						<select name="SelPolStat">
-							<option value="buynew">Buy New</option>
-							<option value="renew">Renew</option>
-						</select>
-					</p>
+					<h3>Zero Depreciation <i class="fa fa-plus-circle fa-lg"></i></h3>
+					<div>
+						<span>Do not pay anything from your pocket in case of a claim.</span>
+					</div>
 				</div>
-				<div class="car-re-add">
-					<span>Add Ons</span>
-					<button>Zero Depriciation</button>
-					<button>Engine Protect</button>
-					<button>NCB Protect</button>
+				<div class="car-re-data">
+					<h3>Discounts <i class="fa fa-plus-circle fa-lg"></i></h3>
+					<div>
+						<span>Save upto 40% on these quotes</span>
+					</div>
 				</div>
-				<div class="car-re-dis">
-					<span>Discounts</span>
-					<select name="Voluntary Deductible">
-						<option value="Voluntary Deductible">Voluntary Deductible</option>
-						<option value="2,500">2,500</option>
-						<option value="5,000">5,000</option>
-						<option value="7,500">7,500</option>
-						<option value="15,000">15,000</option>
-					</select>
+				<div class="car-re-data">
+					<h3>Additional Covers</h3>
+					<div>
+						<p>
+							<span><input type="checkbox" name="am" value="Invoice Cover">Invoice Cover</span>
+							<span><input type="checkbox" name="lt" value="24x7 Roadside Assistance">24x7 Roadside Assistance</span>
+							<span><input type="checkbox" name="ba" value="NCB Protection">NCB Protection</span>
+							<span><input type="checkbox" name="rl" value="Passenger Cover">Passenger Cover</span>
+							<span><input type="checkbox" name="ba" value="Engine Protector">Engine Protector</span>
+						</p>
+					</div>
 				</div>
-				<button class="ref-submit">Submit</button>
+				<button class="ref-submit">Update</button>
 			</div>
 			<div class="car-wrap-plan">
 				<div class="car-plan">
-					<span>Policy Plans</span>
+					<span>Showing results</span>
 					<div>
 						<span class="car-sort">Sort By:</span>
 						<select name="car-price" class="car-price">
@@ -120,11 +89,11 @@ include("header.php");
 								<span><i class="fa fa-inr"></i> 5,00,850</span>
 							</p>
 							<p>
-								<span>Add Ons</span>
-								<span>-</span>
+								<span class="car-idv">Additional Covers</span>
+								<span>NCB Protection</span>
 							</p>
 							<p>
-								<span>Discounts</span>
+								<span class="car-idv">Discounts</span>
 								<span>-</span>
 							</p>
 						</div>
