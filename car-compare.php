@@ -28,7 +28,7 @@ include("header.php");
 		<div class="car-profile-content">
 
 			<div class="car-profile-text">
-				<span>Car Plans</span> <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a>
+				<span>Car Plans</span> <!-- <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a> -->
 			</div>
 			<div class="car-refine">
 				<div class="car-re-data">
