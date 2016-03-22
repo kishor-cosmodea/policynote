@@ -661,9 +661,11 @@ input[type=number]::-webkit-outer-spin-button {
   width: 90%;
 }
 
-.car-chk-cont .car-profile-content { margin: 75px auto 0; }
+.car-chk-text,
+.health-chk-text { margin: 10px 0; }
 
-.car-chk-text { margin: 10px 0; }
+.car-chk-cont .car-profile-content,
+.health-chk-cont .health-profile-content { margin: 75px auto 0; }
 
 .health-profile-content {
   margin: 78px auto 0;
@@ -723,7 +725,10 @@ input[type=number]::-webkit-outer-spin-button {
   min-height: 885px;
 }
 
-.health-checkout { min-height: 212px; }
+.health-checkout {
+  margin: 0 0 60px 0;
+  min-height: 212px;
+}
 
 .car-re-data,
 .health-re-data {
@@ -752,7 +757,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: 1px solid #363636;
   border-radius: 4px;
   margin: 10px 0;
-  color: #ccc;
+  color: #999;
   outline: none;
   font-size: 14px;
   cursor: pointer;
@@ -948,9 +953,11 @@ input[type=number]::-webkit-outer-spin-button {
   background: #fff;
 }
 
-.car-chout-prop { margin: 0 0 10px 0; }
+.car-chout-prop,
+.health-chout-prop { margin: 0 0 10px 0; }
 
-.car-chout-prop span {
+.car-chout-prop span,
+.health-chout-prop span {
   padding: 10px 16.65px;
   font-size: 18px;
   text-align: center;
@@ -961,7 +968,8 @@ input[type=number]::-webkit-outer-spin-button {
   border: 1px solid #fff;
 }
 
-.car-chout-prop p {
+.car-chout-prop p,
+.health-chout-prop p {
   display: inline-block;
   font-size: 28px;
   font-weight: 300;
@@ -1213,7 +1221,7 @@ i.car-ct-amt i.fa-inr  {
 .health-ch-ins img {
   width: 50%;
   height: auto;
-  margin: 0 auto;
+  margin: 0 10px 10px 0;
 }
 
 .car-ch-ins span,
@@ -1225,26 +1233,27 @@ i.car-ct-amt i.fa-inr  {
 .car-ch-ins span.car-ct-amt,
 .health-ch-ins span.health-ct-amt { font-size: 22px; }
 
-.car-ch-idv, .car-ch-add, .car-ch-dis {
+.car-ch-idv, .car-ch-add, .car-ch-dis,
+.health-ch-cm {
   padding: 30px 10%;
   border-bottom: 1px solid #ccc;
 }
 
-.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 {
+.car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3,
+.health-ch-cm h3 {
   margin: 0 0 10px;
   font-weight: 600;
 }
 
 .car-ch-dis { border: none; }
 
-.car-ch-idv .idv-right { float: right; }
+.car-ch-idv .idv-right,
+.health-ch-cm .cov-right { float: right; }
 
 .car-ch-add span, .car-ch-dis span {
   display: block;
   font-size: 14px;
 }
-
-.health-chout-plan span + p { margin: 20px 0 10px 0; }
 
 .car-chout-user,
 .health-chout-user { padding: 10px 0; }
@@ -1272,6 +1281,13 @@ i.car-ct-amt i.fa-inr  {
   box-sizing: border-box;
 }
 
+.health-chout-user #fname,
+.health-chout-user #lname{ margin: 0 0 15px 5%; }
+
+input[type="radio"] {
+  margin: 0;
+}
+
 .health-chout-user .health-rb input {
   width: 3%;
   vertical-align: top;
@@ -1292,11 +1308,15 @@ i.car-ct-amt i.fa-inr  {
   margin: 14px 1% 0 0;
 }
 
+.health-chout-user #mm {     margin: 0 1% 0 0; }
+
 .car-chout-user #yyyy,
 .health-chout-user #yyyy {
   width: 12%;
   text-align: center;
 }
+
+.health-chout-user #yyyy { margin: 0 0 0 -6px; }
 
 .car-chout-buy,
 .health-chout-buy {
@@ -1327,13 +1347,11 @@ i.car-ct-amt i.fa-inr  {
 
 .car-chout-user span + span { float: right; }
 
-.health-chout-user #fname { margin: 0 0 0 80px; }
-
 .health-chout-user #dd { margin: 0 0 0 16px; }
 
 textarea {
   padding: 10px;
-  margin: 0 0 0 46px;
+  margin: 0 0 0 30px;
   resize: none;
 }
 

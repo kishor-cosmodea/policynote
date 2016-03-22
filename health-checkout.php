@@ -6,31 +6,29 @@ include("header.php");
 
 <!-- Content starts here-->
 <div class="container">
-	<div class="wrapper">
+	<div class="wrapper health-chk-cont">
 		<div class="health-profile-content">
 			<div class="health-chk-text">
-				<h2>Health Insurance Checkout</h2>
+				<span><i class="fa fa-arrow-circle-left fa-lg"></i> Back to Results</span>
 			</div>
 			<div class="health-checkout">
-				<div class="health-ch-data">
-					<h3>Health Details</h3>
-				</div>
 				<div class="health-ch-ins">
 					<img src="assets/images/apollo.png" alt="policy-logo">
-					<span class="health-ct-amt">Care NCB Super</span>
-					<span>Cover Amount : 1,00,000</span>
 					<span class="health-ct-amt"><i class="fa fa-inr"></i> 2,283</span>
+					<span class="health-ct-amt">Care NCB Super</span>
+				</div>
+				<div class="health-ch-cm">
+					<h3>Cover Amount</h3>
+					<span>Health:</span><span class="cov-right"><i class="fa fa-inr"></i> 1,00,000</span>
 				</div>
 			</div>
 			<div class="health-chout-data">
 
 				<div class="health-chout-plan">
-					<p>Book your policy in simple steps</p>
 					<div class="health-chout-prop">
-						<p>1. Proposer</p>
+						<span>1</span> <p>Proposer Details</p>
 					</div>
 					<div class="health-chout-user">
-						<button>Self</button>
 						<input type="text" name="fname" placeholder="First Name">
 						<input type="text" name="lname" placeholder="Last Name">
 						<p><input type="text" name="email" placeholder="Email">
@@ -40,12 +38,12 @@ include("header.php");
 
 					<div class="health-chout-plan">
 						<div class="health-chout-prop">
-							<p>2. Insured Members</p>
+							<span>2</span> <p>Insured Members</p>
 						</div>
 						<div class="health-chout-user">
 							<span>Self</span>
 							<input id="fname" type="text" name="fname" placeholder="First Name">
-							<input type="text" name="lname" placeholder="Last Name">
+							<input id="lname" type="text" name="lname" placeholder="Last Name">
 							<p class="he-inp">
 								<span>Date of Birth</span>
 								<input id="dd" type="text" name="dd" placeholder="DD" maxlength="2">
@@ -57,7 +55,7 @@ include("header.php");
 
 					<div class="health-chout-plan">
 						<div class="health-chout-prop">
-							<p>3. Medical History</p>
+							<span>3</span> <p>Medical History</p>
 						</div>
 						<div class="health-chout-user">
 							<span>Have you or any other member(s) proposed to be insured under this policy have ever suffered from any disease.</span>
@@ -70,12 +68,12 @@ include("header.php");
 
 					<div class="health-chout-plan">
 						<div class="health-chout-prop">
-							<p>4. Mailing Address</p>
+							<span>4</span> <p>Contact Details</p>
 						</div>
 						<div class="health-chout-user">
 							<span>Address</span>
 							<textarea rows="4" cols="50" placeholder="Address" maxlength="250"></textarea>
-							<p class="health-chout-buy"><button>Confirm Purchase</button></p>
+							<p class="health-chout-buy"><button>Confirm</button></p>
 						</div>
 					</div>
 
