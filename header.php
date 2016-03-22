@@ -59,6 +59,12 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
 </head>
 <body>
     <!-- Header starts here -->

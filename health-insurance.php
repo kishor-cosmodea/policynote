@@ -30,6 +30,7 @@ include("header.php");
 				<p>
 					<input type="text" name="health-age" maxlength="2" placeholder="Age">
 					<input class="health-pin" type="text" name="health-pin" placeholder="Pincode" maxlength="6">
+					<!-- <p><span><i class="fa fa-plus-circle fa-lg"></i> Add more members</span></p> -->
 				</p>
 				<p class="health-sub-btn">
 					<button class="btn-quote"><a href="health-compare.php">Get Quotes</a></button>

@@ -9,7 +9,7 @@ include("header.php");
 	<div class="wrapper car-chk-cont">
 		<div class="car-profile-content">
 			<div class="car-chk-text">
-				<span><i class="fa fa-arrow-circle-left fa-lg"></i> Back to Results</span>
+				<span onclick="goBack()"><i class="fa fa-arrow-circle-left fa-lg"></i> Back to Results</span>
 			</div>
 			<div class="car-checkout">
 				<div class="car-ch-ins">

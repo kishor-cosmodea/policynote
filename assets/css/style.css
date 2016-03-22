@@ -664,6 +664,14 @@ input[type=number]::-webkit-outer-spin-button {
 .car-chk-text,
 .health-chk-text { margin: 10px 0; }
 
+.car-chk-text span,
+.health-chk-text span { cursor: pointer; }
+
+.car-chk-text span:hover,
+.health-chk-text span:hover {
+    color: #008ed6;
+}
+
 .car-chk-cont .car-profile-content,
 .health-chk-cont .health-profile-content { margin: 75px auto 0; }
 
@@ -1273,6 +1281,8 @@ i.car-ct-amt i.fa-inr  {
   text-align: left;
 }
 
+.health-chout-user .health-rb { margin: 15px 0 0 0; }
+
 .car-chout-user input,
 .health-chout-user input {
   width: 40%;
@@ -1499,7 +1509,7 @@ textarea {
 .about-cont { margin: 20px 0 36px 0; }
 
 .about-cont .wrap-cont {
-  width: 60%;
+  width: 50%;
   margin: 80px auto 0;
 }
 
@@ -1510,21 +1520,40 @@ textarea {
 }
 
 .about-cont .about-street {
+  width: 42%;
   margin: 0 20px 0 0;
-  text-align: right;
 }
 
 .about-cont .about-street p {
-  margin: 0 0 5px 0;
-  color: #008ed6;
-  font-weight: 600;
+    margin: 0 0 25px 0;
+    color: #008ed6;
+    font-size: 28px;
+}
+
+.about-cont .about-street div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-cont .about-street > div {
+    margin: 0 7%;}
+
+.about-cont .about-street span img {
+    margin: 0 15% 0 7%;
+    display: inline-block;
 }
 
 .about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
 
 .about-cont .about-street span {
-  font-size: 15px;
-  display: block;
+/*  margin: 10px 0;*/
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+}
+
+.about-cont .about-street p + span {
+  margin: 10px 0;
 }
 
 .terms-content {

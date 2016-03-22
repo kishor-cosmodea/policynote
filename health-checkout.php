@@ -9,7 +9,7 @@ include("header.php");
 	<div class="wrapper health-chk-cont">
 		<div class="health-profile-content">
 			<div class="health-chk-text">
-				<span><i class="fa fa-arrow-circle-left fa-lg"></i> Back to Results</span>
+				<span onclick="goBack()"><i class="fa fa-arrow-circle-left fa-lg"></i> Back to Results</span>
 			</div>
 			<div class="health-checkout">
 				<div class="health-ch-ins">

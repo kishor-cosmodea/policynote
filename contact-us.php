@@ -7,16 +7,18 @@ include("header.php");
 	<div class="about-cont">
 		<div class="wrap-cont">
 			<div>
-				<h2>Location</h2>
+				<h2>Get in touch</h2>
 			</div>
 			<div class="about-street">
 				<p>Policynote</p>
-				<span>02, New Street,</span>
+				<div><img src="assets/images/cont.png" alt="map" width="30" height="30"></div>
+				<div><span>02, New Street,</span>
 				<span>Star Villa,</span>
 				<span>Mumbai-400001</span>
+				</div>
 				<p class="about-us">Write to us</p>
-				<span>support@policynote.com</span>
-				<span>022-22222222</span>
+				<span><img src="assets/images/tele.png" alt="map" width="30" height="30">support@policynote.com</span>
+				<span><img src="assets/images/msg.png" alt="map" width="30" height="30">022-22222222</span>
 			</div>
 			<div class="about-add">
 				<img src="assets/images/about-map.png" alt="map">
