@@ -34,12 +34,12 @@
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
     <!-- Open Raleway font -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'> -->
     
     <!-- Abril font -->
-    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'> -->
 
-    <!-- Bootstrap of rupee font -->
+    <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- jQuery -->

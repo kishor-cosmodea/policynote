@@ -10,7 +10,7 @@ include("header.php");
 		<div class="main-text">
 			<div class="main-life"><h2>Give</h2><h3>Life</h3></div>
 			<div><h2>an</h2><h3>Insurance</h3></div>
-			<div class="main-gq"><h4>Get Quotes:</h4></div>
+			<div class="main-gq"><h4>Get Quotes</h4></div>
 			<a href="car-insurance.php" title="Car"><i class="fa fa-car fa-2x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i></span><span class="t-car">Car</span></a>
 			<a href="health-insurance.php" title="Health"><i class="fa fa-heart-o fa-2x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i></span><span class="t-health">Health</span></a>
 		</div>

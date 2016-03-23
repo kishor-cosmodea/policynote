@@ -9,7 +9,7 @@ include("header.php");
 	<div class="health-content">
 		<div class="health-quote">
 			<div class="health-get">
-				<h2>Get a Health Insurance <span>It only takes 30 seconds</span></h2>
+				<h2>Get Health Insurance <span>It only takes 30 seconds</span></h2>
 				<p>
 					<select name="ins-for" class="ins-for">
 						<option value="Insurance For">Insurance For</option>
