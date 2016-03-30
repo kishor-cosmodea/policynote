@@ -18,7 +18,7 @@ include("header.php");
 	<div class="about-policy">
 		<div class="wrap-policy">
 			<div>
-				<h2>Our Story</h2>
+				<h2>OUR STORY</h2>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</p>
@@ -28,16 +28,12 @@ include("header.php");
 
 	<div class="about-family">
 		<div class="wrap-family">
-			<div>
-				<img src="assets/images/about-family.png" alt="family">
-			</div>
-			<div>
-				<h2>For Family</h2>
-				<h3>Lorem Ipsum is simply dummy text of!</h3>
-			</div>
+				<h2>MEET THE TEAM</h2>
+				<img src="assets/images/dummy-200x200-Rope.jpg" alt="family">
+				<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
 		</div>
 	</div>
-
 
 <!-- 	<div class="about-buy">
 		<div class="wrap-buy">

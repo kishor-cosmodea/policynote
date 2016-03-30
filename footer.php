@@ -1,14 +1,11 @@
 	
 <!-- Footer starts here -->
 <footer>
-	<div class="wrapper">
+	<!-- <div class="wrapper"> -->
 		<div class="foot-content">
-			<ul>
-        <h2>
-          <a href="index.php" title="Policynote">Policynote</a>
-        </h2>
-				<span class="pnote">&copy; 2016 Policynote. All Rights Reserved.</span>
-			</ul>
+			<h2>
+      	<a href="index.php" title="Policynote">Policynote</a>
+      </h2>
 			<ul>
 				<li><a href="about-us.php" title="About Us">About Us</a></li>
 				<li><a href="privacy-policy.php" title="Privacy Policy">Privacy Policy</a></li>
@@ -35,8 +32,11 @@
 			<p class="foot-irda">
 				Insurance is the subject matter of the solicitation.
 			</p>
+			<p class="foot-irda">
+			&copy; 2016 Policynote. All Rights Reserved.
+			</p>
 		</div>
-	</div>
+	<!-- </div> -->
 </footer>
 <!-- Footer ends here -->
 
