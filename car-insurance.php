@@ -12,13 +12,24 @@ include("header.php");
         <h2>Get Car Insurance <span>It only takes 30 seconds</span></h2>
         <div class="car-fis-ul">
           <p>
-           <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
-           data-source="[&quot;Audi A3&quot;,&quot;Audi A4&quot;,&quot;Audi A6&quot;
-           ,&quot;Audi A7&quot;,&quot;Audi A8&quot;,&quot;Audi C7&quot;,&quot;Audi Q3&quot;
-           ,&quot;Audi Q5&quot;,&quot;Audi Q7&quot;,&quot;Audi Q7&quot;,&quot;Audi R8&quot;
-           ,&quot;Audi RS5&quot;,&quot;Audi RS 6 Avant&quot;,&quot;Audi RS7&quot;,&quot;Audi S4&quot;
-           ,&quot;Audi S6&quot;,&quot;Audi TT Coupe&quot;
-           ]" placeholder="Car Model">
+            <?php
+              $str = file_get_contents('assets/js/car-data.json');
+              $json = json_decode($str, true);
+
+              // $temp = $json[0]['name'];
+              // echo $temp;
+
+              //echo "<input class='typeh'>";
+            ?>
+            <ul class="car-list">
+              <?php foreach ($json as $name) {?>
+                <li><a href='#' title=''> <?php echo $name['name']; ?></a></li>
+              <?php } ?>
+            </ul>
+            <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
+            data-items="6" placeholder="Car Model">
+           <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
+           data-source="" placeholder="Car Model"> -->
 
            <select class="car-sel" name="Manufacturing Year">
              <option value="year">Manufacturing Year</option>
@@ -42,19 +53,16 @@ include("header.php");
 
            <select name="Fuel Type" class="sel-fuel">
              <option value="fueltype">Fuel Type</option>
-             <option value="petrol">Petrol</option>
-             <option value="diesel">Diesel</option>
            </select>
          </p>
        </div>
        <div class="car-sec-ul">
         <p>
-          <select name="Variant" class="sel-var">
+          <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
+            data-items="6" placeholder="Varient">
+          <!-- <select name="Variant" class="sel-var">
            <option value="variant">Variant</option>
-           <option value="tsi">TSI</option>
-           <option value="vdi">VDI</option>
-           <option value="vdi">ZDI</option>
-         </select>
+          </select> -->
 
          <input type="text" class="car-mod span3 car-sel" name="car-mod" data-provide="typeahead" data-items="4"
          data-source="[&quot;MH-01-Mumbai Central- Location- Tardeo&quot;,&quot;MH-02-Andheri (mumbai Western Suburbs)&quot;,&quot;MH-03-Mumbai, (east), Wadala&quot;

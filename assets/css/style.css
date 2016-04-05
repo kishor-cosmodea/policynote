@@ -553,6 +553,7 @@ footer {
       .car-get div {
         width: 82%;
         display: inline-block;
+        position: relative;
       }
 
       .car-get div.car-sub-btn {
@@ -614,6 +615,12 @@ footer {
       .car-sel,
       .car-get input.car-sel { margin: 0 4%; }
 
+      .car-get .car-list { display: none; } 
+
+.car-get .car-list li {
+      position: absolute;
+    top: 39px;
+    }
 
       .car-get .dropdown-menu,
       .car-re-data .dropdown-menu {
@@ -904,7 +911,7 @@ footer {
       .health-result-data { min-height: 868px; }
 
       .car-sel-info {
-        margin: 82px 0 0 0;
+        margin: 72px 0 0 0;
         background: #e9e9f0;
       }
 
