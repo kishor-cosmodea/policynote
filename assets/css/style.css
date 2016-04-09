@@ -441,7 +441,7 @@ footer {
       .ins-gq h2 {
         padding: 16px 0;
         color: #fff;
-        font-size: 42px;
+        font-size: 34px;
         font-weight: 400;
         text-align: center;
       }
@@ -525,7 +525,7 @@ footer {
         text-align: center;
       }
 
-      .car-quote { padding: 0 0 140px 0; }
+      .car-quote { padding: 0 0 130px 0; }
 
       .car-get h2,
       .health-quote h2 {
@@ -544,7 +544,7 @@ footer {
       .car-get {
         width: 65%;
         margin: 0 auto;
-        padding: 21px 3% 32px;
+        padding: 21px 3% 15px;
         border-radius: 4px;
         background: rgba(255,255,255, 0.8);
         text-align: left;
@@ -558,7 +558,7 @@ footer {
 
       .car-get div.car-sub-btn {
         width: 18%;
-        margin: -38px 0 0 0;
+        margin: -27px 0 0 0;
         float: right;
         display: inline-block;
         vertical-align: top;
@@ -612,8 +612,8 @@ footer {
         color: #2f3e5c;
       }
 
-      .car-sel,
-      .car-get input.car-sel { margin: 0 4%; }
+      /*.car-sel,
+      .car-get input.car-sel { margin: 0 4%; }*/
 
       .car-get .car-list { display: none; } 
 
@@ -630,7 +630,7 @@ footer {
 
       .car-fis-ul .dropdown-menu { margin: 25px 0 10px; }
 
-      .car-sec-ul .dropdown-menu { margin: 0 0 0 31px; }
+      .car-sec-ul .dropdown-menu { margin: 23px 0 0 3px; }
 
       .car-get .dropdown-menu li,
       .car-re-data .dropdown-menu li {
@@ -649,7 +649,7 @@ footer {
       .car-get .dropdown-menu li a:hover,
       .car-re-data .dropdown-menu li:hover, 
       .car-re-data .dropdown-menu li a:hover {
-        color: #000;
+        color: #70cbd2;
         background: #fff;
       }
 
@@ -1152,7 +1152,7 @@ footer {
         text-align: center;
       }
 
-      .health-quote { padding: 0 0 140px 0; }
+      .health-quote { padding: 0 0 130px 0; }
 
       .health-get button {
         border: none;
