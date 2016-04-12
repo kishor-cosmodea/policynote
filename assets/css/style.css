@@ -96,7 +96,7 @@ Fonts
 @font-face {
   font-family: Gotham Rounded Medium;
   src: url("../fonts/GothamRounded-Medium.otf");
-  src: url("../fonts/GothamRounded-Medium.otf") format("opentype"), url("../fonts/GothamRoundedMedium_21022.ttf") format("ttf"), url("../fonts/GothamRounded-MediumItalic.otf") format("otf ");
+  src: url("../fonts/GothamRounded-Medium.otf") format("opentype"), url("../fonts/GothamRoundedMedium_21022.ttf") format("ttf"), url("../fonts/GothamRounded-MediumItalic.otf") format("otf");
   font-style: normal;
   font-weight: 200; }
 
@@ -628,7 +628,10 @@ footer {
         width: 200px;
       }
 
-      .car-fis-ul .dropdown-menu { margin: 25px 0 10px; }
+      .car-fis-ul .dropdown-menu {
+        margin: 25px 0 10px;
+        z-index: 1;
+      }
 
       .car-sec-ul .dropdown-menu { margin: 23px 0 0 3px; }
 

@@ -18,15 +18,20 @@ include("header.php");
               // $temp = $json[0]['name'];
               // echo $temp;
 
-              //echo "<input class='typeh'>";
             ?>
-            <ul class="car-list">
+            <!-- <ul class="car-list">
               <?php foreach ($json as $name) {?>
                 <li><a href='#' title=''> <?php echo $name['name']; ?> </a></li>
               <?php } ?>
-            </ul>
+            </ul> -->
             <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
-            data-items="6" placeholder="Car Model">
+            data-items="6" placeholder="Car Model" data-source="[
+            <?php foreach ($json as $name) {
+                echo '&quot;' . $name['name'] . '&quot;,'; }
+                echo "&quot; &quot;";
+            ?>
+            ]">
+
            <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
            data-source="" placeholder="Car Model"> -->
 

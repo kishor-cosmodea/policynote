@@ -151,10 +151,10 @@ $(function() {
 // });
 
 
-//car model
-	$('#typeahead1').on("click", function () {
-		$('.car-list').show();
-	});
+				//car model
+					// $('#typeahead1').on("click", function () {
+					// 	$('.car-list').show();
+					// });
 
 // var jsonString = '[{"name":"Audi","value":"1"},{"name":"BMW","value":"2"},{"name":" Volvo","value":"3"},{"name":"Nissan","value":"4"},{"name":"Jaguar","value":"5"},{"name":"Dodge","value":"6"}]';
 // var jsonObj = $.parseJSON(jsonString);
