@@ -12,20 +12,30 @@ include("header.php");
         <h2>Get Car Insurance <span>It only takes 30 seconds</span></h2>
         <div class="car-fis-ul">
             <?php
-              $str = file_get_contents('assets/js/car-data.json');
-              $json = json_decode($str, true);
+              //$str = file_get_contents('assets/js/car-data.json');
+              //$json = json_decode($str, true);
 
               // $temp = $json[0]['name'];
               // echo $temp;
 
+              $url = "http://52.32.253.76:8080/webapp/api/business/getAllMakes";
+              $ch = curl_init();
+
+              // Disable SSL verification
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+              // Will return the response, if false it print the response
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              // Set the url
+              curl_setopt($ch, CURLOPT_URL,$url);
+              // Execute
+              $res = curl_exec($ch);
+              // Closing
+              curl_close($ch);
+
+              $json = json_decode($res, true);
             ?>
-            <!-- <ul class="car-list">
-              <?php foreach ($json as $name) {?>
-                <li><a href='#' title=''> <?php echo $name['name']; ?> </a></li>
-              <?php } ?>
-            </ul> -->
             <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
-            data-items="6" placeholder="Car Model" data-source="[
+            data-items="6" placeholder="Car" data-source="[
             <?php foreach ($json as $name) {
                 echo '&quot;' . $name['name'] . '&quot;,'; }
                 echo "&quot; &quot;";
@@ -69,7 +79,7 @@ include("header.php");
              <option value="2015">2001</option>
            </select>
 
-         <input type="text" class="car-mod span3 car-sel" name="car-mod" data-provide="typeahead" data-items="6"
+         <input id="typeahead3" type="text" class="car-mod span3 car-sel" name="car-mod" data-provide="typeahead" data-items="6"
          data-source="[&quot;AN-01 - Port Blair&quot;,&quot;AN-02 - Car Nicobar&quot;,&quot;AP-01 - Nirmal&quot;,&quot;AP-02 - Anantapur&quot;,
 &quot;AP-03 - Tirupathi&quot;,&quot;AP-04 - Cuddapah&quot;,&quot;AP-05 - Rajahmundry&quot;,&quot;AP-06 - Kakinada&quot;,
 &quot;AP-07 - Guntur&quot;,&quot;AP-08 - Guntur&quot;,&quot;AP-09 - Hyderabad&quot;,&quot;AP-10 - Secunderabad Hyderabad North&quot;,

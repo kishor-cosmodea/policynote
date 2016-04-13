@@ -152,9 +152,10 @@ $(function() {
 
 
 				//car model
-					// $('#typeahead1').on("click", function () {
-					// 	$('.car-list').show();
-					// });
+					$('#typeahead1').on("click", function () {
+						//alert("hi");
+						//$('.typeahead.dropdown-menu').show();
+					});
 
 // var jsonString = '[{"name":"Audi","value":"1"},{"name":"BMW","value":"2"},{"name":" Volvo","value":"3"},{"name":"Nissan","value":"4"},{"name":"Jaguar","value":"5"},{"name":"Dodge","value":"6"}]';
 // var jsonObj = $.parseJSON(jsonString);
@@ -189,28 +190,28 @@ $(function() {
 //
 $(document).ready(function(){
   $.ajax({
-    url: "assets/js/car-data.json",
+    url: "http://52.32.253.76:8080/webapp/api/business/getAllMakes",
     dataType: 'json',
     success: function(data) {
     	//alert(data);
-      //alert("Temperature is: " + name );
+      
     },
     error: function() {
-      alert("error");
+      //alert("error");
     }
   });
 });
 
 
-$.getJSON( "assets/js/car-data.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push();
-  });
+// $.getJSON( "assets/js/car-data.json", function( data ) {
+//   var items = [];
+//   $.each( data, function( key, val ) {
+//     items.push();
+//   });
  
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-});
+//   $( "<ul/>", {
+//     "class": "my-new-list",
+//     html: items.join( "" )
+//   }).appendTo( "body" );
+// });
 
