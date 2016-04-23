@@ -19,7 +19,8 @@
     <!-- This meta tag is used for mobile device to display the page without any zooming,
          so how much the device is able to fit on the screen is what's shown initially.
          Remove comments from this tag, when you want to apply media queries to the website. -->
-         <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> -->
+    <meta name="viewport" content="width=1250">
 
          <!-- To adhear no-cache for Chrome -->
     <!-- <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
@@ -47,6 +48,8 @@
 
     <!-- Bootstrap Typehead -->
     <script type="text/javascript" src="assets/vendor/bootstrap-typehead.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap Icons -->
     <!-- <script type="text/javascript" src="assets/vendor/boot-icon.css"></script> -->
@@ -78,7 +81,7 @@
                     <ul>
                         <li><a id="nav-home" href="index.php" title="Home">Home</a></li>
                         <li><a id="nav-car" href="car-insurance.php" title="Car">Car</a></li>
-                        <li><a id="nav-health" href="health-insurance.php" title="Health">Health</a></li>
+                        <!-- <li><a id="nav-health" href="health-insurance.php" title="Health">Health</a></li> -->
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
                         <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
                     </ul>

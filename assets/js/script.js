@@ -187,10 +187,15 @@ $(function() {
 // 	source: sourceArrV
 // });
 
-//
-$(document).ready(function(){
+//$vl = $("#typeahead1").val();
+//alert($vl);
+
+$(document).ready(function() {
+
   $.ajax({
-    url: "http://52.32.253.76:8080/webapp/api/business/getAllMakes",
+  	//$("#txtEmail").val(),
+  	
+    url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/258",
     dataType: 'json',
     success: function(data) {
     	//alert(data);

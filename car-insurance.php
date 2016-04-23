@@ -34,6 +34,7 @@ include("header.php");
 
               $json = json_decode($res, true);
             ?>
+
             <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
             data-items="6" placeholder="Car" data-source="[
             <?php foreach ($json as $name) {
@@ -49,7 +50,7 @@ include("header.php");
              <option value="fueltype">Fuel Type</option>
              <option value="petrol">Petrol</option>
              <option value="diesel">Diesel</option>
-           </select>
+          </select>
 
           <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
             data-items="6" placeholder="Varient">
@@ -416,11 +417,11 @@ include("header.php");
           <i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
           <p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
         </div>
-        <div class="health-block">
+        <!-- <div class="health-block">
           <h3>Health Insurance</h3>
           <i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
           <p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="main-testi">
