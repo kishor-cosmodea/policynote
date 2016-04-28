@@ -33,35 +33,53 @@ include("header.php");
               curl_close($ch);
 
               $json = json_decode($res, true);
+
+              //echo $json[1];
+
             ?>
 
-            <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
+ <select id="car-model" name="carmodel">
+  <option value="" disabled selected>Car Model</option>
+  <?php
+    foreach ($json as $data) {
+      echo  "<option value=". $data['make_id'] .">" . $data['name'] .  "</option>";
+    }
+  ?>
+</select>
+
+
+            <!-- <input id="typeahead1" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
             data-items="6" placeholder="Car" data-source="[
-            <?php foreach ($json as $name) {
-                echo '&quot;' . $name['name'] . '&quot;,'; }
+            <?php foreach ($json as $data) {
+                echo '&quot;' . $data['name'] . '&quot;,'; }
                 echo "&quot; &quot;";
             ?>
-            ]">
+            ]" value="<?php foreach ($json as $data) {
+                echo $data['make_id']; }
+
+            ?>"/> -->
 
            <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
            data-source="" placeholder="Car Model"> -->
 
           <select name="FuelType" class="sel-fuel">
-             <option value="fueltype">Fuel Type</option>
-             <option value="petrol">Petrol</option>
-             <option value="diesel">Diesel</option>
+             <option value="" disabled selected>Fuel Type</option>
+             <option value="Petrol">Petrol</option>
+             <option value="Diesel">Diesel</option>
           </select>
 
-          <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
-            data-items="6" placeholder="Varient">
-          <!-- <select name="Variant" class="sel-var">
-           <option value="variant">Variant</option>
-          </select> -->
+          <!-- <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
+            data-items="6" placeholder="Variant"> -->
+
+          <select name="variant" class="sel-var">
+           <option value="" disabled selected>Variant</option>
+          </select>
+
        </div>
        <div class="car-sec-ul">
 
-           <select class="car-sel" name="Manufacturing Year">
-             <option value="year">Manufacturing Year</option>
+           <select class="car-year" name="Manufacturing Year">
+             <option value="year" disabled selected>Manufacturing Year</option>
              <option value="2016">2016</option>
              <option value="2015">2015</option>
              <option value="2015">2014</option>
@@ -384,10 +402,10 @@ include("header.php");
 
          ]" placeholder="RTO">
 
-         <select name="SelPolStat">
-          <option value="buynew">Policy Status</option>
-          <option value="buynew">Buy New</option>
-          <option value="renew">Renew</option>
+         <select name="SelPolStat" class="polstat">
+          <option value="buynew" disabled selected>Policy Status</option>
+          <option value="buynew" class="buynew">Buy New</option>
+          <option value="renew" class="renew">Renew</option>
         </select>
     </div>
     <div class="car-sub-btn">

@@ -33,7 +33,7 @@
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-
+    
     <!-- Open Raleway font -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'> -->
     
@@ -49,7 +49,8 @@
     <!-- Bootstrap Typehead -->
     <script type="text/javascript" src="assets/vendor/bootstrap-typehead.min.js"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,500,700,800,900' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap Icons -->
     <!-- <script type="text/javascript" src="assets/vendor/boot-icon.css"></script> -->

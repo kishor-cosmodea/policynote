@@ -41,6 +41,5 @@
 <!-- Footer ends here -->
 
 <script type="text/javascript" src="assets/js/script.js"></script>
-<!-- <script Src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 </body>
 </html>

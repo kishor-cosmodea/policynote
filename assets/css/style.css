@@ -137,7 +137,8 @@ Fonts
 body, select, input,
 textarea, button {
   /*font-family: "Gotham Rounded Book";*/
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 a { text-decoration: none; }
@@ -165,7 +166,7 @@ h1, nav, nav ul li {
   vertical-align: top;
 }
 
-nav ul li { margin: 0 0 0 -3px; }
+nav ul li { margin: 0 0 0 -1px; }
 
 nav ul li:last-child { padding: 0; }
 
@@ -182,7 +183,7 @@ h1 a {
 nav { float: right; }
 
 nav ul li a {
-  padding: 26.3px;
+  padding: 26px;
   display: block;
   text-transform: uppercase;
   color: #2f3e5c;
@@ -193,8 +194,9 @@ nav ul li a {
 nav ul li a:hover, .active {
   color: #fff;
   background: #70cbd2;
-  font-weight: 700;
 }
+
+.active { font-weight: 700; }
 /*Header style end*/
 
 /*footer style starts*/
@@ -205,7 +207,8 @@ footer {
 
 .foot-content {
   background: url("../images/foot-bg.png") top center no-repeat;
-  padding: 38px 0; }
+  padding: 38px 0 10px 0;
+}
 
   .foot-content h2 {
     margin: 15px 0 20px 0;
@@ -480,7 +483,7 @@ footer {
         color: #4d4d4d;
       }
 
-      .sketch-cont { margin: 40px 0 0 0; }
+      .sketch-cont { margin: 51px 0 0 0; }
 
       .main-testi {
         background: url("../images/testimonialsbg.png");
@@ -1539,3 +1542,4 @@ footer {
         }
 
         /*content style end*/
+

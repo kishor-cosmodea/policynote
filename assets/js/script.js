@@ -152,7 +152,7 @@ $(function() {
 
 
 				//car model
-					$('#typeahead1').on("click", function () {
+				$('#typeahead1').on("click", function () {
 						//alert("hi");
 						//$('.typeahead.dropdown-menu').show();
 					});
@@ -192,31 +192,68 @@ $(function() {
 
 $(document).ready(function() {
 
-  $.ajax({
-  	//$("#txtEmail").val(),
-  	
-    url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/258",
-    dataType: 'json',
-    success: function(data) {
+	$('.car-year').on('change',function(){
+		var caryear = parseInt($(this).val());
+		if(caryear == 2016) {
+			console.log(caryear);
+			$('.polstat option.renew').hide();
+			$('.polstat option.buynew').show();
+		} else {
+			console.log('caryear');
+			$('.polstat option.renew').show();
+			$('.polstat option.buynew').hide();
+		}
+	});
+
+	$( "#car-model" ).blur(function() {
+		$('.sel-fuel option , .sel-var option ').prop('selected', function () {
+			return this.defaultSelected;
+		});
+
+		$.ajax({
+
+			url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
+			dataType: 'json',
+			success: function(data) {
     	//alert(data);
-      
-    },
-    error: function() {
+    	fuletype(data);
+    	//console.log(JSON.stringify(data));
+    	     //   $.each(data, function (index, element) {
+    	     	
+    	     //   	 if (element.model_id.make_id.name == $_model) {
+          //     dats_sourc.push(element.model_id.model_name);
+          //   }
+          
+          //     console.log(element.model_id.model_name);
+          
+          // });
+
+	},
+	error: function() {
       //alert("error");
     }
   });
+
+	});
+
+	function fuletype (data) {
+		$('.sel-fuel').on('change',function(){
+			$('.sel-var').empty();
+			var typeful = $(this).val();
+			console.log(typeful);
+			if (typeful) {
+				$.each(data, function (index, element) {      
+					if (element.fuel_type == typeful) {
+              //console.log(element.model_id.model_name +' - '+element.varient );
+
+              $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>')
+
+            }
+            
+          });
+			};
+		})
+	}
+
 });
-
-
-// $.getJSON( "assets/js/car-data.json", function( data ) {
-//   var items = [];
-//   $.each( data, function( key, val ) {
-//     items.push();
-//   });
- 
-//   $( "<ul/>", {
-//     "class": "my-new-list",
-//     html: items.join( "" )
-//   }).appendTo( "body" );
-// });
 
