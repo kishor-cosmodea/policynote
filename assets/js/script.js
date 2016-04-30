@@ -34,23 +34,23 @@ $(window).load(function() {
 			$('#nav-car').addClass('active');
 		}
 
-		var pos_health = pathname.search("health-insurance.php");
+		// var pos_health = pathname.search("health-insurance.php");
 
-		if(pos_health == 12) {
-			$('#nav-health').addClass('active');	
-		}
+		// if(pos_health == 12) {
+		// 	$('#nav-health').addClass('active');	
+		// }
 
-		var pos_health_comp = pathname.search("health-compare.php");
+		// var pos_health_comp = pathname.search("health-compare.php");
 
-		if(pos_health_comp == 12) {
-			$('#nav-health').addClass('active');	
-		}
+		// if(pos_health_comp == 12) {
+		// 	$('#nav-health').addClass('active');	
+		// }
 		
-		var pos_car_chk = pathname.search("health-checkout.php");
+		// var pos_car_chk = pathname.search("health-checkout.php");
 
-		if(pos_car_chk == 12) {
-			$('#nav-health').addClass('active');
-		}
+		// if(pos_car_chk == 12) {
+		// 	$('#nav-health').addClass('active');
+		// }
 
 		var pos_about = pathname.search("about-us.php");
 
@@ -67,47 +67,14 @@ $(window).load(function() {
 	});
 
 
-// Document ready functions
-$(document).ready(function(){
-	//alert("hi");
-
-});
-
-
 // Hide input placeholder on focus event
 $('input[placeholder]').on('focus', function () {
 	var $this = $(this);
-	$this.data('placeholder', $this.prop('placeholder')).removeAttr('placeholder')
+	$this.data('placeholder', $this.prop('placeholder')).removeAttr('placeholder');
 }).on('blur', function () {
 	var $this = $(this);
 	$this.prop('placeholder', $this.data('placeholder'));
 });
-
-
-//Car and health insurance buttons
-// $('.car-re-add button, .health-item button').on("click", function () {
-
-// 	if ( $(this).hasClass( "act" ) ) {
-// 		$(this).removeClass('act');
-// 	} else {
-// 		$(this).addClass('act');
-// 	}
-
-// });
-
-
-//Health insurance gender buttons
-// $('.health-g-item button').on("click", function () {
-
-// 	if ( $("button").hasClass( 'act' ) ) {
-// 		console.log("if");
-// 		$(this).removeClass('act');
-// 	} else {
-// 		console.log("el");
-// 		$(this).addClass('act');
-// 	}
-
-// });
 
 
 //input mobile validation
@@ -137,96 +104,26 @@ $(function() {
 
 
 
-// $.getJSON( "car-data.json", function( data ) {
-//   var items = [];
-  // $.each( data, function( key, val ) {
-  //   items.push( "<li id='" + key + "'>" + val + "</li>" );
-  // });
-
-  // $( "<ul/>", {
-  //   "class": "my-new-list",
-  //   html: items.join( "" )
-  // }).appendTo( "body" );
-	//alert(items);
-// });
-
-
-				//car model
-				$('#typeahead1').on("click", function () {
-						//alert("hi");
-						//$('.typeahead.dropdown-menu').show();
-					});
-
-// var jsonString = '[{"name":"Audi","value":"1"},{"name":"BMW","value":"2"},{"name":" Volvo","value":"3"},{"name":"Nissan","value":"4"},{"name":"Jaguar","value":"5"},{"name":"Dodge","value":"6"}]';
-// var jsonObj = $.parseJSON(jsonString);
-// var sourceArr = [];
-
-// for (var i = 0; i < jsonObj.length; i++) {
-// 	sourceArr.push(jsonObj[i].name);
-// }
-
-// $("#typeahead1").typeahead({
-// 	source: sourceArr
-// });
-
-
-//varient
-// 	$('#typeahead2').on("click", function () {
-// 		$('.typeahead.dropdown-menu').show();
-// 	});
-
-// var jsonString = '[{"varient":"LXI","value":"1"},{"varient":"TCZ","value":"2"},{"varient":" MNB","value":"3"},{"varient":"AAA","value":"4"},{"varient":"HJF","value":"5"},{"varient":"AWQ","value":"6"}]';
-// var jsonObj = $.parseJSON(jsonString);
-// var sourceArrV = [];
-
-// for (var i = 0; i < jsonObj.length; i++) {
-// 	sourceArr.push(jsonObj[i].varient);
-// }
-
-// $("#typeahead2").typeahead({
-// 	source: sourceArrV
-// });
-
-//$vl = $("#typeahead1").val();
-//alert($vl);
-
+/*
+	Document ready function
+*/
 $(document).ready(function() {
 
-	$('.car-year').on('change',function(){
-		var caryear = parseInt($(this).val());
-		if(caryear == 2016) {
-			console.log(caryear);
-			$('.polstat option.renew').hide();
-			$('.polstat option.buynew').show();
-		} else {
-			console.log('caryear');
-			$('.polstat option.renew').show();
-			$('.polstat option.buynew').hide();
-		}
-	});
-
-	$( "#car-model" ).blur(function() {
-		$('.sel-fuel option , .sel-var option ').prop('selected', function () {
+//Clear fuel type and variant
+	$( "#car-model, .car-year" ).on('click', function() {
+		$('.sel-fuel option, .sel-var option, .polstat option').prop('selected', function () {
 			return this.defaultSelected;
 		});
 
-		$.ajax({
 
+//Call to selected car brand
+		$.ajax({
 			url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
 			dataType: 'json',
 			success: function(data) {
     	//alert(data);
-    	fuletype(data);
+    	fueltype(data);
     	//console.log(JSON.stringify(data));
-    	     //   $.each(data, function (index, element) {
-    	     	
-    	     //   	 if (element.model_id.make_id.name == $_model) {
-          //     dats_sourc.push(element.model_id.model_name);
-          //   }
-          
-          //     console.log(element.model_id.model_name);
-          
-          // });
 
 	},
 	error: function() {
@@ -236,24 +133,55 @@ $(document).ready(function() {
 
 	});
 
-	function fuletype (data) {
-		$('.sel-fuel').on('change',function(){
+	function fueltype (data) {
+		$('.sel-fuel').on('change', function() {
 			$('.sel-var').empty();
-			var typeful = $(this).val();
-			console.log(typeful);
-			if (typeful) {
-				$.each(data, function (index, element) {      
-					if (element.fuel_type == typeful) {
-              //console.log(element.model_id.model_name +' - '+element.varient );
-
-              $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>')
-
+			var typefuel = $(this).val();
+			//console.log(typefuel);
+			if (typefuel) {
+				$.each(data, function (index, element) {
+					$('.sel-var').append('<option value="" disabled selected>Variant</option>');
+					if (element.fuel_type == typefuel) {
+              $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
-            
-          });
-			};
-		})
+        });
+			}
+		});
 	}
+
+
+//Car year functionality
+	$('.car-year').on('change', function() {
+		var caryear = parseInt($(this).val());
+		if(caryear == 2016) {
+			//console.log(caryear);
+			$('.polstat option.renew').hide();
+			$('.polstat option.buynew').show();
+		} else {
+			//console.log('caryear');
+			$('.polstat option.renew').show();
+			$('.polstat option.buynew').hide();
+		}
+
+	});
+
+
+
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: "http://52.32.253.76:8080/webapp/api/business/getFinalPremium",
+		// 	dataType: 'json',
+		// 	success: function(data) {
+  //   	//alert(data);
+  //   	//console.log(JSON.stringify(data));
+	 //    },
+	 //    error: function() {
+  //     //alert("error");
+  //     }
+  //   });
+
+	});
+
 
 });
 

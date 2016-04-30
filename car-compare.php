@@ -4,6 +4,53 @@ $pagetitle="Car Compare |";
 include("header.php");
 ?>
 
+
+<?php
+
+$data = array(
+  "regNumber" => "MH12ST1122",
+  "regDate"=>"05/03/2016",
+  "make"=>"AUDI",
+  "model"=>"A4",
+  "variant"=>"2.0 TDI B E",
+  "ncbPolicy"=>35,
+  "claimStatus"=>"No",
+  "idv"=>"2802690",
+  "insurancePerecentage"=>"60",
+  "addon"=>1.03,
+  "premium"=>601,
+  "electronic"=>""
+);
+
+$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
+
+$str_data = json_encode($data);
+
+//echo $str_data;
+
+
+
+
+function sendPostData($url, $post){
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
+  $result = curl_exec($ch);
+  curl_close($ch);  // Seems like good practice
+  return $result;
+  echo $result;
+  print_r($result);
+  var_dump($result);
+
+}
+
+//echo " " . sendPostData($url_send, $str_data);
+
+?>
+
+
 <!-- Content starts here-->
 <div class="container">
 	<div class="car-sel-info">

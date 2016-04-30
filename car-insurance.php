@@ -98,7 +98,7 @@ include("header.php");
              <option value="2015">2001</option>
            </select>
 
-         <input id="typeahead3" type="text" class="car-mod span3 car-sel" name="car-mod" data-provide="typeahead" data-items="6"
+         <input id="typeahead3" type="text" class="car-mod span3 car-rto" name="car-mod" data-provide="typeahead" data-items="6"
          data-source="[&quot;AN-01 - Port Blair&quot;,&quot;AN-02 - Car Nicobar&quot;,&quot;AP-01 - Nirmal&quot;,&quot;AP-02 - Anantapur&quot;,
 &quot;AP-03 - Tirupathi&quot;,&quot;AP-04 - Cuddapah&quot;,&quot;AP-05 - Rajahmundry&quot;,&quot;AP-06 - Kakinada&quot;,
 &quot;AP-07 - Guntur&quot;,&quot;AP-08 - Guntur&quot;,&quot;AP-09 - Hyderabad&quot;,&quot;AP-10 - Secunderabad Hyderabad North&quot;,
@@ -409,7 +409,7 @@ include("header.php");
         </select>
     </div>
     <div class="car-sub-btn">
-      <button class="btn-quote"><a href="car-compare.php">Get Quotes</a></button>
+      <button class="btn-quote" id="get-car-quote"><a href="car-compare.php">Get Quotes</a></button>
     </div>
   </div>
 </div>

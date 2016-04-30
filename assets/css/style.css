@@ -589,6 +589,7 @@ footer {
       }
 
       .car-get button.btn-quote {
+        /*padding: 15px 15px;*/
         border-radius: 4px;
         color: #fff;
         background: #70cbd2;
