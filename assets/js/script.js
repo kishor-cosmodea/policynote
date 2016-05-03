@@ -116,20 +116,20 @@ $(document).ready(function() {
 		});
 
 
-//Call to selected car brand
+		//Call to selected car brand
 		$.ajax({
+			method: "get",
 			url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
 			dataType: 'json',
 			success: function(data) {
     	//alert(data);
     	fueltype(data);
     	//console.log(JSON.stringify(data));
-
-	},
-	error: function() {
-      //alert("error");
-    }
-  });
+		},
+		error: function() {
+	      //alert("error");
+	    }
+	  });
 
 	});
 
@@ -158,7 +158,7 @@ $(document).ready(function() {
 			$('.polstat option.renew').hide();
 			$('.polstat option.buynew').show();
 		} else {
-			//console.log('caryear');
+			//console.log(caryear);
 			$('.polstat option.renew').show();
 			$('.polstat option.buynew').hide();
 		}
@@ -166,22 +166,60 @@ $(document).ready(function() {
 	});
 
 
+			$('.polstat').on('change', function() {
+				//$('.claimstatr').empty();
+				var ren = "Renew";
 
-		// $.ajax({
-		// 	type: "POST",
-		// 	url: "http://52.32.253.76:8080/webapp/api/business/getFinalPremium",
-		// 	dataType: 'json',
-		// 	success: function(data) {
-  //   	//alert(data);
-  //   	//console.log(JSON.stringify(data));
-	 //    },
-	 //    error: function() {
-  //     //alert("error");
-  //     }
-  //   });
+				if($(".polstat option:selected" ).val() == ren) {
+					$('.claimstat').show();
+				}	else {
+					$('.claimstat').hide();
+					$('.ncbpolicy').hide();
+				}
+
+			});
+
+
+			$('.claimstat').on('change', function() {
+				var claim = "No";
+				if($(".claimstat option:selected" ).val() == claim) {
+					$('.ncbpolicy').show();
+				}	else {
+					$('.ncbpolicy').hide();
+				}
+			});
+
+
+//Get All Makes Model Variant Data
+		$.ajax({
+			method: "get",
+			url: "http://52.32.253.76:8080/webapp/api/business/getAllMakesModelVariantData",
+			dataType: 'json',
+			success: function(data) {
+    	//alert(data);
+    	allmodeldata(data);
+    	//console.log(JSON.stringify(data));
+		},
+		error: function() {
+	      //alert("error");
+	    }
+	  });
+
+  	function allmodeldata (data) {
+	   	$.each(data, function (index, element) {
+	   			//console.log(element.idv_2016);
+
+      });
+    }
+
+
+    $('#get-car-quote').click(function() {
+    	var car = (".carmodel").find(":selected").text();
+    	console.log(car);
+    	alert(car);
+
+    });
+
 
 	});
-
-
-});
 

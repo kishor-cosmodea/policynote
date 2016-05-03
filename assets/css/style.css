@@ -628,15 +628,14 @@ footer {
         color: #2f3e5c;
       }
 
-      /*.car-sel,
-      .car-get input.car-sel { margin: 0 4%; }*/
+      .claimstat, .ncbpolicy { display: none; }
 
       .car-get .car-list { display: none; } 
 
-.car-get .car-list li {
-      position: absolute;
-    top: 39px;
-    }
+      .car-get .car-list li {
+        position: absolute;
+        top: 39px;
+      }
 
       .car-get .dropdown-menu,
       .car-re-data .dropdown-menu {
