@@ -110,8 +110,8 @@ $(function() {
 $(document).ready(function() {
 
 //Clear fuel type and variant
-	$( "#car-model, .car-year" ).on('click', function() {
-		$('.sel-fuel option, .sel-var option, .polstat option').prop('selected', function () {
+$( "#car-model, .car-year" ).on('click', function() {
+		$('.sel-fuel option, .polstat option').prop('selected', function () {
 			return this.defaultSelected;
 		});
 
@@ -149,6 +149,10 @@ $(document).ready(function() {
 		});
 	}
 
+    //Get car brand name
+    $("#car-model").change(function(){
+    	$("#car-hide").val($("#car-model").find("option:selected").text());
+  	});
 
 //Car year functionality
 	$('.car-year').on('change', function() {
@@ -213,13 +217,6 @@ $(document).ready(function() {
     }
 
 
-    $('#get-car-quote').click(function() {
-    	var car = (".carmodel").find(":selected").text();
-    	console.log(car);
-    	alert(car);
 
-    });
-
-
-	});
+});
 

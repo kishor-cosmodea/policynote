@@ -33,14 +33,16 @@ include("header.php");
 
             ?>
 
- <select id="car-model" name="carmodel">
-  <option value="" disabled selected>Car</option>
-  <?php
-    foreach ($json as $data) {
-      echo  "<option value=". $data['make_id'] .">" . $data['name'] .  "</option>";
-    }
-  ?>
-</select>
+           <select id="car-model" name="carmodel">
+            <option value="" disabled selected>Car</option>
+            <?php
+              foreach ($json as $data) {
+                echo  "<option value=". $data['make_id'] .">" . $data['name'] .  "</option>";
+              }
+            ?>
+          </select>
+          
+          <input type="hidden" name="carname" id="car-hide"/>
 
            <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
            data-source="" placeholder="Car Model"> -->
@@ -49,6 +51,8 @@ include("header.php");
              <option value="" disabled selected>Fuel Type</option>
              <option value="Petrol">Petrol</option>
              <option value="Diesel">Diesel</option>
+             <option value="CNG">CNG</option>
+             <option value="null">LPG</option>
           </select>
 
           <!-- <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
@@ -61,10 +65,10 @@ include("header.php");
        </div>
        <div class="car-sec-ul">
 
-        <input type="text" name="carReg" placeholder="Registration Number"/>
+        <input type="text" name="carreg" placeholder="Registration Number"/>
 
-           <select class="car-year" name="Registration Year">
-             <option value="year" disabled selected>Registration Year</option>
+           <select class="car-year" name="year">
+             <option value="" disabled selected>Registration Year</option>
              <option value="2016">2016</option>
              <option value="2015">2015</option>
              <option value="2014">2014</option>
@@ -98,8 +102,6 @@ include("header.php");
           <option value="45">45%</option>
           <option value="50">50%</option>
         </select>
-
-        <input type="hidden" name="idv" class="idv-hide"/>
 
     </div>
 

@@ -7,20 +7,57 @@ include("header.php");
 
 <?php
 
-	//echo $_POST['carReg'];
+	$carreg =  $_POST['carreg'];
+	$year =  $_POST['year'];
+	$carname = $_POST['carname'];
+	$variant = $_POST['variant'];
+	$claimStatus = $_POST['claimStatus'];
+
+//echo $variant;
+	$splitted = explode("-",$variant);
+	//echo $splitted;
+	$model = trim($splitted[0]);
+	$vari = trim($splitted[1]);
+
+	if($vari == "") {
+		$vari = "-";
+	}
+
+	if($claimStatus == "Yes") {
+		$ncb = "0";
+		$claimstat = "Yes";
+		//echo $ncb;
+		//echo $claimstat;
+	} else {
+		$ncb = $_POST['ncbPolicy'];
+		if($ncb == "") {
+			$ncb = "0";
+		}
+		$claimstat = "No";
+		//echo $ncb;
+		//echo $claimstat;
+	}
+
+	//echo $carreg;
+	//echo $year;
+	//echo $carname;
+	//echo $model;
+	//echo $var;
+	//echo $claimStatus;
+
 
 	$data = array(
-	  "regNumber" => "MH12ST1122",
-	  "regDate"=>"05/03/2016",
-	  "make"=>"AUDI",
-	  "model"=>"A4",
-	  "variant"=>"2.0 TDI B E",
-	  "ncbPolicy"=>35,
-	  "claimStatus"=>"No",
-	  "idv"=>"2802690",
-	  "insurancePerecentage"=>"60",
-	  "addon"=>1.03,
-	  "premium"=>601,
+	  "regNumber" => $carreg,
+	  "regDate"=> $year,
+	  "make"=> $carname,
+	  "model"=> $model,
+	  "variant"=> $vari,
+	  "ncbPolicy"=> $ncb,
+	  "claimStatus"=> $claimstat,
+	  "idv"=>"0",
+	  "insurancePerecentage"=>"0",
+	  "addon"=>"",
+	  "premium"=>"",
 	  "electronic"=>""
 	);
 
@@ -28,7 +65,7 @@ include("header.php");
 
 	$str_data = json_encode($data);
 
-	//echo $str_data;
+	echo $str_data;
 	//print_r($str_data);
 	//var_dump($str_data);
 
@@ -48,7 +85,7 @@ include("header.php");
 	  //var_dump($result);
 	}
 	
-	//echo " " . sendPostData($url_send, $str_data);
+	echo " " . sendPostData($url_send, $str_data);
 	
 ?>
 
