@@ -30,7 +30,7 @@ include("header.php");
               curl_close($ch);
 
               $json = json_decode($res, true);
-
+              //var_dump($json);
             ?>
 
            <select id="car-model" name="carmodel">

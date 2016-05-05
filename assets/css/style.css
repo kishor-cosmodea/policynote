@@ -1034,9 +1034,17 @@ footer {
 
       .car-policy-plan,
       .health-policy-plan {
-        background: #fff;
+/*        background: #fff;*/
         text-align: center;
       }
+
+    .car-policy-plan div {
+      border: 1px solid #ccc;
+      min-height: 150px;
+      display: block;
+      margin: 0 0 10px 0;
+     background: #fff;
+    }
 
       .health-policy-plan {
         padding: 0;
@@ -1049,8 +1057,8 @@ footer {
         width: 32%;
         text-align: center;
         vertical-align: top;
-        padding: 20px 0;
-        border-right: 4px solid #fbfbfb;
+        padding: 17px 0;
+       /* border-right: 4px solid #fbfbfb;*/
       }
 
       .health-policy-plan p { min-height: 82px; }

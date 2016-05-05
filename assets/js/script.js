@@ -110,10 +110,16 @@ $(function() {
 $(document).ready(function() {
 
 //Clear fuel type and variant
-$( "#car-model, .car-year" ).on('click', function() {
-		$('.sel-fuel option, .polstat option').prop('selected', function () {
+$( "#car-model" ).on('click', function() {
+		$('.sel-fuel option, .sel-var option').prop('selected', function () {
 			return this.defaultSelected;
 		});
+
+
+// $( ".car-year" ).on('click', function() {
+// 		$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+// 			return this.defaultSelected;
+// 		});
 
 
 		//Call to selected car brand
@@ -161,10 +167,12 @@ $( "#car-model, .car-year" ).on('click', function() {
 			//console.log(caryear);
 			$('.polstat option.renew').hide();
 			$('.polstat option.buynew').show();
+			//$('.polstat').val("Buy New") = $("option:selected", this);
 		} else {
 			//console.log(caryear);
-			$('.polstat option.renew').show();
 			$('.polstat option.buynew').hide();
+			$('.polstat option.renew').show();
+			//$('.polstat').val("Renew") = $("option:selected", this);
 		}
 
 	});
@@ -215,7 +223,6 @@ $( "#car-model, .car-year" ).on('click', function() {
 
       });
     }
-
 
 
 });

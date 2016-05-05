@@ -13,6 +13,13 @@ include("header.php");
 	$variant = $_POST['variant'];
 	$claimStatus = $_POST['claimStatus'];
 
+	// if($claimStatus = $_POST['claimStatus'] == "") {
+	// 	$ncb = 0;
+	// 	$claimStatus = "No";
+	// }
+	//echo $ncb;
+	//echo $claimStatus;
+
 //echo $variant;
 	$splitted = explode("-",$variant);
 	//echo $splitted;
@@ -24,25 +31,28 @@ include("header.php");
 	}
 
 	if($claimStatus == "Yes") {
-		$ncb = "0";
+		$ncb = 0;
 		$claimstat = "Yes";
 		//echo $ncb;
 		//echo $claimstat;
 	} else {
 		$ncb = $_POST['ncbPolicy'];
+
 		if($ncb == "") {
-			$ncb = "0";
+			$ncb = 0;
 		}
 		$claimstat = "No";
-		//echo $ncb;
+		//echo $int;
 		//echo $claimstat;
 	}
+
+	$int = (int)$ncb;
 
 	//echo $carreg;
 	//echo $year;
 	//echo $carname;
 	//echo $model;
-	//echo $var;
+	//echo $int;
 	//echo $claimStatus;
 
 
@@ -52,12 +62,12 @@ include("header.php");
 	  "make"=> $carname,
 	  "model"=> $model,
 	  "variant"=> $vari,
-	  "ncbPolicy"=> $ncb,
+	  "ncbPolicy"=> $int,
 	  "claimStatus"=> $claimstat,
 	  "idv"=>"0",
 	  "insurancePerecentage"=>"0",
-	  "addon"=>"",
-	  "premium"=>"",
+	  "addon"=> 0,
+	  "premium"=> 0,
 	  "electronic"=>""
 	);
 
@@ -65,7 +75,7 @@ include("header.php");
 
 	$str_data = json_encode($data);
 
-	echo $str_data;
+	//echo $str_data;
 	//print_r($str_data);
 	//var_dump($str_data);
 
@@ -77,16 +87,17 @@ include("header.php");
 	  curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
 	  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	  $result = curl_exec($ch);
-	  curl_close($ch);  // Seems like good practice
-	  return $result;
-
-	  //echo $result;
-	  //print_r($result);
-	  //var_dump($result);
+	  curl_close($ch);
+	  $json = json_decode($result, true);
+	  return $json;
 	}
 	
-	echo " " . sendPostData($url_send, $str_data);
+	//echo " " . sendPostData($url_send, $str_data);
+	$resp = sendPostData($url_send, $str_data);
 	
+	//echo $resp;
+	//var_dump($resp);
+	//print_r($resp);
 ?>
 
 
@@ -95,9 +106,9 @@ include("header.php");
 	<div class="car-sel-info">
 		<div>
 			<p>SHOWING RESULTS FOR</p>
-			<span class="car-name">Aston Martin DB9</span>
-			<span>Coupe (5935 CC)</span>
-			<span>MH-01 - Mumbai</span>
+			<span class="car-name"><?php $_POST['carname'] ?></span>
+			<span><?php $variant ?></span>
+			<span><?php $carreg ?></span>
 		</div>
 		<div>
 			<p>IDV</p>
@@ -106,7 +117,7 @@ include("header.php");
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
-			<span>Manufacturing Date..................01-01-2016</span>
+			<span>Registration Year............................<?php $year ?></span>
 			<span>Policy start date............................01-04-2016</span>
 		</div>
 	</div>
@@ -156,20 +167,25 @@ include("header.php");
 				</div>
 				<div class="car-result-data">
 					<div class="car-policy-plan">
-						<div>
+						<?php
+						foreach ($resp as $data) {
+						echo "<div>
 							<p>
-								<img src="assets/images/sbi.png" alt="policy-logo">
+								<img src='assets/images/sbi.png' alt='policy-logo'>
+								<span class='car-amt'>" . $data['companyName'] .  "</span>
 							</p>
-							<p class="car-premium">
-								<span class="car-low">Lowest Price</span>		
-								<span class="car-amt"><i class="fa fa-inr"></i> 10,123</span>
-								<span class="car-det">Premium Details</span>
+							<p class='car-premium'>
+								
+              <span class='car-amt'><i class='fa fa-inr'></i>" . $data['finalPremium'] .  "</span>
+                		
 							</p>
 							<p>
-								<button class="car-buy"><a href="car-checkout.php">Buy Now</a></button>
+								<button class='car-buy'><a href='car-checkout.php'>Buy Now</a></button>
 							</p>
-						</div>
-						<div class="car-idv-cont">
+						</div>";
+						}
+						?>
+<!-- 						<div class="car-idv-cont">
 							<p>
 								<span class="car-idv">Insured Declared Value (IDV)</span>
 								<span><i class="fa fa-inr"></i> 5,00,850</span>
@@ -182,7 +198,7 @@ include("header.php");
 								<span class="car-idv">Discounts</span>
 								<span>-</span>
 							</p>
-						</div>
+						</div> -->
 					</div>
 
 				</div>
