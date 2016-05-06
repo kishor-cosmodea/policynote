@@ -80,11 +80,16 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a id="nav-home" href="index.php" title="Home">Home</a></li>
+                        <!-- <li><a id="nav-home" href="index.php" title="Home">Home</a></li> -->
                         <li><a id="nav-car" href="car-insurance.php" title="Car">Car</a></li>
                         <!-- <li><a id="nav-health" href="health-insurance.php" title="Health">Health</a></li> -->
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
                         <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
+                        <li>
+                            <a href="tel:123321123" class="cl" title="call">cl</a>
+                            <!-- <a href="https://www.facebook.com/" target="_blank" class="fb" title="Facebook">fb</a>
+                            <a href="https://twitter.com/" target="_blank" class="tw" title="Twitter">tw</a> -->
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -46,7 +46,7 @@ include("header.php");
 		//echo $claimstat;
 	}
 
-	$int = (int)$ncb;
+	$intval = (int)$ncb;
 
 	//echo $carreg;
 	//echo $year;
@@ -62,7 +62,7 @@ include("header.php");
 	  "make"=> $carname,
 	  "model"=> $model,
 	  "variant"=> $vari,
-	  "ncbPolicy"=> $int,
+	  "ncbPolicy"=> $intval,
 	  "claimStatus"=> $claimstat,
 	  "idv"=>"0",
 	  "insurancePerecentage"=>"0",
@@ -105,10 +105,10 @@ include("header.php");
 <div class="container">
 	<div class="car-sel-info">
 		<div>
-			<p>SHOWING RESULTS FOR</p>
-			<span class="car-name"><?php $_POST['carname'] ?></span>
-			<span><?php $variant ?></span>
-			<span><?php $carreg ?></span>
+			<p>SHOWING RESULTS FOR <!-- <span onclick="goBack()"> Edit</span> --></p>
+			<span class="car-name"><?php echo $carname; ?></span>
+			<span><?php echo $variant; ?></span>
+			<span><?php echo $carreg; ?></span>
 		</div>
 		<div>
 			<p>IDV</p>
@@ -117,8 +117,8 @@ include("header.php");
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
-			<span>Registration Year............................<?php $year ?></span>
-			<span>Policy start date............................01-04-2016</span>
+			<span>Registration Year............................<?php echo $year; ?></span>
+			<span>Policy start date............................01-06-2016</span>
 		</div>
 	</div>
 	<div class="wrapper">
@@ -156,7 +156,7 @@ include("header.php");
 			</div>
 			<div class="car-wrap-plan">
 				<div class="car-plan">
-					<span>Showing results</span>
+					<span>Showing results from <?php echo count($resp); ?> insurers</span>
 					<div>
 						<span class="car-sort">Sort By:</span>
 						<select name="car-price" class="car-price">

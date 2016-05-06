@@ -67,7 +67,7 @@ include("header.php");
 
         <input type="text" name="carreg" placeholder="Registration Number"/>
 
-           <select class="car-year" name="year">
+           <select name="year" class="car-year">
              <option value="" disabled selected>Registration Year</option>
              <option value="2016">2016</option>
              <option value="2015">2015</option>
@@ -81,7 +81,7 @@ include("header.php");
              <option value="2007">2007</option>
            </select>
 
-        <select name="SelPolStat" class="polstat">
+        <select name="policyStatus" class="polstat">
           <option value="" disabled selected>Policy Status</option>
           <option value="Buy New" class="buynew">Buy New</option>
           <option value="Renew" class="renew">Renew</option>

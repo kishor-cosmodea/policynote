@@ -111,15 +111,11 @@ $(document).ready(function() {
 
 //Clear fuel type and variant
 $( "#car-model" ).on('click', function() {
-		$('.sel-fuel option, .sel-var option').prop('selected', function () {
+		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
 			return this.defaultSelected;
 		});
 
 
-// $( ".car-year" ).on('click', function() {
-// 		$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
-// 			return this.defaultSelected;
-// 		});
 
 
 		//Call to selected car brand
@@ -136,7 +132,6 @@ $( "#car-model" ).on('click', function() {
 	      //alert("error");
 	    }
 	  });
-
 	});
 
 	function fueltype (data) {
@@ -146,7 +141,6 @@ $( "#car-model" ).on('click', function() {
 			//console.log(typefuel);
 			if (typefuel) {
 				$.each(data, function (index, element) {
-					$('.sel-var').append('<option value="" disabled selected>Variant</option>');
 					if (element.fuel_type == typefuel) {
               $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
@@ -156,7 +150,6 @@ $( "#car-model" ).on('click', function() {
 	}
 
     //Get car brand name
-    $("#car-model").change(function(){
     	$("#car-hide").val($("#car-model").find("option:selected").text());
   	});
 

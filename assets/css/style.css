@@ -166,11 +166,11 @@ h1, nav, nav ul li {
   vertical-align: top;
 }
 
-nav ul li { margin: 0 0 0 -1px; }
+nav ul li { margin: 34px 34px 0; }
 
-nav ul li:last-child { padding: 0; }
+nav ul li:last-child { margin: 26px 34px 0; }
 
-h1 { padding: 8px 0; }
+h1 { padding: 15px 0; }
 
 h1 a {
   width: 300px;
@@ -183,17 +183,18 @@ h1 a {
 nav { float: right; }
 
 nav ul li a {
-  padding: 26px;
+  /*padding: 26px;*/
   display: block;
   text-transform: uppercase;
-  color: #2f3e5c;
+  color: #44516d;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 nav ul li a:hover, .active {
-  color: #fff;
-  background: #70cbd2;
+  color: #70cbd2;
+  /*font-weight: 700;*/
+  /*background: #70cbd2;*/
 }
 
 .active { font-weight: 700; }
@@ -231,16 +232,16 @@ footer {
 
   .foot-content ul:first-child { margin: 0; }
 
-  .foot-content ul li { margin: 5px 0; }
+  /*.foot-content ul li { margin: 5px 0; }*/
 
   .foot-content ul li a, .foot-content li span {
     color: #000;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 35px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
   }
 
-  .foot-content ul li a:hover { text-decoration: underline; }
+  /*.foot-content ul li a:hover { text-decoration: underline; }*/
 
   .foot-content ul li #sub-email {
     padding: 15px 11px;
@@ -255,11 +256,11 @@ footer {
 
   .foot-content ul li #sub-email:hover { background: #359fa7; }
 
-  .fb, .tw { display: inline-block; }
+  .cl, .fb, .tw { display: inline-block; }
 
-  .tw { margin: 0 2% 32px; }
+  .foot-content .tw { margin: 0 10% 0; }
 
-  .foot-content ul li a.fb, .foot-content ul li a.tw {
+    a.cl,  a.fb,  a.tw {
     border-radius: 50%;
     background-color: #70cbd2;
     width: 34px;
@@ -267,27 +268,34 @@ footer {
     text-indent: -9999px;
   }
 
+  .cl { background: url("../images/call.png") 7px 7px no-repeat; }
+
   .fb { background: url("../images/facebook.png") 11px 7px no-repeat; }
 
   .tw { background: url("../images/twitter.png") 7px 9px no-repeat; }
 
-  .foot-content ul li a.fb:hover {
+    a.cl:hover {
+    background: url("../images/call.png") 7px 7px no-repeat;
+    background-color: #3e9ca3 ;  }
+
+    a.fb:hover {
     background: url("../images/facebook.png") 11px 7px no-repeat;
     background-color: #3e9ca3 ;  }
 
-    .foot-content ul li a.tw:hover {
+    a.tw:hover {
       background: url("../images/twitter.png") 7px 9px no-repeat;
       background-color: #3e9ca3 ; }
 
       .foot-content .foot-irda {
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         text-align: center;
         line-height: 20px;
         color: #000;
       }
 
-      .foot-content .foot-irda:first-child { margin: 0; }
+      .foot-content ul + .foot-irda { margin: 28px 0 0 0; }
+       .foot-content .foot-irda:last-child { margin: 15px 0 0 0; }
 
       .foot-content ul li input {
         width: 135px;
@@ -307,12 +315,12 @@ footer {
 
       .main-content {
         margin: 62px 0 0 0;
-        background: url("../images/main-banner.jpg") top center;
+        background: url("../images/main-banner.png") top center;
         background-size: cover;
       }
 
       .main-text {
-        padding: 0 8% 288px 0;
+        padding: 0 8% 360px 0;
         text-align: right;
       }
 
@@ -456,8 +464,8 @@ footer {
       .ins-gq h2 {
         padding: 16px 0;
         color: #fff;
-        font-size: 34px;
-        font-weight: 400;
+        font-size: 42px;
+        font-weight: 700;
         text-align: center;
       }
 
@@ -535,7 +543,7 @@ footer {
       .car-content {
         margin: 7px 0 0 0;
         padding: 354px 0 0 0;
-        background: url("../images/car.jpg") top center;
+        background: url("../images/main-banner.png") top center;
         background-size: cover;
         text-align: center;
       }
@@ -589,7 +597,7 @@ footer {
       }
 
       .car-get button.btn-quote {
-        /*padding: 15px 15px;*/
+        padding: 15px 15px;
         border-radius: 4px;
         color: #fff;
         background: #70cbd2;
