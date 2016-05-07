@@ -42,9 +42,13 @@
 
     <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
     
     <!-- jQuery -->
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
+    
+    <script type="text/javascript" src="assets/vendor/jquery-ui.js"></script>
 
     <!-- Bootstrap Typehead -->
     <script type="text/javascript" src="assets/vendor/bootstrap-typehead.min.js"></script>

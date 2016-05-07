@@ -115,10 +115,13 @@ $( "#car-model" ).on('click', function() {
 			return this.defaultSelected;
 		});
 
-
-
+	// $( ".car-year" ).on('click', function() {
+	// 	$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+	// 		return this.defaultSelected;
+	// });
 
 		//Call to selected car brand
+		if($("#car-model").val()) {
 		$.ajax({
 			method: "get",
 			url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
@@ -132,28 +135,47 @@ $( "#car-model" ).on('click', function() {
 	      //alert("error");
 	    }
 	  });
+		}
 	});
 
 	function fueltype (data) {
 		$('.sel-fuel').on('change', function() {
 			$('.sel-var').empty();
+			$('.sel-var').append('<option value="" disabled selected>Variant</option>');
 			var typefuel = $(this).val();
 			//console.log(typefuel);
 			if (typefuel) {
+			//console.log("if");
 				$.each(data, function (index, element) {
+					//$('.sel-var').append('<option value="" disabled selected>Variant</option>');
 					if (element.fuel_type == typefuel) {
+						//console.log(typefuel);
+						//console.log(element.fuel_type);
+							//console.log("infill");
               $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
+
+            if (element.fuel_type == null) {
+            	//console.log("no type");
+            	$('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
+            }
+
         });
 			}
 		});
 	}
 
+
     //Get car brand name
+    $("#car-model").change(function() {
     	$("#car-hide").val($("#car-model").find("option:selected").text());
   	});
 
+
 //Car year functionality
+	$('.polstat option.buynew').hide();
+	$('.polstat option.renew').hide();
+
 	$('.car-year').on('change', function() {
 		var caryear = parseInt($(this).val());
 		if(caryear == 2016) {
@@ -216,6 +238,24 @@ $( "#car-model" ).on('click', function() {
 
       });
     }
+
+
+  //Range slider
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 50000,
+      values: [ 0, 5000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
+				$( "#amount1" ).val(ui.values[ 0 ]);
+				$( "#amount2" ).val(ui.values[ 1 ]);
+      }
+    });
+    $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
+     "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
+  });
 
 
 });

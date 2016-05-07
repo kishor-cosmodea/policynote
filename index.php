@@ -8,18 +8,26 @@ include("header.php");
 <div class="container">
 	<div class="main-content">
 		<div class="main-text">
-			<div class="main-life"><h2>Give</h2><h3>Life</h3></div>
-			<div><h2>an</h2><h3>Insurance</h3></div>
-			<div class="main-gq"><h4>Get Quotes</h4></div>
-			<a href="car-insurance.php" title="Car"><i class="fa fa-car fa-2x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i></span><span class="t-car">Car</span></a>
-			<!-- <a href="health-insurance.php" title="Health"><i class="fa fa-heart-o fa-2x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i></span><span class="t-health">Health</span></a> -->
+				<h2>Need a Car Quote?<span> It only takes 30 seconds</span></h2>
+			<div>
+				<p>Choose your monthly premium budget<p id="amount"></p></p>
+
+			  <div id="slider-range"></div>
+
+			  <form method="post" action="car-insurance.php">
+			    <input type="hidden" id="amount1" value="0">
+			    <input type="hidden" id="amount2" value="5000">
+			    <a href="car-insurance.php" title="Submit"><span class="t-car">Submit</span></a>
+			  </form>
+			</div>
+			
 		</div>
 	</div>
 	<div class="middle-content">
 		<div class="list-insurance">
 			<div>
 				<div class="ins-head ins-how">
-					<h2>How it Works</h2>
+					<h2>Get Quotes in 3 Simple Steps</h2>
 				</div>
 				<div class="ins-img">
 					<img src="assets/images/how-it-works.png" alt="Ins">
@@ -32,15 +40,15 @@ include("header.php");
 
 			<div class="sketch-cont cf">
 				<div class="car-block">
-					<h3>Car Insurance</h3>
+					<h3>What is Car Insurance?</h3>
 					<i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
 					<p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
 				</div>
-				<!-- <div class="health-block">
-					<h3>Health Insurance</h3>
-					<i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+				<div class="health-block">
+					<h3>Why Car Insurance?</h3>
+					<i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
 					<p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
-				</div> -->
+				</div>
 			</div>
 
 			<div class="main-testi">
@@ -49,16 +57,16 @@ include("header.php");
 			</div>
 			<div class="car-bg-lay">
 				<div class="ins-head">
-					<h2>Insurance Thoughts</h2>
+					<h2>More reasons...</h2>
 				</div>
 				<div class="ins-thoug">
 					<p>
-						<img src="assets/images/comma.png" alt="comma">
-						Policynote has managed to do what no one else has. Buying insurance has never been this easy. Policynote has managed to do what no one else has. Buying insurance has never been this easy.
+						<img src="assets/images/support.png" alt="comma">
+						<span>24x7 Support</span>
 					</p>
 					<p>
-						<img src="assets/images/comma.png" alt="comma">
-						Policynote has managed to do what no one else has. Buying insurance has never been this easy. Policynote has managed to do what no one else has. Buying insurance has never been this easy.
+						<img src="assets/images/note.png" alt="comma">
+						<span>Hassle Free Process</span>
 					</p>
 				</div>
 			</div>

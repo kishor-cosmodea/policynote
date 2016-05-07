@@ -314,57 +314,71 @@ footer {
       .container { width: 100%; }
 
       .main-content {
-        margin: 62px 0 0 0;
+        padding: 300px 0 220px 0;
+        margin: 85px 0 0 0;
         background: url("../images/main-banner.png") top center;
         background-size: cover;
       }
 
       .main-text {
-        padding: 0 8% 360px 0;
-        text-align: right;
-      }
-
-      .main-text .main-life {
-        margin: 0 13.7% 0 0;
-        padding: 138px 0 0 0;
+        width: 65%;
+        margin: 0 auto;
+        padding: 27px 3% 36px;
+        border-radius: 4px;
+        background: rgba(255,255,255, 0.8);
       }
 
       .main-text h2 {
-        font-size: 56px;
-        font-weight: 500;
+        margin: 0 0 30px 0;
+        font-size: 42px;
+        font-weight: 700;
         display: inline-block;
         color: #2f3e5c;
       }
 
-      .main-text h3 {
-        font-size: 59px;
-        display: inline-block;
-        margin: 0 0 0 20px;
-        color: #2f3e5c;
+      .main-text h2 span {
+        font-size: 42px;
+        font-weight: 400;
+      }
+
+      .main-text span {
+        font-size: 30px;
         font-weight: 700;
       }
 
-      .main-text h4 {
-        font-size: 28.5px;
-        font-weight: 500;
-        display: inline-block;
-        color: #2f3e5c;
-      }
-
-      .main-text .main-gq { margin: 49px 12% 25px 0; }
-
       .main-text a {
         border-radius: 6px;
-        margin: 0 12.8% 0 0;
         display: inline-block;
         background: #70cbd2;
         color: #fff;
         vertical-align: top;
-        padding: 15px 20px;
+        padding: 10px 30px;
       }
 
       .main-text a:hover { background: #359fa7 }
-      .main-text a + a { margin: 0 3%; }
+
+      .main-text p {
+      color:  #44516d;
+      font-size: 23.91px;
+      font-weight: 400;
+      }
+
+      #amount .fa-lg {
+    font-size: 0.8em !important;
+}
+
+      #slider-range {
+       width: 60%;
+       height: 25px;
+       display: inline-block;
+       margin: 20px 0 0 2%;
+      }
+
+      .main-text form {
+      margin: 3px 0 0 15%;
+      display: inline-block;
+      vertical-align: top;
+      }
 
       .btn-car {
         display: inline-block; 
@@ -378,22 +392,9 @@ footer {
         height: 25px;
       }
 
-      .btn-car { background: url("../images/car.png"); }
-
-      .btn-health { background: url("../images/heart.png"); }
-
-      .t-car, .t-health {
-        color: #fff;
-        font-weight: 700;
-        vertical-align: top;
-        display: inline-block;
-        margin: 0 0 0 18px;
-        font-size: 22.5px;
-      }
-
       .sketch-cont .car-block,
       .sketch-cont .health-block {
-        width: 100%;
+        width: 50%;
         text-align: center;
         padding: 70px 0 57px 0;
         float: left;
@@ -456,9 +457,9 @@ footer {
 
       .ins-head h2 {
         margin: 0 0 10px 0;
-        color: #2f3e5c;
-        font-size: 35px;
-        font-weight: 400;
+color:  #8db0db;
+font-size: 42px;
+font-weight: 700;
       }
 
       .ins-gq h2 {
@@ -479,18 +480,29 @@ footer {
       }
 
       .ins-thoug {
-        width: 40%;
-        margin: 0 auto;
+        width: 70%;
+        margin: 0 auto 30px;
         text-align: center;
       }
 
       .ins-thoug p {
-        font-size: 16px;
-        margin: 40px 0;
-        font-weight: 400;
-        color: #4d4d4d;
+    width: 45%;
+    margin: 40px 0;
+    display: inline-block;
+    vertical-align: top;
       }
 
+.ins-thoug p span {
+      margin: 61px 0 0 0;
+      color:  #44516d;
+font-size: 42px;
+font-weight: 700;
+display: block;
+}
+
+.ins-thoug p:last-child span {
+margin: 50px 0 0 0;
+}
       .sketch-cont { margin: 51px 0 0 0; }
 
       .main-testi {
