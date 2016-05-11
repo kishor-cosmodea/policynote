@@ -52,7 +52,7 @@ include("header.php");
              <option value="Petrol">Petrol</option>
              <option value="Diesel">Diesel</option>
              <option value="CNG">CNG</option>
-             <option value="null">LPG</option>
+             <option value="LPG">LPG</option>
           </select>
 
           <!-- <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
@@ -69,17 +69,19 @@ include("header.php");
 
            <select name="year" class="car-year">
              <option value="" disabled selected>Registration Year</option>
-             <option value="2016">2016</option>
-             <option value="2015">2015</option>
-             <option value="2014">2014</option>
-             <option value="2013">2013</option>
-             <option value="2012">2012</option>
-             <option value="2011">2011</option>
-             <option value="2010">2010</option>
-             <option value="2009">2009</option>
-             <option value="2008">2008</option>
-             <option value="2007">2007</option>
+             <option value="idv_2016">2016</option>
+             <option value="idv_2015">2015</option>
+             <option value="idv_2014">2014</option>
+             <option value="idv_2013">2013</option>
+             <option value="idv_2012">2012</option>
+             <option value="idv_2011">2011</option>
+             <option value="idv_2010">2010</option>
+             <option value="idv_2009">2009</option>
+             <option value="idv_2008">2008</option>
+             <option value="idv_2007">2007</option>
            </select>
+
+           <input type="hidden" name="caridv" id="car-idv"/>
 
         <select name="policyStatus" class="polstat">
           <option value="" disabled selected>Policy Status</option>

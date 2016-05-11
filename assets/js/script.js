@@ -10,12 +10,6 @@ $(window).load(function() {
  	  var pathname = window.location.pathname; // Returns path only
 		// var url      = window.location.href;     // Returns full URL
 
-		var pos_home = pathname.search("index.php");
-
-		if(pos_home == 12) {
-			$('#nav-home').addClass('active');
-		}
-
 		var pos_car = pathname.search("car-insurance.php");
 
 		if(pos_car == 12) {
@@ -33,24 +27,6 @@ $(window).load(function() {
 		if(pos_car_chk == 12) {
 			$('#nav-car').addClass('active');
 		}
-
-		// var pos_health = pathname.search("health-insurance.php");
-
-		// if(pos_health == 12) {
-		// 	$('#nav-health').addClass('active');	
-		// }
-
-		// var pos_health_comp = pathname.search("health-compare.php");
-
-		// if(pos_health_comp == 12) {
-		// 	$('#nav-health').addClass('active');	
-		// }
-		
-		// var pos_car_chk = pathname.search("health-checkout.php");
-
-		// if(pos_car_chk == 12) {
-		// 	$('#nav-health').addClass('active');
-		// }
 
 		var pos_about = pathname.search("about-us.php");
 
@@ -129,6 +105,7 @@ $( "#car-model" ).on('click', function() {
 			success: function(data) {
     	//alert(data);
     	fueltype(data);
+    	asignidv(data);
     	//console.log(JSON.stringify(data));
 		},
 		error: function() {
@@ -154,12 +131,10 @@ $( "#car-model" ).on('click', function() {
 							//console.log("infill");
               $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
-
-            if (element.fuel_type == null) {
+            //if (element.fuel_type == null) {
             	//console.log("no type");
-            	$('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
-            }
-
+            	//$('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
+            //}
         });
 			}
 		});
@@ -172,13 +147,21 @@ $( "#car-model" ).on('click', function() {
   	});
 
 
+    //Get car idv
+    //$(".car-year").change(function() {
+    	//console.log("ch");
+    	//$("#car-idv").val($("#car-year").find("option:selected").text());
+  	//});
+
+
 //Car year functionality
 	$('.polstat option.buynew').hide();
 	$('.polstat option.renew').hide();
 
 	$('.car-year').on('change', function() {
-		var caryear = parseInt($(this).val());
-		if(caryear == 2016) {
+		var caryear = $(this).val();
+		//console.log(caryear);
+		if(caryear == "idv_2016") {
 			//console.log(caryear);
 			$('.polstat option.renew').hide();
 			$('.polstat option.buynew').show();
@@ -191,6 +174,56 @@ $( "#car-model" ).on('click', function() {
 		}
 
 	});
+
+
+			function asignidv(data) {
+
+			$('.car-year').on('change', function() {
+				var caryr = $(this).val();
+				var ncaryr = jQuery.trim(caryr);
+				var fuel = $(".sel-fuel").val();
+				var vari = $(".sel-var").val();
+				var splivar = vari.split('-');
+				//console.log(splivar);
+				var nmodel = splivar[0];
+				var nvari = splivar[1];
+				var nnmodel = jQuery.trim(nmodel);
+				var nnvari = jQuery.trim(nvari);
+				if(nnvari == "") {
+					var nnvari = "-";
+				}
+				//console.log(nnmodel);
+				//console.log(nnvari);
+
+				$.each(data, function (index, element) {
+					//console.log(element.idv_data.idv_2016);
+					//if (element.model_id.model_name == nnmodel && element.varient == nnvari && element.fuel_type == fuel && element.idv_data == ncaryr ) {
+					//console.log(ncaryr);
+					//console.log(element.idv_data);
+
+					//if (element.idv_data == ncaryr) {
+						//console.log("if");
+						//console.log(element.idv_data);
+						//$("#car-idv").val(element.idv_data.idv_2016);
+					//} else {
+						//console.log("el");
+					//}
+
+					var results = [];
+					var searchField = element.idv_data;
+					//console.log(searchField);
+					var searchVal = ncaryr;
+					//console.log(data.length);
+					for (var i=0 ; i < data.length ; i++) {
+					    if (data[i][searchField] == searchVal) {
+					        results.push(data[i]);
+					    }
+					}
+						console.log(results);
+
+				});
+			});
+		}
 
 
 			$('.polstat').on('change', function() {
@@ -215,29 +248,6 @@ $( "#car-model" ).on('click', function() {
 					$('.ncbpolicy').hide();
 				}
 			});
-
-
-//Get All Makes Model Variant Data
-		$.ajax({
-			method: "get",
-			url: "http://52.32.253.76:8080/webapp/api/business/getAllMakesModelVariantData",
-			dataType: 'json',
-			success: function(data) {
-    	//alert(data);
-    	allmodeldata(data);
-    	//console.log(JSON.stringify(data));
-		},
-		error: function() {
-	      //alert("error");
-	    }
-	  });
-
-  	function allmodeldata (data) {
-	   	$.each(data, function (index, element) {
-	   			//console.log(element.idv_2016);
-
-      });
-    }
 
 
   //Range slider

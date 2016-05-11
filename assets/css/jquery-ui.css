@@ -870,6 +870,7 @@ body .ui-tooltip {
 	font-weight: bold;
 	color: #1c94c4;
 	outline: none;
+	cursor: pointer;
 }
 .ui-state-default a,
 .ui-state-default a:link,
