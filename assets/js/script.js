@@ -196,20 +196,50 @@ $( "#car-model" ).on('click', function() {
 				//console.log(nnvari);
 
 				$.each(data, function (index, element) {
-					//console.log(element.idv_data.idv_2016);
-					//if (element.model_id.model_name == nnmodel && element.varient == nnvari && element.fuel_type == fuel && element.idv_data == ncaryr ) {
-					//console.log(ncaryr);
-					//console.log(element.idv_data);
 
-					//if (element.idv_data == ncaryr) {
-						//console.log("if");
-						//console.log(element.idv_data);
-						//$("#car-idv").val(element.idv_data.idv_2016);
-					//} else {
-						//console.log("el");
-					//}
+					if (element.model_id.model_name == nnmodel && element.varient == nnvari && element.fuel_type == fuel ) {
+						
+						if (ncaryr == "idv_2016") {
+							//console.log(element.idv_data.idv_2016);
+							$('#car-idv').val(element.idv_data.idv_2016);
+						} else if (ncaryr == "idv_2015") {
+							//console.log(element.idv_data.idv_2015);
+							$('#car-idv').val(element.idv_data.idv_2015);
+						} else if (ncaryr == "idv_2014") {
+							//console.log(element.idv_data.idv_2014);
+							$('#car-idv').val(element.idv_data.idv_2014);
+						} else if (ncaryr == "idv_2013") {
+							//console.log(element.idv_data.idv_2013);
+							$('#car-idv').val(element.idv_data.idv_2013);
+						} else if (ncaryr == "idv_2012") {
+							//console.log(element.idv_data.idv_2012);
+							$('#car-idv').val(element.idv_data.idv_2012);
+						} else if (ncaryr == "idv_2011") {
+							//console.log(element.idv_data.idv_2011);
+							$('#car-idv').val(element.idv_data.idv_2011);
+						} else if (ncaryr == "idv_2010") {
+							//console.log(element.idv_data.idv_2010);
+							$('#car-idv').val(element.idv_data.idv_2010);
+						} else if (ncaryr == "idv_2009") {
+							//console.log(element.idv_data.idv_2009);
+							$('#car-idv').val(element.idv_data.idv_2009);
+						} else if (ncaryr == "idv_2008") {
+							//console.log(element.idv_data.idv_2008);
+							$('#car-idv').val(element.idv_data.idv_2008);
+						} else if (ncaryr == "idv_2007") {
+							//console.log(element.idv_data.idv_2007);
+							$('#car-idv').val(element.idv_data.idv_2007);
+						} else {
+							//console.log("else");
+							$('#car-idv').val("0");
+						}
 
-					var results = [];
+					}
+
+
+					
+
+/*					var results = [];
 					var searchField = element.idv_data;
 					//console.log(searchField);
 					var searchVal = ncaryr;
@@ -217,9 +247,10 @@ $( "#car-model" ).on('click', function() {
 					for (var i=0 ; i < data.length ; i++) {
 					    if (data[i][searchField] == searchVal) {
 					        results.push(data[i]);
+					        //console.log(results);
 					    }
 					}
-						console.log(results);
+						//console.log(results); */
 
 				});
 			});

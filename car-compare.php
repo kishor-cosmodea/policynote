@@ -12,6 +12,7 @@ include("header.php");
 	$carname = $_POST['carname'];
 	$variant = $_POST['variant'];
 	$claimStatus = $_POST['claimStatus'];
+	$idv = $_POST['caridv'];
 
 	// if($claimStatus = $_POST['claimStatus'] == "") {
 	// 	$ncb = 0;
@@ -64,7 +65,7 @@ include("header.php");
 	  "variant"=> $vari,
 	  "ncbPolicy"=> $intval,
 	  "claimStatus"=> $claimstat,
-	  "idv"=>"0",
+	  "idv"=> $idv,
 	  "insurancePerecentage"=>"0",
 	  "addon"=> 0,
 	  "premium"=> 0,
