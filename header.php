@@ -33,31 +33,21 @@
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-    
-    <!-- Open Raleway font -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'> -->
-    
-    <!-- Abril font -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'> -->
+
+    <!-- Css for range slider -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
 
     <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
     
     <!-- jQuery -->
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
     
+    <!-- jQuery for range slider -->
     <script type="text/javascript" src="assets/vendor/jquery-ui.js"></script>
 
-    <!-- Bootstrap Typehead -->
-    <script type="text/javascript" src="assets/vendor/bootstrap-typehead.min.js"></script>
-
-    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'> -->
+    <!-- Google font -->
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,500,700,800,900' rel='stylesheet' type='text/css'>
-
-    <!-- Bootstrap Icons -->
-    <!-- <script type="text/javascript" src="assets/vendor/boot-icon.css"></script> -->
 
     <!-- For IE9 browsers. -->
     <!--[if IE 9 ]><html class="ie9"> <![endif]-->
@@ -84,15 +74,13 @@
                 </h1>
                 <nav>
                     <ul>
-                        <!-- <li><a id="nav-home" href="index.php" title="Home">Home</a></li> -->
-                        <li><a id="nav-car" href="car-insurance.php" title="Car">Car</a></li>
-                        <!-- <li><a id="nav-health" href="health-insurance.php" title="Health">Health</a></li> -->
+                        <li><a id="nav-car" href="car-insurance.php" title="Car">Car Insurance</a></li>
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
                         <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
                         <li>
                             <a href="tel:123321123" class="cl" title="call">cl</a>
-                            <!-- <a href="https://www.facebook.com/" target="_blank" class="fb" title="Facebook">fb</a>
-                            <a href="https://twitter.com/" target="_blank" class="tw" title="Twitter">tw</a> -->
+                            <a href="https://www.facebook.com/" target="_blank" class="fb" title="Facebook">fb</a>
+                            <a href="https://twitter.com/" target="_blank" class="tw" title="Twitter">tw</a>
                         </li>
                     </ul>
                 </nav>

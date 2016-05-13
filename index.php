@@ -27,14 +27,14 @@ include("header.php");
 		<div class="list-insurance">
 			<div>
 				<div class="ins-head ins-how">
-					<h2>Get Quotes in 3 Simple Steps</h2>
+					<h2>How it works</h2>
 				</div>
 				<div class="ins-img">
 					<img src="assets/images/how-it-works.png" alt="Ins">
-					<span>Give us your car details</span>
+					<!-- <span>Give us your car details</span>
 					<span>Select from wide array of affordable options</span>
 					<span>Fill in your personal details</span>
-					<span>Our Executive will contact you at the earliest</span>
+					<span>Our Executive will contact you at the earliest</span> -->
 				</div>
 			</div>
 

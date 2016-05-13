@@ -11,6 +11,7 @@ include("header.php");
 	$year =  $_POST['year'];
 	$carname = $_POST['carname'];
 	$variant = $_POST['variant'];
+	$fueltype = $_POST['fueltype'];
 	$claimStatus = $_POST['claimStatus'];
 	$idv = $_POST['caridv'];
 
@@ -108,18 +109,19 @@ include("header.php");
 		<div>
 			<p>SHOWING RESULTS FOR <!-- <span onclick="goBack()"> Edit</span> --></p>
 			<span class="car-name"><?php echo $carname; ?></span>
-			<span><?php echo $variant; ?></span>
+			<span><?php echo "( " . $fueltype . " )    "; echo $variant; ?></span>
 			<span><?php echo $carreg; ?></span>
 		</div>
 		<div>
 			<p>IDV</p>
 			<span class="car-idv">Insured Declared Value (IDV)</span>
-			<span>It has been set automatically to get you the best quotes from each insurer.</span>
+			<span><i class="fa fa-inr"></i><?php echo $idv; ?></span>
+			<span>(The IDV is based on your car registration year)</span>
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
-			<span>Registration Year............................<?php echo $year; ?></span>
-			<span>Policy start date............................01-06-2016</span>
+			<span>Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
+			<span>Policy start date .......................... 01-06-2016</span>
 		</div>
 	</div>
 	<div class="wrapper">
@@ -129,7 +131,7 @@ include("header.php");
 				<span>Car</span> <!-- <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a> -->
 			</div>
 			<div class="car-refine">
-				<div class="car-re-data">
+<!-- 				<div class="car-re-data">
 					<h3>Zero Depreciation <i class="fa fa-plus-circle fa-lg"></i></h3>
 					<div>
 						<span>Do not pay anything from your pocket in case of a claim.</span>
@@ -140,16 +142,15 @@ include("header.php");
 					<div>
 						<span>Save upto 40% on these quotes</span>
 					</div>
-				</div>
+				</div> -->
 				<div class="car-re-data">
-					<h3>Additional Covers</h3>
+					<h3>Additional</h3>
 					<div>
 						<p>
-							<span><input type="checkbox" name="am" value="Invoice Cover">Invoice Cover</span>
-							<span><input type="checkbox" name="lt" value="24x7 Roadside Assistance">24x7 Roadside Assistance</span>
-							<span><input type="checkbox" name="ba" value="NCB Protection">NCB Protection</span>
-							<span><input type="checkbox" name="rl" value="Passenger Cover">Passenger Cover</span>
-							<span><input type="checkbox" name="ba" value="Engine Protector">Engine Protector</span>
+							<span><input type="checkbox" name="insper" value="Insurance Perecentage">Insurance Perecentage</span>
+							<span><input type="checkbox" name="addon" value="addon">Addon</span>
+							<span><input type="checkbox" name="premium" value="premium">Premium</span>
+							<span><input type="checkbox" name="electronic" value="electronic">Electronic</span>
 						</p>
 					</div>
 				</div>
@@ -177,7 +178,7 @@ include("header.php");
 							</p>
 							<p class='car-premium'>
 								
-              <span class='car-amt'><i class='fa fa-inr'></i>" . $data['finalPremium'] .  "</span>
+              <span class='car-amt'><i class='fa fa-inr'></i>" . number_format($data['finalPremium']) .  "</span>
                 		
 							</p>
 							<p>

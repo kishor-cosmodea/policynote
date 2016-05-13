@@ -25,7 +25,7 @@ include("header.php");
 					<span>Car:</span><span class="idv-right"><i class="fa fa-inr"></i> 3,66,789</span>
 				</div>
 				<div class="car-ch-add">
-					<h3>Additional Covers</h3>
+					<h3>Additional</h3>
 					<span>No aditional covers supported</span>
 				</div>
 				<div class="car-ch-dis">

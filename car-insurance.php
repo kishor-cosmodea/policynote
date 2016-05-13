@@ -9,7 +9,7 @@ include("header.php");
 	<div class="car-content">
 		<div class="car-quote">
       <div class="car-get cf">
-        <h2>Get Car Insurance <span>It only takes 30 seconds</span></h2>
+        <h2>Need a Car Quote? <span>It on takes 30 seconds</span></h2>
         <form name="form" action="car-compare.php" method="post">
         <div class="car-fis-ul">
           
@@ -47,7 +47,7 @@ include("header.php");
            <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
            data-source="" placeholder="Car Model"> -->
 
-          <select name="FuelType" class="sel-fuel">
+          <select name="fueltype" class="sel-fuel">
              <option value="" disabled selected>Fuel Type</option>
              <option value="Petrol">Petrol</option>
              <option value="Diesel">Diesel</option>
@@ -122,10 +122,10 @@ include("header.php");
         </div>
         <div class="ins-img">
           <img src="assets/images/how-it-works.png" alt="Ins">
-          <span>Give us your car details</span>
+          <!-- <span>Give us your car details</span>
           <span>Select from wide array of affordable options</span>
           <span>Fill in your personal details</span>
-          <span>Our Executive will contact you at the earliest</span>
+          <span>Our Executive will contact you at the earliest</span> -->
         </div>
       </div>
 
@@ -135,11 +135,11 @@ include("header.php");
           <i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
           <p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
         </div>
-        <!-- <div class="health-block">
-          <h3>Health Insurance</h3>
-          <i class="fa fa-heart-o fa-5x wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+        <div class="health-block">
+          <h3>Why Car Insurance?</h3>
+          <i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
           <p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
-        </div> -->
+        </div>
       </div>
 
       <div class="main-testi">
@@ -148,16 +148,16 @@ include("header.php");
       </div>
       <div class="car-bg-lay">
         <div class="ins-head">
-          <h2>Insurance Thoughts</h2>
+          <h2>More reasons...</h2>
         </div>
         <div class="ins-thoug">
           <p>
-            <img src="assets/images/comma.png" alt="comma">
-            Policynote has managed to do what no one else has. Buying insurance has never been this easy. Policynote has managed to do what no one else has. Buying insurance has never been this easy.
+            <img src="assets/images/support.png" alt="comma">
+            <span>24x7 Support</span>
           </p>
           <p>
-            <img src="assets/images/comma.png" alt="comma">
-            Policynote has managed to do what no one else has. Buying insurance has never been this easy. Policynote has managed to do what no one else has. Buying insurance has never been this easy.
+            <img src="assets/images/note.png" alt="comma">
+            <span>Hassle Free Process</span>
           </p>
         </div>
       </div>

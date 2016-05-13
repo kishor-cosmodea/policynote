@@ -86,60 +86,9 @@
 .cf { *zoom: 1; }
 
 
-/*
-========================================================================== */
-
-/*
-Fonts
-*/
-
-/*@font-face{
-  font-family:"Gotham Rounded";
-  src:url("http://www.myfontfree.com/data/502/g/gotham_rounded/GothamRoundedMedium_21022.ttf");
-  font-style: normal;
-  font-weight: 200;
-}*/
-
-
-/*@font-face {
-  font-family: Gotham Rounded Medium;
-  src: url("../fonts/GothamRounded-Medium.otf");
-  src: url("../fonts/GothamRounded-Medium.otf") format("opentype"), url("../fonts/GothamRoundedMedium_21022.ttf") format("ttf"), url("../fonts/GothamRounded-MediumItalic.otf") format("otf");
-  font-style: normal;
-  font-weight: 200; }
-
-  @font-face {
-    font-family: Gotham Rounded Book;
-    src: url("../fonts/GothamRounded-Book.otf");
-    src: url("../fonts/GothamRounded-Book.otf") format("opentype"), url("../fonts/GothamRoundedBook_21018.ttf") format("ttf"), url("../fonts/GothamRounded-BookItalic.otf") format("otf");
-    font-style: normal;
-    font-weight: 200; }
-
-    @font-face {
-      font-family: Gotham Bold;
-      src: url("../fonts/GothamRounded-Bold.otf");
-      src: url("../fonts/GothamRounded-Bold.otf") format("opentype"), url("../fonts/GothamRoundedBold_21016.ttf") format("ttf"), url("../fonts/GothamRounded-BoldItalic.otf") format("otf");
-      font-style: normal;
-      font-weight: 200; }
-
-      @font-face {
-        font-family: Gotham Rounded Light;
-        src: url("../fonts/GothamRounded-Light.otf");
-        src: url("../fonts/GothamRounded-Light.otf") format("opentype"), url("../fonts/GothamRoundedLight_21020.ttf") format("ttf"), url("../fonts/GothamRounded-LightItalic.otf") format("otf");
-        font-style: normal;
-        font-weight: 200; }*/
-
-/*
-============================================================================*/
-
-
 /*Header style start*/
 body, select, input,
-textarea, button {
-  /*font-family: "Gotham Rounded Book";*/
-  /*font-family: 'Raleway', sans-serif;*/
-  font-family: 'Alegreya Sans', sans-serif;
-}
+textarea, button { font-family: 'Alegreya Sans', sans-serif; }
 
 a { text-decoration: none; }
 
@@ -151,7 +100,7 @@ header {
   position: fixed;
   background-color: #fff;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .wrapper {
@@ -166,7 +115,7 @@ h1, nav, nav ul li {
   vertical-align: top;
 }
 
-nav ul li { margin: 34px 34px 0; }
+nav ul li { margin: 34px 30px 0; }
 
 nav ul li:last-child { margin: 26px 34px 0; }
 
@@ -232,16 +181,12 @@ footer {
 
   .foot-content ul:first-child { margin: 0; }
 
-  /*.foot-content ul li { margin: 5px 0; }*/
-
   .foot-content ul li a, .foot-content li span {
     color: #000;
     font-weight: 400;
     font-size: 20px;
     line-height: 50px;
   }
-
-  /*.foot-content ul li a:hover { text-decoration: underline; }*/
 
   .foot-content ul li #sub-email {
     padding: 15px 11px;
@@ -262,11 +207,14 @@ footer {
 
     a.cl,  a.fb,  a.tw {
     border-radius: 50%;
+    margin: 0 0 0 20px;
     background-color: #70cbd2;
     width: 34px;
     height: 34px;
     text-indent: -9999px;
   }
+
+  footer a.cl, footer a.fb, footer a.tw { margin: 0 0 0 0; }
 
   .cl { background: url("../images/call.png") 7px 7px no-repeat; }
 
@@ -323,21 +271,22 @@ footer {
       .main-text {
         width: 65%;
         margin: 0 auto;
-        padding: 27px 3% 36px;
+        padding: 18px 4% 30px;
         border-radius: 4px;
         background: rgba(255,255,255, 0.8);
       }
 
       .main-text h2 {
         margin: 0 0 30px 0;
-        font-size: 42px;
+        font-size: 48px;
         font-weight: 700;
         display: inline-block;
         color: #2f3e5c;
       }
 
       .main-text h2 span {
-        font-size: 42px;
+        color: #44516c;
+        font-size: 48px;
         font-weight: 400;
       }
 
@@ -347,7 +296,7 @@ footer {
       }
 
       .main-text a {
-        border-radius: 6px;
+        border-radius: 4px;
         display: inline-block;
         background: #70cbd2;
         color: #fff;
@@ -375,7 +324,7 @@ footer {
       }
 
       .main-text form {
-      margin: 3px 0 0 15%;
+      margin: 3px 0 0 20%;
       display: inline-block;
       vertical-align: top;
       }
@@ -457,9 +406,10 @@ footer {
 
       .ins-head h2 {
         margin: 0 0 10px 0;
-color:  #8db0db;
-font-size: 42px;
-font-weight: 700;
+        color:  #8db0db;
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
       }
 
       .ins-gq h2 {
@@ -495,15 +445,14 @@ font-weight: 700;
 .ins-thoug p span {
       margin: 61px 0 0 0;
       color:  #44516d;
-font-size: 42px;
-font-weight: 700;
-display: block;
+      font-size: 42px;
+      font-weight: 700;
+      display: block;
 }
 
-.ins-thoug p:last-child span {
-margin: 50px 0 0 0;
-}
-      .sketch-cont { margin: 51px 0 0 0; }
+.ins-thoug p:last-child span { margin: 50px 0 0 0; }
+
+      .sketch-cont { margin: 57px 0 0 0; }
 
       .main-testi {
         background: url("../images/testimonialsbg.png");
@@ -562,24 +511,23 @@ margin: 50px 0 0 0;
 
       .car-quote { padding: 0 0 130px 0; }
 
-      .car-get h2,
-      .health-quote h2 {
-        font-size: 35px;
-        color: #44516c; 
-        font-weight: 600;
+      .car-get h2 {
+        margin: 0 0 30px 0;
+        font-size: 48px;
+        color: #44516c;
+        font-weight: 700;
       }
 
-      .car-get h2 span,
-      .health-get h2 span {
+      .car-get h2 span {
         color: #44516c;
-        font-size: 30px;
-        font-weight: 300;
+        font-size: 48px;
+        font-weight: 400;
       }
 
       .car-get {
-        width: 65%;
+        width: 80%;
         margin: 0 auto;
-        padding: 21px 3% 15px;
+        padding: 19px 4% 0;
         border-radius: 4px;
         background: rgba(255,255,255, 0.8);
         text-align: left;
@@ -593,7 +541,7 @@ margin: 50px 0 0 0;
 
       .car-get div.car-sub-btn {
         width: 18%;
-        margin: -27px 0 0 0;
+        margin: -42px -29px 0 0;
         float: right;
         display: inline-block;
         vertical-align: top;
@@ -602,14 +550,14 @@ margin: 50px 0 0 0;
       .car-get button {
         border: none;
         background: #fff;
-        font-size: 19px;
+        font-size: 30px;
         color: #008ed6;
-        font-weight: 500;
+        font-weight: 700;
         outline: none;
       }
 
       .car-get button.btn-quote {
-        padding: 15px 15px;
+        padding: 15px 16px;
         border-radius: 4px;
         color: #fff;
         background: #70cbd2;
@@ -624,28 +572,25 @@ margin: 50px 0 0 0;
         font-weight: 600;
       }
 
-      .car-get select {
-        width: 204px;
-        height: 48px;
-        padding: 5px;
-        border-radius: 4px;
-        border: 3px solid #C5D6EA;
-        color: #2f3e5c;
-        font-size: 13px;
+      .car-get select,
+      .car-get input {
+        width: 230px;
+        height: 60px;
+        padding: 0 0 0 5px;
+        border-radius: 3px;
+        border: 4px solid #70cbd2;
+        margin: 0 6% 30px 0;
+        background-color: #efefef;
+        color: #a4a4a4;
+        font-size: 20px;
+        font-weight: 400;
         outline: none;
         cursor: pointer;
       }
 
-      .car-get select.sel-rto { width: 304px; }
-
       .car-get input {
-        width: 178px;
-        height: 20px;
-        margin: 25px 0;
-        padding: 10px;
-        outline: none;
-        border: 3px solid #C5D6EA;
-        color: #2f3e5c;
+        width: 217px;
+        height: 52px;
       }
 
       .claimstat, .ncbpolicy { display: none; }
@@ -700,16 +645,16 @@ margin: 50px 0 0 0;
       }
 
       ::-webkit-input-placeholder {
-        color:    #2f3e5c;
+        color: #a4a4a4;
       }
       :-moz-placeholder {
-        color:    #2f3e5c;
+        color: #a4a4a4;
       }
       ::-moz-placeholder {
-        color:    #2f3e5c;
+        color: #a4a4a4;
       }
       :-ms-input-placeholder {
-        color:    #2f3e5c;
+        color: #a4a4a4;
       }
 
       .car-profile-content {
@@ -717,34 +662,23 @@ margin: 50px 0 0 0;
         width: 90%;
       }
 
-      .car-chk-text,
-      .health-chk-text { margin: 10px 0; }
+      .car-chk-text { margin: 10px 0; }
 
-      .car-chk-text span,
-      .health-chk-text span {
+      .car-chk-text span {
         color: #2f3e5c;
         cursor: pointer;
       }
 
-      .car-chk-cont .car-profile-content,
-      .health-chk-cont .health-profile-content { margin: 100px auto 0; }
+      .car-chk-cont .car-profile-content { margin: 100px auto 0; }
 
-      .health-profile-content {
-        margin: 98px auto 0;
-        width: 90%;
-      }
-
-      .car-profile-text span,
-      .health-profile-text span {
+      .car-profile-text span {
         font-size: 18px;
         font-weight: 600;
         display: inline-block;
         margin: 0 20px 0 0;
       }
 
-      .car-profile-text a,
-      .health-profile-text a,
-      .health-chk-text h2 {
+      .car-profile-text a {
         width: 15%;
         padding: 6px 10px;
         border-radius: 6px;
@@ -756,64 +690,51 @@ margin: 50px 0 0 0;
         outline: none;
       }
 
-      .car-profile-text a:hover,
-      .health-profile-text a:hover {
+      .car-profile-text a:hover {
         color: #fff;
         background: #587291;
         border: none;
       }
 
-      .car-profile-text a i,
-      .health-profile-text a i {
+      .car-profile-text a i {
         vertical-align: top;
         margin: 17px 5px 0 0;
       }
 
       .car-refine,
-      .health-refine,
-      .car-checkout,
-      .health-checkout {
+      .car-checkout {
         margin: 33px 0 60px 0;
         display: inline-block;
         width: 28%;
         padding: 0;
-        background-color: #fbfbfb;
+        background-color: #e8f2f5;
         min-height: 783px;
         vertical-align: top;
       }
 
       .car-checkout {
         margin: 0 0 60px 0;
-        min-height: 885px;
+        min-height: 894px;
       }
 
-      .health-checkout {
-        margin: 0 0 60px 0;
-        min-height: 212px;
-      }
-
-      .car-re-data,
-      .health-re-data {
+      .car-re-data {
         border-bottom: 1px solid #ccc;
         padding: 30px 10%;
       }
 
-      .car-re-data h3,
-      .health-re-data h3 {
+      .car-re-data h3 {
         margin: 5px 0;
         font-size: 16px;
         color: #363636;
         font-weight: 600;
       }
 
-      .car-re-data div p,
-      .health-re-data div p {
+      .car-re-data div p {
         font-size: 14px;
         margin: 10px 0;
       }
 
-      .car-re-data select,
-      .health-re-data select {
+      .car-re-data select {
         width: 204px;
         height: 26px;
         border: 1px solid #4d4d4d;
@@ -825,16 +746,12 @@ margin: 50px 0 0 0;
         cursor: pointer;
       }
 
-      .health-re-data input { vertical-align: top; }
-
-      .car-re-data p
-      .health-re-data p {
+      .car-re-data p {
         margin: 10px 0;
         font-size: 14px;
       }
 
-      .car-refine .ref-submit,
-      .health-refine .ref-submit {
+      .car-refine .ref-submit {
         width: 160px;
         height: 50px;
         border-radius: 4px;
@@ -847,8 +764,7 @@ margin: 50px 0 0 0;
         border: none;
       }
 
-      .car-refine .ref-submit:hover,
-      .health-refine .ref-submit:hover { background: #359fa7; }
+      .car-refine .ref-submit:hover { background: #359fa7; }
 
       .car-re-data label {
         margin: 10px 0;
@@ -857,8 +773,7 @@ margin: 50px 0 0 0;
         color: #008ed6;
       }
 
-      .car-re-data div p span,
-      .health-re-data div p span {
+      .car-re-data div p span {
         margin: 10px 0;
         display: block;
         font-size: 14px;
@@ -898,27 +813,19 @@ margin: 50px 0 0 0;
         margin: 10px 0 10px 13px;
       }
 
-      .health-refine button {
-        display: inline-block;
-        width: 106px;
-        text-align: center;
-      }
-
       .act {
         color: #fff !important;
         background: #008ed6 !important;
       }
 
-      .car-re-dis,
-      .health-re-dis {
+      .car-re-dis {
         margin: 25px 0;
         border-top: 1px solid #008ed6;
         border-bottom: 1px solid #008ed6;
       }
 
       .car-re-add span,
-      .car-re-dis span,
-      .health-re-add span {
+      .car-re-dis span {
         display: block;
         margin: 15px 0 5px 5%;
         font-size: 21px;
@@ -926,27 +833,21 @@ margin: 50px 0 0 0;
         font-weight: 600;
       }
 
-      .car-re-add button,
-      .health-re-add button { text-align: center; }
+      .car-re-add button { text-align: center; }
 
       .car-result-data,
-      .health-result-data,
-      .car-chout-data,
-      .health-chout-data {
+      .car-chout-data {
         min-height: 738px;
         margin: 0 0 60px 2%;
         display: inline-block;
         width: 95%;
         padding: 3%;
-        background-color: #fbfbfb;
+        background-color: #e8f2f5;
       }
 
-      .car-chout-data,
-      .health-chout-data { width: 65%; }
+      .car-chout-data { width: 65%; }
 
       .car-result-data { min-height: 738px; }
-
-      .health-result-data { min-height: 868px; }
 
       .car-sel-info {
         margin: 72px 0 0 0;
@@ -990,34 +891,28 @@ margin: 50px 0 0 0;
         font-weight: 400;
       }
 
-      .car-chout-data,
-      .health-chout-data { padding: 0 2%; }
+      .car-chout-data { padding: 0 2%; }
 
-      .car-wrap-plan,
-      .health-wrap-plan {
+      .car-wrap-plan {
         vertical-align: top;
         width: 69%;
         display: inline-block;
       }
 
-      .car-plan,
-      .health-plan {
+      .car-plan {
         width: 99%;
         padding: 0px 2% 14px;
       }
 
-      .car-chout-plan,
-      .health-chout-plan {
+      .car-chout-plan {
         padding: 35px 10%;
         margin: 30px 0;
         background: #fff;
       }
 
-      .car-chout-prop,
-      .health-chout-prop { margin: 0 0 10px 0; }
+      .car-chout-prop { margin: 0 0 10px 0; }
 
-      .car-chout-prop span,
-      .health-chout-prop span {
+      .car-chout-prop span {
         padding: 10px 16.65px;
         font-size: 18px;
         text-align: center;
@@ -1028,19 +923,16 @@ margin: 50px 0 0 0;
         border: 1px solid #fff;
       }
 
-      .car-chout-prop p,
-      .health-chout-prop p {
+      .car-chout-prop p {
         display: inline-block;
         font-size: 28px;
         font-weight: 300;
         margin: 0 2%;
       }
 
-      .car-plan div,
-      .health-plan div { float: right; }
+      .car-plan div { float: right; }
 
-      .car-plan select,
-      .health-plan select {
+      .car-plan select {
         border: none;
         font-weight: 600;
         font-size: 14px;
@@ -1049,14 +941,9 @@ margin: 50px 0 0 0;
         outline: none;
       }
 
-      .car-plan .car-sort,
-      .health-plan .health-sort { color: #000; }
+      .car-plan .car-sort { color: #000; }
 
-      .car-policy-plan,
-      .health-policy-plan {
-/*        background: #fff;*/
-        text-align: center;
-      }
+      .car-policy-plan { text-align: center; }
 
     .car-policy-plan div {
       border: 1px solid #ccc;
@@ -1066,42 +953,30 @@ margin: 50px 0 0 0;
      background: #fff;
     }
 
-      .health-policy-plan {
-        padding: 0;
-        min-height: 190px;
-      }
-
-      .car-policy-plan p,
-      .health-policy-plan p {
+      .car-policy-plan p {
         display: inline-block;
         width: 32%;
         text-align: center;
         vertical-align: top;
         padding: 17px 0;
-       /* border-right: 4px solid #fbfbfb;*/
       }
-
-      .health-policy-plan p { min-height: 82px; }
 
       .car-policy-plan p:first-child {
         float: left;
       }
 
-      .car-policy-plan p span,
-      .health-policy-plan p span {
+      .car-policy-plan p span {
         margin: 5px 0;
         font-size: 14px;
         display: block;
       }
 
-      .car-idv,
-      .health-cov {
+      .car-idv {
         color: #44516c;
         font-weight: 600;
       }
 
-      .car-policy-plan .car-premium .car-amt,
-      .health-policy-plan .health-premium .health-amt {
+      .car-policy-plan .car-premium .car-amt {
         font-size: 23px;
         font-weight: 500;
       }
@@ -1111,30 +986,26 @@ margin: 50px 0 0 0;
         vertical-align: top;
       }
 
-      .car-policy-plan .car-premium .car-det,
-      .health-policy-plan .health-premium .health-det {
+      .car-policy-plan .car-premium .car-det {
         color: #008ed6;
         text-decoration: underline;
         cursor: pointer;
         font-size: 12px;
       }
 
-      .car-premium .car-low,
-      .health-premium .health-low {
+      .car-premium .car-low {
         color: #00b300;
         font-weight: 600;
       }
 
-      .car-policy-plan p img,
-      .health-policy-plan p img {
+      .car-policy-plan p img {
         display: inline-block;
         width: 60%;
         height: auto;
         margin: 12px 0;
       }
 
-      .car-buy,
-      .health-buy {
+      .car-buy {
         text-align: center;
         background: #70cbd2;
         border-radius: 4px;
@@ -1145,18 +1016,15 @@ margin: 50px 0 0 0;
         outline: none;
       }
 
-      .car-buy:hover,
-      .health-buy:hover { background: #359fa7; }
+      .car-buy:hover { background: #359fa7; }
 
-      .car-buy a,
-      .health-buy a {
+      .car-buy a {
         color: #fff;
         padding: 10px 20px;
         display: inline-block;
       }
 
-      .car-buy a:hover,
-      .health-buy a:hover { color: #fff; }
+      .car-buy a:hover { color: #fff; }
 
       .car-policy-plan .car-idv-cont { border-top: 4px solid #fbfbfb; }
 
@@ -1166,160 +1034,50 @@ margin: 50px 0 0 0;
       }
 
       .car-policy-plan p:last-child,
-      .car-idv-cont p:last-child,
-      .health-pla-cont p:last-child,
-      .health-policy-plan .health-cov-cont p:last-child { border: none; }
+      .car-idv-cont p:last-child { border: none; }
 
       .car-idv-cont span { display: block; }
 
-      .health-policy-plan .health-cov-cont {
-        border-top: 4px solid #fbfbfb;
-      }
-
-      .health-policy-plan .health-cov-cont p {
-        width: 32%;
-        display: inline-block;
-        vertical-align: top;
-        padding: 15px 0;
-        border-right: 4px solid #fbfbfb;
-        min-height: 70px;
-      }
-
-      .health-policy-plan div span {
-        display: block;
-        font-size: 14px;
-      }
-
-      .health-content {
-        margin: 63px 0 0 0;
-        padding: 327px 0 0 0;
-        background: url("../images/health.jpg") top center;
-        background-size: cover;
-        text-align: center;
-      }
-
-      .health-quote { padding: 0 0 130px 0; }
-
-      .health-get button {
-        border: none;
-        background: #fff;
-        font-size: 19px;
-        color: #008ed6;
-        font-weight: 500;
-        outline: none;
-      }
-
-      .health-get {
-        width: 56%;
-        margin: 0 auto;
-        padding: 21px 3% 7px;
-        border-radius: 4px;
-        background: rgba(255,255,255, 0.8);
-        text-align: left;
-      }
-
-      .health-get input {
-        width: 178px;
-        height: 20px;
-        margin: 25px 0;
-        padding: 10px;
-        outline: none;
-        border: 3px solid #C5D6EA;
-        color: #2f3e5c;
-      }
-
-      .health-get select {
-        width: 204px;
-        height: 48px;
-        padding: 5px;
-        border-radius: 4px;
-        margin: 25px 0 0 0;
-        outline: none;
-        cursor: pointer;
-        border: 3px solid #C5D6EA;
-        color: #2f3e5c;
-      }
-
-      .health-get p {
-        display: inline-block;
-        width: 65%;
-      }
-
-      .health-get p.health-sub-btn {
-        width: 21%;
-        margin: -17px 14% 0 0;
-        float: right;
-        display: inline-block;
-        vertical-align: top;
-      }
-
-      .health-get  button.btn-quote {
-        border-radius: 4px;
-        color: #fff;
-        background: #70cbd2;
-      }
-
-      .health-get  button.btn-quote:hover { background: #359fa7; }
-
-      .health-get button a {
-        padding: 15px 15px;
-        display: inline-block;
-        color: #fff;
-        font-weight: 600;
-      }
-      `
-      .health-get .gender,
-      .health-get .health-pin { margin: 0 4%; }
-
-      .car-ch-ins,
-      .health-ch-ins {
+      .car-ch-ins {
         padding: 15px 10%;
         border-bottom: 4px solid #fff;
       }
 
-      .car-ch-ins img,
-      .health-ch-ins img {
+      .car-ch-ins img {
         width: 50%;
         height: auto;
         margin: 0 10px 10px 0;
       }
 
-      .car-ch-ins span,
-      .health-ch-ins span {
+      .car-ch-ins span {
         margin: 11px 0;
         font-size: 16px;
       }
 
-      .car-ch-ins span.car-ct-amt,
-      .health-ch-ins span.health-ct-amt { font-size: 22px; }
+      .car-ch-ins span.car-ct-amt { font-size: 22px; }
 
-      .car-ch-idv, .car-ch-add, .car-ch-dis,
-      .health-ch-cm {
+      .car-ch-idv, .car-ch-add, .car-ch-dis {
         padding: 30px 10%;
         border-bottom: 1px solid #ccc;
       }
 
-      .car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3,
-      .health-ch-cm h3 {
+      .car-ch-idv h3, .car-ch-add h3, .car-ch-dis h3 {
         margin: 0 0 10px;
         font-weight: 600;
       }
 
       .car-ch-dis { border: none; }
 
-      .car-ch-idv .idv-right,
-      .health-ch-cm .cov-right { float: right; }
+      .car-ch-idv .idv-right { float: right; }
 
       .car-ch-add span, .car-ch-dis span {
         display: block;
         font-size: 14px;
       }
 
-      .car-chout-user,
-      .health-chout-user { padding: 10px 0; }
+      .car-chout-user { padding: 10px 0; }
 
-      .car-chout-user button,
-      .health-chout-user button {
+      .car-chout-user button {
         margin: 0 31px 25px 0;
         border: none;
         width: 90px;
@@ -1333,86 +1091,52 @@ margin: 50px 0 0 0;
         text-align: left;
       }
 
-      .car-chout-user button:hover,
-      .health-chout-user button:hover { background: #359fa7; }
+      .car-chout-user button:hover { background: #359fa7; }
 
-      .health-chout-user .health-rb { margin: 15px 0 0 0; }
-
-      .car-chout-user input,
-      .health-chout-user input {
+      .car-chout-user input {
         width: 40%;
         padding: 10px;
         margin: 14px 5% 0 0;
         box-sizing: border-box;
       }
 
-      .health-chout-user #fname,
-      .health-chout-user #lname{ margin: 0 0 15px 5%; }
-
-      input[type="radio"] {
-        margin: 0;
-      }
-
-      .health-chout-user .health-rb input {
-        width: 3%;
-        vertical-align: top;
-      }
-
-      .car-chout-user p.ch-inp,
-      .health-chout-user p.he-inp {
+      .car-chout-user p.ch-inp {
         margin: 25px 0 21px 0;
         text-align: left;
       }
 
       .car-chout-user #dd,
-      .car-chout-user #mm,
-      .health-chout-user #dd,
-      .health-chout-user #mm {
+      .car-chout-user #mm {
         width: 9%;
         text-align: center;
         margin: 14px 1% 0 0;
       }
 
-      .health-chout-user #mm {     margin: 0 1% 0 0; }
-
-      .car-chout-user #yyyy,
-      .health-chout-user #yyyy {
+      .car-chout-user #yyyy {
         width: 12%;
         text-align: center;
       }
 
-      .health-chout-user #yyyy { margin: 0 0 0 -6px; }
-
-      .car-chout-buy,
-      .health-chout-buy {
+      .car-chout-buy {
         font-size: 15px;
         text-align: center;
       }
 
-      .car-chout-buy button,
-      .health-chout-buy button {
-        width: 110px;
-        height: 41px;
+      .car-chout-buy button {
+        width: 146px;
+        height: 50px;
         margin: 35px 0 14px 0;
-        font-size: 16px;
+        font-size: 20px;
         text-align: center;
         border-radius: 6px;
       }
 
-      .health-chout-buy button {
-        width: 160px;
-        margin: 20px 0 6px 0;
-      }
-
-      .car-chout-user span,
-      .health-chout-user span {
+      .car-chout-user span {
         vertical-align: top;
         font-weight: 600;
       }
 
       .car-chout-user span + span { float: right; }
-
-      .health-chout-user #dd { margin: 0 0 0 16px; }
 
       textarea {
         padding: 10px;
@@ -1450,11 +1174,11 @@ margin: 50px 0 0 0;
       .about-family h3 {
         width: 65%;
         margin: 0 0 0 7%;
-        font-size: 14px;
+        font-size: 18px;
         color: #445160;
         display: inline-block;
-        line-height: 22px;
-        font-weight: 500;
+        line-height: 24px;
+        font-weight: 400;
       }
 
       .about-policy {
@@ -1463,33 +1187,33 @@ margin: 50px 0 0 0;
       }
 
       .about-policy h2 {
-        font-size: 34px;
+        font-size: 42px;
         color: #8db0db;
-        font-weight: 600;
+        font-weight: 700;
         text-align: center;
       }
 
       .about-policy p {
         margin: 10px 0 0 0;
-        font-size: 15px;
+        font-size: 18px;
         color: #445160;
         line-height: 24px;
-        font-weight: 500;
+        font-weight: 400;
       }
 
       .about-cont h2 {
-        margin: 0 0 20px 0;
+        margin: 0 0 40px 0;
         text-align: center;
-        font-size: 44px;
-        color: #2f3e5c;
-        font-weight: 600;
+        color: #8db0db;
+        font-weight: 700;
+        font-size: 52px;
       }
 
-      .about-cont { margin: 20px 0 36px 0; }
+      .about-cont { margin: 20px 0 100px 0; }
 
       .about-cont .wrap-cont {
-        width: 50%;
-        margin: 100px auto 0;
+        width: 80%;
+        margin: 128px auto 0;
       }
 
       .about-cont .about-street,
@@ -1499,15 +1223,15 @@ margin: 50px 0 0 0;
       }
 
       .about-cont .about-street {
-        width: 42%;
+        width: 50%;
         margin: 0 20px 0 0;
       }
 
       .about-cont .about-street p {
-        margin: 0 0 25px 0;
-        color: #4d4d4d;
-        font-weight: 500;
-        font-size: 28px;
+        margin: 0 0 37px 0;
+        color: #8db0db;
+        font-weight: 700;
+        font-size: 48px;
       }
 
       .about-cont .about-street div {
@@ -1515,29 +1239,25 @@ margin: 50px 0 0 0;
         vertical-align: top;
       }
 
-      .about-cont .about-street > div {
-        margin: 0 7%;}
+      .about-cont .about-street > div { margin: 0 7%; }
 
         .about-cont .about-street span img {
           margin: 0 15% 0 7%;
           display: inline-block;
         }
 
-        .about-cont .about-street span a {
-          color: #000;
-        }
+        .about-cont .about-street span a { color: #000; }
 
         .about-cont .about-street p.about-us { margin: 50px 0 5px 0; }
 
         .about-cont .about-street span {
-          font-size: 15px;
+          color: #000;
+          font-size: 24px;
           font-weight: 400;
           display: block;
         }
 
-        .about-cont .about-street p + span {
-          margin: 10px 0;
-        }
+        .about-cont .about-street p + span { margin: 10px 0; }
 
         .terms-content {
           margin: 70px 0 0 0;
@@ -1554,9 +1274,7 @@ margin: 50px 0 0 0;
           font-weight: 600;
         }
 
-        .terms-use {
-          margin: 0 0 30px 0;
-        }
+        .terms-use { margin: 0 0 30px 0; }
 
         .terms-use h3 {
           margin: 0 0 10px 0;

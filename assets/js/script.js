@@ -175,7 +175,6 @@ $( "#car-model" ).on('click', function() {
 
 	});
 
-
 			function asignidv(data) {
 
 			$('.car-year').on('change', function() {
@@ -236,22 +235,6 @@ $( "#car-model" ).on('click', function() {
 
 					}
 
-
-					
-
-/*					var results = [];
-					var searchField = element.idv_data;
-					//console.log(searchField);
-					var searchVal = ncaryr;
-					//console.log(data.length);
-					for (var i=0 ; i < data.length ; i++) {
-					    if (data[i][searchField] == searchVal) {
-					        results.push(data[i]);
-					        //console.log(results);
-					    }
-					}
-						//console.log(results); */
-
 				});
 			});
 		}
@@ -286,8 +269,8 @@ $( "#car-model" ).on('click', function() {
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
-      max: 50000,
-      values: [ 0, 5000 ],
+      max: 500000,
+      values: [ 0, 25000 ],
       slide: function( event, ui ) {
         $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
 				$( "#amount1" ).val(ui.values[ 0 ]);

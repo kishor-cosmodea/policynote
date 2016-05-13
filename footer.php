@@ -14,7 +14,6 @@
       	<li><a href="about-us.php" title="About Us">About Us</a></li>
         <li><a href="car-insurance.php" title="Car Insurance">Car Insurance</a></li>
         <li><a href="contact-us.php" title="Contact Us">Contact Us</a></li>
-        <!-- <li><a href="health-insurance.php" title="Health Insurance">Health Insurance</a></li> -->
       </ul>
 			<ul>
 				<li><span>Subscribe</span></li>
