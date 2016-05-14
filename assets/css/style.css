@@ -295,16 +295,18 @@ footer {
         font-weight: 700;
       }
 
-      .main-text a {
-        border-radius: 4px;
-        display: inline-block;
-        background: #70cbd2;
-        color: #fff;
-        vertical-align: top;
+      .main-text .range-submit {
         padding: 10px 30px;
+        border-radius: 4px;
+        color: #fff;
+        background: #70cbd2;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        font-size: 30px;
       }
 
-      .main-text a:hover { background: #359fa7 }
+      .main-text .range-submit:hover { background: #359fa7 }
 
       .main-text p {
       color:  #44516d;
@@ -312,9 +314,7 @@ footer {
       font-weight: 400;
       }
 
-      #amount .fa-lg {
-    font-size: 0.8em !important;
-}
+      #amount .fa-lg { font-size: 0.8em !important; }
 
       #slider-range {
        width: 60%;
@@ -855,12 +855,13 @@ footer {
       }
 
       .car-sel-info div {
-        display: inline-block;
+        min-height: 103px;
         width: 22%;
         padding: 20px 5% 13px;
-        vertical-align: top;
         border-right: 1px solid #fbfbfb;
-        min-height: 103px;
+        display: inline-block;
+        background-color: #e8f2f5;
+        vertical-align: top;
       }
 
       .car-sel-info div:last-child { border:none; }
@@ -901,7 +902,7 @@ footer {
 
       .car-plan {
         width: 99%;
-        padding: 0px 2% 14px;
+        padding: 0 2% 14px;
       }
 
       .car-chout-plan {
@@ -961,9 +962,7 @@ footer {
         padding: 17px 0;
       }
 
-      .car-policy-plan p:first-child {
-        float: left;
-      }
+      .car-policy-plan p:first-child { float: left; }
 
       .car-policy-plan p span {
         margin: 5px 0;

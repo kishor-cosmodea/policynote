@@ -15,9 +15,9 @@ include("header.php");
 			  <div id="slider-range"></div>
 
 			  <form method="post" action="car-insurance.php">
-			    <input type="hidden" id="amount1" value="0">
-			    <input type="hidden" id="amount2" value="5000">
-			    <a href="car-insurance.php" title="Submit"><span class="t-car">Submit</span></a>
+			    <input type="hidden" name="amtstart" id="amount1" value="0">
+			    <input type="hidden" name="amtend" id="amount2" value="25000">
+			    <button class="range-submit" title="Submit">Submit</button>
 			  </form>
 			</div>
 			

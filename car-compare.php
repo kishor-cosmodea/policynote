@@ -7,6 +7,12 @@ include("header.php");
 
 <?php
 
+  //$amtstart =  $_POST['amtstart'];
+  //$amtend =  $_POST['amtend'];
+
+  //echo $amtstart;
+  //echo $amtend;
+
 	$carreg =  $_POST['carreg'];
 	$year =  $_POST['year'];
 	$carname = $_POST['carname'];
@@ -81,7 +87,7 @@ include("header.php");
 	//print_r($str_data);
 	//var_dump($str_data);
 
-	function sendPostData($url, $post){
+	function sendPostData($url, $post) {
 	  $ch = curl_init($url);
 	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -170,22 +176,22 @@ include("header.php");
 				<div class="car-result-data">
 					<div class="car-policy-plan">
 						<?php
-						foreach ($resp as $data) {
-						echo "<div>
-							<p>
-								<img src='assets/images/sbi.png' alt='policy-logo'>
-								<span class='car-amt'>" . $data['companyName'] .  "</span>
-							</p>
-							<p class='car-premium'>
-								
-              <span class='car-amt'><i class='fa fa-inr'></i>" . number_format($data['finalPremium']) .  "</span>
-                		
-							</p>
-							<p>
-								<button class='car-buy'><a href='car-checkout.php'>Buy Now</a></button>
-							</p>
-						</div>";
-						}
+							foreach ($resp as $data) {
+								echo "<div>
+									<p>
+										<img src='assets/images/sbi.png' alt='policy-logo'>
+										<span class='car-amt'>" . $data['companyName'] .  "</span>
+									</p>
+									<p class='car-premium'>
+										
+		              <span class='car-amt'><i class='fa fa-inr'></i>" . number_format($data['finalPremium']) .  "</span>
+		                		
+									</p>
+									<p>
+										<button class='car-buy'><a href='car-checkout.php'>Buy Now</a></button>
+									</p>
+								</div>";
+							}
 						?>
 <!-- 						<div class="car-idv-cont">
 							<p>
