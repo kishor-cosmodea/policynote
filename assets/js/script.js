@@ -85,16 +85,85 @@ $(function() {
 */
 $(document).ready(function() {
 
+//$('body').on('click', '#get-car-quote', function(e) {
+$("#get-car-quote").click(function(e) {
+	e.preventDefault();
+	//console.log("prev");
+
+	var carModel  = jQuery.trim(($('#car-model').val()));
+	var selFuel   = jQuery.trim(($('.sel-fuel').val()));
+	var selVar    = jQuery.trim(($('.sel-var').val()));
+	var carRegyr  = jQuery.trim(($('#carregyr').val()));
+	var carYear   = jQuery.trim(($('.car-year').val()));
+	var polStat   = jQuery.trim(($('.polstat').val()));
+
+
+// if(carModel == "" || selFuel == "" || selVar == "" || carRegyr == "" || carYear == "" || polStat == "") {	
+// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #ff0000" );
+// } else {
+// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #70cbd2" );
+// 	$parent.submit();
+// }
+
+if(carModel == "") {
+	$('#car-model').css( "border", "4px solid #ff0000" );
+} else {
+	$('#car-model').css( "border", "4px solid #70cbd2" );
+}
+
+if(selFuel == "") {
+	$('.sel-fuel').css( "border", "4px solid #ff0000" );
+} else {
+	$('.sel-fuel').css( "border", "4px solid #70cbd2" );
+}
+
+if(selVar == "") {	
+	$('.sel-var').css( "border", "4px solid #ff0000" );
+} else {
+	$('.sel-var').css( "border", "4px solid #70cbd2" );
+}
+
+if(carRegyr == "") {	
+	$('#carregyr').css( "border", "4px solid #ff0000" );
+} else {
+	$('#carregyr').css( "border", "4px solid #70cbd2" );
+}
+
+if(carYear == "") {	
+	$('.car-year').css( "border", "4px solid #ff0000" );
+} else {
+	$('.car-year').css( "border", "4px solid #70cbd2" );
+}
+
+if(polStat == "") {	
+	$('.polstat').css( "border", "4px solid #ff0000" );
+} else {
+	$('.polstat').css( "border", "4px solid #70cbd2" );
+}
+
+if(carYear) {
+	$( "#get-car-quote" ).submit();
+}
+
+	/*$("#carregyr").blur(function() {
+		var regnum = jQuery.trim(($(this).val()));
+		var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
+			if(!(regPattern.test(regnum)) || regnum == "") {
+			$("#carregyr").css( "border", "4px solid #ff0000" );
+		} else {
+		  $("#carregyr").css( "border", "4px solid #70cbd2" );
+		}
+	});*/
+
+});
+
+
 //Clear fuel type and variant
 $( "#car-model" ).on('click', function() {
 		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
 			return this.defaultSelected;
 		});
 
-	// $( ".car-year" ).on('click', function() {
-	// 	$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
-	// 		return this.defaultSelected;
-	// });
 
 		//Call to selected car brand
 		if($("#car-model").val()) {
@@ -159,12 +228,19 @@ $( "#car-model" ).on('click', function() {
 	$('.polstat option.renew').hide();
 
 	$('.car-year').on('change', function() {
+
+		$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+			return this.defaultSelected;
+		});
+
 		var caryear = $(this).val();
 		//console.log(caryear);
 		if(caryear == "idv_2016") {
 			//console.log(caryear);
 			$('.polstat option.renew').hide();
 			$('.polstat option.buynew').show();
+			$('.claimstat').hide();
+			$('.ncbpolicy').hide();
 			//$('.polstat').val("Buy New") = $("option:selected", this);
 		} else {
 			//console.log(caryear);
@@ -241,6 +317,10 @@ $( "#car-model" ).on('click', function() {
 
 
 			$('.polstat').on('change', function() {
+
+				$('.claimstat option, .ncbpolicy option').prop('selected', function () {
+					return this.defaultSelected;
+				});
 				//$('.claimstatr').empty();
 				var ren = "Renew";
 
@@ -255,6 +335,9 @@ $( "#car-model" ).on('click', function() {
 
 
 			$('.claimstat').on('change', function() {
+				$('.ncbpolicy option').prop('selected', function () {
+					return this.defaultSelected;
+				});
 				var claim = "No";
 				if($(".claimstat option:selected" ).val() == claim) {
 					$('.ncbpolicy').show();

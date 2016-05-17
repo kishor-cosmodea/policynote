@@ -121,7 +121,7 @@ include("header.php");
 		<div>
 			<p>IDV</p>
 			<span class="car-idv">Insured Declared Value (IDV)</span>
-			<span><i class="fa fa-inr"></i><?php echo $idv; ?></span>
+			<span><i class="fa fa-inr"></i><?php echo number_format($idv); ?></span>
 			<span>(The IDV is based on your car registration year)</span>
 		</div>
 		<div>

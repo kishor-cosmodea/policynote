@@ -75,7 +75,7 @@ include("header.php");
        </div>
        <div class="car-sec-ul">
 
-        <input type="text" name="carreg" placeholder="Registration Number"/>
+        <input id="carregyr" type="text" name="carreg" placeholder="Registration Number" maxlength="10"/>
 
            <select name="year" class="car-year">
              <option value="" disabled selected>Registration Year</option>
