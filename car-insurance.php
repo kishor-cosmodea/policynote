@@ -17,7 +17,7 @@ include("header.php");
 		<div class="car-quote">
       <div class="car-get cf">
         <h2>Need a Car Quote? <span>It on takes 30 seconds</span></h2>
-        <form name="form" action="car-compare.php" method="post">
+        <form name="form" action="car-compare.php" method="post" id="car-details">
         <div class="car-fis-ul">
           
             <?php

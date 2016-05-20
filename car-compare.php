@@ -4,7 +4,6 @@ $pagetitle="Car Compare |";
 include("header.php");
 ?>
 
-
 <?php
 
   //$amtstart =  $_POST['amtstart'];
@@ -28,7 +27,7 @@ include("header.php");
 	//echo $ncb;
 	//echo $claimStatus;
 
-//echo $variant;
+  //echo $variant;
 	$splitted = explode("-",$variant);
 	//echo $splitted;
 	$model = trim($splitted[0]);
@@ -127,7 +126,7 @@ include("header.php");
 		<div>
 			<p>POLICY DETAILS</p>
 			<span>Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
-			<span>Policy start date .......................... 01-06-2016</span>
+			<span>Policy start date .......................... 01-07-2016</span>
 		</div>
 	</div>
 	<div class="wrapper">

@@ -15,7 +15,7 @@ include("header.php");
 				<div class="car-ch-ins">
 					<img src="assets/images/sbi.png" alt="policy-logo">
 					<span class="car-ct-amt"><i class="fa fa-inr"></i> 8,222</span>
-					<span class="car-ct-amt">2016 Maruti Swift Dzire</span>
+					<span class="car-ct-amt"><?php echo $_POST['carname']; ?></span>
 					<span>ZXI 1197cc</span>
 					<span>Petrol</span>
 

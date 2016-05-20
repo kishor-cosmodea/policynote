@@ -8,7 +8,7 @@ include("header.php");
 <div class="container">
 	<div class="main-content">
 		<div class="main-text">
-				<h2>Need a Car Quote?<span> It only takes 30 seconds</span></h2>
+				<h2>Need a Car Insurance?<span> It only takes 30 seconds</span></h2>
 			<div>
 				<p>Choose your monthly premium budget<p id="amount"></p></p>
 
@@ -16,11 +16,11 @@ include("header.php");
 
 			  <form method="post" action="car-insurance.php">
 			    <input type="hidden" name="amtstart" id="amount1" value="0">
-			    <input type="hidden" name="amtend" id="amount2" value="25000">
+			    <input type="hidden" name="amtend" id="amount2" value="30000">
 			    <button class="range-submit" title="Submit">Submit</button>
 			  </form>
 			</div>
-			
+
 		</div>
 	</div>
 	<div class="middle-content">

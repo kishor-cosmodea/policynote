@@ -3,8 +3,7 @@
  *
  */
 
-
-// Window load functions
+// Window load function
 $(window).load(function() {
 
  	  var pathname = window.location.pathname; // Returns path only
@@ -40,151 +39,116 @@ $(window).load(function() {
 			$('#nav-contact').addClass('active');	
 		}
 
-	});
-
-
-// Hide input placeholder on focus event
-$('input[placeholder]').on('focus', function () {
-	var $this = $(this);
-	$this.data('placeholder', $this.prop('placeholder')).removeAttr('placeholder');
-}).on('blur', function () {
-	var $this = $(this);
-	$this.prop('placeholder', $this.data('placeholder'));
 });
 
 
-//input mobile validation
-var inputMobile = [];
-$(function() {
-	$(".mobile").each(function(i) {
-		inputMobile[i]=this.defaultValue;
-         $(this).data("idx",i); // save this field's index to access later
-       });
-	$(".mobile").on("keyup", function (e) {
-		var $field = $(this),
-		val=this.value,
-            $thisIndex=parseInt($field.data("idx"),10); // retrieve the index
-//        window.console && console.log($field.is(":invalid"));
-          //  $field.is(":invalid") is for Safari, it must be the last to not error in IE8
-          if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
-          	this.value = inputMobile[$thisIndex];
-          	return;
-          } 
-          if (val.length > Number($field.attr("maxlength"))) {
-          	val=val.slice(0, 10);
-          	$field.val(val);
-          }
-          inputMobile[$thisIndex]=val;
-        });      
-});
-
-
-
-/*
-	Document ready function
-*/
+// Document ready function
 $(document).ready(function() {
 
-//$('body').on('click', '#get-car-quote', function(e) {
-$("#get-car-quote").click(function(e) {
-	e.preventDefault();
-	//console.log("prev");
+	//$('body').on('click', '#get-car-quote', function(e) {
+	$("#get-car-quote").click(function(e) {
+		e.preventDefault();
+		//console.log("prev");
 
-	var carModel  = jQuery.trim(($('#car-model').val()));
-	var selFuel   = jQuery.trim(($('.sel-fuel').val()));
-	var selVar    = jQuery.trim(($('.sel-var').val()));
-	var carRegyr  = jQuery.trim(($('#carregyr').val()));
-	var carYear   = jQuery.trim(($('.car-year').val()));
-	var polStat   = jQuery.trim(($('.polstat').val()));
+		var carModel  = jQuery.trim($('#car-model').val());
+		var selFuel   = jQuery.trim($('.sel-fuel').val());
+		var selVar    = jQuery.trim($('.sel-var').val());
+		var carRegyr  = jQuery.trim($('#carregyr').val());
+		var carYear   = jQuery.trim($('.car-year').val());
+		var polStat   = jQuery.trim($('.polstat').val());
 
+	// if(carModel == "" || selFuel == "" || selVar == "" || carRegyr == "" || carYear == "" || polStat == "") {	
+	// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #ff0000" );
+	// } else {
+	// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #70cbd2" );
+	// }
 
-// if(carModel == "" || selFuel == "" || selVar == "" || carRegyr == "" || carYear == "" || polStat == "") {	
-// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #ff0000" );
-// } else {
-// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #70cbd2" );
-// 	$parent.submit();
-// }
+	if(carModel == "") {
+		$('#car-model').css( "border", "4px solid #ff0000" );
+	} else {
+		$('#car-model').css( "border", "4px solid #70cbd2" );
+	}
 
-if(carModel == "") {
-	$('#car-model').css( "border", "4px solid #ff0000" );
-} else {
-	$('#car-model').css( "border", "4px solid #70cbd2" );
-}
+	if(selFuel == "") {
+		$('.sel-fuel').css( "border", "4px solid #ff0000" );
+	} else {
+		$('.sel-fuel').css( "border", "4px solid #70cbd2" );
+	}
 
-if(selFuel == "") {
-	$('.sel-fuel').css( "border", "4px solid #ff0000" );
-} else {
-	$('.sel-fuel').css( "border", "4px solid #70cbd2" );
-}
+	if(selVar == "") {	
+		$('.sel-var').css( "border", "4px solid #ff0000" );
+	} else {
+		$('.sel-var').css( "border", "4px solid #70cbd2" );
+	}
 
-if(selVar == "") {	
-	$('.sel-var').css( "border", "4px solid #ff0000" );
-} else {
-	$('.sel-var').css( "border", "4px solid #70cbd2" );
-}
+	var regnum = jQuery.trim(($('#carregyr').val()));
+	var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
+	//if(carRegyr == "") {
+	if(!(regPattern.test(regnum)) || regnum == "") {
+		$('#carregyr').css( "border", "4px solid #ff0000" );
+	} else {
+		$('#carregyr').css( "border", "4px solid #70cbd2" );
+	}
 
-if(carRegyr == "") {	
-	$('#carregyr').css( "border", "4px solid #ff0000" );
-} else {
-	$('#carregyr').css( "border", "4px solid #70cbd2" );
-}
+	if(carYear == "") {
+		$('.car-year').css( "border", "4px solid #ff0000" );
+	} else {
+		$('.car-year').css( "border", "4px solid #70cbd2" );
+	}
 
-if(carYear == "") {	
-	$('.car-year').css( "border", "4px solid #ff0000" );
-} else {
-	$('.car-year').css( "border", "4px solid #70cbd2" );
-}
+	if(polStat == "") {
+		$('.polstat').css( "border", "4px solid #ff0000" );
+	} else {
+		$('.polstat').css( "border", "4px solid #70cbd2" );
+	}
 
-if(polStat == "") {	
-	$('.polstat').css( "border", "4px solid #ff0000" );
-} else {
-	$('.polstat').css( "border", "4px solid #70cbd2" );
-}
+	if(!(carModel == "") && !(selFuel == "") && !(selVar == "") && !(carRegyr == "") && !(carYear == "") && !(polStat == "")) {
+		$( "#car-details" ).submit();
+	}
 
-if(carYear) {
-	$( "#get-car-quote" ).submit();
-}
-
-	/*$("#carregyr").blur(function() {
-		var regnum = jQuery.trim(($(this).val()));
-		var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
-			if(!(regPattern.test(regnum)) || regnum == "") {
-			$("#carregyr").css( "border", "4px solid #ff0000" );
-		} else {
-		  $("#carregyr").css( "border", "4px solid #70cbd2" );
-		}
-	});*/
-
-});
-
-
-//Clear fuel type and variant
-$( "#car-model" ).on('click', function() {
-		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
-			return this.defaultSelected;
-		});
-
-
-		//Call to selected car brand
-		if($("#car-model").val()) {
-		$.ajax({
-			method: "get",
-			url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
-			dataType: 'json',
-			success: function(data) {
-    	//alert(data);
-    	fueltype(data);
-    	asignidv(data);
-    	//console.log(JSON.stringify(data));
-		},
-		error: function() {
-	      //alert("error");
-	    }
-	  });
-		}
 	});
 
+
+	//Clear fuel type and variant
+	$( "#car-model" ).on('click', function() {
+				$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+					return this.defaultSelected;
+				});
+
+		//$("#car-model").on('change', function() {
+			//Call to selected car brand
+			if($("#car-model").val()) {
+				console.log("got val")
+				//alert($("#car-model").val());
+				$.post('get-vehicle.php',
+					'val=' + $("#car-model").val(),
+					function (data) {
+      			//alert(data);
+      			fueltype(data);
+      			assignidv(data);
+   				});
+
+				/*$.ajax({
+					method: "get",
+					url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
+					dataType: 'json',
+					success: function(data) {
+		    	//alert(data);
+		    	fueltype(data);
+		    	asignidv(data);
+		    	//console.log(JSON.stringify(data));
+				},
+				error: function() {
+			      //alert("error");
+			    }
+			  });*/
+			}
+		//});
+	});
+
+	//Assign variant
 	function fueltype (data) {
+		console.log("in fuel asign");
 		$('.sel-fuel').on('change', function() {
 			$('.sel-var').empty();
 			$('.sel-var').append('<option value="" disabled selected>Variant</option>');
@@ -192,11 +156,9 @@ $( "#car-model" ).on('click', function() {
 			//console.log(typefuel);
 			if (typefuel) {
 			//console.log("if");
-				$.each(data, function (index, element) {
+				$.each(JSON.parse(data), function (index, element) {
 					//$('.sel-var').append('<option value="" disabled selected>Variant</option>');
 					if (element.fuel_type == typefuel) {
-						//console.log(typefuel);
-						//console.log(element.fuel_type);
 							//console.log("infill");
               $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
@@ -209,49 +171,8 @@ $( "#car-model" ).on('click', function() {
 		});
 	}
 
-
-    //Get car brand name
-    $("#car-model").change(function() {
-    	$("#car-hide").val($("#car-model").find("option:selected").text());
-  	});
-
-
-    //Get car idv
-    //$(".car-year").change(function() {
-    	//console.log("ch");
-    	//$("#car-idv").val($("#car-year").find("option:selected").text());
-  	//});
-
-
-//Car year functionality
-	$('.polstat option.buynew').hide();
-	$('.polstat option.renew').hide();
-
-	$('.car-year').on('change', function() {
-
-		$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
-			return this.defaultSelected;
-		});
-
-		var caryear = $(this).val();
-		//console.log(caryear);
-		if(caryear == "idv_2016") {
-			//console.log(caryear);
-			$('.polstat option.renew').hide();
-			$('.polstat option.buynew').show();
-			$('.claimstat').hide();
-			$('.ncbpolicy').hide();
-			//$('.polstat').val("Buy New") = $("option:selected", this);
-		} else {
-			//console.log(caryear);
-			$('.polstat option.buynew').hide();
-			$('.polstat option.renew').show();
-			//$('.polstat').val("Renew") = $("option:selected", this);
-		}
-
-	});
-
-			function asignidv(data) {
+	//Assign IDV
+		function assignidv(data) {
 
 			$('.car-year').on('change', function() {
 				var caryr = $(this).val();
@@ -265,12 +186,12 @@ $( "#car-model" ).on('click', function() {
 				var nnmodel = jQuery.trim(nmodel);
 				var nnvari = jQuery.trim(nvari);
 				if(nnvari == "") {
-					var nnvari = "-";
+					nnvari = "-";
 				}
 				//console.log(nnmodel);
 				//console.log(nnvari);
 
-				$.each(data, function (index, element) {
+				$.each(JSON.parse(data), function (index, element) {
 
 					if (element.model_id.model_name == nnmodel && element.varient == nnvari && element.fuel_type == fuel ) {
 						
@@ -316,6 +237,48 @@ $( "#car-model" ).on('click', function() {
 		}
 
 
+    //Get car brand name
+    $("#car-model").change(function() {
+    	$("#car-hide").val($("#car-model").find("option:selected").text());
+  	});
+
+		//Clear the year and policy status
+    $(".sel-var").change(function() {
+    	$('.car-year option, .polstat option').prop('selected', function () {
+			return this.defaultSelected;
+			});
+			$('#car-idv').val("0");
+  	});
+
+	//Car year functionality
+	$('.polstat option.buynew').hide();
+	$('.polstat option.renew').hide();
+
+	$('.car-year').on('change', function() {
+
+		$('.polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+			return this.defaultSelected;
+		});
+
+		var caryear = $(this).val();
+		//console.log(caryear);
+		if(caryear == "idv_2016") {
+			//console.log(caryear);
+			$('.polstat option.renew').hide();
+			$('.polstat option.buynew').show();
+			$('.claimstat').hide();
+			$('.ncbpolicy').hide();
+			//$('.polstat').val("Buy New") = $("option:selected", this);
+		} else {
+			//console.log(caryear);
+			$('.polstat option.buynew').hide();
+			$('.polstat option.renew').show();
+			//$('.polstat').val("Renew") = $("option:selected", this);
+		}
+
+	});
+
+			//Policy status on change
 			$('.polstat').on('change', function() {
 
 				$('.claimstat option, .ncbpolicy option').prop('selected', function () {
@@ -333,7 +296,7 @@ $( "#car-model" ).on('click', function() {
 
 			});
 
-
+			//Claim status on change
 			$('.claimstat').on('change', function() {
 				$('.ncbpolicy option').prop('selected', function () {
 					return this.defaultSelected;
@@ -353,7 +316,7 @@ $( "#car-model" ).on('click', function() {
       range: true,
       min: 0,
       max: 500000,
-      values: [ 0, 25000 ],
+      values: [ 0, 30000 ],
       slide: function( event, ui ) {
         $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
 				$( "#amount1" ).val(ui.values[ 0 ]);
@@ -367,3 +330,38 @@ $( "#car-model" ).on('click', function() {
 
 });
 
+
+// Hide input placeholder on focus event
+$('input[placeholder]').on('focus', function () {
+	var $this = $(this);
+	$this.data('placeholder', $this.prop('placeholder')).removeAttr('placeholder');
+}).on('blur', function () {
+	var $this = $(this);
+	$this.prop('placeholder', $this.data('placeholder'));
+});
+
+
+//input mobile validation
+var inputMobile = [];
+$(function() {
+	$(".mobile").each(function(i) {
+		inputMobile[i]=this.defaultValue;
+         $(this).data("idx",i); // save this field's index to access later
+       });
+	$(".mobile").on("keyup", function (e) {
+		var $field = $(this),
+		val=this.value,
+            $thisIndex=parseInt($field.data("idx"),10); // retrieve the index
+//        window.console && console.log($field.is(":invalid"));
+          //  $field.is(":invalid") is for Safari, it must be the last to not error in IE8
+          if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
+          	this.value = inputMobile[$thisIndex];
+          	return;
+          } 
+          if (val.length > Number($field.attr("maxlength"))) {
+          	val=val.slice(0, 10);
+          	$field.val(val);
+          }
+          inputMobile[$thisIndex]=val;
+        });      
+});
