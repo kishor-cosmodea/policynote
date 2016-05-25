@@ -35,19 +35,22 @@
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
     <!-- Css for range slider -->
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/vendor/jquery-ui.css">
 
     <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- jQuery -->
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
+
+    <!-- jQuery for cookie-->
+    <script type = "text/javascript" src = "http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
     
     <!-- jQuery for range slider -->
     <script type="text/javascript" src="assets/vendor/jquery-ui.js"></script>
 
     <!-- Google font -->
-    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,500,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500,500italic,700,700italic,300italic' rel='stylesheet' type='text/css'>
 
     <!-- For IE9 browsers. -->
     <!--[if IE 9 ]><html class="ie9"> <![endif]-->

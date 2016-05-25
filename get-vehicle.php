@@ -3,7 +3,6 @@
 $value = $_POST['val'];
 //echo "I got your value! $value";
 
-
 $url = "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" . $value;
 $ch = curl_init();
 

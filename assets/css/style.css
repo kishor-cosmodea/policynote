@@ -88,7 +88,7 @@
 
 /*Header style start*/
 body, select, input,
-textarea, button { font-family: 'Alegreya Sans', sans-serif; }
+textarea, button { font-family: 'Ubuntu', sans-serif; }
 
 a { text-decoration: none; }
 
@@ -269,9 +269,9 @@ footer {
       }
 
       .main-text {
-        width: 65%;
+        width: 77%;
         margin: 0 auto;
-        padding: 18px 4% 30px;
+        padding: 18px 3.5% 30px 4%;
         border-radius: 4px;
         background: rgba(255,255,255, 0.8);
       }
@@ -324,7 +324,7 @@ footer {
       }
 
       .main-text form {
-      margin: 3px 0 0 20%;
+      margin: 3px 0 0 21%;
       display: inline-block;
       vertical-align: top;
       }
@@ -352,13 +352,13 @@ footer {
       .sketch-cont .car-block {
         background: #70cbd2;
         color: #fff;
-        min-height: 265px;
+        min-height: 300px;
       }
 
       .sketch-cont .health-block {
         background: #2f3e5c;
         color: #fff;
-        min-height: 265px;
+        min-height: 300px;
       }
 
       .sketch-cont .car-block h3,
@@ -525,9 +525,9 @@ footer {
       }
 
       .car-get {
-        width: 80%;
+        width: 86%;
         margin: 0 auto;
-        padding: 19px 4% 0;
+        padding: 19px 3.3% 0 4%;
         border-radius: 4px;
         background: rgba(255,255,255, 0.8);
         text-align: left;
@@ -541,7 +541,7 @@ footer {
 
       .car-get div.car-sub-btn {
         width: 18%;
-        margin: -42px -29px 0 0;
+        margin: -42px 0 0 0;
         float: right;
         display: inline-block;
         vertical-align: top;
@@ -948,10 +948,11 @@ footer {
 
     .car-policy-plan div {
       border: 1px solid #ccc;
-      min-height: 150px;
+      min-height: 95px;
       display: block;
+      padding: 25px 2%;
       margin: 0 0 10px 0;
-     background: #fff;
+      background: #fff;
     }
 
       .car-policy-plan p {
@@ -959,8 +960,9 @@ footer {
         width: 32%;
         text-align: center;
         vertical-align: top;
-        padding: 17px 0;
       }
+
+      .car-policy-plan p.car-premium { margin: 27px 0 0 0; }
 
       .car-policy-plan p:first-child { float: left; }
 
@@ -976,6 +978,7 @@ footer {
       }
 
       .car-policy-plan .car-premium .car-amt {
+        display: inline-block;
         font-size: 23px;
         font-weight: 500;
       }
@@ -1001,14 +1004,15 @@ footer {
         display: inline-block;
         width: 60%;
         height: auto;
-        margin: 12px 0;
       }
 
       .car-buy {
         text-align: center;
         background: #70cbd2;
         border-radius: 4px;
-        margin: 18px 47px 0 0;
+        margin: 27px 0 0 0;
+        padding: 10px 20px;
+        color: #fff;
         border: none;
         font-size: 18px;
         float: right;
@@ -1016,14 +1020,6 @@ footer {
       }
 
       .car-buy:hover { background: #359fa7; }
-
-      .car-buy a {
-        color: #fff;
-        padding: 10px 20px;
-        display: inline-block;
-      }
-
-      .car-buy a:hover { color: #fff; }
 
       .car-policy-plan .car-idv-cont { border-top: 4px solid #fbfbfb; }
 
@@ -1043,17 +1039,25 @@ footer {
       }
 
       .car-ch-ins img {
-        width: 50%;
+        width: 60%;
         height: auto;
-        margin: 0 10px 10px 0;
+        margin: 0 auto;
+        display: block;
       }
 
       .car-ch-ins span {
         margin: 11px 0;
+        display: block;
         font-size: 16px;
+        text-align: center;
       }
 
       .car-ch-ins span.car-ct-amt { font-size: 22px; }
+
+      .car-ch-ins .cpre {
+        display: inline-block;
+        font-size:26px;
+      }
 
       .car-ch-idv, .car-ch-add, .car-ch-dis {
         padding: 30px 10%;
@@ -1097,6 +1101,7 @@ footer {
         padding: 10px;
         margin: 14px 5% 0 0;
         box-sizing: border-box;
+        border: 2px solid #70cbd2;
       }
 
       .car-chout-user p.ch-inp {

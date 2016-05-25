@@ -16,7 +16,7 @@ include("header.php");
 	<div class="car-content">
 		<div class="car-quote">
       <div class="car-get cf">
-        <h2>Need a Car Quote? <span>It on takes 30 seconds</span></h2>
+        <h2>Need a Car Insurance Quote? <span>It on takes 30 seconds</span></h2>
         <form name="form" action="car-compare.php" method="post" id="car-details">
         <div class="car-fis-ul">
           
@@ -54,9 +54,6 @@ include("header.php");
           
           <input type="hidden" name="carname" id="car-hide"/>
 
-           <!-- <input type="text" class="car-mod span3" name="car-mod" data-provide="typeahead" data-items="4"
-           data-source="" placeholder="Car Model"> -->
-
           <select name="fueltype" class="sel-fuel">
              <option value="" disabled selected>Fuel Type</option>
              <option value="Petrol">Petrol</option>
@@ -64,9 +61,6 @@ include("header.php");
              <option value="CNG">CNG</option>
              <option value="LPG">LPG</option>
           </select>
-
-          <!-- <input id="typeahead2" type="text" data-provide="typeahead" class="car-mod span3" name="car-mod"
-            data-items="6" placeholder="Variant"> -->
 
           <select name="variant" class="sel-var">
            <option value="" disabled selected>Variant</option>

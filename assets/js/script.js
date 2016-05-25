@@ -118,7 +118,7 @@ $(document).ready(function() {
 		//$("#car-model").on('change', function() {
 			//Call to selected car brand
 			if($("#car-model").val()) {
-				console.log("got val")
+				//console.log("got val");
 				//alert($("#car-model").val());
 				$.post('get-vehicle.php',
 					'val=' + $("#car-model").val(),
@@ -148,7 +148,7 @@ $(document).ready(function() {
 
 	//Assign variant
 	function fueltype (data) {
-		console.log("in fuel asign");
+		//console.log("in fuel asign");
 		$('.sel-fuel').on('change', function() {
 			$('.sel-var').empty();
 			$('.sel-var').append('<option value="" disabled selected>Variant</option>');
@@ -327,6 +327,40 @@ $(document).ready(function() {
      "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
+
+	//Buy now
+	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
+
+		var cval  = $(this).val();
+		var nval  = $(this).closest("div").attr("id");
+		
+		var cpolicy = $('#cn' + nval).text();
+    var cpre = $('#cp' + nval).text();
+
+    var cmodel  = $('.car-name').text();
+    var cvari   = $('.car-vari').text();
+    var regyr  = $('.reg-yr').text();
+    var spliyr = regyr.split('.');
+		//console.log(spliyr);
+		var cnregyr = jQuery.trim(spliyr[25]);
+    var cidv    = $('.idvamt').text();
+
+    // console.log(cpolicy);
+    // console.log(cpre);
+    // console.log(cvari);
+    // console.log(cnregyr);
+    // console.log(cidv);
+
+    $.cookie("cpolicy", cpolicy);
+    $.cookie("cpre", cpre);
+    $.cookie("cmodel", cmodel);
+    $.cookie("cvari", cvari);
+    $.cookie("cnregyr", cnregyr);
+    $.cookie("cidv", cidv);
+
+    window.location.href = "http://stayintouch.be:54/car-checkout.php";
+
+	});
 
 });
 

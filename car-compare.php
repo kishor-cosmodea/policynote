@@ -114,18 +114,18 @@ include("header.php");
 		<div>
 			<p>SHOWING RESULTS FOR <!-- <span onclick="goBack()"> Edit</span> --></p>
 			<span class="car-name"><?php echo $carname; ?></span>
-			<span><?php echo "( " . $fueltype . " )    "; echo $variant; ?></span>
-			<span><?php echo $carreg; ?></span>
+			<span class="car-vari"><?php echo "( " . $fueltype . " )    "; echo $variant; ?></span>
+			<span ><?php echo $carreg; ?></span>
 		</div>
 		<div>
 			<p>IDV</p>
 			<span class="car-idv">Insured Declared Value (IDV)</span>
-			<span><i class="fa fa-inr"></i><?php echo number_format($idv); ?></span>
+			<span class="idvamt"><i class="fa fa-inr"></i> <?php echo number_format($idv); ?></span>
 			<span>(The IDV is based on your car registration year)</span>
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
-			<span>Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
+			<span class="reg-yr">Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
 			<span>Policy start date .......................... 01-07-2016</span>
 		</div>
 	</div>
@@ -136,18 +136,6 @@ include("header.php");
 				<span>Car</span> <!-- <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a> -->
 			</div>
 			<div class="car-refine">
-<!-- 				<div class="car-re-data">
-					<h3>Zero Depreciation <i class="fa fa-plus-circle fa-lg"></i></h3>
-					<div>
-						<span>Do not pay anything from your pocket in case of a claim.</span>
-					</div>
-				</div>
-				<div class="car-re-data">
-					<h3>Discounts <i class="fa fa-plus-circle fa-lg"></i></h3>
-					<div>
-						<span>Save upto 40% on these quotes</span>
-					</div>
-				</div> -->
 				<div class="car-re-data">
 					<h3>Additional</h3>
 					<div>
@@ -175,21 +163,23 @@ include("header.php");
 				<div class="car-result-data">
 					<div class="car-policy-plan">
 						<?php
+							$i = 1;
 							foreach ($resp as $data) {
-								echo "<div>
+								echo "<div id='". $i ."'>
 									<p>
 										<img src='assets/images/sbi.png' alt='policy-logo'>
-										<span class='car-amt'>" . $data['companyName'] .  "</span>
+										<span class='car-amt' id='cn". $i ."'>" . $data['companyName'] .  "</span>
 									</p>
 									<p class='car-premium'>
-										
-		              <span class='car-amt'><i class='fa fa-inr'></i>" . number_format($data['finalPremium']) .  "</span>
-		                		
+
+		              <i class='fa fa-inr'></i> <span class='car-amt' id='cp". $i ."'>" . number_format($data['finalPremium']) .  "</span>
+
 									</p>
 									<p>
-										<button class='car-buy'><a href='car-checkout.php'>Buy Now</a></button>
+										<button value='". $i ."' class='car-buy buynow'>Buy Now</button>
 									</p>
 								</div>";
+								$i++;
 							}
 						?>
 <!-- 						<div class="car-idv-cont">

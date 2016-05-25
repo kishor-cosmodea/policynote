@@ -1,8 +1,31 @@
 <?php
-$description="";
-$pagetitle="Car Checkout |";
-include("header.php");
+	$description="";
+	$pagetitle="Car Checkout |";
+	include("header.php");
 ?>
+
+<script type="text/javascript">
+    $(function () {
+        if ($.cookie("cpolicy") != null && $.cookie("cpre") != null && $.cookie("cmodel") != null && $.cookie("cvari") != null && $.cookie("cnregyr") != null && $.cookie("cidv") != null) {
+
+            $(".cpolicy").html($.cookie("cpolicy"));
+            $(".cpre").html($.cookie("cpre"));
+            $(".cmodel").html($.cookie("cmodel"));
+            $(".cvari").html($.cookie("cvari"));
+            $(".cnregyr").html($.cookie("cnregyr"));
+            $(".cidv").html($.cookie("cidv"));
+            
+            $.removeCookie("cpolicy");
+            $.removeCookie("cpre");
+            $.removeCookie("cmodel");
+            $.removeCookie("cvari");
+            $.removeCookie("cnregyr");
+            $.removeCookie("cidv");
+        } else {
+        	console.log("error");
+        }
+    });
+</script>
 
 <!-- Content starts here-->
 <div class="container">
@@ -14,15 +37,14 @@ include("header.php");
 			<div class="car-checkout">
 				<div class="car-ch-ins">
 					<img src="assets/images/sbi.png" alt="policy-logo">
-					<span class="car-ct-amt"><i class="fa fa-inr"></i> 8,222</span>
-					<span class="car-ct-amt"><?php echo $_POST['carname']; ?></span>
-					<span>ZXI 1197cc</span>
-					<span>Petrol</span>
-
+					<span class="cpolicy"></span>
+					<span class="car-ct-amt cmodel"></span>
+					<span class="cvari"></span>
+					<span class="car-ct-amt"><i class="fa fa-inr"></i> <span class="cpre"></span></span>
 				</div>
 				<div class="car-ch-idv">
 					<h3>Insured Declared Value:</h3>
-					<span>Car:</span><span class="idv-right"><i class="fa fa-inr"></i> 3,66,789</span>
+					<span>Year: </span><span class="cnregyr"></span><span class="idv-right"><i class="fa fa-inr"></i> <span class="cidv"></span></span>
 				</div>
 				<div class="car-ch-add">
 					<h3>Additional</h3>
@@ -42,8 +64,10 @@ include("header.php");
 					<div class="car-chout-user">
 						<input type="text" name="fname" placeholder="First Name">
 						<input type="text" name="lname" placeholder="Last Name">
-						<p><input type="text" name="email" placeholder="Email">
-							<input class="mobile" type="number" name="mobile" placeholder="Mobile" maxlength="10"></p>
+						<p>
+							<input type="text" name="email" placeholder="Email">
+							<input class="mobile" type="number" name="mobile" placeholder="Mobile" maxlength="10">
+						</p>
 						</div>
 					</div>
 
