@@ -44,7 +44,7 @@
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
 
     <!-- jQuery for cookie-->
-    <script type = "text/javascript" src = "http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+    <script type = "text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
     
     <!-- jQuery for range slider -->
     <script type="text/javascript" src="assets/vendor/jquery-ui.js"></script>
@@ -60,7 +60,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script>
+    <script type="text/javascript">
         function goBack() {
             window.history.back();
         }
@@ -77,11 +77,11 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a id="nav-car" href="car-insurance.php" title="Car">Car Insurance</a></li>
+                        <li><a id="nav-car" href="index.php" title="Car">Car Insurance</a></li>
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
                         <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
                         <li>
-                            <a href="tel:123321123" class="cl" title="call">cl</a>
+                            <a href="tel:123321123" class="cl" title="Call">cl</a>
                             <a href="https://www.facebook.com/" target="_blank" class="fb" title="Facebook">fb</a>
                             <a href="https://twitter.com/" target="_blank" class="tw" title="Twitter">tw</a>
                         </li>

@@ -22,6 +22,106 @@ include("header.php");
 			</div>
 
 		</div>
+				<div class="car-quote">
+      <div class="car-get cf">
+        <h2>Need a Car Insurance Quote? <span>It on takes 30 seconds</span></h2>
+        <form name="form" action="car-compare.php" method="post" id="car-details">
+        <div class="car-fis-ul">
+
+            <?php
+
+              $url = "http://52.32.253.76:8080/webapp/api/business/getAllMakes";
+              $ch = curl_init();
+
+              // Disable SSL verification
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+              // Will return the response, if false it print the response
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              // Set the url
+              curl_setopt($ch, CURLOPT_URL,$url);
+              // Execute
+              $res = curl_exec($ch);
+              // Closing
+              curl_close($ch);
+
+              $json = json_decode($res, true);
+              //var_dump($json);
+            ?>
+
+           <select id="car-model" name="carmodel">
+            <option value="" disabled selected>Car</option>
+            <?php
+              foreach ($json as $data) {
+                echo  "<option value=". $data['make_id'] .">" . $data['name'] .  "</option>";
+              }
+            ?>
+          </select>
+          
+          <input type="hidden" name="carname" id="car-hide"/>
+
+          <select name="fueltype" class="sel-fuel">
+             <option value="" disabled selected>Fuel Type</option>
+             <option value="Petrol">Petrol</option>
+             <option value="Diesel">Diesel</option>
+             <option value="CNG">CNG</option>
+             <option value="LPG">LPG</option>
+          </select>
+
+          <select name="variant" class="sel-var">
+           <option value="" disabled selected>Variant</option>
+          </select>
+
+       </div>
+       <div class="car-sec-ul">
+
+        <input id="carregyr" type="text" name="carreg" placeholder="Registration Number" maxlength="10"/>
+
+           <select name="year" class="car-year">
+             <option value="" disabled selected>Registration Year</option>
+             <option value="idv_2016">2016</option>
+             <option value="idv_2015">2015</option>
+             <option value="idv_2014">2014</option>
+             <option value="idv_2013">2013</option>
+             <option value="idv_2012">2012</option>
+             <option value="idv_2011">2011</option>
+             <option value="idv_2010">2010</option>
+             <option value="idv_2009">2009</option>
+             <option value="idv_2008">2008</option>
+             <option value="idv_2007">2007</option>
+           </select>
+
+           <input type="hidden" name="caridv" id="car-idv"/>
+
+        <select name="policyStatus" class="polstat">
+          <option value="" disabled selected>Policy Status</option>
+          <option value="Buy New" class="buynew">Buy New</option>
+          <option value="Renew" class="renew">Renew</option>
+        </select>
+
+        <select name="claimStatus" class="claimstat">
+          <option value="" disabled selected>Claim Status</option>
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+
+        <select name="ncbPolicy" class="ncbpolicy">
+          <option value="" disabled selected>No Claim Bonus (NCB)</option>
+          <option value="0">0%</option>
+          <option value="20">20%</option>
+          <option value="25">25%</option>
+          <option value="35">35%</option>
+          <option value="45">45%</option>
+          <option value="50">50%</option>
+        </select>
+
+    </div>
+
+    <div class="car-sub-btn">
+      <button class="btn-quote" id="get-car-quote">Get Quotes</button>
+    </div>
+    </form>
+  </div>
+</div>
 	</div>
 	<div class="middle-content">
 		<div class="list-insurance">

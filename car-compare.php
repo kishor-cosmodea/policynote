@@ -6,12 +6,6 @@ include("header.php");
 
 <?php
 
-  //$amtstart =  $_POST['amtstart'];
-  //$amtend =  $_POST['amtend'];
-
-  //echo $amtstart;
-  //echo $amtend;
-
 	$carreg =  $_POST['carreg'];
 	$year =  $_POST['year'];
 	$carname = $_POST['carname'];
@@ -20,12 +14,12 @@ include("header.php");
 	$claimStatus = $_POST['claimStatus'];
 	$idv = $_POST['caridv'];
 
-	// if($claimStatus = $_POST['claimStatus'] == "") {
+	// if($_POST['claimStatus'] == "") {
 	// 	$ncb = 0;
 	// 	$claimStatus = "No";
 	// }
-	//echo $ncb;
-	//echo $claimStatus;
+	// echo $ncb;
+	// echo $claimStatus;
 
   //echo $variant;
 	$splitted = explode("-",$variant);
@@ -112,7 +106,7 @@ include("header.php");
 <div class="container">
 	<div class="car-sel-info">
 		<div>
-			<p>SHOWING RESULTS FOR <!-- <span onclick="goBack()"> Edit</span> --></p>
+			<p>SHOWING RESULTS FOR</p>
 			<span class="car-name"><?php echo $carname; ?></span>
 			<span class="car-vari"><?php echo "( " . $fueltype . " )    "; echo $variant; ?></span>
 			<span ><?php echo $carreg; ?></span>
@@ -126,7 +120,8 @@ include("header.php");
 		<div>
 			<p>POLICY DETAILS</p>
 			<span class="reg-yr">Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
-			<span>Policy start date .......................... 01-07-2016</span>
+			<span>Policy start date .......................... <?php $date_format = 'jS F Y'; $tomorrow = strtotime('+1 day'); echo date($date_format, $tomorrow); ?>
+			</span>
 		</div>
 	</div>
 	<div class="wrapper">
@@ -167,7 +162,7 @@ include("header.php");
 							foreach ($resp as $data) {
 								echo "<div id='". $i ."'>
 									<p>
-										<img src='assets/images/sbi.png' alt='policy-logo'>
+										<img src='assets/images/loader.gif' alt='policy-logo'>
 										<span class='car-amt' id='cn". $i ."'>" . $data['companyName'] .  "</span>
 									</p>
 									<p class='car-premium'>

@@ -45,7 +45,18 @@ $(window).load(function() {
 // Document ready function
 $(document).ready(function() {
 
-	//$('body').on('click', '#get-car-quote', function(e) {
+	$(".range-submit").click(function(e) {
+		e.preventDefault();
+		//$(".main-text").animate( { "opacity": "show", top:"100"} , 500 );
+		if($('#amount2').val() == "0") {
+			$('.range-submit').css( "border", "4px solid #ff0000" );
+		} else {
+			//$('.range-submit').css( "border", "4px solid #70cbd2" );
+			$('.main-text').fadeOut( "hide" );
+			$('.car-quote').fadeIn( "show" );
+		}
+	});
+
 	$("#get-car-quote").click(function(e) {
 		e.preventDefault();
 		//console.log("prev");
@@ -56,12 +67,6 @@ $(document).ready(function() {
 		var carRegyr  = jQuery.trim($('#carregyr').val());
 		var carYear   = jQuery.trim($('.car-year').val());
 		var polStat   = jQuery.trim($('.polstat').val());
-
-	// if(carModel == "" || selFuel == "" || selVar == "" || carRegyr == "" || carYear == "" || polStat == "") {	
-	// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #ff0000" );
-	// } else {
-	// 	$('#car-model, .sel-fuel, .sel-var, #carregyr, .car-year, .polstat').css( "border", "4px solid #70cbd2" );
-	// }
 
 	if(carModel == "") {
 		$('#car-model').css( "border", "4px solid #ff0000" );
@@ -318,13 +323,13 @@ $(document).ready(function() {
       max: 500000,
       values: [ 0, 30000 ],
       slide: function( event, ui ) {
-        $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
+        $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
 				$( "#amount1" ).val(ui.values[ 0 ]);
 				$( "#amount2" ).val(ui.values[ 1 ]);
       }
     });
     $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
-     "  -  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
+     "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
 
@@ -333,7 +338,7 @@ $(document).ready(function() {
 
 		var cval  = $(this).val();
 		var nval  = $(this).closest("div").attr("id");
-		
+
 		var cpolicy = $('#cn' + nval).text();
     var cpre = $('#cp' + nval).text();
 

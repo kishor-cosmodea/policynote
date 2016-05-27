@@ -36,7 +36,7 @@
 			</div>
 			<div class="car-checkout">
 				<div class="car-ch-ins">
-					<img src="assets/images/sbi.png" alt="policy-logo">
+					<img src="assets/images/loader.gif" alt="policy-logo">
 					<span class="cpolicy"></span>
 					<span class="car-ct-amt cmodel"></span>
 					<span class="cvari"></span>

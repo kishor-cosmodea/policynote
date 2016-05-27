@@ -1,16 +1,9 @@
 <?php
-$description="";
-$pagetitle="Car Insurance |";
-include("header.php");
+  $description="";
+  $pagetitle="Car Insurance |";
+  include("header.php");
 ?>
 
-<?php
-  //$amtstart =  $_POST['amtstart'];
-  //$amtend =  $_POST['amtend'];
-
-  //echo $amtstart;
-  //echo $amtend;
-?>
 <!-- Content starts here-->
 <div class="container">
 	<div class="car-content">
@@ -19,11 +12,8 @@ include("header.php");
         <h2>Need a Car Insurance Quote? <span>It on takes 30 seconds</span></h2>
         <form name="form" action="car-compare.php" method="post" id="car-details">
         <div class="car-fis-ul">
-          
-            <?php
 
-              // $amtstart =  $_POST['amtstart'];
-              // $amtend =  $_POST['amtend'];
+            <?php
 
               $url = "http://52.32.253.76:8080/webapp/api/business/getAllMakes";
               $ch = curl_init();

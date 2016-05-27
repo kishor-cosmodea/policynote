@@ -17,8 +17,8 @@ include("header.php");
 				<span>Mumbai-400001</span>
 				</div>
 				<p class="about-us">Write to us</p>
-				<span><img src="assets/images/tele.png" alt="map" width="37" height="37"><a href="mail:support@policynote.com">support@policynote.com</a></span>
-				<span><img src="assets/images/msg.png" alt="map" width="37" height="37"><a href="tel:022-22222222">022-22222222</a></span>
+				<span><img src="assets/images/msg.png" alt="map" width="37" height="37"><a href="mail:support@policynote.com">support@policynote.com</a></span>
+				<span><img src="assets/images/tele.png" alt="map" width="37" height="37"><a href="tel:022-22222222">022-22222222</a></span>
 			</div>
 			<div class="about-add">
 				<img src="assets/images/about-map.png" alt="map">
