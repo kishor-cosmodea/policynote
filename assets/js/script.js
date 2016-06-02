@@ -47,13 +47,14 @@ $(document).ready(function() {
 
 	$(".range-submit").click(function(e) {
 		e.preventDefault();
-		//$(".main-text").animate( { "opacity": "show", top:"100"} , 500 );
-		if($('#amount2').val() == "0") {
+		if($('#amount1').val() == $('#amount2').val() || $('#amount2').val() == "0") {
 			$('.range-submit').css( "border", "4px solid #ff0000" );
 		} else {
-			//$('.range-submit').css( "border", "4px solid #70cbd2" );
 			$('.main-text').fadeOut( "hide" );
 			$('.car-quote').fadeIn( "show" );
+			$('#amount1').val();
+			$('#amount2').val();
+			//console.log($('#amount1').val() + " " +  $('#amount2').val());
 		}
 	});
 
@@ -114,17 +115,23 @@ $(document).ready(function() {
 	});
 
 
-	//Clear fuel type and variant
 	$( "#car-model" ).on('click', function() {
-				$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
-					return this.defaultSelected;
-				});
+		$('.loader').show();
+		$('.sel-fuel').attr('disabled', 'disabled');
+		$('.sel-var').empty();
+		$('.sel-var').append('<option value="" disabled selected>Variant</option>');
+		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
+			return this.defaultSelected;
+		});
+	});
 
-		//$("#car-model").on('change', function() {
+
+	//Clear fuel type and variant
+	$( "#car-model" ).on('change', function() {
+
 			//Call to selected car brand
 			if($("#car-model").val()) {
-				//console.log("got val");
-				//alert($("#car-model").val());
+				console.log("got val");
 				$.post('get-vehicle.php',
 					'val=' + $("#car-model").val(),
 					function (data) {
@@ -148,12 +155,13 @@ $(document).ready(function() {
 			    }
 			  });*/
 			}
-		//});
 	});
 
 	//Assign variant
 	function fueltype (data) {
-		//console.log("in fuel asign");
+		console.log("in fuel asign");
+		$('.loader').hide();
+		$('.sel-fuel').removeAttr('disabled');
 		$('.sel-fuel').on('change', function() {
 			$('.sel-var').empty();
 			$('.sel-var').append('<option value="" disabled selected>Variant</option>');
@@ -171,6 +179,19 @@ $(document).ready(function() {
             	//console.log("no type");
             	//$('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             //}
+
+            //Assign variant in a ascending order
+						var sortSelect = function (select, attr, order) {
+						  if(attr === 'text') {
+						    if(order === 'asc') {
+						      $(select).html($(select).children('option').sort(function (x, y) {
+						        return $(x).text().toUpperCase() < $(y).text().toUpperCase() ? -1 : 1;
+						      }));
+						      $(select).get(0).selectedIndex = 0;
+						    }
+						  }
+						};
+						sortSelect('.sel-var', 'text', 'asc');
         });
 			}
 		});
@@ -193,8 +214,7 @@ $(document).ready(function() {
 				if(nnvari == "") {
 					nnvari = "-";
 				}
-				//console.log(nnmodel);
-				//console.log(nnvari);
+				//console.log(nnmodel + nnvari);
 
 				$.each(JSON.parse(data), function (index, element) {
 
@@ -350,11 +370,7 @@ $(document).ready(function() {
 		var cnregyr = jQuery.trim(spliyr[25]);
     var cidv    = $('.idvamt').text();
 
-    // console.log(cpolicy);
-    // console.log(cpre);
-    // console.log(cvari);
-    // console.log(cnregyr);
-    // console.log(cidv);
+    // console.log(cpolicy + cpre + cvari + cnregyr + cidv);
 
     $.cookie("cpolicy", cpolicy);
     $.cookie("cpre", cpre);
@@ -363,7 +379,7 @@ $(document).ready(function() {
     $.cookie("cnregyr", cnregyr);
     $.cookie("cidv", cidv);
 
-    window.location.href = "http://stayintouch.be:54/car-checkout.php";
+    window.location.href = "../../car-checkout.php";
 
 	});
 

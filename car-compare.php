@@ -13,7 +13,7 @@ include("header.php");
 	$fueltype = $_POST['fueltype'];
 	$claimStatus = $_POST['claimStatus'];
 	$idv = $_POST['caridv'];
-
+	$insPer = 60;
 	// if($_POST['claimStatus'] == "") {
 	// 	$ncb = 0;
 	// 	$claimStatus = "No";
@@ -53,8 +53,11 @@ include("header.php");
 	//echo $year;
 	//echo $carname;
 	//echo $model;
-	//echo $int;
-	//echo $claimStatus;
+	//echo $vari;
+	//echo $intval;
+	//echo $claimstat;
+	//echo $idv;
+	//echo $insPer;
 
 
 	$data = array(
@@ -66,10 +69,8 @@ include("header.php");
 	  "ncbPolicy"=> $intval,
 	  "claimStatus"=> $claimstat,
 	  "idv"=> $idv,
-	  "insurancePerecentage"=>"0",
-	  "addon"=> 0,
-	  "premium"=> 0,
-	  "electronic"=>""
+	  "insurancePerecentage"=> $insPer,
+	  "addonType"=> "1"
 	);
 
 	$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
@@ -135,10 +136,31 @@ include("header.php");
 					<h3>Additional</h3>
 					<div>
 						<p>
-							<span><input type="checkbox" name="insper" value="Insurance Perecentage">Insurance Perecentage</span>
-							<span><input type="checkbox" name="addon" value="addon">Addon</span>
-							<span><input type="checkbox" name="premium" value="premium">Premium</span>
-							<span><input type="checkbox" name="electronic" value="electronic">Electronic</span>
+							<span><select name="insper" class="insper">
+             		<option value="" disabled selected>Insurance Perecentage</option>
+             		<option value="10">10</option>
+             		<option value="20">20</option>
+             		<option value="30">30</option>
+             		<option value="40">40</option>
+             		<option value="50">50</option>
+             		<option value="60">60</option>
+             		<option value="70">70</option>
+             		<option value="80">80</option>
+             		<option value="90">90</option>
+								<option value="100">100</option>
+          			</select></span>
+							<span><select name="addon" class="addon">
+             		<option value="" disabled selected>Add on</option>
+             		<option value="1">DTCH WITH RTI</option>
+             		<option value="2">DTCH WITHOUT RTI</option>
+             		<option value="3">DCH</option>
+             		<option value="4">DC</option>
+             		<option value="5">D</option>
+          			</select></span>
+          		<!-- <span><input type="checkbox" name="insper" value="Insurance Perecentage">Insurance Perecentage</span> -->
+							<!-- <span><input type="checkbox" name="addon" value="addon">Addon</span> -->
+							<!-- <span><input type="checkbox" name="premium" value="premium">Premium</span>
+							<span><input type="checkbox" name="electronic" value="electronic">Electronic</span> -->
 						</p>
 					</div>
 				</div>
@@ -150,8 +172,8 @@ include("header.php");
 					<div>
 						<span class="car-sort">Sort By:</span>
 						<select name="car-price" class="car-price">
-							<option value="price">Price</option>
-							<option value="match">Match</option>
+							<option value="0">Match</option>
+							<option value="1">Price</option>
 						</select>
 					</div>
 				</div>

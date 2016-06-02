@@ -58,8 +58,8 @@ include("header.php");
           </select>
           
           <input type="hidden" name="carname" id="car-hide"/>
-
-          <select name="fueltype" class="sel-fuel">
+          <img class="loader" src='assets/images/loader1.gif' alt='policy-logo'>
+          <select name="fueltype" class="sel-fuel" disabled="disabled">
              <option value="" disabled selected>Fuel Type</option>
              <option value="Petrol">Petrol</option>
              <option value="Diesel">Diesel</option>

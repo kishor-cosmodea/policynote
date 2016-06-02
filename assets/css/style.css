@@ -218,20 +218,20 @@ footer {
 
   .cl { background: url("../images/call.png") 7px 7px no-repeat; }
 
-  .fb { background: url("../images/facebook.png") 11px 7px no-repeat; }
+  .fb { background: url("../images/fb.png") 11px 7px no-repeat; }
 
-  .tw { background: url("../images/twitter.png") 7px 9px no-repeat; }
+  .tw { background: url("../images/tw.png") 7px 9px no-repeat; }
 
     a.cl:hover {
     background: url("../images/call.png") 7px 7px no-repeat;
     background-color: #3e9ca3 ;  }
 
     a.fb:hover {
-    background: url("../images/facebook.png") 11px 7px no-repeat;
+    background: url("../images/fb.png") 11px 7px no-repeat;
     background-color: #3e9ca3 ;  }
 
     a.tw:hover {
-      background: url("../images/twitter.png") 7px 9px no-repeat;
+      background: url("../images/tw.png") 7px 9px no-repeat;
       background-color: #3e9ca3 ; }
 
       .foot-content .foot-irda {
@@ -537,6 +537,13 @@ footer {
         font-weight: 400;
       }
 
+    .car-quote .loader {
+      display: none;
+      position: absolute;
+      left: 470px;
+      top: 4px;
+    }
+
       .car-get {
         width: 86%;
         margin: 0 auto;
@@ -802,11 +809,11 @@ footer {
         height: 40px;
         padding: 5px;
         margin: 10px 0;
-        background-color: #008ed6;
+        background-color: #70cbd2;
         color: #fff;
         outline: none;
         border: none;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 13px;
         cursor: pointer;
       }
