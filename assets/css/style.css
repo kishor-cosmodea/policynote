@@ -146,7 +146,7 @@ nav ul li a:hover, .active {
   /*background: #70cbd2;*/
 }
 
-.active { font-weight: 700; }
+/*.active { font-weight: 700; }*/
 /*Header style end*/
 
 /*footer style starts*/
@@ -255,6 +255,8 @@ footer {
         font-size: 11px;
         font-weight: 300;
       }
+
+      .foot-content ul li a:hover { text-decoration: underline; }
       /*footer style end*/
 
 
@@ -728,13 +730,13 @@ footer {
         width: 28%;
         padding: 0;
         background-color: #e8f2f5;
-        min-height: 783px;
+        min-height: 829px;
         vertical-align: top;
       }
 
       .car-checkout {
         margin: 0 0 60px 0;
-        min-height: 894px;
+        min-height: 889px;
       }
 
       .car-re-data {
@@ -901,6 +903,8 @@ footer {
         font-weight: 500;
       }
 
+      .car-sel-info .car-vari + span { text-transform: uppercase; }
+
       .car-sel-info .car-idv {
         font-size: 16px;
         color: #4d4d4d;
@@ -1022,10 +1026,11 @@ footer {
         font-weight: 600;
       }
 
-      .car-policy-plan p img {
-        display: inline-block;
-       /* width: 60%;
-        height: auto;*/
+      .car-policy-plan p img { display: inline-block; }
+
+      .car-policy-plan p img.get-logo {
+        width: 60%;
+        height: auto;
       }
 
       .car-buy {

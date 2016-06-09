@@ -9,34 +9,40 @@ $(window).load(function() {
  	  var pathname = window.location.pathname; // Returns path only
 		// var url      = window.location.href;     // Returns full URL
 
-		var pos_car = pathname.search("car-insurance.php");
+		// var pos_ind = pathname.search("/");
 
-		if(pos_car == 12) {
+		// if(pos_ind == 0) {
+		// 	$('#nav-car').addClass('active');
+		// }
+		
+		var pos_car_ind = pathname.search("index.php");
+
+		if(pos_car_ind == 1) {
 			$('#nav-car').addClass('active');
 		}
 
 		var pos_car_comp = pathname.search("car-compare.php");
 
-		if(pos_car_comp == 12) {
+		if(pos_car_comp == 1) {
 			$('#nav-car').addClass('active');
 		}
 
 		var pos_car_chk = pathname.search("car-checkout.php");
 
-		if(pos_car_chk == 12) {
+		if(pos_car_chk == 1) {
 			$('#nav-car').addClass('active');
 		}
 
 		var pos_about = pathname.search("about-us.php");
 
-		if(pos_about == 12) {
+		if(pos_about == 1) {
 			$('#nav-about').addClass('active');
 		}
 
-		var pos_about = pathname.search("contact-us.php");
+		var pos_contact = pathname.search("contact-us.php");
 
-		if(pos_about == 12) {
-			$('#nav-contact').addClass('active');	
+		if(pos_contact == 1) {
+			$('#nav-contact').addClass('active');
 		}
 
 });
@@ -52,8 +58,8 @@ $(document).ready(function() {
 		} else {
 			$('.main-text').fadeOut( "hide" );
 			$('.car-quote').fadeIn( "show" );
-			$('#amount1').val();
-			$('#amount2').val();
+			//$('#amount1').val();
+			//$('#amount2').val();
 			//console.log($('#amount1').val() + " " +  $('#amount2').val());
 		}
 	});
@@ -352,6 +358,28 @@ $(document).ready(function() {
      "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
+  //Assign car insurance company logo
+  var $parent = $('.car-policy-plan');
+
+  $(function () {
+    $('.car-policy-plan .car-cmp').each( function () {
+      var getcmp = $(this).text();
+      console.log(getcmp);
+
+      if(getcmp.match(/Bajaj/g)) {
+     	  console.log("baj");
+     		$('.car-cmp').parent().find("img").attr("src", "assets/images/bajaj-allianz.png");
+      } else if(getcmp.match(/Tata/g)) {
+      	console.log("tata");
+     		$('.car-cmp').parent().find("img").attr("src", "assets/images/tata-aig.png");
+      } else {
+      	console.log("el");
+      	$('.get-logo').css('width', 'auto');
+		  	$('.get-logo').attr('src', 'assets/images/loader.gif');
+      }
+    });
+  });
+
 
 	//Buy now
 	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
@@ -370,7 +398,24 @@ $(document).ready(function() {
 		var cnregyr = jQuery.trim(spliyr[25]);
     var cidv    = $('.idvamt').text();
 
-    // console.log(cpolicy + cpre + cvari + cnregyr + cidv);
+    var caddon = $(".addon option:selected" ).val();
+	    if(caddon == 5) {
+	    	caddon = " - Depreciation";
+	    } else if(caddon == 4) {
+	    	caddon = " - Depreciation, Consumables";
+	    } else if(caddon == 3) {
+	    	caddon = " - Depreciation, Tyre, Consumables";
+	    } else if(caddon == 2) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock";
+	    } else if(caddon == 1) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice";
+	    } else {
+	    	console.log("No addon selected");
+	    }
+
+		var cinsper = $(".insper option:selected" ).val();
+		var ncinsper = " - " + cinsper + " %";
+    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper);
 
     $.cookie("cpolicy", cpolicy);
     $.cookie("cpre", cpre);
@@ -378,6 +423,8 @@ $(document).ready(function() {
     $.cookie("cvari", cvari);
     $.cookie("cnregyr", cnregyr);
     $.cookie("cidv", cidv);
+    $.cookie("caddon", caddon);
+    $.cookie("cinsper", ncinsper);
 
     window.location.href = "../../car-checkout.php";
 

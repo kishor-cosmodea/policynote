@@ -14,6 +14,8 @@
             $(".cvari").html($.cookie("cvari"));
             $(".cnregyr").html($.cookie("cnregyr"));
             $(".cidv").html($.cookie("cidv"));
+            $(".caddon").html($.cookie("caddon"));
+            $(".cinsper").html($.cookie("cinsper"));
             
             $.removeCookie("cpolicy");
             $.removeCookie("cpre");
@@ -21,6 +23,8 @@
             $.removeCookie("cvari");
             $.removeCookie("cnregyr");
             $.removeCookie("cidv");
+            $.removeCookie("caddon");
+            $.removeCookie("cinsper");
         } else {
         	console.log("error");
         }
@@ -47,12 +51,14 @@
 					<span>Year: </span><span class="cnregyr"></span><span class="idv-right"><i class="fa fa-inr"></i> <span class="cidv"></span></span>
 				</div>
 				<div class="car-ch-add">
-					<h3>Additional</h3>
-					<span>No aditional covers supported</span>
+					<h3>Addon</h3>
+					<span>Addon applicable</span>
+					<span class="caddon"></span>
 				</div>
 				<div class="car-ch-dis">
-					<h3>Discounts</h3>
-					<span>No discounts applicable</span>
+					<h3>Insurance Percentage</h3>
+					<span>Percentage applicable</span>
+					<span class="cinsper"></span>
 				</div>
 			</div>
 			<div class="car-chout-data">

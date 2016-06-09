@@ -70,7 +70,7 @@ include("header.php");
 	  "claimStatus"=> $claimstat,
 	  "idv"=> $idv,
 	  "insurancePerecentage"=> $insPer,
-	  "addonType"=> "1"
+	  "addonType"=> "5"
 	);
 
 	$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
@@ -136,27 +136,31 @@ include("header.php");
 					<h3>Additional</h3>
 					<div>
 						<p>
-							<span><select name="insper" class="insper">
+							<span>Add on</span>
+							<select name="addon" class="addon">
+             		<option value="" disabled selected>Add on</option>
+             		<option value="5" selected>Depreciation</option>
+             		<option value="4">Depreciation, Consumables</option>
+             		<option value="3">Depreciation, Tyre, Consumables</option>
+             		<option value="2">Depreciation, Tyre, Consumables, Hydrostatic Lock</option>
+             		<option value="1">Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice</option>
+          		</select>
+
+							<span>Insurance Perecentage</span>
+							<select name="insper" class="insper">
              		<option value="" disabled selected>Insurance Perecentage</option>
+             		<option value="0">0</option>
              		<option value="10">10</option>
              		<option value="20">20</option>
              		<option value="30">30</option>
              		<option value="40">40</option>
              		<option value="50">50</option>
-             		<option value="60">60</option>
+             		<option value="60" selected>60</option>
              		<option value="70">70</option>
              		<option value="80">80</option>
              		<option value="90">90</option>
 								<option value="100">100</option>
-          			</select></span>
-							<span><select name="addon" class="addon">
-             		<option value="" disabled selected>Add on</option>
-             		<option value="1">DTCH WITH RTI</option>
-             		<option value="2">DTCH WITHOUT RTI</option>
-             		<option value="3">DCH</option>
-             		<option value="4">DC</option>
-             		<option value="5">D</option>
-          			</select></span>
+          		</select>
           		<!-- <span><input type="checkbox" name="insper" value="Insurance Perecentage">Insurance Perecentage</span> -->
 							<!-- <span><input type="checkbox" name="addon" value="addon">Addon</span> -->
 							<!-- <span><input type="checkbox" name="premium" value="premium">Premium</span>
@@ -184,8 +188,8 @@ include("header.php");
 							foreach ($resp as $data) {
 								echo "<div id='". $i ."'>
 									<p>
-										<img src='assets/images/loader.gif' alt='policy-logo'>
-										<span class='car-amt' id='cn". $i ."'>" . $data['companyName'] .  "</span>
+										<img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'>
+										<span class='car-amt car-cmp' id='cn". $i ."'>" . $data['companyName'] .  "</span>
 									</p>
 									<p class='car-premium'>
 
