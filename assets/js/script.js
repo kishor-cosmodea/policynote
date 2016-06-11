@@ -8,12 +8,6 @@ $(window).load(function() {
 
  	  var pathname = window.location.pathname; // Returns path only
 		// var url      = window.location.href;     // Returns full URL
-
-		// var pos_ind = pathname.search("/");
-
-		// if(pos_ind == 0) {
-		// 	$('#nav-car').addClass('active');
-		// }
 		
 		var pos_car_ind = pathname.search("index.php");
 
@@ -58,15 +52,11 @@ $(document).ready(function() {
 		} else {
 			$('.main-text').fadeOut( "hide" );
 			$('.car-quote').fadeIn( "show" );
-			//$('#amount1').val();
-			//$('#amount2').val();
-			//console.log($('#amount1').val() + " " +  $('#amount2').val());
 		}
 	});
 
 	$("#get-car-quote").click(function(e) {
 		e.preventDefault();
-		//console.log("prev");
 
 		var carModel  = jQuery.trim($('#car-model').val());
 		var selFuel   = jQuery.trim($('.sel-fuel').val());
@@ -137,7 +127,7 @@ $(document).ready(function() {
 
 			//Call to selected car brand
 			if($("#car-model").val()) {
-				console.log("got val");
+				//console.log("got val");
 				$.post('get-vehicle.php',
 					'val=' + $("#car-model").val(),
 					function (data) {
@@ -165,7 +155,7 @@ $(document).ready(function() {
 
 	//Assign variant
 	function fueltype (data) {
-		console.log("in fuel asign");
+		//console.log("in fuel asign");
 		$('.loader').hide();
 		$('.sel-fuel').removeAttr('disabled');
 		$('.sel-fuel').on('change', function() {
@@ -181,10 +171,6 @@ $(document).ready(function() {
 							//console.log("infill");
               $('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
             }
-            //if (element.fuel_type == null) {
-            	//console.log("no type");
-            	//$('.sel-var').append('<option>'+element.model_id.model_name +' - '+element.varient +'</option>');
-            //}
 
             //Assign variant in a ascending order
 						var sortSelect = function (select, attr, order) {
@@ -358,24 +344,76 @@ $(document).ready(function() {
      "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
+
   //Assign car insurance company logo
   var $parent = $('.car-policy-plan');
 
   $(function () {
     $('.car-policy-plan .car-cmp').each( function () {
       var getcmp = $(this).text();
-      console.log(getcmp);
+      //console.log(getcmp);
 
       if(getcmp.match(/Bajaj/g)) {
-     	  console.log("baj");
-     		$('.car-cmp').parent().find("img").attr("src", "assets/images/bajaj-allianz.png");
+     	  //console.log("baj");
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/bajaj.jpg");
       } else if(getcmp.match(/Tata/g)) {
-      	console.log("tata");
-     		$('.car-cmp').parent().find("img").attr("src", "assets/images/tata-aig.png");
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/tata-aig.jpg");
+      } else if(getcmp.match(/Future/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/future-gen.png");
+      } else if(getcmp.match(/Royal/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/royal-sundaram.jpg");
+      } else if(getcmp.match(/Liberty/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/liberty-videocon.png");
+      } else if(getcmp.match(/Oriental/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/oriental.png");
+      } else if(getcmp.match(/Bharti/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/bharti.png");
+      } else if(getcmp.match(/HDFC/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/hdfc-ergo.jpg");
+      } else if(getcmp.match(/ICICI/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/icici-lombard.png");
+      } else if(getcmp.match(/IFFCO/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/iffco-tokio.png");
+      } else if(getcmp.match(/L&T/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/lnt.png");
+      } else if(getcmp.match(/Universal/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/universal-motor.png");
+      } else if(getcmp.match(/Agriculture/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/aic.png");
+      } else if(getcmp.match(/Apollo/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/apollo.png");
+      } else if(getcmp.match(/Cholamandalam/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/chola-ms.png");
+      } else if(getcmp.match(/Cigna/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/cigna.png");
+      } else if(getcmp.match(/Export/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/ecgc.jpg");
+      } else if(getcmp.match(/Magma/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/magma.png");
+      } else if(getcmp.match(/Max/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/max-bupa.jpg");
+      } else if(getcmp.match(/National/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/national.jpg");
+      } else if(getcmp.match(/Raheja/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/raheja.gif");
+      } else if(getcmp.match(/Reliance/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/reliance.png");
+      } else if(getcmp.match(/Religare/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/religare.gif");
+      } else if(getcmp.match(/SBI/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/sbi.png");
+      } else if(getcmp.match(/Shriram/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/shriram.jpg");
+      } else if(getcmp.match(/Star/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/star.png");
+      } else if(getcmp.match(/The New India/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/the-new-india.jpg");
+      } else if(getcmp.match(/United/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/united-india.jpg");
       } else {
-      	console.log("el");
-      	$('.get-logo').css('width', 'auto');
-		  	$('.get-logo').attr('src', 'assets/images/loader.gif');
+      	//console.log("el");
+      	$(this).parent().find("img").css('width', 'auto');
+		  	$(this).parent().find("img").attr('src', 'assets/images/loader.gif');
       }
     });
   });
@@ -415,7 +453,8 @@ $(document).ready(function() {
 
 		var cinsper = $(".insper option:selected" ).val();
 		var ncinsper = " - " + cinsper + " %";
-    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper);
+		var cpolicon = $("#" + nval + " " + '.get-logo').attr('src');
+    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper + cpolicon);
 
     $.cookie("cpolicy", cpolicy);
     $.cookie("cpre", cpre);
@@ -425,6 +464,7 @@ $(document).ready(function() {
     $.cookie("cidv", cidv);
     $.cookie("caddon", caddon);
     $.cookie("cinsper", ncinsper);
+    $.cookie("cpolicon", cpolicon);
 
     window.location.href = "../../car-checkout.php";
 

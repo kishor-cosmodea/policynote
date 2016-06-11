@@ -6,6 +6,9 @@ include("header.php");
 
 <?php
 
+	$range1 =  $_POST['amtstart'];
+	$range2 =  $_POST['amtend'];
+
 	$carreg =  $_POST['carreg'];
 	$year =  $_POST['year'];
 	$carname = $_POST['carname'];
@@ -13,13 +16,8 @@ include("header.php");
 	$fueltype = $_POST['fueltype'];
 	$claimStatus = $_POST['claimStatus'];
 	$idv = $_POST['caridv'];
+	$addonType = 5;
 	$insPer = 60;
-	// if($_POST['claimStatus'] == "") {
-	// 	$ncb = 0;
-	// 	$claimStatus = "No";
-	// }
-	// echo $ncb;
-	// echo $claimStatus;
 
   //echo $variant;
 	$splitted = explode("-",$variant);
@@ -49,16 +47,9 @@ include("header.php");
 
 	$intval = (int)$ncb;
 
-	//echo $carreg;
-	//echo $year;
-	//echo $carname;
-	//echo $model;
-	//echo $vari;
-	//echo $intval;
-	//echo $claimstat;
-	//echo $idv;
-	//echo $insPer;
-
+	//echo $carreg; //echo $year; //echo $carname; //echo $model;
+	//echo $vari; //echo $intval; //echo $claimstat; //echo $idv;
+	//echo $addonType; //echo $insPer;
 
 	$data = array(
 	  "regNumber" => $carreg,
@@ -70,16 +61,14 @@ include("header.php");
 	  "claimStatus"=> $claimstat,
 	  "idv"=> $idv,
 	  "insurancePerecentage"=> $insPer,
-	  "addonType"=> "5"
+	  "addonType"=> $addonType
 	);
 
 	$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
 
 	$str_data = json_encode($data);
 
-	//echo $str_data;
 	//print_r($str_data);
-	//var_dump($str_data);
 
 	function sendPostData($url, $post) {
 	  $ch = curl_init($url);
@@ -93,15 +82,11 @@ include("header.php");
 	  $json = json_decode($result, true);
 	  return $json;
 	}
-	
 	//echo " " . sendPostData($url_send, $str_data);
 	$resp = sendPostData($url_send, $str_data);
-	
-	//echo $resp;
-	//var_dump($resp);
+
 	//print_r($resp);
 ?>
-
 
 <!-- Content starts here-->
 <div class="container">
@@ -173,20 +158,31 @@ include("header.php");
 			<div class="car-wrap-plan">
 				<div class="car-plan">
 					<span>Showing results from <?php echo count($resp); ?> insurers</span>
-					<div>
+					<!-- <div>
 						<span class="car-sort">Sort By:</span>
 						<select name="car-price" class="car-price">
 							<option value="0">Match</option>
 							<option value="1">Price</option>
 						</select>
-					</div>
+					</div> -->
 				</div>
 				<div class="car-result-data">
 					<div class="car-policy-plan">
 						<?php
+							usort($resp, function($a, $b) {
+    					return $a['finalPremium'] - $b['finalPremium'];
+							});
+							//print_r($resp);
 							$i = 1;
+							$flg = true;
 							foreach ($resp as $data) {
-								echo "<div id='". $i ."'>
+								if($flg){
+									if($range2 < $data['finalPremium']) {
+										echo "<span class='more-policy'>We have more insurance policies for you other than your budget</span>";
+										$flg = false;
+									}
+								}
+								echo "<div class='car-cmp-parent' id='". $i ."'>
 									<p>
 										<img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'>
 										<span class='car-amt car-cmp' id='cn". $i ."'>" . $data['companyName'] .  "</span>

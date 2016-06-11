@@ -305,6 +305,7 @@ footer {
       .main-text .range-submit {
         padding: 10px 30px;
         border-radius: 4px;
+        float: right;
         color: #fff;
         background: #70cbd2;
         font-weight: 700;
@@ -730,7 +731,7 @@ footer {
         width: 28%;
         padding: 0;
         background-color: #e8f2f5;
-        min-height: 829px;
+        min-height: 930px;
         vertical-align: top;
       }
 
@@ -869,7 +870,7 @@ footer {
 
       .car-chout-data { width: 65%; }
 
-      .car-result-data { min-height: 738px; }
+      .car-result-data { min-height: 887px; }
 
       .car-sel-info { margin: 86px 0 0 0; }
 
@@ -993,7 +994,7 @@ footer {
       .car-policy-plan p:first-child { float: left; }
 
       .car-policy-plan p span {
-        margin: 5px 0;
+        margin: 10px 0 0;
         font-size: 14px;
         display: block;
       }
@@ -1026,12 +1027,20 @@ footer {
         font-weight: 600;
       }
 
-      .car-policy-plan p img { display: inline-block; }
+    .car-policy-plan p img { display: inline-block; }
 
-      .car-policy-plan p img.get-logo {
-        width: 60%;
-        height: auto;
-      }
+    .car-policy-plan span.more-policy {
+      padding: 10px;
+      display: block;
+      margin: 15px 0;
+      border: none;
+      background: #70cbd2;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+      .car-cmp-parent p i { font-size: 20px; }
 
       .car-buy {
         text-align: center;
@@ -1061,7 +1070,7 @@ footer {
       .car-idv-cont span { display: block; }
 
       .car-ch-ins {
-        padding: 15px 10%;
+        padding: 30px 10% 5px;
         border-bottom: 4px solid #fff;
       }
 

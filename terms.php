@@ -9,7 +9,7 @@ include("header.php");
 
 	<div class="terms-content">
 		<div class="wrapper">
-			<h2>Policynote Terms of Use</h2>
+			<h2>Terms of Use</h2>
 
 			<div class="terms-use">
 				<h3>Terms of Use Agreement</h3>

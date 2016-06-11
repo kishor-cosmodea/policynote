@@ -16,7 +16,8 @@
             $(".cidv").html($.cookie("cidv"));
             $(".caddon").html($.cookie("caddon"));
             $(".cinsper").html($.cookie("cinsper"));
-            
+            $(".cpolicon").attr('src', $.cookie("cpolicon"));
+
             $.removeCookie("cpolicy");
             $.removeCookie("cpre");
             $.removeCookie("cmodel");
@@ -25,6 +26,7 @@
             $.removeCookie("cidv");
             $.removeCookie("caddon");
             $.removeCookie("cinsper");
+            $.removeCookie("cpolicon");
         } else {
         	console.log("error");
         }
@@ -40,7 +42,7 @@
 			</div>
 			<div class="car-checkout">
 				<div class="car-ch-ins">
-					<img src="assets/images/loader.gif" alt="policy-logo">
+					<img class="cpolicon" src="assets/images/loader.gif" alt="policy-logo">
 					<span class="cpolicy"></span>
 					<span class="car-ct-amt cmodel"></span>
 					<span class="cvari"></span>

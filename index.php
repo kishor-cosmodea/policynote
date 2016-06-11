@@ -1,6 +1,6 @@
 <?php
 $description="";
-$pagetitle="";
+$pagetitle="Home |";
 include("header.php");
 ?>
 
@@ -11,14 +11,8 @@ include("header.php");
 				<h2>Need a Car Insurance?<span> It only takes 30 seconds</span></h2>
 			<div>
 				<p>Choose your monthly premium budget<p id="amount"></p></p>
-
 			  <div id="slider-range"></div>
-
-			  <form method="post" action="car-insurance.php">
-			    <input type="hidden" name="amtstart" id="amount1" value="0">
-			    <input type="hidden" name="amtend" id="amount2" value="30000">
 			    <button class="range-submit" title="Submit">Submit</button>
-			  </form>
 			</div>
 
 		</div>
@@ -26,6 +20,8 @@ include("header.php");
       <div class="car-get cf">
         <h2>Need a Car Insurance Quote? <span>It on takes 30 seconds</span></h2>
         <form name="form" action="car-compare.php" method="post" id="car-details">
+          <input type="hidden" name="amtstart" id="amount1" value="0">
+          <input type="hidden" name="amtend" id="amount2" value="30000">
         <div class="car-fis-ul">
 
             <?php
@@ -147,7 +143,7 @@ include("header.php");
 				<div class="health-block">
 					<h3>Why Car Insurance?</h3>
 					<i class="fa fa-car fa-5x wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
-					<p>Find the best match health insurance, Find the best match health insurance, Find the best match health insurance</p>
+					<p>Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance</p>
 				</div>
 			</div>
 

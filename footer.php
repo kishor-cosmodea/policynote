@@ -26,7 +26,7 @@
 			</ul>
 			<p class="foot-irda">
 				This site is being operated by Policynote insurance, 
-				an IRDAI certified broker under license no. IRDAI/AAAAAA/22, Valid till: 02/02/2022
+				an IRDAI certified broker under license no. IRDAI/XXXXX/XX, Valid till: XX/XX/XXXX
 			</p>
 			<p class="foot-irda">
 				Insurance is the subject matter of the solicitation.
