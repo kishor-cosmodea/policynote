@@ -419,6 +419,80 @@ $(document).ready(function() {
   });
 
 
+	//Update additional functionality
+		$("#update-add").on('click', function() {
+
+			$('.load-up').show();
+			$('.car-policy-plan').empty();
+
+			var uregyr  = $('.reg-yr').text();
+    	var uspliyr = uregyr.split('.');
+			var unregyr = jQuery.trim(uspliyr[25]);
+			//console.log(unregyr);
+
+			var uvari   = $('.car-vari').text();
+			var uvspliyr = uvari.split(')');
+			//console.log(uvspliyr);
+			var unspli = jQuery.trim(uvspliyr[1]);
+			//console.log(unspli);
+			var unmods = unspli.split('-');
+			//console.log(unmods);
+			var unmod = jQuery.trim(unmods[0]);
+			//console.log(unmod);
+
+			//var unvari = jQuery.trim(unmods[1]);
+			if(jQuery.trim(unmods[1]) == "") {
+				var unvari = "-";
+				//console.log(unvari);
+			} else {
+				unvari = jQuery.trim(unmods[1]);
+				//console.log(unvari);
+			}
+			var uncb = $('#ncbval').val();
+			var uclaim = $('#claimval').val();
+			//console.log(uncb + " " + uclaim);
+
+			var uidv = jQuery.trim($('.idvamt').text().replace(/,/g, ""));
+			//console.log(uidv);
+			var  uinsper = $(".insper option:selected" ).val();
+			var  uaddon = $(".addon option:selected" ).val();
+			//console.log(uinsper + uaddon);
+			var data = {
+        regNumber: $('.car-rnum').text(),
+        regDate: unregyr,
+        make: $('.car-name').text(),
+        model: unmod,
+        variant: unvari,
+        ncbPolicy: uncb,
+        claimStatus: uclaim,
+        idv: uidv,
+        insurancePerecentage: uinsper,
+        addonType: uaddon
+      }
+      console.log(data);
+		  //console.log("on click");
+			// $.post('get-additional.php',
+			// 	'val=' + data,
+			// 	function (data) {
+   //    		alert(data);
+   // 		  });
+
+			$.ajax({
+			    type: "POST",
+			    url: "get-additional.php",
+			    data:{
+			    	data : data
+			    },
+			    //dataType: "json",
+			    success: function(data) {
+			        //alert(data);
+			    }
+
+			});
+
+		});
+
+
 	//Buy now
 	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
 

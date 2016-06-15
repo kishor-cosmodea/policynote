@@ -872,6 +872,8 @@ footer {
 
       .car-result-data { min-height: 887px; }
 
+      .car-result-data .load-up { display: none; }      
+
       .car-sel-info { margin: 86px 0 0 0; }
 
       .car-sel-info div {

@@ -95,13 +95,16 @@ include("header.php");
 			<p>SHOWING RESULTS FOR</p>
 			<span class="car-name"><?php echo $carname; ?></span>
 			<span class="car-vari"><?php echo "( " . $fueltype . " )    "; echo $variant; ?></span>
-			<span ><?php echo $carreg; ?></span>
+			<span class="car-rnum"><?php echo $carreg; ?></span>
+			<span class="car-hvar" style="display:none;"><?php echo $variant; ?></span>
 		</div>
 		<div>
 			<p>IDV</p>
 			<span class="car-idv">Insured Declared Value (IDV)</span>
 			<span class="idvamt"><i class="fa fa-inr"></i> <?php echo number_format($idv); ?></span>
 			<span>(The IDV is based on your car registration year)</span>
+			<input id="ncbval" type="hidden" name="ncbval" value="<?php echo $intval ?>"/>
+			<input id="claimval" type="hidden" name="claimval" value="<?php echo $claimstat ?>"/>
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
@@ -133,7 +136,7 @@ include("header.php");
 
 							<span>Insurance Perecentage</span>
 							<select name="insper" class="insper">
-             		<option value="" disabled selected>Insurance Perecentage</option>
+             		<option value="" disabled selected>Insurance Percentage</option>
              		<option value="0">0</option>
              		<option value="10">10</option>
              		<option value="20">20</option>
@@ -153,7 +156,7 @@ include("header.php");
 						</p>
 					</div>
 				</div>
-				<button class="ref-submit">Update</button>
+				<button id="update-add" class="ref-submit">Update</button>
 			</div>
 			<div class="car-wrap-plan">
 				<div class="car-plan">
@@ -167,6 +170,7 @@ include("header.php");
 					</div> -->
 				</div>
 				<div class="car-result-data">
+					<img class="load-up" src='assets/images/loader-up.gif' alt='policy-logo'>
 					<div class="car-policy-plan">
 						<?php
 							usort($resp, function($a, $b) {
@@ -178,7 +182,7 @@ include("header.php");
 							foreach ($resp as $data) {
 								if($flg){
 									if($range2 < $data['finalPremium']) {
-										echo "<span class='more-policy'>We have more insurance policies for you other than your budget</span>";
+										echo "<span class='more-policy'>There are no policies available of given budget. We have another policies for you.</span>";
 										$flg = false;
 									}
 								}

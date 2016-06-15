@@ -126,7 +126,7 @@ include("header.php");
 					<h2>How it works</h2>
 				</div>
 				<div class="ins-img">
-					<img src="assets/images/how-it-works.png" alt="Ins">
+					<img src="assets/images/simple.png" alt="Ins">
 					<!-- <span>Give us your car details</span>
 					<span>Select from wide array of affordable options</span>
 					<span>Fill in your personal details</span>
