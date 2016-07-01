@@ -40,11 +40,16 @@ $ndata = $_POST['data'];
 	  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	  $result = curl_exec($ch);
 	  curl_close($ch);
-	  $json = json_decode($result, true);
-	  return $json;
+	  //$json = json_decode($result, true);
+	  //return $json;
+	  
+	  return $result;
 	}
 	//echo " " . sendPostData($url_send, $str_data);
 	$resp = sendPostData($url_send, $str_data);
 
-	print_r($resp);
+	//print_r($resp);
+	//echo $resp;
+
+	echo $resp;
 ?>

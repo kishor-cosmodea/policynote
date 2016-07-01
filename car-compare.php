@@ -182,7 +182,7 @@ include("header.php");
 							foreach ($resp as $data) {
 								if($flg){
 									if($range2 < $data['finalPremium']) {
-										echo "<span class='more-policy'>There are no policies available of given budget. We have another policies for you.</span>";
+										echo "<span class='more-policy'>We have another policies for you.</span>";
 										$flg = false;
 									}
 								}
@@ -225,5 +225,80 @@ include("header.php");
 	</div>
 </div>
 <!-- Content ends here -->
+
+<script>
+//Assign car insurance company logo
+  var $parent = $('.car-policy-plan');
+
+  $(function plogo() {
+    $('.car-policy-plan .car-cmp').each( function () {
+      var getcmp = $(this).text();
+      //console.log(getcmp);
+
+      if(getcmp.match(/Bajaj/g)) {
+     	  //console.log("baj");
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/bajaj.jpg");
+      } else if(getcmp.match(/Tata/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/tata-aig.jpg");
+      } else if(getcmp.match(/Future/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/future-gen.png");
+      } else if(getcmp.match(/Royal/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/royal-sundaram.jpg");
+      } else if(getcmp.match(/Liberty/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/liberty-videocon.png");
+      } else if(getcmp.match(/Oriental/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/oriental.png");
+      } else if(getcmp.match(/Bharti/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/bharti.png");
+      } else if(getcmp.match(/HDFC/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/hdfc-ergo.jpg");
+      } else if(getcmp.match(/ICICI/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/icici-lombard.png");
+      } else if(getcmp.match(/IFFCO/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/iffco-tokio.png");
+      } else if(getcmp.match(/L&T/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/lnt.png");
+      } else if(getcmp.match(/Universal/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/universal-motor.png");
+      } else if(getcmp.match(/Agriculture/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/aic.png");
+      } else if(getcmp.match(/Apollo/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/apollo.png");
+      } else if(getcmp.match(/Cholamandalam/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/chola-ms.png");
+      } else if(getcmp.match(/Cigna/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/cigna.png");
+      } else if(getcmp.match(/Export/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/ecgc.jpg");
+      } else if(getcmp.match(/Magma/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/magma.png");
+      } else if(getcmp.match(/Max/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/max-bupa.jpg");
+      } else if(getcmp.match(/National/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/national.jpg");
+      } else if(getcmp.match(/Raheja/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/raheja.gif");
+      } else if(getcmp.match(/Reliance/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/reliance.png");
+      } else if(getcmp.match(/Religare/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/religare.gif");
+      } else if(getcmp.match(/SBI/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/sbi.png");
+      } else if(getcmp.match(/Shriram/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/shriram.jpg");
+      } else if(getcmp.match(/Star/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/star.png");
+      } else if(getcmp.match(/The New India/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/the-new-india.jpg");
+      } else if(getcmp.match(/United/g)) {
+     		$(this).parent().find("img").attr("src", "assets/images/ins-comp/united-india.jpg");
+      } else {
+      	//console.log("el");
+      	$(this).parent().find("img").css('width', 'auto');
+		  	$(this).parent().find("img").attr('src', 'assets/images/loader.gif');
+      }
+    });
+  });
+</script>
 
 <?php include("footer.php"); ?>

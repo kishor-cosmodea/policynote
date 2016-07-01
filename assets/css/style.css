@@ -435,11 +435,11 @@ footer {
       .ins-how h2 { margin: -20px 0 30px 0; }
 
       .list-insurance .ins-img img {
-        width: 70%;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
-        display: block;
       }
+
+      .slider { text-align: center; }
 
       .ins-thoug {
         width: 70%;
@@ -448,18 +448,18 @@ footer {
       }
 
       .ins-thoug p {
-    width: 45%;
-    margin: 40px 0;
-    display: inline-block;
-    vertical-align: top;
+        width: 45%;
+        margin: 40px 0;
+        display: inline-block;
+        vertical-align: top;
       }
 
 .ins-thoug p span {
-      margin: 61px 0 0 0;
-      color:  #44516d;
-      font-size: 42px;
-      font-weight: 700;
-      display: block;
+  margin: 61px 0 0 0;
+  color:  #44516d;
+  font-size: 42px;
+  font-weight: 700;
+  display: block;
 }
 
 .ins-thoug p:last-child span { margin: 50px 0 0 0; }
@@ -861,7 +861,7 @@ footer {
       .car-result-data,
       .car-chout-data {
         min-height: 738px;
-        margin: 0 0 60px 2%;
+        margin: 0 0 60px 0;
         display: inline-block;
         width: 95%;
         padding: 3%;
@@ -919,13 +919,13 @@ footer {
 
       .car-wrap-plan {
         vertical-align: top;
-        width: 69%;
+        width: 70%;
         display: inline-block;
       }
 
       .car-plan {
         width: 99%;
-        padding: 0 2% 14px;
+        padding: 0 0 14px;
       }
 
       .car-chout-plan {

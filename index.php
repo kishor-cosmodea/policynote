@@ -125,12 +125,10 @@ include("header.php");
 				<div class="ins-head ins-how">
 					<h2>How it works</h2>
 				</div>
-				<div class="ins-img">
-					<img src="assets/images/simple.png" alt="Ins">
-					<!-- <span>Give us your car details</span>
-					<span>Select from wide array of affordable options</span>
-					<span>Fill in your personal details</span>
-					<span>Our Executive will contact you at the earliest</span> -->
+				<div class="ins-img slider">
+					<div style="display: inline-block;"><img src="assets/images/simple.png" alt="Ins"></div>
+          <div><img src="assets/images/details.png" alt="Ins"></div>
+          <div><img src="assets/images/quotes.png" alt="Ins"></div>
 				</div>
 			</div>
 

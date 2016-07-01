@@ -121,6 +121,25 @@ $(document).ready(function() {
 		});
 	});
 
+	//Image slider
+	var currentIndex = 0,
+	  items = $('.slider div'),
+	  itemAmt = items.length;
+
+	function cycleItems() {
+	  var item = $('.slider div').eq(currentIndex);
+	  items.hide();
+	  item.css('display','inline-block');
+	}
+
+	var autoSlide = setInterval(function() {
+	  currentIndex += 1;
+	  if (currentIndex > itemAmt - 1) {
+	    currentIndex = 0;
+	  }
+	  cycleItems();
+	}, 3000);
+
 
 	//Clear fuel type and variant
 	$( "#car-model" ).on('change', function() {
@@ -345,10 +364,152 @@ $(document).ready(function() {
   });
 
 
+	//Update additional functionality
+		$("#update-add").on('click', function() {
+
+				$('.load-up').show();
+				$('.car-policy-plan').empty();
+
+	      var uregnum = $('.car-rnum').text();
+	      var umake = $('.car-name').text();
+
+				var uregyr  = $('.reg-yr').text();
+	    	var uspliyr = uregyr.split('.');
+				var unregyr = jQuery.trim(uspliyr[25]);
+				//console.log(unregyr);
+
+				var uvari   = $('.car-vari').text();
+				var uvspliyr = uvari.split(')');
+				//console.log(uvspliyr);
+				var unspli = jQuery.trim(uvspliyr[1]);
+				//console.log(unspli);
+				var unmods = unspli.split('-');
+				//console.log(unmods);
+				var unmod = jQuery.trim(unmods[0]);
+				//console.log(unmod);
+
+				//var unvari = jQuery.trim(unmods[1]);
+				if(jQuery.trim(unmods[1]) == "") {
+					var unvari = "-";
+					//console.log(unvari);
+				} else {
+					unvari = jQuery.trim(unmods[1]);
+					//console.log(unvari);
+				}
+				var uncb = $('#ncbval').val();
+				var uclaim = $('#claimval').val();
+				//console.log(uncb + " " + uclaim);
+
+				var uidv = jQuery.trim($('.idvamt').text().replace(/,/g, ""));
+				//console.log(uidv);
+				var  uinsper = $(".insper option:selected" ).val();
+				var  uaddon = $(".addon option:selected" ).val();
+				//console.log(uinsper + uaddon);
+				var data = {
+	        regNumber: uregnum,
+	        regDate: unregyr,
+	        make: umake,
+	        model: unmod,
+	        variant: unvari,
+	        ncbPolicy: uncb,
+	        claimStatus: uclaim,
+	        idv: uidv,
+	        insurancePerecentage: uinsper,
+	        addonType: uaddon
+	      };
+	      //console.log(data);
+
+				$.ajax({
+				    type: "POST",
+				    url: "get-additional.php",
+				    data:{
+				    	data : data
+				    },
+				    success: function(data) {
+				        console.log(data);
+				        updateadd(data);
+				    }
+				});
+		});
+
+
+	//Assign updated premium data in compare page
+	function updateadd (data) {
+		console.log(data);
+		// 	data.sort(function(a, b) {
+      	// return +a.finalPremium > +b.finalPremium ? 1 : -1;
+		// });
+		// console.log(data);
+		var i = 1;
+		$.each(JSON.parse(data), function (index, element) {
+		//console.log(data);
+
+		$(".car-policy-plan").append("<div class='car-cmp-parent' id='" + i +"'><p><img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'><span class='car-amt car-cmp' id='cn"+ i +"'>" + element.companyName + "</span></p><p class='car-premium'><i class='fa fa-inr'></i> <span class='car-amt' id='cp"+ i +"'>" + element.finalPremium.toFixed(0) +  "</span></p><p><button value='" + i + "' class='car-buy buynow'>Buy Now</button></p></div>");
+		i++;
+		$('.load-up').hide();
+		});
+		plogo();
+	}
+
+
+	//Buy now
+	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
+
+		var cval  = $(this).val();
+		var nval  = $(this).closest("div").attr("id");
+
+		var cpolicy = $('#cn' + nval).text();
+    var cpre = $('#cp' + nval).text();
+
+    var cmodel  = $('.car-name').text();
+    var cvari   = $('.car-vari').text();
+    var regyr  = $('.reg-yr').text();
+    var spliyr = regyr.split('.');
+		//console.log(spliyr);
+		var cnregyr = jQuery.trim(spliyr[25]);
+    var cidv    = $('.idvamt').text();
+
+    var caddon = $(".addon option:selected" ).val();
+	    if(caddon == 5) {
+	    	caddon = " - Depreciation";
+	    } else if(caddon == 4) {
+	    	caddon = " - Depreciation, Consumables";
+	    } else if(caddon == 3) {
+	    	caddon = " - Depreciation, Tyre, Consumables";
+	    } else if(caddon == 2) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock";
+	    } else if(caddon == 1) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice";
+	    } else {
+	    	console.log("No addon selected");
+	    }
+
+		var cinsper = $(".insper option:selected" ).val();
+		var ncinsper = " - " + cinsper + " %";
+		var cpolicon = $("#" + nval + " " + '.get-logo').attr('src');
+    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper + cpolicon);
+
+    $.cookie("cpolicy", cpolicy);
+    $.cookie("cpre", cpre);
+    $.cookie("cmodel", cmodel);
+    $.cookie("cvari", cvari);
+    $.cookie("cnregyr", cnregyr);
+    $.cookie("cidv", cidv);
+    $.cookie("caddon", caddon);
+    $.cookie("cinsper", ncinsper);
+    $.cookie("cpolicon", cpolicon);
+
+    window.location.href = "../../car-checkout.php";
+
+	});
+
+});
+
+
   //Assign car insurance company logo
   var $parent = $('.car-policy-plan');
 
-  $(function () {
+  function plogo() {
     $('.car-policy-plan .car-cmp').each( function () {
       var getcmp = $(this).text();
       //console.log(getcmp);
@@ -416,135 +577,7 @@ $(document).ready(function() {
 		  	$(this).parent().find("img").attr('src', 'assets/images/loader.gif');
       }
     });
-  });
-
-
-	//Update additional functionality
-		$("#update-add").on('click', function() {
-
-			$('.load-up').show();
-			$('.car-policy-plan').empty();
-
-			var uregyr  = $('.reg-yr').text();
-    	var uspliyr = uregyr.split('.');
-			var unregyr = jQuery.trim(uspliyr[25]);
-			//console.log(unregyr);
-
-			var uvari   = $('.car-vari').text();
-			var uvspliyr = uvari.split(')');
-			//console.log(uvspliyr);
-			var unspli = jQuery.trim(uvspliyr[1]);
-			//console.log(unspli);
-			var unmods = unspli.split('-');
-			//console.log(unmods);
-			var unmod = jQuery.trim(unmods[0]);
-			//console.log(unmod);
-
-			//var unvari = jQuery.trim(unmods[1]);
-			if(jQuery.trim(unmods[1]) == "") {
-				var unvari = "-";
-				//console.log(unvari);
-			} else {
-				unvari = jQuery.trim(unmods[1]);
-				//console.log(unvari);
-			}
-			var uncb = $('#ncbval').val();
-			var uclaim = $('#claimval').val();
-			//console.log(uncb + " " + uclaim);
-
-			var uidv = jQuery.trim($('.idvamt').text().replace(/,/g, ""));
-			//console.log(uidv);
-			var  uinsper = $(".insper option:selected" ).val();
-			var  uaddon = $(".addon option:selected" ).val();
-			//console.log(uinsper + uaddon);
-			var data = {
-        regNumber: $('.car-rnum').text(),
-        regDate: unregyr,
-        make: $('.car-name').text(),
-        model: unmod,
-        variant: unvari,
-        ncbPolicy: uncb,
-        claimStatus: uclaim,
-        idv: uidv,
-        insurancePerecentage: uinsper,
-        addonType: uaddon
-      }
-      console.log(data);
-		  //console.log("on click");
-			// $.post('get-additional.php',
-			// 	'val=' + data,
-			// 	function (data) {
-   //    		alert(data);
-   // 		  });
-
-			$.ajax({
-			    type: "POST",
-			    url: "get-additional.php",
-			    data:{
-			    	data : data
-			    },
-			    //dataType: "json",
-			    success: function(data) {
-			        //alert(data);
-			    }
-
-			});
-
-		});
-
-
-	//Buy now
-	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
-
-		var cval  = $(this).val();
-		var nval  = $(this).closest("div").attr("id");
-
-		var cpolicy = $('#cn' + nval).text();
-    var cpre = $('#cp' + nval).text();
-
-    var cmodel  = $('.car-name').text();
-    var cvari   = $('.car-vari').text();
-    var regyr  = $('.reg-yr').text();
-    var spliyr = regyr.split('.');
-		//console.log(spliyr);
-		var cnregyr = jQuery.trim(spliyr[25]);
-    var cidv    = $('.idvamt').text();
-
-    var caddon = $(".addon option:selected" ).val();
-	    if(caddon == 5) {
-	    	caddon = " - Depreciation";
-	    } else if(caddon == 4) {
-	    	caddon = " - Depreciation, Consumables";
-	    } else if(caddon == 3) {
-	    	caddon = " - Depreciation, Tyre, Consumables";
-	    } else if(caddon == 2) {
-	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock";
-	    } else if(caddon == 1) {
-	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice";
-	    } else {
-	    	console.log("No addon selected");
-	    }
-
-		var cinsper = $(".insper option:selected" ).val();
-		var ncinsper = " - " + cinsper + " %";
-		var cpolicon = $("#" + nval + " " + '.get-logo').attr('src');
-    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper + cpolicon);
-
-    $.cookie("cpolicy", cpolicy);
-    $.cookie("cpre", cpre);
-    $.cookie("cmodel", cmodel);
-    $.cookie("cvari", cvari);
-    $.cookie("cnregyr", cnregyr);
-    $.cookie("cidv", cidv);
-    $.cookie("caddon", caddon);
-    $.cookie("cinsper", ncinsper);
-    $.cookie("cpolicon", cpolicon);
-
-    window.location.href = "../../car-checkout.php";
-
-	});
-
-});
+  };
 
 
 // Hide input placeholder on focus event
