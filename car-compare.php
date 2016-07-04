@@ -9,55 +9,43 @@ include("header.php");
 	$range1 =  $_POST['amtstart'];
 	$range2 =  $_POST['amtend'];
 
-	$carreg =  $_POST['carreg'];
-	$year =  $_POST['year'];
-	$carname = $_POST['carname'];
-	$variant = $_POST['variant'];
-	$fueltype = $_POST['fueltype'];
-	$claimStatus = $_POST['claimStatus'];
-	$idv = $_POST['caridv'];
-	$addonType = 5;
-	$insPer = 60;
 
-  //echo $variant;
-	$splitted = explode("-",$variant);
-	//echo $splitted;
-	$model = trim($splitted[0]);
-	$vari = trim($splitted[1]);
+	if($year =  $_POST['year'] == "idv_2016") {
+		//echo "if";
 
-	if($vari == "") {
-		$vari = "-";
-	}
+		$carreg =  $_POST['carreg'];
+		$year =  $_POST['year'];
+		$carname = $_POST['carname'];
+		$variant = $_POST['variant'];
+		$fueltype = $_POST['fueltype'];
+		$idv = $_POST['caridv'];
+		$addonType = 5;
+		$insPer = 60;
 
-	if($claimStatus == "Yes") {
-		$ncb = 0;
-		$claimstat = "Yes";
-		//echo $ncb;
-		//echo $claimstat;
-	} else {
-		$ncb = $_POST['ncbPolicy'];
+	  //echo $variant;
+		$splitted = explode("-",$variant);
+		//echo $splitted;
+		$model = trim($splitted[0]);
+		$vari = trim($splitted[1]);
 
-		if($ncb == "") {
-			$ncb = 0;
+		if($vari == "") {
+			$vari = "-";
 		}
-		$claimstat = "No";
-		//echo $int;
-		//echo $claimstat;
-	}
 
-	$intval = (int)$ncb;
+		$claimstat = "Yes";
+		(int)$ncb = 0;
 
-	//echo $carreg; //echo $year; //echo $carname; //echo $model;
-	//echo $vari; //echo $intval; //echo $claimstat; //echo $idv;
-	//echo $addonType; //echo $insPer;
+		//echo $carreg; //echo $year; //echo $carname; //echo $model;
+	  //echo $vari; //echo $ncb; //echo $claimstat; //echo $idv;
+	  //echo $addonType; //echo $insPer;
 
-	$data = array(
+		$data = array(
 	  "regNumber" => $carreg,
 	  "regDate"=> $year,
 	  "make"=> $carname,
 	  "model"=> $model,
 	  "variant"=> $vari,
-	  "ncbPolicy"=> $intval,
+	  "ncbPolicy"=> $ncb,
 	  "claimStatus"=> $claimstat,
 	  "idv"=> $idv,
 	  "insurancePerecentage"=> $insPer,
@@ -75,7 +63,7 @@ include("header.php");
 	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	  curl_setopt($ch, CURLOPT_HTTPHEADER, Array("Content-Type: application/json"));
-	  curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
+	  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 	  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	  $result = curl_exec($ch);
 	  curl_close($ch);
@@ -85,7 +73,84 @@ include("header.php");
 	//echo " " . sendPostData($url_send, $str_data);
 	$resp = sendPostData($url_send, $str_data);
 
-	//print_r($resp);
+	} else {
+		//echo "el";
+
+		$carreg =  $_POST['carreg'];
+		$year =  $_POST['year'];
+		$carname = $_POST['carname'];
+		$variant = $_POST['variant'];
+		$fueltype = $_POST['fueltype'];
+		$claimStatus = $_POST['claimStatus'];
+		$idv = $_POST['caridv'];
+		$addonType = 5;
+		$insPer = 60;
+
+	  //echo $variant;
+		$splitted = explode("-",$variant);
+		//echo $splitted;
+		$model = trim($splitted[0]);
+		$vari = trim($splitted[1]);
+
+		if($vari == "") {
+			$vari = "-";
+		}
+
+		if($claimStatus == "Yes") {
+			(int)$ncb = 0;
+			$claimstat = "Yes";
+			//echo $ncb;
+			//echo $claimstat;
+		} else {
+			$ncb = $_POST['ncbPolicy'];
+
+			if($ncb == "") {
+				(int)$ncb = 0;
+			}
+			$claimstat = "No";
+			//echo $int;
+			//echo $claimstat;
+		}
+
+		//echo $carreg; //echo $year; //echo $carname; //echo $model;
+	  //echo $vari; //echo $ncb; //echo $claimstat; //echo $idv;
+	  //echo $addonType; //echo $insPer;
+	
+		$data = array(
+		  "regNumber" => $carreg,
+		  "regDate"=> $year,
+		  "make"=> $carname,
+		  "model"=> $model,
+		  "variant"=> $vari,
+		  "ncbPolicy"=> $ncb,
+		  "claimStatus"=> $claimstat,
+		  "idv"=> $idv,
+		  "insurancePerecentage"=> $insPer,
+		  "addonType"=> $addonType
+		);
+
+		$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
+
+		$str_data = json_encode($data);
+
+		//print_r($str_data);
+
+		function sendPostData($url, $post) {
+		  $ch = curl_init($url);
+		  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
+		  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		  curl_setopt($ch, CURLOPT_HTTPHEADER, Array("Content-Type: application/json"));
+		  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+		  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+		  $result = curl_exec($ch);
+		  curl_close($ch);
+		  $json = json_decode($result, true);
+		  return $json;
+		}
+		//echo " " . sendPostData($url_send, $str_data);
+		$resp = sendPostData($url_send, $str_data);
+	}
+
 ?>
 
 <!-- Content starts here-->
@@ -103,7 +168,7 @@ include("header.php");
 			<span class="car-idv">Insured Declared Value (IDV)</span>
 			<span class="idvamt"><i class="fa fa-inr"></i> <?php echo number_format($idv); ?></span>
 			<span>(The IDV is based on your car registration year)</span>
-			<input id="ncbval" type="hidden" name="ncbval" value="<?php echo $intval ?>"/>
+			<input id="ncbval" type="hidden" name="ncbval" value="<?php echo $ncb ?>"/>
 			<input id="claimval" type="hidden" name="claimval" value="<?php echo $claimstat ?>"/>
 		</div>
 		<div>
@@ -149,10 +214,6 @@ include("header.php");
              		<option value="90">90</option>
 								<option value="100">100</option>
           		</select>
-          		<!-- <span><input type="checkbox" name="insper" value="Insurance Perecentage">Insurance Perecentage</span> -->
-							<!-- <span><input type="checkbox" name="addon" value="addon">Addon</span> -->
-							<!-- <span><input type="checkbox" name="premium" value="premium">Premium</span>
-							<span><input type="checkbox" name="electronic" value="electronic">Electronic</span> -->
 						</p>
 					</div>
 				</div>

@@ -18,7 +18,7 @@ include("header.php");
 		</div>
 				<div class="car-quote">
       <div class="car-get cf">
-        <h2>Need a Car Insurance Quote? <span>It on takes 30 seconds</span></h2>
+        <h2>Need a Car Insurance Quote? <span>It only takes 30 seconds</span></h2>
         <form name="form" action="car-compare.php" method="post" id="car-details">
           <input type="hidden" name="amtstart" id="amount1" value="0">
           <input type="hidden" name="amtend" id="amount2" value="30000">
@@ -48,7 +48,7 @@ include("header.php");
             <option value="" disabled selected>Car</option>
             <?php
               foreach ($json as $data) {
-                echo  "<option value=". $data['make_id'] .">" . $data['name'] .  "</option>";
+                echo  "<option value=" . $data['make_id'] . ">" . $data['name'] .  "</option>";
               }
             ?>
           </select>

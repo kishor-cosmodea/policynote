@@ -57,56 +57,88 @@ $(document).ready(function() {
 
 	$("#get-car-quote").click(function(e) {
 		e.preventDefault();
-
+		var flag = true;
 		var carModel  = jQuery.trim($('#car-model').val());
 		var selFuel   = jQuery.trim($('.sel-fuel').val());
 		var selVar    = jQuery.trim($('.sel-var').val());
 		var carRegyr  = jQuery.trim($('#carregyr').val());
 		var carYear   = jQuery.trim($('.car-year').val());
 		var polStat   = jQuery.trim($('.polstat').val());
+		var claimStat   = jQuery.trim($('.claimstat').val());
+		var ncbPolicy   = jQuery.trim($('.ncbpolicy').val());
 
-	if(carModel == "") {
-		$('#car-model').css( "border", "4px solid #ff0000" );
-	} else {
-		$('#car-model').css( "border", "4px solid #70cbd2" );
-	}
+		if(carModel == "") {
+			$('#car-model').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('#car-model').css( "border", "4px solid #70cbd2" );
+		}
 
-	if(selFuel == "") {
-		$('.sel-fuel').css( "border", "4px solid #ff0000" );
-	} else {
-		$('.sel-fuel').css( "border", "4px solid #70cbd2" );
-	}
+		if(selFuel == "") {
+			$('.sel-fuel').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.sel-fuel').css( "border", "4px solid #70cbd2" );
+		}
 
-	if(selVar == "") {	
-		$('.sel-var').css( "border", "4px solid #ff0000" );
-	} else {
-		$('.sel-var').css( "border", "4px solid #70cbd2" );
-	}
+		if(selVar == "") {	
+			$('.sel-var').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.sel-var').css( "border", "4px solid #70cbd2" );
+		}
 
-	var regnum = jQuery.trim(($('#carregyr').val()));
-	var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
-	//if(carRegyr == "") {
-	if(!(regPattern.test(regnum)) || regnum == "") {
-		$('#carregyr').css( "border", "4px solid #ff0000" );
-	} else {
-		$('#carregyr').css( "border", "4px solid #70cbd2" );
-	}
+		var regnum = jQuery.trim(($('#carregyr').val()));
+		var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
+		//if(carRegyr == "") {
+		if(!(regPattern.test(regnum)) || regnum == "") {
+			$('#carregyr').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('#carregyr').css( "border", "4px solid #70cbd2" );
+		}
 
-	if(carYear == "") {
-		$('.car-year').css( "border", "4px solid #ff0000" );
-	} else {
-		$('.car-year').css( "border", "4px solid #70cbd2" );
-	}
+		if(carYear == "") {
+			$('.car-year').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.car-year').css( "border", "4px solid #70cbd2" );
+		}
 
-	if(polStat == "") {
-		$('.polstat').css( "border", "4px solid #ff0000" );
-	} else {
-		$('.polstat').css( "border", "4px solid #70cbd2" );
-	}
+		if(polStat == "") {
+			$('.polstat').css( "border", "4px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.polstat').css( "border", "4px solid #70cbd2" );
+		}
 
-	if(!(carModel == "") && !(selFuel == "") && !(selVar == "") && !(carRegyr == "") && !(carYear == "") && !(polStat == "")) {
-		$( "#car-details" ).submit();
-	}
+		if(carYear == "idv_2015") {
+			if(claimStat == "") {
+				$('.claimstat').css( "border", "4px solid #ff0000" );
+				flag = false;
+			} else {
+				$('.claimstat').css( "border", "4px solid #70cbd2" );
+			}
+
+			if(claimStat == "No") {
+				if(ncbPolicy == "") {
+					$('.ncbpolicy').css( "border", "4px solid #ff0000" );
+					flag = false;
+				} else {
+					$('.ncbpolicy').css( "border", "4px solid #70cbd2" );
+				}
+			}
+		} else {
+			$('.claimstat').css( "border", "4px solid #70cbd2" );
+	  }
+			
+
+		if(flag == true) {
+			console.log("flag true");
+			$( "#car-details" ).submit();
+		} else {
+			console.log("flag false");
+		}
 
 	});
 
@@ -325,6 +357,7 @@ $(document).ready(function() {
 
 				if($(".polstat option:selected" ).val() == ren) {
 					$('.claimstat').show();
+					$('.claimstat').css( "border", "4px solid #70cbd2" );
 				}	else {
 					$('.claimstat').hide();
 					$('.ncbpolicy').hide();
@@ -340,6 +373,7 @@ $(document).ready(function() {
 				var claim = "No";
 				if($(".claimstat option:selected" ).val() == claim) {
 					$('.ncbpolicy').show();
+					$('.ncbpolicy').css( "border", "4px solid #70cbd2" );
 				}	else {
 					$('.ncbpolicy').hide();
 				}
@@ -426,7 +460,7 @@ $(document).ready(function() {
 				    	data : data
 				    },
 				    success: function(data) {
-				        console.log(data);
+				        //console.log(data);
 				        updateadd(data);
 				    }
 				});
@@ -435,81 +469,42 @@ $(document).ready(function() {
 
 	//Assign updated premium data in compare page
 	function updateadd (data) {
-		console.log(data);
+		//console.log(data);
 		// 	data.sort(function(a, b) {
       	// return +a.finalPremium > +b.finalPremium ? 1 : -1;
 		// });
 		// console.log(data);
+		function numberWithCommas(x) {
+    	return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+		}
 		var i = 1;
 		$.each(JSON.parse(data), function (index, element) {
-		//console.log(data);
+			//console.log(data);
 
-		$(".car-policy-plan").append("<div class='car-cmp-parent' id='" + i +"'><p><img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'><span class='car-amt car-cmp' id='cn"+ i +"'>" + element.companyName + "</span></p><p class='car-premium'><i class='fa fa-inr'></i> <span class='car-amt' id='cp"+ i +"'>" + element.finalPremium.toFixed(0) +  "</span></p><p><button value='" + i + "' class='car-buy buynow'>Buy Now</button></p></div>");
-		i++;
-		$('.load-up').hide();
+			var v_pound = element.finalPremium;
+			v_pound = numberWithCommas(element.finalPremium);
+			var finalAmt = v_pound;
+			//.toFixed(0)
+
+			$(".car-policy-plan").append("<div class='car-cmp-parent' id='" + i +"'><p><img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'><span class='car-amt car-cmp' id='cn"+ i +"'>" + element.companyName + "</span></p><p class='car-premium'><i class='fa fa-inr'></i> <span class='car-amt' id='cp"+ i +"'>" +   finalAmt +  "</span></p><p><button value='" + i + "' class='car-buy buynow'>Buy Now</button></p></div>");
+			i++;
+			$('.load-up').hide();
 		});
-		plogo();
+		policylogo();
+		$(".car-plan span").empty();
+		var obj = eval('(' + data + ')');
+
+		var objCount=0;
+		for(_obj in obj) objCount++;
+		//alert(objCount);
+		$(".car-plan span").html("Showing results from " + objCount + " insurers");
 	}
-
-
-	//Buy now
-	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
-
-		var cval  = $(this).val();
-		var nval  = $(this).closest("div").attr("id");
-
-		var cpolicy = $('#cn' + nval).text();
-    var cpre = $('#cp' + nval).text();
-
-    var cmodel  = $('.car-name').text();
-    var cvari   = $('.car-vari').text();
-    var regyr  = $('.reg-yr').text();
-    var spliyr = regyr.split('.');
-		//console.log(spliyr);
-		var cnregyr = jQuery.trim(spliyr[25]);
-    var cidv    = $('.idvamt').text();
-
-    var caddon = $(".addon option:selected" ).val();
-	    if(caddon == 5) {
-	    	caddon = " - Depreciation";
-	    } else if(caddon == 4) {
-	    	caddon = " - Depreciation, Consumables";
-	    } else if(caddon == 3) {
-	    	caddon = " - Depreciation, Tyre, Consumables";
-	    } else if(caddon == 2) {
-	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock";
-	    } else if(caddon == 1) {
-	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice";
-	    } else {
-	    	console.log("No addon selected");
-	    }
-
-		var cinsper = $(".insper option:selected" ).val();
-		var ncinsper = " - " + cinsper + " %";
-		var cpolicon = $("#" + nval + " " + '.get-logo').attr('src');
-    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper + cpolicon);
-
-    $.cookie("cpolicy", cpolicy);
-    $.cookie("cpre", cpre);
-    $.cookie("cmodel", cmodel);
-    $.cookie("cvari", cvari);
-    $.cookie("cnregyr", cnregyr);
-    $.cookie("cidv", cidv);
-    $.cookie("caddon", caddon);
-    $.cookie("cinsper", ncinsper);
-    $.cookie("cpolicon", cpolicon);
-
-    window.location.href = "../../car-checkout.php";
-
-	});
-
-});
 
 
   //Assign car insurance company logo
   var $parent = $('.car-policy-plan');
 
-  function plogo() {
+  function policylogo() {
     $('.car-policy-plan .car-cmp').each( function () {
       var getcmp = $(this).text();
       //console.log(getcmp);
@@ -578,6 +573,60 @@ $(document).ready(function() {
       }
     });
   };
+
+
+	//Buy now
+	$('.car-policy-plan').delegate('button.buynow', 'click', function() {
+
+		var cval  = $(this).val();
+		var nval  = $(this).closest("div").attr("id");
+
+		var cpolicy = $('#cn' + nval).text();
+    var cpre = $('#cp' + nval).text();
+
+    var cmodel  = $('.car-name').text();
+    var cvari   = $('.car-vari').text();
+    var regyr  = $('.reg-yr').text();
+    var spliyr = regyr.split('.');
+		//console.log(spliyr);
+		var cnregyr = jQuery.trim(spliyr[25]);
+    var cidv    = $('.idvamt').text();
+
+    var caddon = $(".addon option:selected" ).val();
+	    if(caddon == 5) {
+	    	caddon = " - Depreciation";
+	    } else if(caddon == 4) {
+	    	caddon = " - Depreciation, Consumables";
+	    } else if(caddon == 3) {
+	    	caddon = " - Depreciation, Tyre, Consumables";
+	    } else if(caddon == 2) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock";
+	    } else if(caddon == 1) {
+	    	caddon = " - Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice";
+	    } else {
+	    	console.log("No addon selected");
+	    }
+
+		var cinsper = $(".insper option:selected" ).val();
+		var ncinsper = " - " + cinsper + " %";
+		var cpolicon = $("#" + nval + " " + '.get-logo').attr('src');
+    //console.log(cpolicy + cpre + cvari + cnregyr + cidv + caddon + cinsper + cpolicon);
+
+    $.cookie("cpolicy", cpolicy);
+    $.cookie("cpre", cpre);
+    $.cookie("cmodel", cmodel);
+    $.cookie("cvari", cvari);
+    $.cookie("cnregyr", cnregyr);
+    $.cookie("cidv", cidv);
+    $.cookie("caddon", caddon);
+    $.cookie("cinsper", ncinsper);
+    $.cookie("cpolicon", cpolicon);
+
+    window.location.href = "../../car-checkout.php";
+
+	});
+
+});
 
 
 // Hide input placeholder on focus event
