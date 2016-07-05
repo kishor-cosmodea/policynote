@@ -17,7 +17,10 @@
       </ul>
 			<ul>
 				<li><span>Subscribe</span></li>
-				<li><input type="text" name="sub" placeholder="Email ID"><a id="sub-email" href="#" title="">></a></li>
+				<li>
+					<input type="text" class="sub" name="sub" placeholder="Email ID">
+					<submit id="sub-email">></submit>
+				</li>
 				<li><span>Follow Us</span></li>
 				<li>
 					<a href="https://www.facebook.com/" target="_blank" class="fb" title="Facebook">fb</a>

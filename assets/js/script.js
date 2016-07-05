@@ -134,10 +134,10 @@ $(document).ready(function() {
 			
 
 		if(flag == true) {
-			console.log("flag true");
+			//console.log("flag true");
 			$( "#car-details" ).submit();
 		} else {
-			console.log("flag false");
+			//console.log("flag false");
 		}
 
 	});
@@ -624,6 +624,24 @@ $(document).ready(function() {
 
     window.location.href = "../../car-checkout.php";
 
+	});
+
+	
+	$("#sub-email").on('click', function() {
+		var uemail = $(".sub").val();
+		var emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //Regex for test@test.com
+		if(!(emailPattern.test(uemail)) || uemail == "") {
+			$('.sub').css( "border", "1px solid #ff0000" );
+		} else {
+			$('.sub').css( "border", "1px solid #70cbd2" );
+
+			$.post('subscribe-email.php',
+			'val=' + uemail,
+			function (data) {
+      	alert("Thank you");
+      	window.location.replace("index.php");
+   		});
+		}
 	});
 
 });
