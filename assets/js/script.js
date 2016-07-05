@@ -644,6 +644,144 @@ $(document).ready(function() {
 		}
 	});
 
+
+	$("#get-policy").on('click', function(e) {
+
+		e.preventDefault();
+		var flag = true;
+
+		var firstName = jQuery.trim($(".bfname").val());
+		var lastName = jQuery.trim($(".blname").val());
+		var email = jQuery.trim($(".bemail").val());
+		var mobile = jQuery.trim($(".bmobile").val());
+		var dd = jQuery.trim($("#dd").val());
+		var mm = jQuery.trim($("#mm").val());
+		var yyyy = jQuery.trim($("#yyyy").val());
+		var alphaChar = /^[a-zA-Z]*$/;
+		var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //Regex for test@test.com
+		var numChar = /[0-9]/g;
+
+		if(!(alphaChar.test(firstName)) || firstName == "") {
+			$('.bfname').css( "border", "1px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.bfname').css( "border", "1px solid #70cbd2" );
+		}
+
+		if(!(alphaChar.test(lastName)) || lastName == "") {
+			$('.blname').css( "border", "1px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.blname').css( "border", "1px solid #70cbd2" );
+		}
+
+		if(!(emailPat.test(email)) || email == "") {
+			$('.bemail').css( "border", "1px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.bemail').css( "border", "1px solid #70cbd2" );
+		}
+
+		if(!(numChar.test(mobile)) || mobile == "") {
+			$('.bmobile').css( "border", "1px solid #ff0000" );
+			flag = false;
+		} else {
+			$('.bmobile').css( "border", "1px solid #70cbd2" );
+		}
+
+		if(dd == "" || mm == "" || yyyy == "") {
+			$('#dd, #mm, #yyyy').css( "border", "1px solid #ff0000" );
+			console.log("in red");
+			flag = false;
+		} else {
+			$('#dd, #mm, #yyyy').css( "border", "1px solid #70cbd2" );
+		}
+
+		if(flag == true) {
+			console.log("flag true");
+			var policyStartDate = dd + "/" + mm + "/" + yyyy;
+
+			var policyCompany = jQuery.trim($(".cpolicy").text());
+			var premiumAmount = jQuery.trim($(".cpre").text().replace(/,/g, ""));
+			var make = jQuery.trim($(".cmodel").text());
+
+			var cmodel = jQuery.trim($(".cvari").text());
+			var smodel = cmodel.split(')');
+			//console.log(smodel);
+			var splimo = smodel[0];
+			var ftype = splimo.split('(');
+			var nftype = jQuery.trim(ftype[1]);
+			console.log(nftype);
+			var somod = smodel[1];
+			var spomod = somod.split('-');
+			console.log(spomod);
+			var nspmodel = jQuery.trim(spomod[0]);
+			console.log(nspmodel);
+			var nspvari = jQuery.trim(spomod[1]);
+			if(nspvari == "") {
+				nspvari = "-";
+			}
+			console.log(nspvari);
+
+			var model = nspmodel;
+			var variant = nspvari;
+			var fuelType = nftype;
+			var idv = jQuery.trim($(".cidv").text().replace(/,/g, ""));
+
+			var year = jQuery.trim($(".cnregyr").text());
+
+			var addOnType = jQuery.trim($(".caddon").text());
+		 	if(addOnType == "- Depreciation") {
+		 	  	addOnType = "5";
+		    } else if(addOnType == "- Depreciation, Consumables") {
+		    	addOnType = "4";
+		    } else if(addOnType == "- Depreciation, Tyre, Consumables") {
+		    	addOnType = "3";
+		    } else if(addOnType == "- Depreciation, Tyre, Consumables, Hydrostatic Lock") {
+		    	addOnType = "2";
+		    } else if(addOnType == "- Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice") {
+		    	addOnType = "1";
+		    } else {
+		    	console.log("No addon selected");
+		    }
+
+	    var data = {
+
+				firstName: firstName,
+		    lastName: lastName,
+		    email: email,
+		    mobile: mobile,
+		    policyStartDate: policyStartDate,
+		    policyCompany: policyCompany,
+		    premiumAmount: premiumAmount,
+		    make: make,
+		    model: nspmodel,
+		    variant: variant,
+		    fuelType: fuelType,
+		    idv: idv,
+		    year: year,
+		    addOnType: addOnType
+	    
+	    }
+	    console.log(data);
+			//$( "#" ).submit();
+					$.ajax({
+				    type: "POST",
+				    url: "get-policy.php",
+				    data:{
+				    	data : data
+				    },
+				    success: function(data) {
+				    		alert(data);
+				        console.log(data);
+				    }
+					});
+		} else {
+			console.log("flag false");
+		}
+
+	});
+
 });
 
 
@@ -656,28 +794,3 @@ $('input[placeholder]').on('focus', function () {
 	$this.prop('placeholder', $this.data('placeholder'));
 });
 
-
-//input mobile validation
-var inputMobile = [];
-$(function() {
-	$(".mobile").each(function(i) {
-		inputMobile[i]=this.defaultValue;
-         $(this).data("idx",i); // save this field's index to access later
-       });
-	$(".mobile").on("keyup", function (e) {
-		var $field = $(this),
-		val=this.value,
-            $thisIndex=parseInt($field.data("idx"),10); // retrieve the index
-//        window.console && console.log($field.is(":invalid"));
-          //  $field.is(":invalid") is for Safari, it must be the last to not error in IE8
-          if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
-          	this.value = inputMobile[$thisIndex];
-          	return;
-          } 
-          if (val.length > Number($field.attr("maxlength"))) {
-          	val=val.slice(0, 10);
-          	$field.val(val);
-          }
-          inputMobile[$thisIndex]=val;
-        });      
-});

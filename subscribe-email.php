@@ -42,7 +42,7 @@
 		}
 		
 			$to = 'admin@cosmodea.com';
-			$subject = 'Subscribe Newsletter: [Policy Note]';
+			$subject = 'Policy Note : [Subscribe Newsletter]';
 			$sender=$useremail;
 			$user_email=$useremail;
 	

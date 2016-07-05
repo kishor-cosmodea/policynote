@@ -70,11 +70,11 @@
 						<span>1</span> <p>Contact Details</p>
 					</div>
 					<div class="car-chout-user">
-						<input type="text" name="fname" placeholder="First Name">
-						<input type="text" name="lname" placeholder="Last Name">
+						<input class="bfname" type="text" name="fname" placeholder="First Name">
+						<input class="blname" type="text" name="lname" placeholder="Last Name">
 						<p>
-							<input type="text" name="email" placeholder="Email">
-							<input class="mobile" type="number" name="mobile" placeholder="Mobile" maxlength="10">
+							<input class="bemail" type="text" name="email" placeholder="Email">
+							<input class="bmobile" type="text" name="mobile" placeholder="Mobile" maxlength="10">
 						</p>
 						</div>
 					</div>
@@ -85,9 +85,11 @@
 						</div>
 						<div class="car-chout-user">
 							<span>When do you want to start the policy?</span>
-							<p class="ch-inp"><input id="dd" type="text" name="dd" placeholder="DD" maxlength="2">
+							<p class="ch-inp">
+								<input id="dd" type="text" name="dd" placeholder="DD" maxlength="2">
 								<input id="mm" type="text" name="mm" placeholder="MM" maxlength="2">
-								<input id="yyyy" type="text" name="yyyy" placeholder="YYYY" maxlength="4"></p>
+								<input id="yyyy" type="text" name="yyyy" placeholder="YYYY" maxlength="4">
+							</p>
 							</div>
 						</div>
 
@@ -98,7 +100,7 @@
 							<div class="car-chout-user">
 								<span>Buy at Home</span>
 								<span>facilitator will assist on phone & in-person</span>
-								<p class="car-chout-buy"><button>Confirm</button></p>
+								<p class="car-chout-buy"><button id="get-policy">Confirm</button></p>
 							</div>
 						</div>
 

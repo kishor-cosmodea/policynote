@@ -73,7 +73,7 @@ include("header.php");
         <input id="carregyr" type="text" name="carreg" placeholder="Registration Number" maxlength="10"/>
 
            <select name="year" class="car-year">
-             <option value="" disabled selected>Registration Year</option>
+             <option value="" disabled selected>Manufacturing Year</option>
              <option value="idv_2016">2016</option>
              <option value="idv_2015">2015</option>
              <option value="idv_2014">2014</option>
