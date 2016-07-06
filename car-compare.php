@@ -12,7 +12,6 @@ include("header.php");
 
 	if($year =  $_POST['year'] == "idv_2016") {
 		//echo "if";
-
 		$carreg =  $_POST['carreg'];
 		$year =  $_POST['year'];
 		$carname = $_POST['carname'];
@@ -75,7 +74,6 @@ include("header.php");
 
 	} else {
 		//echo "el";
-
 		$carreg =  $_POST['carreg'];
 		$year =  $_POST['year'];
 		$carname = $_POST['carname'];
@@ -167,13 +165,13 @@ include("header.php");
 			<p>IDV</p>
 			<span class="car-idv">Insured Declared Value (IDV)</span>
 			<span class="idvamt"><i class="fa fa-inr"></i> <?php echo number_format($idv); ?></span>
-			<span>(The IDV is based on your car registration year)</span>
+			<span>(The IDV is based on your car manufacturing year)</span>
 			<input id="ncbval" type="hidden" name="ncbval" value="<?php echo $ncb ?>"/>
 			<input id="claimval" type="hidden" name="claimval" value="<?php echo $claimstat ?>"/>
 		</div>
 		<div>
 			<p>POLICY DETAILS</p>
-			<span class="reg-yr">Registration Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
+			<span class="reg-yr">Manufacturing Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
 			<span>Policy start date .......................... <?php $date_format = 'jS F Y'; $tomorrow = strtotime('+1 day'); echo date($date_format, $tomorrow); ?>
 			</span>
 		</div>
@@ -191,7 +189,7 @@ include("header.php");
 						<p>
 							<span>Add on</span>
 							<select name="addon" class="addon">
-             		<option value="" disabled selected>Add on</option>
+             		<option disabled>Add on</option>
              		<option value="5" selected>Depreciation</option>
              		<option value="4">Depreciation, Consumables</option>
              		<option value="3">Depreciation, Tyre, Consumables</option>
@@ -201,14 +199,13 @@ include("header.php");
 
 							<span>Insurance Perecentage</span>
 							<select name="insper" class="insper">
-             		<option value="" disabled selected>Insurance Percentage</option>
-             		<option value="0">0</option>
+             		<option disabled>Insurance Percentage</option>
+             		<option value="60" selected>60</option>
              		<option value="10">10</option>
              		<option value="20">20</option>
              		<option value="30">30</option>
              		<option value="40">40</option>
              		<option value="50">50</option>
-             		<option value="60" selected>60</option>
              		<option value="70">70</option>
              		<option value="80">80</option>
              		<option value="90">90</option>
@@ -287,8 +284,8 @@ include("header.php");
 </div>
 <!-- Content ends here -->
 
-<script>
-//Assign car insurance company logo
+<script type="text/javascript">
+ //Assign car insurance company logo
   var $parent = $('.car-policy-plan');
 
   $(function plogo() {
@@ -360,6 +357,13 @@ include("header.php");
       }
     });
   });
+
+	//Default state of select box
+	$('select[name^="addon"] option:selected').attr("selected",null);
+	//$('select[name^="addon"] option[value="5"]').attr("selected","selected");
+	$('select[name^="insper"] option:selected').attr("selected",null);
+	//$('select[name^="insper"] option[value="60"]').attr("selected","selected");
+
 </script>
 
 <?php include("footer.php"); ?>

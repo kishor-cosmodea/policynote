@@ -45,7 +45,7 @@ include("header.php");
             ?>
 
            <select id="car-model" name="carmodel">
-            <option value="" disabled selected>Car</option>
+            <option  disabled selected>Car</option>
             <?php
               foreach ($json as $data) {
                 echo  "<option value=" . $data['make_id'] . ">" . $data['name'] .  "</option>";
@@ -56,7 +56,7 @@ include("header.php");
           <input type="hidden" name="carname" id="car-hide"/>
           <img class="loader" src='assets/images/loader1.gif' alt='policy-logo'>
           <select name="fueltype" class="sel-fuel" disabled="disabled">
-             <option value="" disabled selected>Fuel Type</option>
+             <option  disabled selected>Fuel Type</option>
              <option value="Petrol">Petrol</option>
              <option value="Diesel">Diesel</option>
              <option value="CNG">CNG</option>
@@ -64,7 +64,7 @@ include("header.php");
           </select>
 
           <select name="variant" class="sel-var">
-           <option value="" disabled selected>Variant</option>
+           <option  disabled selected>Variant</option>
           </select>
 
        </div>
@@ -73,7 +73,7 @@ include("header.php");
         <input id="carregyr" type="text" name="carreg" placeholder="Registration Number" maxlength="10"/>
 
            <select name="year" class="car-year">
-             <option value="" disabled selected>Manufacturing Year</option>
+             <option  disabled selected>Manufacturing Year</option>
              <option value="idv_2016">2016</option>
              <option value="idv_2015">2015</option>
              <option value="idv_2014">2014</option>
@@ -89,19 +89,19 @@ include("header.php");
            <input type="hidden" name="caridv" id="car-idv"/>
 
         <select name="policyStatus" class="polstat">
-          <option value="" disabled selected>Policy Status</option>
+          <option  disabled selected>Policy Status</option>
           <option value="Buy New" class="buynew">Buy New</option>
           <option value="Renew" class="renew">Renew</option>
         </select>
 
         <select name="claimStatus" class="claimstat">
-          <option value="" disabled selected>Claim Status</option>
+          <option  disabled selected>Claim Status</option>
           <option value="No">No</option>
           <option value="Yes">Yes</option>
         </select>
 
         <select name="ncbPolicy" class="ncbpolicy">
-          <option value="" disabled selected>No Claim Bonus (NCB)</option>
+          <option  disabled selected>No Claim Bonus (NCB)</option>
           <option value="0">0%</option>
           <option value="20">20%</option>
           <option value="25">25%</option>

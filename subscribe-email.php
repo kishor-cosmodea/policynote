@@ -1,5 +1,5 @@
 <?php
-	
+
 	define('GUSER', 'admin@cosmodea.com'); // GMail username
 	define('GPWD', 'blabla12'); // GMail password
 

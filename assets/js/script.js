@@ -151,6 +151,8 @@ $(document).ready(function() {
 		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
 			return this.defaultSelected;
 		});
+		$('.claimstat').hide();
+		$('.ncbpolicy').hide();
 	});
 
 	//Image slider
@@ -482,11 +484,11 @@ $(document).ready(function() {
 			//console.log(data);
 
 			var v_pound = element.finalPremium;
-			v_pound = numberWithCommas(element.finalPremium);
-			var finalAmt = v_pound;
-			//.toFixed(0)
+			var amount = v_pound;
+			var finalNum = Math.round(amount);
+			var finalPrem = numberWithCommas(finalNum);
 
-			$(".car-policy-plan").append("<div class='car-cmp-parent' id='" + i +"'><p><img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'><span class='car-amt car-cmp' id='cn"+ i +"'>" + element.companyName + "</span></p><p class='car-premium'><i class='fa fa-inr'></i> <span class='car-amt' id='cp"+ i +"'>" +   finalAmt +  "</span></p><p><button value='" + i + "' class='car-buy buynow'>Buy Now</button></p></div>");
+			$(".car-policy-plan").append("<div class='car-cmp-parent' id='" + i +"'><p><img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'><span class='car-amt car-cmp' id='cn"+ i +"'>" + element.companyName + "</span></p><p class='car-premium'><i class='fa fa-inr'></i> <span class='car-amt' id='cp"+ i +"'>" +   finalPrem +  "</span></p><p><button value='" + i + "' class='car-buy buynow'>Buy Now</button></p></div>");
 			i++;
 			$('.load-up').hide();
 		});
@@ -494,7 +496,7 @@ $(document).ready(function() {
 		$(".car-plan span").empty();
 		var obj = eval('(' + data + ')');
 
-		var objCount=0;
+		var objCount = 0;
 		for(_obj in obj) objCount++;
 		//alert(objCount);
 		$(".car-plan span").html("Showing results from " + objCount + " insurers");
@@ -659,7 +661,7 @@ $(document).ready(function() {
 		var yyyy = jQuery.trim($("#yyyy").val());
 		var alphaChar = /^[a-zA-Z]*$/;
 		var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //Regex for test@test.com
-		var numChar = /[0-9]/g;
+		var numChar = /[0-9]$/;
 
 		if(!(alphaChar.test(firstName)) || firstName == "") {
 			$('.bfname').css( "border", "1px solid #ff0000" );
@@ -689,16 +691,15 @@ $(document).ready(function() {
 			$('.bmobile').css( "border", "1px solid #70cbd2" );
 		}
 
-		if(dd == "" || mm == "" || yyyy == "") {
+		if(!(numChar.test(dd)) || dd == "" || !(numChar.test(mm)) || mm == "" || !(numChar.test(yyyy)) || yyyy == "") {
 			$('#dd, #mm, #yyyy').css( "border", "1px solid #ff0000" );
-			console.log("in red");
 			flag = false;
 		} else {
 			$('#dd, #mm, #yyyy').css( "border", "1px solid #70cbd2" );
 		}
 
 		if(flag == true) {
-			console.log("flag true");
+			//console.log("flag true");
 			var policyStartDate = dd + "/" + mm + "/" + yyyy;
 
 			var policyCompany = jQuery.trim($(".cpolicy").text());
@@ -711,17 +712,17 @@ $(document).ready(function() {
 			var splimo = smodel[0];
 			var ftype = splimo.split('(');
 			var nftype = jQuery.trim(ftype[1]);
-			console.log(nftype);
+			//console.log(nftype);
 			var somod = smodel[1];
 			var spomod = somod.split('-');
-			console.log(spomod);
+			//console.log(spomod);
 			var nspmodel = jQuery.trim(spomod[0]);
-			console.log(nspmodel);
+			//console.log(nspmodel);
 			var nspvari = jQuery.trim(spomod[1]);
 			if(nspvari == "") {
 				nspvari = "-";
 			}
-			console.log(nspvari);
+			//console.log(nspvari);
 
 			var model = nspmodel;
 			var variant = nspvari;
@@ -746,7 +747,6 @@ $(document).ready(function() {
 		    }
 
 	    var data = {
-
 				firstName: firstName,
 		    lastName: lastName,
 		    email: email,
@@ -761,10 +761,9 @@ $(document).ready(function() {
 		    idv: idv,
 		    year: year,
 		    addOnType: addOnType
-	    
 	    }
-	    console.log(data);
-			//$( "#" ).submit();
+	    //console.log(data);
+
 					$.ajax({
 				    type: "POST",
 				    url: "get-policy.php",
@@ -772,12 +771,12 @@ $(document).ready(function() {
 				    	data : data
 				    },
 				    success: function(data) {
-				    		alert(data);
-				        console.log(data);
+				    	alert("Thank you");
+      				window.location.replace("index.php");
 				    }
 					});
 		} else {
-			console.log("flag false");
+			//console.log("flag false");
 		}
 
 	});
