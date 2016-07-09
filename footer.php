@@ -19,7 +19,7 @@
 				<li><span>Subscribe</span></li>
 				<li>
 					<input type="text" class="sub" name="sub" placeholder="Email ID">
-					<submit id="sub-email">></submit>
+					<input type="submit" name="submit" id="sub-email" value=">"/>
 				</li>
 				<li><span>Follow Us</span></li>
 				<li>

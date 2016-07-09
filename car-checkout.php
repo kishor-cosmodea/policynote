@@ -28,8 +28,9 @@
             $.removeCookie("cinsper");
             $.removeCookie("cpolicon");
         } else {
-        	console.log("error");
-        }
+	        	//console.log("error");
+	          window.location.replace("index.php");
+        	}
     });
 </script>
 

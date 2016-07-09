@@ -48,7 +48,7 @@ $(document).ready(function() {
 	$(".range-submit").click(function(e) {
 		e.preventDefault();
 		if($('#amount1').val() == $('#amount2').val() || $('#amount2').val() == "0") {
-			$('.range-submit').css( "border", "4px solid #ff0000" );
+			$('.range-submit').css( "border", "2px solid #ff0000" );
 		} else {
 			$('.main-text').fadeOut( "hide" );
 			$('.car-quote').fadeIn( "show" );
@@ -89,7 +89,7 @@ $(document).ready(function() {
 		}
 
 		var regnum = jQuery.trim(($('#carregyr').val()));
-		var regPattern = /^[A-Za-z]{2}[0-9]{1,2}(?:[A-Za-z])?(?:[A-Za-z]*)?[0-9]{4}$/; //Regex for MH12ST1122
+		var regPattern = /^[A-Za-z]{2}[0-9]{2}(?:[A-Za-z]{2})?(?:[A-Za-z]*)?[0-9]{1,4}$/g; //Regex for MH12ST1122
 		//if(carRegyr == "") {
 		if(!(regPattern.test(regnum)) || regnum == "") {
 			$('#carregyr').css( "border", "4px solid #ff0000" );
@@ -136,8 +136,6 @@ $(document).ready(function() {
 		if(flag == true) {
 			//console.log("flag true");
 			$( "#car-details" ).submit();
-		} else {
-			//console.log("flag false");
 		}
 
 	});
@@ -151,6 +149,7 @@ $(document).ready(function() {
 		$('.sel-fuel option, .sel-var option, .car-year option, .polstat option, .claimstat option, .ncbpolicy option').prop('selected', function () {
 			return this.defaultSelected;
 		});
+		$('#car-idv').val("0");
 		$('.claimstat').hide();
 		$('.ncbpolicy').hide();
 	});
@@ -630,7 +629,7 @@ $(document).ready(function() {
 
 	
 	$("#sub-email").on('click', function() {
-		var uemail = $(".sub").val();
+		var uemail = jQuery.trim($(".sub").val());
 		var emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //Regex for test@test.com
 		if(!(emailPattern.test(uemail)) || uemail == "") {
 			$('.sub').css( "border", "1px solid #ff0000" );

@@ -10,7 +10,7 @@ include("header.php");
 		<div class="main-text">
 				<h2>Need a Car Insurance?<span> It only takes 30 seconds</span></h2>
 			<div>
-				<p>Choose your monthly premium budget<p id="amount"></p></p>
+				<p>Choose your monthly premium budget<p id="amount"></p>
 			  <div id="slider-range"></div>
 			    <button class="range-submit" title="Submit">Submit</button>
 			</div>
@@ -47,8 +47,10 @@ include("header.php");
            <select id="car-model" name="carmodel">
             <option  disabled selected>Car</option>
             <?php
-              foreach ($json as $data) {
-                echo  "<option value=" . $data['make_id'] . ">" . $data['name'] .  "</option>";
+              if($json) {
+                foreach ($json as $data) {
+                  echo  "<option value=" . $data['make_id'] . ">" . $data['name'] .  "</option>";
+                }
               }
             ?>
           </select>
@@ -86,7 +88,7 @@ include("header.php");
              <option value="idv_2007">2007</option>
            </select>
 
-           <input type="hidden" name="caridv" id="car-idv"/>
+           <input type="hidden" name="caridv" id="car-idv" value="0"/>
 
         <select name="policyStatus" class="polstat">
           <option  disabled selected>Policy Status</option>
@@ -126,9 +128,9 @@ include("header.php");
 					<h2>How it works</h2>
 				</div>
 				<div class="ins-img slider">
-					<div style="display: inline-block;"><img src="assets/images/simple.png" alt="Ins"></div>
-          <div><img src="assets/images/details.png" alt="Ins"></div>
-          <div><img src="assets/images/quotes.png" alt="Ins"></div>
+					<div style="display: inline-block;"><img src="assets/images/simple.png" alt="Slider1"></div>
+          <div><img src="assets/images/details.png" alt="Slider2"></div>
+          <div><img src="assets/images/quotes.png" alt="Slider3"></div>
 				</div>
 			</div>
 

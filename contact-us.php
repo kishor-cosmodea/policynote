@@ -11,7 +11,7 @@ include("header.php");
 			</div>
 			<div class="about-street">
 				<p>Policynote</p>
-				<div><img src="assets/images/cont.png" alt="map" width="37" height="37	"></div>
+				<div><img src="assets/images/cont.png" alt="map" width="37" height="37"></div>
 				<div><span>02, New Street,</span>
 				<span>Star Villa,</span>
 				<span>Mumbai-400001</span>

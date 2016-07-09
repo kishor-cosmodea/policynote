@@ -201,6 +201,7 @@ include("header.php");
 							<select name="insper" class="insper">
              		<option disabled>Insurance Percentage</option>
              		<option value="60" selected>60</option>
+             		<option value="0">0</option>
              		<option value="10">10</option>
              		<option value="20">20</option>
              		<option value="30">30</option>
@@ -232,16 +233,20 @@ include("header.php");
 					<div class="car-policy-plan">
 						<?php
 							usort($resp, function($a, $b) {
-    					return $a['finalPremium'] - $b['finalPremium'];
+    						return $a['finalPremium'] - $b['finalPremium'];
 							});
 							//print_r($resp);
 							$i = 1;
 							$flg = true;
 							foreach ($resp as $data) {
-								if($flg){
+								if($flg) {
 									if($range2 < $data['finalPremium']) {
-										echo "<span class='more-policy'>We have another policies for you.</span>";
+										$stat = $i;
+										echo $stat;
+										echo "<span class='more-policy'>We have more policies for you, outside provided budget</span>";
 										$flg = false;
+										//exit();
+										//echo "<button>Show More</button>";
 									}
 								}
 								echo "<div class='car-cmp-parent' id='". $i ."'>
@@ -250,9 +255,7 @@ include("header.php");
 										<span class='car-amt car-cmp' id='cn". $i ."'>" . $data['companyName'] .  "</span>
 									</p>
 									<p class='car-premium'>
-
-		              <i class='fa fa-inr'></i> <span class='car-amt' id='cp". $i ."'>" . number_format($data['finalPremium']) .  "</span>
-
+		              	<i class='fa fa-inr'></i> <span class='car-amt' id='cp". $i ."'>" . number_format($data['finalPremium']) . "</span>
 									</p>
 									<p>
 										<button value='". $i ."' class='car-buy buynow'>Buy Now</button>

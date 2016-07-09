@@ -189,11 +189,12 @@ footer {
   }
 
   .foot-content ul li #sub-email {
-    padding: 14px 10px;
+    width: 32px;
+    height: 32px;
     display: inline-block;
     vertical-align: top;
     background: #70cbd2;
-    margin: 2px 0 0 -36px;
+    margin: 0 0 0 -5px;
     color: #fff;
     line-height: 0;
     font-weight: 700;
@@ -248,11 +249,11 @@ footer {
        .foot-content .foot-irda:last-child { margin: 15px 0 0 0; }
 
       .foot-content ul li input {
-        width: 170px;
+        width: 130px;
         height: 30px;
         border: none;
         outline: none;
-        padding: 0 0 0 10px;
+        padding: 0 5px 0 5px;
         color: #ccc;
         font-size: 11px;
         font-weight: 300;
@@ -296,7 +297,7 @@ footer {
 
       .main-text h2 span {
         color: #44516c;
-        font-size: 48px;
+        font-size: 44px;
         font-weight: 400;
       }
 
@@ -539,7 +540,7 @@ footer {
 
       .car-get h2 span {
         color: #44516c;
-        font-size: 48px;
+        font-size: 44px;
         font-weight: 400;
       }
 
@@ -662,13 +663,13 @@ footer {
         background: #fff;
       }
 
-      input[type=number]::-webkit-inner-spin-button, 
+/*      input[type=number]::-webkit-inner-spin-button, 
       input[type=number]::-webkit-outer-spin-button { 
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         margin: 0; 
-      }
+      }*/
 
       ::-webkit-input-placeholder {
         color: #a4a4a4;
