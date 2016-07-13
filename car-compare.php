@@ -232,37 +232,38 @@ include("header.php");
 					<img class="load-up" src='assets/images/loader-up.gif' alt='policy-logo'>
 					<div class="car-policy-plan">
 						<?php
-							usort($resp, function($a, $b) {
-    						return $a['finalPremium'] - $b['finalPremium'];
-							});
-							//print_r($resp);
-							$i = 1;
-							$flg = true;
-							foreach ($resp as $data) {
-								if($flg) {
-									if($range2 < $data['finalPremium']) {
-										$stat = $i;
-										echo $stat;
-										echo "<span class='more-policy'>We have more policies for you, outside provided budget</span>";
-										$flg = false;
-										//exit();
-										//echo "<button>Show More</button>";
+							if($resp){
+								usort($resp, function($a, $b) {
+	    						return $a['finalPremium'] - $b['finalPremium'];
+								});
+								//print_r($resp);
+								$i = 1;
+								$flg = true;
+								foreach ($resp as $data) {
+									if($flg) {
+										if($range2 < $data['finalPremium']) {
+											echo "<span class='more-policy'>We have more policies for you, outside provided budget</span>";
+											$flg = false;
+										}
 									}
+									echo "<div class='car-cmp-parent' id='". $i ."'>
+										<p>
+											<img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'>
+											<span class='car-amt car-cmp' id='cn". $i ."'>" . $data['companyName'] .  "</span>
+										</p>
+										<p class='car-premium'>
+			              	<i class='fa fa-inr'></i> <span class='car-amt' id='cp". $i ."'>" . number_format($data['finalPremium']) . "</span>
+										</p>
+										<p>
+											<button value='". $i ."' class='car-buy buynow'>Buy Now</button>
+										</p>
+									</div>";
+									$i++;
 								}
-								echo "<div class='car-cmp-parent' id='". $i ."'>
-									<p>
-										<img class='get-logo' src='assets/images/loader.gif' alt='policy-logo'>
-										<span class='car-amt car-cmp' id='cn". $i ."'>" . $data['companyName'] .  "</span>
-									</p>
-									<p class='car-premium'>
-		              	<i class='fa fa-inr'></i> <span class='car-amt' id='cp". $i ."'>" . number_format($data['finalPremium']) . "</span>
-									</p>
-									<p>
-										<button value='". $i ."' class='car-buy buynow'>Buy Now</button>
-									</p>
-								</div>";
-								$i++;
 							}
+							// else {
+							// 	echo "<script type='text/javascript'> window.location.replace('index.php'); <script>";
+							// }
 						?>
 <!-- 						<div class="car-idv-cont">
 							<p>
