@@ -11,8 +11,8 @@
 				<li><a href="terms.php" title="Terms">Terms</a></li>
 			</ul>
       <ul>
+      	<li><a href="index.php" title="Car Insurance">Car Insurance</a></li>
       	<li><a href="about-us.php" title="About Us">About Us</a></li>
-        <li><a href="index.php" title="Car Insurance">Car Insurance</a></li>
         <li><a href="contact-us.php" title="Contact Us">Contact Us</a></li>
       </ul>
 			<ul>

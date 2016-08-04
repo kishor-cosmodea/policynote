@@ -73,6 +73,7 @@ include("header.php");
        <div class="car-sec-ul">
 
         <input id="carregyr" type="text" name="carreg" placeholder="Registration Number" maxlength="10"/>
+        <span style="position: absolute; left: 44px; top: 60px; color: #4d4d4d;">eg: MH01AA9999</span>
 
            <select name="year" class="car-year">
              <option  disabled selected>Manufacturing Year</option>
@@ -96,12 +97,16 @@ include("header.php");
           <option value="Renew" class="renew">Renew</option>
         </select>
 
+        <div class="info-wrap in-cs">
         <select name="claimStatus" class="claimstat">
           <option  disabled selected>Claim Status</option>
           <option value="No">No</option>
           <option value="Yes">Yes</option>
         </select>
+        <a href="#" class="incon hint--bottom hint--medium" aria-label="Filed claim in last year. If it is Yes then no NCB will be applied" ></a>
+        </div>
 
+        <div class="info-wrap in-ncb">
         <select name="ncbPolicy" class="ncbpolicy">
           <option  disabled selected>No Claim Bonus (NCB)</option>
           <option value="0">0%</option>
@@ -111,6 +116,8 @@ include("header.php");
           <option value="45">45%</option>
           <option value="50">50%</option>
         </select>
+        <a href="#" class="incon hint--bottom hint--medium" aria-label="NCB discount, from 0 to 50%, is applied to your car premium depending on the number of continuous claim free years. Find it on your policy document." ></a>
+        </div>
 
     </div>
 
@@ -148,8 +155,11 @@ include("header.php");
 			</div>
 
 			<div class="main-testi">
-				<h2>Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.</h2>
-				<span>- Jack Son</span>
+        <div><img src="assets/images/photo.jpg" alt="pic"></div>
+				<div class="testi-per">
+          <h2>Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.</h2>
+				  <span>Mr Jack Son</span>
+        </div>
 			</div>
 			<div class="car-bg-lay">
 				<div class="ins-head">

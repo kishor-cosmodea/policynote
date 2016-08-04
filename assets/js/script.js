@@ -151,7 +151,9 @@ $(document).ready(function() {
 		});
 		$('#car-idv').val("0");
 		$('.claimstat').hide();
+		$('.in-cs .incon').css("display","none");
 		$('.ncbpolicy').hide();
+		$('.in-ncb .incon').css("display","none");
 	});
 
 	//Image slider
@@ -336,7 +338,9 @@ $(document).ready(function() {
 			$('.polstat option.renew').hide();
 			$('.polstat option.buynew').show();
 			$('.claimstat').hide();
+			$('.in-cs .incon').css("display","none");
 			$('.ncbpolicy').hide();
+			$('.in-ncb .incon').css("display","none");
 			//$('.polstat').val("Buy New") = $("option:selected", this);
 		} else {
 			//console.log(caryear);
@@ -358,10 +362,13 @@ $(document).ready(function() {
 
 				if($(".polstat option:selected" ).val() == ren) {
 					$('.claimstat').show();
+					$('.in-cs .incon').css("display","inline-block");
 					$('.claimstat').css( "border", "4px solid #70cbd2" );
 				}	else {
 					$('.claimstat').hide();
+					$('.in-cs .incon').css("display","none");
 					$('.ncbpolicy').hide();
+					$('.in-ncb .incon').css("display","none");
 				}
 
 			});
@@ -374,9 +381,11 @@ $(document).ready(function() {
 				var claim = "No";
 				if($(".claimstat option:selected" ).val() == claim) {
 					$('.ncbpolicy').show();
+					$('.in-ncb .incon').css("display","inline-block");
 					$('.ncbpolicy').css( "border", "4px solid #70cbd2" );
 				}	else {
 					$('.ncbpolicy').hide();
+					$('.in-ncb .incon').css("display","none");
 				}
 			});
 
@@ -394,10 +403,12 @@ $(document).ready(function() {
 				$( "#amount2" ).val(ui.values[ 1 ]);
       }
     });
-    $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
-     "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
+     $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
+      "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
+//$( "#slider-range + span" ).hide();
+$('#slider-range span:first', this).hide();
 
 	//Update additional functionality
 		$("#update-add").on('click', function() {

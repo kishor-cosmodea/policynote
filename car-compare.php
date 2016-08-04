@@ -172,7 +172,7 @@ include("header.php");
 		<div>
 			<p>POLICY DETAILS</p>
 			<span class="reg-yr">Manufacturing Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
-			<span>Policy start date .......................... <?php $date_format = 'jS F Y'; $tomorrow = strtotime('+1 day'); echo date($date_format, $tomorrow); ?>
+			<!-- <span>Policy start date .......................... <?php $date_format = 'jS F Y'; $tomorrow = strtotime('+1 day'); echo date($date_format, $tomorrow); ?> -->
 			</span>
 		</div>
 	</div>
@@ -180,7 +180,7 @@ include("header.php");
 		<div class="car-profile-content">
 
 			<div class="car-profile-text">
-				<span>Car</span> <!-- <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a> -->
+				<!--<span>Car</span>  <a href="car-insurance.php" title="Modify Details"><i class="fa fa-cog"></i>Modify Details</a> -->
 			</div>
 			<div class="car-refine">
 				<div class="car-re-data">

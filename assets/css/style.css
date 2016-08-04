@@ -115,38 +115,38 @@ h1, nav, nav ul li {
   vertical-align: top;
 }
 
-nav ul li { margin: 34px 30px 0; }
+/*nav ul li { margin: 34px 30px 0; }*/
 
-nav ul li:last-child { margin: 26px 0 0; }
+nav ul li:last-child { margin: 18px 0 0; }
 
-h1 { padding: 15px 0; }
+/*h1 { padding: 15px 0; }*/
 
 h1 a {
   width: 300px;
-  height: 55px;
+  height: 70px;
   display: inline-block;
-  background: url("../images/logo.png");
+  background: url("../images/logo.jpg");
   text-indent: -9999px;
 }
 
 nav { float: right; }
 
 nav ul li a {
-  /*padding: 26px;*/
-  display: block;
-  text-transform: uppercase;
-  color: #44516d;
-  font-size: 15px;
-  font-weight: 400;
+padding: 26px;
+    display: block;
+    text-transform: uppercase;
+    color: #44516d;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 nav ul li a:hover, .active {
-  color: #70cbd2;
-  /*font-weight: 700;*/
-  /*background: #70cbd2;*/
+    color: #fff;
+    background: #70cbd2;
 }
 
-/*.active { font-weight: 700; }*/
+
+
 /*Header style end*/
 
 /*footer style starts*/
@@ -175,8 +175,9 @@ footer {
 
   .foot-content ul {
     display: inline-block;
-    margin: 0 0 0 19%;
+    margin: 0 10%;
     vertical-align: top;
+    width: 13%;
   }
 
   .foot-content ul:first-child { margin: 0; }
@@ -211,6 +212,7 @@ footer {
     a.cl,  a.fb,  a.tw {
     border-radius: 50%;
     margin: 0 0 0 20px;
+    padding: 0;
     background-color: #70cbd2;
     width: 34px;
     height: 34px;
@@ -226,6 +228,8 @@ footer {
   .tw { background: url("../images/tw.png") 7px 9px no-repeat; }
 
     a.cl:hover {
+
+    
     background: url("../images/call.png") 7px 7px no-repeat;
     background-color: #3e9ca3 ;  }
 
@@ -260,7 +264,9 @@ footer {
         border: 1px solid #70cbd2;
       }
 
-      .foot-content ul li a:hover { text-decoration: underline; }
+      .foot-content ul li a:hover {
+        color: #70cbd2;
+      }
       /*footer style end*/
 
 
@@ -269,11 +275,11 @@ footer {
 
       .main-content {
     min-height: 445px;
-    padding: 350px 0 0 0;
+    padding: 320px 0 100px 0;
     position: relative;
         /*min-height: 247px;*/
         /*padding: 354px 0 170px 0;*/
-        margin: 85px 0 0 0;
+        margin: 71px 0 0 0;
         background: url("../images/main-banner.png") top center;
         background-size: cover;
       }
@@ -471,29 +477,35 @@ footer {
       .sketch-cont { margin: 57px 0 0 0; }
 
       .main-testi {
-        background: url("../images/testimonialsbg.png");
+        background: url("../images/testimonialsbg.jpg");
         background-size: cover;
-        text-align: center;
+        padding: 29px 15%;
       }
 
+.main-testi div {
+  display: inline-block;
+}
+
+.main-testi .testi-per { width: 60%; }
+
       .main-testi h2 {
-        width: 64%;
-        font-size: 28px;
-        font-weight: 300;
-        color: #2f3e5c;
-        margin: 0 auto 0;
-        line-height: 40px;
-        padding: 45px 0 40px 0;
+        /*width: 64%;*/
+        font-size: 30px;
+        font-weight: 400;
+        color: #8db0db;
+        margin: 0 10%;
+        /*line-height: 40px;*/
+        /*padding: 45px 0 40px 0;*/
       }
 
       .main-testi span {
-        font-size: 24px;
-        font-weight: 300;
-        color: #4d4d4d;
-        text-align: right;
+        font-size: 36px;
+        font-weight: 600;
+        color: #70cbd2;
+        /*text-align: right;*/
         display: inherit;
-        margin: 0 20% 0 0;
-        padding: 0 0 24px 0;
+        margin: 0 0 0 51%;
+        /*padding: 0 0 24px 0;*/
       }
 
       .easy-wrap {
@@ -620,9 +632,23 @@ footer {
         height: 52px;
       }
 
-      .claimstat, .ncbpolicy { display: none; }
+      .claimstat, .ncbpolicy, .cs-i, .ncb-i { display: none; }
 
-      .car-get .car-list { display: none; } 
+      .cs-i, .ncb-i { cursor: pointer;}
+
+      .car-get div.info-wrap { width: 30%; }
+
+      .car-get .info-wrap select { margin: 0 0 30px 0; }
+
+      .incon {
+      width: 26px;
+      height: 26px;
+      background: url("../images/info.png");
+      margin: 0 0 -8px;
+      display: none;
+      }
+
+      .car-get .car-list { display: none; }
 
       .car-get .car-list li {
         position: absolute;

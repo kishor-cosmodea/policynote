@@ -29,13 +29,16 @@
     <meta name="robots" content="noindex, nofollow" />
 
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/images/favicon.bmp" type="image/x-icon" />
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
     <!-- Css for range slider -->
     <link rel="stylesheet" href="assets/vendor/jquery-ui.css">
+
+    <!-- Css for tool tip -->
+    <link rel="stylesheet" href="assets/vendor/tool-css.css">
 
     <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -77,7 +80,7 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a id="nav-car" href="index.php" title="Car">Car Insurance</a></li>
+                        <li><a id="nav-car" href="index.php" title="Car Insurance">Car Insurance</a></li>
                         <li><a id="nav-about" href="about-us.php" title="About Us">About Us</a></li>
                         <li><a id="nav-contact" href="contact-us.php" title="Contact Us">Contact Us</a></li>
                         <li>
