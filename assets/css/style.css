@@ -313,6 +313,7 @@ footer {
       }
 
       .main-text .range-submit {
+        margin: -79px 0 0 0;
         padding: 10px 30px;
         border-radius: 4px;
         float: right;
@@ -324,14 +325,21 @@ footer {
         font-size: 30px;
       }
 
-      .main-text .range-submit:hover { background: #359fa7 }
+      .main-text .range-submit:hover { background: #359fa7; }
 
-      .main-text p {
+      .main-text p,
+      .main-text span {
       color:  #44516d;
       font-size: 23.91px;
       font-weight: 400;
       }
 
+      .main-text span { vertical-align: -2px; }
+
+      .main-text i { color: #44516d; }
+
+      #slider-step { margin: 10px 0; }
+      
       #amount .fa-lg {
         margin: 6px 0 0 0;
         font-size: 22px !important;
@@ -767,7 +775,7 @@ footer {
 
       .car-checkout {
         margin: 0 0 60px 0;
-        min-height: 889px;
+        min-height: 914px;
       }
 
       .car-re-data {
@@ -784,7 +792,7 @@ footer {
 
       .car-re-data div p {
         font-size: 14px;
-        margin: 10px 0;
+        margin: 20px 0 40px;
       }
 
       .car-re-data select {
@@ -904,11 +912,14 @@ footer {
 
       .car-result-data .load-up { display: none; }      
 
-      .car-sel-info { margin: 86px 0 0 0; }
+      .car-sel-info {
+        margin: 71px auto 0;
+        width: 80%;
+      }
 
       .car-sel-info div {
         min-height: 120px;
-        width: 25.1%;
+        width: 24.8%;
         padding: 38px 4% 12px;
         display: inline-block;
         background-color: #e8f2f5;
@@ -918,19 +929,19 @@ footer {
       .car-sel-info div:last-child { border:none; }
 
       .car-sel-info p {
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 500;
       }
 
       .car-sel-info span {
-        font-size: 14px;
+        font-size: 15px;
         display: block;
         font-weight: 300;
         margin: 8px 0;
       }
 
       .car-sel-info .car-name {
-        font-size: 20px;
+        font-size: 16px;
         color: #2f3e5c;
         margin: 9px 0;
         font-weight: 500;
@@ -943,6 +954,15 @@ footer {
         color: #4d4d4d;
         margin: 9px 0;
         font-weight: 400;
+      }
+
+      .inidv, .inadd, .inper {
+        width: 26px;
+        height: 26px;
+        margin: 0 0 -8px 0;
+        float: right;
+        background: url("../images/info.png");
+        display: inline-block;
       }
 
       .car-chout-data { padding: 0 2%; }
@@ -1174,11 +1194,15 @@ footer {
       }
 
       .car-chout-user p.ch-inp {
-        margin: 25px 0 21px 0;
+        margin: 10px 0 61px 0;
         text-align: left;
       }
 
-      .car-chout-user #dd,
+      .car-chout-user input#date1 { width: 31%; }
+
+      .car-chout-user .dp-choose-date { display: none; }
+
+/*      .car-chout-user #dd,
       .car-chout-user #mm {
         width: 9%;
         text-align: center;
@@ -1188,7 +1212,7 @@ footer {
       .car-chout-user #yyyy {
         width: 12%;
         text-align: center;
-      }
+      }*/
 
       .car-chout-buy {
         font-size: 15px;
@@ -1210,6 +1234,67 @@ footer {
       }
 
       .car-chout-user span + span { float: right; }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    width: 800px;
+    background-color: #fefefe;
+    margin: 70px auto 0;
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.modal-content h2 {
+  color: #8bb0dc;
+  font-size: 57.41px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-content p {
+  margin: 35px 75px;
+  color: #000;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal-content p span {
+  color:#8bb0dc;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.modal-content button {
+  border: none;
+  margin: 30px 1% 0 0;
+  border-radius: 5px;
+  background-color:#70cbd2;
+  width: 134px;
+  height: 50px;
+  outline: none;
+  color: #fff;
+  font-size: 20.49px;
+  font-weight: 700;
+}
 
       textarea {
         padding: 10px;

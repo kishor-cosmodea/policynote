@@ -35,9 +35,9 @@
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
     <!-- Css for range slider -->
-    <link rel="stylesheet" href="assets/vendor/jquery-ui.css">
-
-    <!-- Css for tool tip -->
+    <link rel="stylesheet" href="assets/vendor/noui.css">
+    
+    <!-- Css for tooltip -->
     <link rel="stylesheet" href="assets/vendor/tool-css.css">
 
     <!-- Bootstrap of rupee font & Font -->
@@ -47,10 +47,10 @@
     <script type="text/javascript" src="assets/vendor/jquery-2.2.0.min.js"></script>
 
     <!-- jQuery for cookie-->
-    <script type = "text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
     
     <!-- jQuery for range slider -->
-    <script type="text/javascript" src="assets/vendor/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/vendor/noui.js"></script>
 
     <!-- Google font -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500,500italic,700,700italic,300italic' rel='stylesheet' type='text/css'>

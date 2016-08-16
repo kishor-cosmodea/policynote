@@ -163,14 +163,14 @@ include("header.php");
 		</div>
 		<div>
 			<p>IDV</p>
-			<span class="car-idv">Insured Declared Value (IDV)</span>
+			<span class="car-idv">Insured Declared Value (IDV) <a href="#" class="inidv hint--bottom hint--medium" aria-label="IDV" ></a> </span>
 			<span class="idvamt"><i class="fa fa-inr"></i> <?php echo number_format($idv); ?></span>
 			<span>(The IDV is based on your car manufacturing year)</span>
 			<input id="ncbval" type="hidden" name="ncbval" value="<?php echo $ncb ?>"/>
 			<input id="claimval" type="hidden" name="claimval" value="<?php echo $claimstat ?>"/>
 		</div>
 		<div>
-			<p>POLICY DETAILS</p>
+			<p>OTHER DETAILS</p>
 			<span class="reg-yr">Manufacturing Year ......................... <?php $spliyear = explode("_",$year); $newyr = $spliyear[1]; echo $newyr; ?></span>
 			<!-- <span>Policy start date .......................... <?php $date_format = 'jS F Y'; $tomorrow = strtotime('+1 day'); echo date($date_format, $tomorrow); ?> -->
 			</span>
@@ -187,7 +187,7 @@ include("header.php");
 					<h3>Additional</h3>
 					<div>
 						<p>
-							<span>Add on</span>
+							<span>Add on <a href="#" class="inadd hint--bottom hint--medium" aria-label="Add on" ></a> </span>
 							<select name="addon" class="addon">
              		<option disabled>Add on</option>
              		<option value="5" selected>Depreciation</option>
@@ -196,8 +196,9 @@ include("header.php");
              		<option value="2">Depreciation, Tyre, Consumables, Hydrostatic Lock</option>
              		<option value="1">Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice</option>
           		</select>
-
-							<span>Insurance Perecentage</span>
+          	</p>
+          	<p>
+							<span>Insurance Percentage <a href="#" class="inper hint--bottom hint--medium" aria-label="Insurance Percentage" ></a> </span>
 							<select name="insper" class="insper">
              		<option disabled>Insurance Percentage</option>
              		<option value="60" selected>60</option>

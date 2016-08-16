@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 	$(".range-submit").click(function(e) {
 		e.preventDefault();
-		if($('#amount1').val() == $('#amount2').val() || $('#amount2').val() == "0") {
+		if($('#amount2').val() == "0") {
 			$('.range-submit').css( "border", "2px solid #ff0000" );
 		} else {
 			$('.main-text').fadeOut( "hide" );
@@ -392,19 +392,40 @@ $(document).ready(function() {
 
   //Range slider
   $(function() {
-    $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 500000,
-      values: [ 0, 30000 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
-				$( "#amount1" ).val(ui.values[ 0 ]);
-				$( "#amount2" ).val(ui.values[ 1 ]);
-      }
-    });
-     $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
-      "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
+
+  	//slider single
+		var stepSlider = document.getElementById('slider-step');
+
+		noUiSlider.create(stepSlider, {
+			start: [ 5000 ],
+			step: 5000,
+			range: {
+				'min': [ 5000 ],
+				'max': [ 500000 ]
+			}
+		});
+    
+    var stepSliderValueElement = document.getElementById('slider-step-value');
+		stepSlider.noUiSlider.on('update', function( values, handle ) {
+			stepSliderValueElement.innerHTML = parseInt(values[handle]);
+			document.getElementById("amount2").value = parseInt(values[handle]);
+		});
+
+		//slider range
+    // $( "#slider-range" ).slider({
+    //   range: true,
+    //   min: 0,
+    //   max: 500000,
+    //   values: [ 0, 30000 ],
+    //   slide: function( event, ui ) {
+    //     $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 0 ] + "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + ui.values[ 1 ] );
+				// $( "#amount1" ).val(ui.values[ 0 ]);
+				// $( "#amount2" ).val(ui.values[ 1 ]);
+    //   }
+    // });
+    //  $( "#amount" ).html( "<i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 0 ) +
+    //   "  to  <i class='fa fa-inr fa-lg' aria-hidden='true'></i> " + $( "#slider-range" ).slider( "values", 1 ) );
+  
   });
 
 //$( "#slider-range + span" ).hide();
@@ -450,6 +471,7 @@ $('#slider-range span:first', this).hide();
 				//console.log(uidv);
 				var  uinsper = $(".insper option:selected" ).val();
 				var  uaddon = $(".addon option:selected" ).val();
+				
 				//console.log(uinsper + uaddon);
 				var data = {
 	        regNumber: uregnum,
@@ -656,7 +678,11 @@ $('#slider-range span:first', this).hide();
 		}
 	});
 
-
+//Buy policy
+	// $("#get-policy").on('click', function() {
+	// 	$("#myModal").show();
+	// });
+	
 	$("#get-policy").on('click', function(e) {
 
 		e.preventDefault();
@@ -666,12 +692,11 @@ $('#slider-range span:first', this).hide();
 		var lastName = jQuery.trim($(".blname").val());
 		var email = jQuery.trim($(".bemail").val());
 		var mobile = jQuery.trim($(".bmobile").val());
-		var dd = jQuery.trim($("#dd").val());
-		var mm = jQuery.trim($("#mm").val());
-		var yyyy = jQuery.trim($("#yyyy").val());
+		var dmy = jQuery.trim($("#date1").val());
 		var alphaChar = /^[a-zA-Z]*$/;
 		var emailPat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //Regex for test@test.com
-		var numChar = /[0-9]$/;
+		var numChar = /[0-9]{10}$/;
+		var dmyMatch = /(0[1-9]|[1-2][0-9]|3[0-1])(\/)(0[1-9]|1[0-2])(\/)[0-9]{4}$/;
 
 		if(!(alphaChar.test(firstName)) || firstName == "") {
 			$('.bfname').css( "border", "1px solid #ff0000" );
@@ -701,16 +726,39 @@ $('#slider-range span:first', this).hide();
 			$('.bmobile').css( "border", "1px solid #70cbd2" );
 		}
 
-		if(!(numChar.test(dd)) || dd == "" || !(numChar.test(mm)) || mm == "" || !(numChar.test(yyyy)) || yyyy == "") {
-			$('#dd, #mm, #yyyy').css( "border", "1px solid #ff0000" );
+		if( dmy == "" || !(dmyMatch.test(dmy)) ) {
+			$('#date1').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('#dd, #mm, #yyyy').css( "border", "1px solid #70cbd2" );
+			$('#date1').css( "border", "1px solid #70cbd2" );
 		}
 
 		if(flag == true) {
-			//console.log("flag true");
-			var policyStartDate = dd + "/" + mm + "/" + yyyy;
+			$("#myModal").show();
+			//console.log("true flag");
+		} else {
+			$("#myModal").hide();
+			//console.log("flag flag");
+		}
+
+	});
+
+
+});
+
+
+//Redirect user to homepage on click of confirm
+$(document).ready(function() {
+
+$("#policyconfirm").on("click", function () {
+			//console.log("in pol conf");
+			var firstName = jQuery.trim($(".bfname").val());
+			var lastName = jQuery.trim($(".blname").val());
+			var email = jQuery.trim($(".bemail").val());
+			var mobile = jQuery.trim($(".bmobile").val());
+			var dmy = jQuery.trim($("#date1").val());
+
+			var policyStartDate = dmy;
 
 			var policyCompany = jQuery.trim($(".cpolicy").text());
 			var premiumAmount = jQuery.trim($(".cpre").text().replace(/,/g, ""));
@@ -781,14 +829,14 @@ $('#slider-range span:first', this).hide();
 				    	data : data
 				    },
 				    success: function(data) {
-				    	alert("Thank you");
-      				window.location.replace("index.php");
+				    	//console.log("Succeessfully sent");
+				    	window.location.replace("index.php");
 				    }
 					});
-		} else {
-			//console.log("flag false");
-		}
+});
 
+	$("#redirback").on("click", function () {
+		$("#myModal").hide();
 	});
 
 });
