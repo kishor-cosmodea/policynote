@@ -123,9 +123,10 @@ nav ul li:last-child { margin: 18px 0 0; }
 
 h1 a {
   width: 300px;
-  height: 70px;
+  height: 64px;
+  margin: 5px 0 1px;
   display: inline-block;
-  background: url("../images/logo.jpg");
+  background: url("../images/logo.png");
   text-indent: -9999px;
 }
 
@@ -167,9 +168,9 @@ footer {
 
   .foot-content h2 a {
     width: 300px;
-    height: 55px;
+    height: 64px;
     display: inline-block;
-    background: url("../images/logo-foot.png");
+    background: url("../images/logo.png");
     text-indent: -9999px;
   }
 
@@ -850,14 +851,15 @@ footer {
         height: 40px;
         padding: 5px;
         margin: 10px 0;
-        background-color: #70cbd2;
-        color: #fff;
+    border: 1px solid #70cbd2;
+    color: #70cbd2;
         outline: none;
-        border: none;
         font-weight: 400;
         font-size: 13px;
         cursor: pointer;
       }
+
+
 
       .car-re-dis select { margin: 10px 0 10px 33px; }
 
@@ -934,7 +936,7 @@ footer {
       }
 
       .car-sel-info span {
-        font-size: 15px;
+        font-size: 14px;
         display: block;
         font-weight: 300;
         margin: 8px 0;
@@ -957,11 +959,11 @@ footer {
       }
 
       .inidv, .inadd, .inper {
-        width: 26px;
-        height: 26px;
+        width: 17px;
+        height: 17px;
         margin: 0 0 -8px 0;
         float: right;
-        background: url("../images/info.png");
+        background: url("../images/small-info.png");
         display: inline-block;
       }
 

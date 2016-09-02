@@ -10,7 +10,7 @@ include("header.php");
 		<div class="main-text">
 				<h2>Need a Car Insurance?<span> It only takes 30 seconds</span></h2>
 			<div>
-				<p>Choose your monthly premium budget</p>
+				<p>Choose your annual premium budget</p>
         <!-- <p id="amount"> -->
         <div id="slider-step"></div>
         <div>

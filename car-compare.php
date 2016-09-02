@@ -196,6 +196,7 @@ include("header.php");
              		<option value="2">Depreciation, Tyre, Consumables, Hydrostatic Lock</option>
              		<option value="1">Depreciation, Tyre, Consumables, Hydrostatic Lock  with Return to Invoice</option>
           		</select>
+          		<span style="margin:0";><a href="#" title="know more" class="more-add">Know more</a></span>
           	</p>
           	<p>
 							<span>Insurance Percentage <a href="#" class="inper hint--bottom hint--medium" aria-label="Insurance Percentage" ></a> </span>
@@ -213,10 +214,40 @@ include("header.php");
              		<option value="90">90</option>
 								<option value="100">100</option>
           		</select>
+          		<!-- <span style="margin:0";><a href="#" title="know more">know more</a></span> -->
 						</p>
 					</div>
 				</div>
 				<button id="update-add" class="ref-submit">Update</button>
+
+				<!-- The Modal -->
+				<div id="myModalAdd" class="modal">
+				  <!-- Modal content -->
+					<div class="modal-content-add">
+						<h2>Add on <img class="modeal-close" src="assets/images/close.png" alt="close"></h2>
+						<div>
+						  <h3>Depreciation</h3>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+						</div>
+						<div>
+						  <h3>Consumables</h3>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					  <div>
+						  <h3>Tyre</h3>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					  </div>
+						<div>
+						  <h3>Hydrostatic Lock</h3>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<div>
+						  <h3>Hydrostatic Lock  with Return to Invoice</h3>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			<div class="car-wrap-plan">
 				<div class="car-plan">
@@ -289,7 +320,73 @@ include("header.php");
 </div>
 <!-- Content ends here -->
 
+<style>
+.modal-content-add {
+    background-color: #fefefe;
+    margin: 70px auto 0;
+    padding: 40px 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content-add h2 {
+color: #8bb0dc;
+    font-size: 57.41px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-content-add h2 img {
+	width: 3%;
+  float: right;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.modal-content-add div {
+width: 17.5%;
+    margin: 24px 1% 0;
+    border: 1px solid #70cbd2;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.modal-content-add div:hover { border: 1px solid #359fa7; }
+
+.modal-content-add h3 {
+		min-height: 60px;
+    margin: 16px 0 0;
+    font-size: 18px;
+    color: #44516c;
+    text-align: center;
+    font-weight: 400;
+}
+
+.modal-content-add p {
+background: #70cbd2;
+    color: #fff;
+    padding: 10px 4%;
+    font-size: 16px;
+}
+
+.more-add {
+	color: #4f9fcf;
+}
+
+</style>
+
+
 <script type="text/javascript">
+
+  //Pop up for add on
+	$(".more-add").on('click', function() {
+		$("#myModalAdd").show();
+	});
+
+	$(".modeal-close").on('click', function() {
+		$("#myModalAdd").hide();
+	});
+
  //Assign car insurance company logo
   var $parent = $('.car-policy-plan');
 
