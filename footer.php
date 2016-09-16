@@ -43,5 +43,7 @@
 <!-- Footer ends here -->
 
 	<script type="text/javascript" src="assets/js/script.js"></script>
+	<!-- Script for testimonial slider -->
+	<script type="text/javascript" src="assets/vendor/owl.carousel.js"></script>
 </body>
 </html>

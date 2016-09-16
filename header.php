@@ -40,6 +40,9 @@
     <!-- Css for tooltip -->
     <link rel="stylesheet" href="assets/vendor/tool-css.css">
 
+    <!-- Css for testimonial slider -->
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.css">
+
     <!-- Bootstrap of rupee font & Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     

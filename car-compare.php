@@ -346,12 +346,12 @@ color: #8bb0dc;
 .modal-content-add div {
 width: 17.5%;
     margin: 24px 1% 0;
-    border: 1px solid #70cbd2;
+    border: 1px solid #86B0DF;
     display: inline-block;
     vertical-align: top;
 }
 
-.modal-content-add div:hover { border: 1px solid #359fa7; }
+.modal-content-add div:hover { border: 1px solid #72a2da; }
 
 .modal-content-add h3 {
 		min-height: 60px;
@@ -363,7 +363,7 @@ width: 17.5%;
 }
 
 .modal-content-add p {
-background: #70cbd2;
+background: #86B0DF;
     color: #fff;
     padding: 10px 4%;
     font-size: 16px;

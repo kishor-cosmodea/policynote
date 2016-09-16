@@ -71,21 +71,21 @@ $(document).ready(function() {
 			$('#car-model').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('#car-model').css( "border", "4px solid #70cbd2" );
+			$('#car-model').css( "border", "4px solid #8db0db" );
 		}
 
 		if(selFuel == "") {
 			$('.sel-fuel').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.sel-fuel').css( "border", "4px solid #70cbd2" );
+			$('.sel-fuel').css( "border", "4px solid #8db0db" );
 		}
 
 		if(selVar == "") {	
 			$('.sel-var').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.sel-var').css( "border", "4px solid #70cbd2" );
+			$('.sel-var').css( "border", "4px solid #8db0db" );
 		}
 
 		var regnum = jQuery.trim(($('#carregyr').val()));
@@ -95,21 +95,21 @@ $(document).ready(function() {
 			$('#carregyr').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('#carregyr').css( "border", "4px solid #70cbd2" );
+			$('#carregyr').css( "border", "4px solid #8db0db" );
 		}
 
 		if(carYear == "") {
 			$('.car-year').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.car-year').css( "border", "4px solid #70cbd2" );
+			$('.car-year').css( "border", "4px solid #8db0db" );
 		}
 
 		if(polStat == "") {
 			$('.polstat').css( "border", "4px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.polstat').css( "border", "4px solid #70cbd2" );
+			$('.polstat').css( "border", "4px solid #8db0db" );
 		}
 
 		if(carYear == "idv_2015") {
@@ -117,7 +117,7 @@ $(document).ready(function() {
 				$('.claimstat').css( "border", "4px solid #ff0000" );
 				flag = false;
 			} else {
-				$('.claimstat').css( "border", "4px solid #70cbd2" );
+				$('.claimstat').css( "border", "4px solid #8db0db" );
 			}
 
 			if(claimStat == "No") {
@@ -125,11 +125,11 @@ $(document).ready(function() {
 					$('.ncbpolicy').css( "border", "4px solid #ff0000" );
 					flag = false;
 				} else {
-					$('.ncbpolicy').css( "border", "4px solid #70cbd2" );
+					$('.ncbpolicy').css( "border", "4px solid #8db0db" );
 				}
 			}
 		} else {
-			$('.claimstat').css( "border", "4px solid #70cbd2" );
+			$('.claimstat').css( "border", "4px solid #8db0db" );
 	  }
 			
 
@@ -363,7 +363,7 @@ $(document).ready(function() {
 				if($(".polstat option:selected" ).val() == ren) {
 					$('.claimstat').show();
 					$('.in-cs .incon').css("display","inline-block");
-					$('.claimstat').css( "border", "4px solid #70cbd2" );
+					$('.claimstat').css( "border", "4px solid #8db0db" );
 				}	else {
 					$('.claimstat').hide();
 					$('.in-cs .incon').css("display","none");
@@ -382,7 +382,7 @@ $(document).ready(function() {
 				if($(".claimstat option:selected" ).val() == claim) {
 					$('.ncbpolicy').show();
 					$('.in-ncb .incon').css("display","inline-block");
-					$('.ncbpolicy').css( "border", "4px solid #70cbd2" );
+					$('.ncbpolicy').css( "border", "4px solid #8db0db" );
 				}	else {
 					$('.ncbpolicy').hide();
 					$('.in-ncb .incon').css("display","none");
@@ -667,7 +667,7 @@ $('#slider-range span:first', this).hide();
 		if(!(emailPattern.test(uemail)) || uemail == "") {
 			$('.sub').css( "border", "1px solid #ff0000" );
 		} else {
-			$('.sub').css( "border", "1px solid #70cbd2" );
+			$('.sub').css( "border", "1px solid #8db0db" );
 
 			$.post('subscribe-email.php',
 			'val=' + uemail,
@@ -702,35 +702,35 @@ $('#slider-range span:first', this).hide();
 			$('.bfname').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.bfname').css( "border", "1px solid #70cbd2" );
+			$('.bfname').css( "border", "1px solid #8db0db" );
 		}
 
 		if(!(alphaChar.test(lastName)) || lastName == "") {
 			$('.blname').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.blname').css( "border", "1px solid #70cbd2" );
+			$('.blname').css( "border", "1px solid #8db0db" );
 		}
 
 		if(!(emailPat.test(email)) || email == "") {
 			$('.bemail').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.bemail').css( "border", "1px solid #70cbd2" );
+			$('.bemail').css( "border", "1px solid #8db0db" );
 		}
 
 		if(!(numChar.test(mobile)) || mobile == "") {
 			$('.bmobile').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('.bmobile').css( "border", "1px solid #70cbd2" );
+			$('.bmobile').css( "border", "1px solid #8db0db" );
 		}
 
 		if( dmy == "" || !(dmyMatch.test(dmy)) ) {
 			$('#date1').css( "border", "1px solid #ff0000" );
 			flag = false;
 		} else {
-			$('#date1').css( "border", "1px solid #70cbd2" );
+			$('#date1').css( "border", "1px solid #8db0db" );
 		}
 
 		if(flag == true) {
@@ -838,6 +838,22 @@ $("#policyconfirm").on("click", function () {
 	$("#redirback").on("click", function () {
 		$("#myModal").hide();
 	});
+
+	//Testimonial slider
+	$("#owl-demo").owlCarousel({
+	 
+	navigation : false, // Show next and prev buttons
+	autoPlay: true,
+	slideSpeed : 300,
+	paginationSpeed : 400,
+	items : 1, 
+	itemsDesktop : false,
+	itemsDesktopSmall : false,
+	itemsTablet: false,
+	itemsMobile : false,
+	stopOnHover :	true
+	});
+
 
 });
 

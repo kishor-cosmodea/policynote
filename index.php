@@ -160,13 +160,14 @@ include("header.php");
 			</div>
 
 			<div class="main-testi">
-        <div><img src="assets/images/photo.jpg" alt="pic"></div>
-				<div class="testi-per">
-          <h2>Policynote has done a great job. I renewed my car policy in 10 minutes. It’s quite incredible.</h2>
-				  <span>Mr Jack Son</span>
+        <h2>You happy We happy</h2>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+          <div class="item"><p><img src="assets/images/support.png" alt="testi">Compare and save upto 60% on car insurance, Compare and save upto 60% on car insurance how to</p><p>- Mr Jack Son</p></div>
+          <div class="item"><p><img src="assets/images/support.png" alt="testi">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is show.</p><p>- Ms Dona Paula</p></div>
+          <div class="item"><p><img src="assets/images/support.png" alt="testi">It is a long established fact that a reader will be distracted by the readable content is important.</p><p>- Mr Mick Mora</p></div>
         </div>
 			</div>
-			<div class="car-bg-lay">
+<!-- 			<div class="car-bg-lay">
 				<div class="ins-head">
 					<h2>More reasons...</h2>
 				</div>
@@ -180,7 +181,7 @@ include("header.php");
 						<span>Hassle Free Process</span>
 					</p>
 				</div>
-			</div>
+			</div> -->
 			<div class="ins-gq">
 					<h2>Get a quote from more than 20 companies</h2>
 			</div>
