@@ -25,7 +25,7 @@ $ndata = $_POST['data'];
 	//   "addonType"=> $addonType
 	// );
 
-	$url_send ="http://52.32.253.76:8080/webapp/api/business/getFinalPremium";
+	$url_send ="http://54.69.133.16:8080/webapp/api/business/getFinalPremium";
 
 	$str_data = json_encode($data);
 

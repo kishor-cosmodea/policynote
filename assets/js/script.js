@@ -192,7 +192,7 @@ $(document).ready(function() {
 
 				/*$.ajax({
 					method: "get",
-					url: "http://52.32.253.76:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
+					url: "http://54.69.133.16:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
 					dataType: 'json',
 					success: function(data) {
 		    	//alert(data);

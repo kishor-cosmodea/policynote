@@ -31,7 +31,7 @@ include("header.php");
 
             <?php
 
-              $url = "http://52.32.253.76:8080/webapp/api/business/getAllMakes";
+              $url = "http://54.69.133.16:8080/webapp/api/business/getAllMakes";
               $ch = curl_init();
 
               // Disable SSL verification
