@@ -189,21 +189,6 @@ $(document).ready(function() {
       			fueltype(data);
       			assignidv(data);
    				});
-
-				/*$.ajax({
-					method: "get",
-					url: "http://54.69.133.16:8080/webapp/api/business/getVehicleDetailsByMakeId/" + $("#car-model").val(),
-					dataType: 'json',
-					success: function(data) {
-		    	//alert(data);
-		    	fueltype(data);
-		    	asignidv(data);
-		    	//console.log(JSON.stringify(data));
-				},
-				error: function() {
-			      //alert("error");
-			    }
-			  });*/
 			}
 	});
 
@@ -682,7 +667,7 @@ $('#slider-range span:first', this).hide();
 	// $("#get-policy").on('click', function() {
 	// 	$("#myModal").show();
 	// });
-	
+
 	$("#get-policy").on('click', function(e) {
 
 		e.preventDefault();

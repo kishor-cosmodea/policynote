@@ -226,24 +226,54 @@ include("header.php");
 					<div class="modal-content-add">
 						<h2>Add on <img class="modeal-close" src="assets/images/close.png" alt="close"></h2>
 						<div>
-						  <h3>Depreciation</h3>
-						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+						  <h3>
+						  	<img src="assets/images/dep.png" alt="icon">
+								<span>Depreciation</span>
+							</h3>
+						  <ul>
+						  	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						  	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</li>
+						  </ul>
 						</div>
 						<div>
-						  <h3>Consumables</h3>
-						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						  <h3>
+						  	<img src="assets/images/consb.png" alt="icon">
+						  	<span>Consumables</span>
+							</h3>
+						  <ul>
+						  	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						  	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</li>
+						  </ul>
 						</div>
 					  <div>
-						  <h3>Tyre</h3>
-						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						  <h3>
+						  	<img src="assets/images/tyre.png" alt="icon">
+						  	<span>Tyre</span>
+						  </h3>
+						  <ul>
+						  	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						  	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</li>
+						  </ul>
 					  </div>
 						<div>
-						  <h3>Hydrostatic Lock</h3>
-						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						  <h3>
+						  	<img src="assets/images/hydro.png" alt="icon">
+						  	<span>Hydrostatic Lock</span>
+						  </h3>
+						  <ul>
+						  	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						  	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</li>
+						  </ul>
 						</div>
 						<div>
-						  <h3>Hydrostatic Lock  with Return to Invoice</h3>
-						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						  <h3>
+						  	<img src="assets/images/hydroin.png" alt="icon">
+						  	<span>Hydrostatic Lock  with Return to Invoice</span>
+						  </h3>
+						  <ul>
+						  	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						  	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</li>
+						  </ul>
 						</div>
 					</div>
 				</div>
@@ -344,7 +374,8 @@ color: #8bb0dc;
 }
 
 .modal-content-add div {
-width: 17.5%;
+	  min-height: 300px;
+		width: 17.5%;
     margin: 24px 1% 0;
     border: 1px solid #86B0DF;
     display: inline-block;
@@ -354,21 +385,31 @@ width: 17.5%;
 .modal-content-add div:hover { border: 1px solid #72a2da; }
 
 .modal-content-add h3 {
-		min-height: 60px;
-    margin: 16px 0 0;
+    min-height: 87px;
     font-size: 18px;
-    color: #44516c;
+    padding: 3px;
+    color: #fff;
     text-align: center;
     font-weight: 400;
+    background: #86B0DF;
+}
+
+.modal-content-add h3 img { margin: 0 10px 0 0; }
+
+.modal-content-add h3 span {
+    margin: 17px 0 0 0;
+    display: inline-block;
 }
 
 .modal-content-add p {
-background: #86B0DF;
-    color: #fff;
-    padding: 10px 4%;
-    font-size: 16px;
+	padding: 10px 4%;
+  font-size: 16px;
 }
 
+.modal-content-add ul li {
+margin: 0 0 0 25px;
+list-style-type: disc;
+}
 .more-add {
 	color: #4f9fcf;
 }
